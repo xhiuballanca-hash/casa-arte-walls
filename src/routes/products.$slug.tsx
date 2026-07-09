@@ -76,7 +76,7 @@ function ProductDetail() {
               Material properties.
             </h3>
             <ul className="space-y-4">
-              {product.features.map((f) => (
+              {product.features.map((f: string) => (
                 <li key={f} className="flex gap-4 items-start text-forest/80">
                   <Check className="h-4 w-4 mt-1 text-gold shrink-0" />
                   <span>{f}</span>
@@ -90,7 +90,7 @@ function ProductDetail() {
               Why architects specify it.
             </h3>
             <ul className="space-y-4">
-              {product.benefits.map((b) => (
+              {product.benefits.map((b: string) => (
                 <li key={b} className="flex gap-4 items-start text-forest/80">
                   <Check className="h-4 w-4 mt-1 text-gold shrink-0" />
                   <span>{b}</span>
@@ -106,7 +106,7 @@ function ProductDetail() {
           <div>
             <p className="eyebrow text-gold mb-5">Interior Applications</p>
             <ul className="space-y-3">
-              {product.interior.map((i) => (
+              {product.interior.map((i: string) => (
                 <li key={i} className="border-b border-forest/10 pb-3 text-forest/80">{i}</li>
               ))}
             </ul>
@@ -115,7 +115,7 @@ function ProductDetail() {
             <p className="eyebrow text-gold mb-5">Exterior Applications</p>
             {product.exterior ? (
               <ul className="space-y-3">
-                {product.exterior.map((e) => (
+                {product.exterior.map((e: string) => (
                   <li key={e} className="border-b border-forest/10 pb-3 text-forest/80">{e}</li>
                 ))}
               </ul>

@@ -47,7 +47,7 @@ function BlogDetail() {
             {post.excerpt}
           </p>
           <div className="space-y-6 text-forest/80 leading-[1.85] text-lg">
-            {post.body.map((para, i) => (
+            {post.body.map((para: string, i: number) => (
               <p key={i}>{para}</p>
             ))}
           </div>
