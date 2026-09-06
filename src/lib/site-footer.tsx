@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 import { products } from "@/lib/products-data";
+import { SITE, whatsappLink } from "@/lib/site-config";
 
 export function SiteFooter() {
   return (
@@ -56,19 +57,19 @@ export function SiteFooter() {
             <address className="not-italic text-sm text-beige/80 space-y-3 leading-relaxed">
               <p>Casa D'Arte<br />Skopje, North Macedonia</p>
               <p>
-                <a href="tel:+38970000000" className="hover:text-gold block transition-colors">+389 70 000 000</a>
-                <a href="mailto:atelier@casadarte.mk" className="hover:text-gold block transition-colors">atelier@casadarte.mk</a>
-                <a href="https://wa.me/38970000000" target="_blank" rel="noreferrer" className="hover:text-gold block transition-colors">WhatsApp</a>
+                <a href={SITE.phoneHref} className="hover:text-gold block transition-colors">{SITE.phoneDisplay}</a>
+                <a href={`mailto:${SITE.email}`} className="hover:text-gold block transition-colors">{SITE.email}</a>
+                <a href={whatsappLink()} target="_blank" rel="noreferrer" className="hover:text-gold block transition-colors">WhatsApp</a>
               </p>
             </address>
             <div className="mt-6 flex gap-5 text-beige/70">
-              <a href="#" aria-label="Instagram" className="hover:text-gold transition-colors">
+              <a href={SITE.social.instagram} aria-label="Instagram" className="hover:text-gold transition-colors">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="Facebook" className="hover:text-gold transition-colors">
+              <a href={SITE.social.facebook} aria-label="Facebook" className="hover:text-gold transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-gold transition-colors">
+              <a href={SITE.social.linkedin} aria-label="LinkedIn" className="hover:text-gold transition-colors">
                 <Linkedin className="h-4 w-4" />
               </a>
             </div>

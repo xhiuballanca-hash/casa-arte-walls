@@ -6,6 +6,7 @@ import craftImg from "@/assets/about-craft.jpg";
 import { products } from "@/lib/products-data";
 import { projects, categories } from "@/lib/portfolio-data";
 import { ConsultationForm } from "@/lib/consultation-form";
+import { SITE, whatsappLink } from "@/lib/site-config";
 
 const TITLE = "Casa D'Arte | Italian Decorative Finishes & Application";
 const DESCRIPTION =
@@ -610,12 +611,12 @@ function HomePage() {
               come back with the next step — a conversation, samples or a site visit.
             </p>
             <div className="space-y-3 text-sm">
-              <a href="https://wa.me/38970000000" target="_blank" rel="noreferrer" className="link-line text-forest">
+              <a href={whatsappLink()} target="_blank" rel="noreferrer" className="link-line text-forest">
                 WhatsApp the studio
               </a>
               <br />
-              <a href="tel:+38970000000" className="link-line text-forest">
-                +389 70 000 000
+              <a href={SITE.phoneHref} className="link-line text-forest">
+                {SITE.phoneDisplay}
               </a>
             </div>
           </div>

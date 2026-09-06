@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ConsultationForm } from "@/lib/consultation-form";
 import { Phone, Mail, MessageCircle, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import { SITE, whatsappLink } from "@/lib/site-config";
 
 const INTENTS = ["project", "sample", "quote", "partner"] as const;
 export type ContactIntent = (typeof INTENTS)[number];
@@ -108,16 +109,16 @@ function ContactPage() {
             <div>
               <p className="eyebrow text-gold mb-4">Direct</p>
               <div className="space-y-3">
-                <a href="tel:+38970000000" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
+                <a href={SITE.phoneHref} className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Phone className="h-4 w-4" />
-                  +389 70 000 000
+                  {SITE.phoneDisplay}
                 </a>
-                <a href="mailto:atelier@casadarte.mk" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
+                <a href={`mailto:${SITE.email}`} className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Mail className="h-4 w-4" />
-                  atelier@casadarte.mk
+                  {SITE.email}
                 </a>
                 <a
-                  href="https://wa.me/38970000000"
+                  href={whatsappLink()}
                   target="_blank"
                   rel="noreferrer"
                   className="flex gap-4 items-center text-forest hover:text-gold transition-colors"
@@ -131,13 +132,13 @@ function ContactPage() {
             <div>
               <p className="eyebrow text-gold mb-4">Social</p>
               <div className="flex gap-6 text-forest/70">
-                <a href="#" aria-label="Instagram" className="hover:text-gold transition-colors">
+                <a href={SITE.social.instagram} aria-label="Instagram" className="hover:text-gold transition-colors">
                   <Instagram className="h-4 w-4" />
                 </a>
-                <a href="#" aria-label="Facebook" className="hover:text-gold transition-colors">
+                <a href={SITE.social.facebook} aria-label="Facebook" className="hover:text-gold transition-colors">
                   <Facebook className="h-4 w-4" />
                 </a>
-                <a href="#" aria-label="LinkedIn" className="hover:text-gold transition-colors">
+                <a href={SITE.social.linkedin} aria-label="LinkedIn" className="hover:text-gold transition-colors">
                   <Linkedin className="h-4 w-4" />
                 </a>
               </div>

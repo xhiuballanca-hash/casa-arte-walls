@@ -1,13 +1,13 @@
 import { MessageCircle } from "lucide-react";
+import { whatsappLink } from "@/lib/site-config";
 
 export function WhatsAppButton() {
-  const phone = "38970000000";
-  const message = encodeURIComponent(
+  const href = whatsappLink(
     "Hello Casa D'Arte, I would like to discuss a project involving your decorative finishes.",
   );
   return (
     <a
-      href={`https://wa.me/${phone}?text=${message}`}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Message Casa D'Arte on WhatsApp"
