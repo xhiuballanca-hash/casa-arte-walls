@@ -237,3 +237,18 @@
     animation: none;
   }
 }
+
+/* Printed documents (quotations) */
+@page {
+  size: A4;
+  margin: 16mm 14mm;
+}
+@media print {
+  html, body {
+    background: var(--card) !important;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
