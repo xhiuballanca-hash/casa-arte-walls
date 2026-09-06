@@ -30,11 +30,11 @@ function PrintQuotationPage() {
   }, [q.data]);
 
   if (q.isLoading) {
-    return <div className="min-h-screen bg-white p-12 text-sm text-forest/40">Preparing document…</div>;
+    return <div className="min-h-screen bg-card p-12 text-sm text-forest/40">Preparing document…</div>;
   }
   if (!q.data) {
     return (
-      <div className="min-h-screen bg-white p-12">
+      <div className="min-h-screen bg-card p-12">
         <p className="text-forest">This quotation could not be found.</p>
         <Link to="/admin/quotations" search={{}} className="link-line text-sm text-forest/70 mt-4 inline-block">
           Back to quotations
@@ -50,7 +50,7 @@ function PrintQuotationPage() {
   const money = (n: number | string | null | undefined) => formatMoney(n, d.currency);
 
   return (
-    <div className="min-h-screen bg-forest/5 print:bg-white text-forest">
+    <div className="min-h-screen bg-forest/5 print:bg-card text-forest">
       {/* Toolbar (screen only) */}
       <div className="print:hidden sticky top-0 z-10 bg-forest text-beige">
         <div className="mx-auto max-w-[210mm] px-6 py-3 flex items-center justify-between gap-4">
@@ -74,7 +74,7 @@ function PrintQuotationPage() {
       </div>
 
       {/* Sheet */}
-      <article className="mx-auto max-w-[210mm] bg-white print:max-w-none my-8 print:my-0 px-12 py-14 print:px-0 print:py-0 shadow-sm print:shadow-none">
+      <article className="mx-auto max-w-[210mm] bg-card print:max-w-none my-8 print:my-0 px-12 py-14 print:px-0 print:py-0 shadow-sm print:shadow-none">
         <header className="flex items-start justify-between gap-8 pb-8 border-b border-forest/15">
           <div>
             <p className="font-serif text-3xl tracking-tight font-bold">CASA D'ARTE</p>
