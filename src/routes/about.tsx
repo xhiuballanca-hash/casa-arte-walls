@@ -1,103 +1,202 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import aboutImg from "@/assets/about-craft.jpg";
+import heroImg from "@/assets/hero-plaster.jpg";
 import { ConsultationForm } from "@/lib/consultation-form";
+import { products } from "@/lib/products-data";
+
+const TITLE = "The Studio — Casa D'Arte, Italian Finishes Since 2012";
+const DESCRIPTION =
+  "Casa D'Arte, Skopje, est. 2012: a studio that supplies premium Italian decorative finishes and applies them with its own team — from sample and quotation to the finished surface.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Casa D'Arte — Italian Craftsmanship in North Macedonia" },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "/about" },
+    ],
+    links: [{ rel: "canonical", href: "/about" }],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Casa D'Arte brings the depth of Italian decorative plasterwork — Travertino, Marmorino, Stucco Veneziano — to homes and hospitality across North Macedonia.",
-      },
-      { property: "og:title", content: "About Casa D'Arte" },
-      {
-        property: "og:description",
-        content: "The story of Casa D'Arte and our passion for Italian craftsmanship.",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: TITLE,
+          description: DESCRIPTION,
+          url: "/about",
+          about: { "@type": "Organization", name: "Casa D'Arte", foundingDate: "2012" },
+        }),
       },
     ],
   }),
   component: AboutPage,
 });
 
+const principles = [
+  {
+    t: "Material and execution, together",
+    d: "We chose early on not to be a shop that sells buckets, nor a crew that applies whatever arrives on site. Casa D'Arte supplies the finish and applies it — so one team is accountable for the surface.",
+  },
+  {
+    t: "Decisions on the real material",
+    d: "Every finish is approved on physical samples prepared for the project. Tone, texture and sheen are judged in the light of the space, not on a screen.",
+  },
+  {
+    t: "Respect for the technique",
+    d: "Italian decorative finishes are layered systems. Preparation, timing and the hand that applies them matter as much as the material. We do not skip steps.",
+  },
+  {
+    t: "Restraint",
+    d: "The finish should serve the architecture. Our role is to make a surface feel inevitable in its space — not to decorate for its own sake.",
+  },
+];
+
 function AboutPage() {
   return (
     <>
-      <section className="pt-40 pb-20 px-6 md:px-12 bg-beige">
-        <div className="mx-auto max-w-5xl text-center">
-          <p className="eyebrow text-gold mb-6">About</p>
-          <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.05] mb-8 text-balance">
-            A quiet devotion to <em className="italic">Italian craft.</em>
-          </h1>
-          <p className="text-forest/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Casa D'Arte was founded in Skopje in 2012 with a single conviction: the walls of a
-            home or hotel deserve the same care as the architecture itself.
-          </p>
+      <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
+        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 md:gap-8 items-end">
+          <div className="md:col-span-8">
+            <p className="eyebrow text-gold mb-6">The Studio · Skopje · Est. 2012</p>
+            <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
+              A studio for Italian finishes — <em className="italic">supplied and applied.</em>
+            </h1>
+          </div>
+          <div className="md:col-span-4">
+            <p className="text-forest/70 text-lg leading-relaxed">
+              Casa D'Arte was founded in Skopje in 2012 around a simple conviction: a wall deserves
+              the same care as the architecture around it — and the people who choose the material
+              should be the people who put it on the wall.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 bg-beige pb-20 md:pb-28">
+        <div className="mx-auto max-w-[1400px]">
+          <img
+            src={heroImg}
+            alt="Hand-applied Italian decorative plaster surface"
+            width={1920}
+            height={1200}
+            className="w-full aspect-[21/9] object-cover"
+          />
         </div>
       </section>
 
       <section className="py-20 md:py-32 px-6 md:px-12 bg-cream">
-        <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-16 md:gap-24 items-center">
-          <img
-            src={aboutImg}
-            alt="Master craftsman applying Italian plaster"
-            width={1200}
-            height={1500}
-            loading="lazy"
-            className="w-full aspect-[4/5] object-cover rounded-sm"
-          />
-          <div>
-            <p className="eyebrow text-gold mb-5">The Atelier</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-forest leading-tight mb-8">
-              A material tradition, translated.
+        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8 items-start">
+          <div className="md:col-span-5 md:sticky md:top-32">
+            <img
+              src={aboutImg}
+              alt="Decorative finish being applied by hand with a steel trowel"
+              width={1200}
+              height={1500}
+              loading="lazy"
+              className="w-full aspect-[4/5] object-cover"
+            />
+          </div>
+          <div className="md:col-span-6 md:col-start-7">
+            <p className="eyebrow text-gold mb-5">What we do</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-forest leading-[1.08] mb-8 text-balance">
+              From the first sample to the finished surface.
             </h2>
-            <div className="space-y-6 text-forest/75 leading-relaxed">
+            <div className="space-y-6 text-forest/75 text-lg leading-relaxed">
               <p>
-                Our pigments and lime bases are sourced from long-established Italian houses in
-                Emilia-Romagna and the Veneto — the same suppliers used by restorers of historic
-                Palladian villas.
+                We work with Italian decorative finishes — Travertino, Marmorino, Stucco
+                Veneziano, Sahara and Microcement — and we do two things with them. We supply the
+                material, pigmented and specified for the project. And we apply it, with our own
+                trained team, from surface preparation through layering, polishing and sealing.
               </p>
               <p>
-                Every application is executed by artisans trained in the traditional Italian
-                method: hand-troweled, layered slowly, polished to spec. There are no shortcuts,
-                because there is no substitute for the depth this technique produces.
+                Most of our work is with architects, interior designers, developers and
+                hospitality or commercial clients, alongside private residences where the owners
+                care about how a wall feels as much as how it looks. In every case the path is the
+                same: consultation, samples, quotation, application, handover.
               </p>
               <p>
-                We supply premium finishes to designers and contractors across North Macedonia,
-                and we execute complete applications — from surface preparation to final polish
-                — for private clients, hoteliers and restaurant groups.
+                It is a deliberately narrow way of working. It means we can stand behind the
+                surface, because we chose the material and we put it there.
               </p>
+            </div>
+            <div className="mt-10 flex flex-col sm:flex-row gap-3">
+              <Link to="/services" className="btn btn-outline">
+                Our Services
+              </Link>
+              <Link to="/products" className="link-line text-forest self-center sm:ml-4">
+                The finishes <span aria-hidden>→</span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       <section className="py-20 md:py-32 px-6 md:px-12 bg-beige">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-10 text-center md:text-left">
-            {[
-              { n: "14", l: "Years of craft" },
-              { n: "300+", l: "Projects delivered" },
-              { n: "240", l: "Custom color tones" },
-              { n: "100%", l: "Italian pigments" },
-            ].map((s) => (
-              <div key={s.l}>
-                <p className="font-serif text-5xl md:text-6xl text-gold mb-2">{s.n}</p>
-                <p className="eyebrow text-forest/60">{s.l}</p>
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid md:grid-cols-12 gap-8 mb-14">
+            <div className="md:col-span-4">
+              <p className="eyebrow text-gold">How we think</p>
+            </div>
+            <div className="md:col-span-8">
+              <h2 className="font-serif text-4xl md:text-5xl text-forest leading-[1.08] text-balance">
+                Four principles that shape every project.
+              </h2>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-x-12 border-t border-forest/15">
+            {principles.map((p, i) => (
+              <div key={p.t} className="grid grid-cols-[3rem_1fr] gap-x-6 py-8 border-b border-forest/15">
+                <p className="font-serif text-gold text-lg pt-0.5">0{i + 1}</p>
+                <div>
+                  <h3 className="font-serif text-2xl text-forest mb-3">{p.t}</h3>
+                  <p className="text-forest/65 leading-relaxed">{p.d}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-32 px-6 md:px-12 bg-forest text-beige">
-        <div className="mx-auto max-w-3xl">
-          <p className="eyebrow text-gold mb-5">Start your project</p>
-          <h2 className="font-serif text-4xl md:text-5xl mb-10">
-            Tell us about your space.
-          </h2>
-          <ConsultationForm variant="dark" source="about-page" />
+      <section className="py-16 md:py-24 px-6 md:px-12 bg-cream border-y border-forest/10">
+        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-8 items-center">
+          <div className="md:col-span-4">
+            <p className="eyebrow text-gold mb-3">The finishes</p>
+            <p className="text-forest/65 leading-relaxed">Five Italian systems, each supplied and applied by the studio.</p>
+          </div>
+          <ul className="md:col-span-8 flex flex-wrap gap-x-10 gap-y-4">
+            {products.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  to="/products/$slug"
+                  params={{ slug: p.slug }}
+                  className="font-serif text-2xl md:text-3xl text-forest hover:text-gold transition-colors"
+                >
+                  {p.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="py-24 md:py-36 px-6 md:px-12 bg-forest text-beige">
+        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8">
+          <div className="md:col-span-5">
+            <p className="eyebrow text-gold mb-5">Start a conversation</p>
+            <h2 className="font-serif text-4xl md:text-6xl leading-[1.05] mb-8 text-balance">
+              Tell us about your space.
+            </h2>
+            <p className="text-beige/70 text-lg leading-relaxed max-w-md">
+              Whether you are specifying a finish, planning a development or renovating a home, the
+              next step is a conversation and a sample.
+            </p>
+          </div>
+          <div className="md:col-span-6 md:col-start-7">
+            <ConsultationForm variant="dark" source="about-page" />
+          </div>
         </div>
       </section>
     </>

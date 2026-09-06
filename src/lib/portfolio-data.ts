@@ -27,9 +27,10 @@ export const categories: Category[] = [
 
 export type Project = {
   id: string;
+  /** Descriptive title of the space — no invented client or project names. */
   title: string;
-  location: string;
   category: Category;
+  /** Finish and tone applied. */
   finish: string;
   image: string;
   span?: "wide" | "tall";
@@ -37,61 +38,54 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "villa-vodno",
-    title: "Villa Vodno",
-    location: "Skopje, Macedonia",
+    id: "living-marmorino",
+    title: "Living room, private residence",
     category: "Living Rooms",
-    finish: "Marmorino, custom warm beige",
+    finish: "Marmorino · custom warm beige",
     image: living,
     span: "wide",
   },
   {
-    id: "hotel-monolith",
-    title: "Hotel Monolith",
-    location: "Ohrid, Macedonia",
+    id: "hotel-veneziano",
+    title: "Hotel lobby",
     category: "Hotels",
-    finish: "Stucco Veneziano, forest green",
+    finish: "Stucco Veneziano · forest green",
     image: hotel,
   },
   {
-    id: "osteria-nord",
-    title: "Osteria Nord",
-    location: "Skopje, Macedonia",
+    id: "restaurant-veneziano",
+    title: "Restaurant interior",
     category: "Restaurants",
-    finish: "Stucco Veneziano, midnight green",
+    finish: "Stucco Veneziano · midnight green",
     image: restaurant,
     span: "tall",
   },
   {
-    id: "headquarters-11",
-    title: "Headquarters 11",
-    location: "Skopje, Macedonia",
+    id: "office-sahara",
+    title: "Office reception",
     category: "Offices",
-    finish: "Sahara, bronze grain",
+    finish: "Sahara · bronze grain",
     image: office,
   },
   {
-    id: "residence-korab",
-    title: "Residence Korab",
-    location: "Skopje, Macedonia",
+    id: "bedroom-marmorino",
+    title: "Master bedroom",
     category: "Bedrooms",
-    finish: "Marmorino, alabaster",
+    finish: "Marmorino · alabaster",
     image: bedroom,
   },
   {
-    id: "spa-treska",
-    title: "Spa Treska",
-    location: "Ohrid, Macedonia",
+    id: "bathroom-travertino",
+    title: "Bathroom and spa",
     category: "Bathrooms",
-    finish: "Travertino, warm ivory",
+    finish: "Travertino · warm ivory",
     image: bathroom,
   },
   {
-    id: "casa-privata",
-    title: "Casa Privata",
-    location: "Bitola, Macedonia",
+    id: "facade-travertino",
+    title: "Villa facade",
     category: "Facades",
-    finish: "Travertino exterior, sand",
+    finish: "Travertino exterior · sand",
     image: facade,
     span: "tall",
   },

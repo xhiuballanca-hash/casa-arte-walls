@@ -1,19 +1,36 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { posts } from "@/lib/blog-data";
 
+const TITLE = "Journal — Casa D'Arte on Italian Decorative Finishes";
+const DESCRIPTION =
+  "Notes and guides on Italian decorative finishes — Venetian plaster, Marmorino, Travertino, Sahara, Microcement — colour, and the architecture of the interior, from the Casa D'Arte studio.";
+
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Journal — Casa D'Arte on Italian Decorative Finishes" },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "/blog" },
+    ],
+    links: [{ rel: "canonical", href: "/blog" }],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Essays and guides on Italian decorative plasterwork, color theory and contemporary interior design from the Casa D'Arte atelier.",
-      },
-      { property: "og:title", content: "Journal — Casa D'Arte" },
-      {
-        property: "og:description",
-        content: "Essays on Italian craft, color, and interior architecture.",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "Casa D'Arte Journal",
+          description: DESCRIPTION,
+          url: "/blog",
+          blogPost: posts.map((p) => ({
+            "@type": "BlogPosting",
+            headline: p.title,
+            datePublished: p.dateISO,
+            url: `/blog/${p.slug}`,
+          })),
+        }),
       },
     ],
   }),
@@ -24,38 +41,43 @@ function BlogIndex() {
   return (
     <>
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
-        <div className="mx-auto max-w-5xl text-center">
-          <p className="eyebrow text-gold mb-6">The Journal</p>
-          <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.05] mb-8">
-            Essays from the <em className="italic">atelier.</em>
-          </h1>
-          <p className="text-forest/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            Notes on Italian craft, colour, and the architecture of the interior.
-          </p>
+        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-8 items-end">
+          <div className="md:col-span-8">
+            <p className="eyebrow text-gold mb-6">The Journal</p>
+            <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
+              Notes from the <em className="italic">studio.</em>
+            </h1>
+          </div>
+          <div className="md:col-span-4">
+            <p className="text-forest/70 text-lg leading-relaxed">
+              On Italian craft, colour, material and the architecture of the interior.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="pb-32 px-6 md:px-12 bg-beige">
-        <div className="mx-auto max-w-4xl divide-y divide-forest/10">
+        <div className="mx-auto max-w-[1400px] border-t border-forest/15">
           {posts.map((p) => (
             <Link
               key={p.slug}
               to="/blog/$slug"
               params={{ slug: p.slug }}
-              className="group block py-10 md:py-14"
+              className="group grid md:grid-cols-12 gap-x-8 gap-y-4 py-10 md:py-14 border-b border-forest/15"
             >
-              <div className="flex items-center gap-3 mb-4">
+              <div className="md:col-span-3 flex md:flex-col gap-3 md:gap-2">
                 <span className="eyebrow text-gold">{p.category}</span>
-                <span className="h-px w-6 bg-forest/20" />
-                <span className="eyebrow text-forest/50">{p.date} · {p.readTime}</span>
+                <span className="eyebrow text-forest/50">
+                  {p.date} · {p.readTime}
+                </span>
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl text-forest leading-tight mb-4 group-hover:text-gold transition-colors">
-                {p.title}
-              </h2>
-              <p className="text-forest/65 leading-relaxed">{p.excerpt}</p>
-              <span className="mt-6 inline-block eyebrow border-b border-forest/40 group-hover:text-gold group-hover:border-gold pb-0.5 transition-colors">
-                Read essay →
-              </span>
+              <div className="md:col-span-8">
+                <h2 className="font-serif text-3xl md:text-5xl text-forest leading-[1.1] mb-4 group-hover:text-gold transition-colors text-balance">
+                  {p.title}
+                </h2>
+                <p className="text-forest/65 text-lg leading-relaxed max-w-2xl">{p.excerpt}</p>
+                <span className="mt-6 inline-block link-line text-forest text-sm">Read</span>
+              </div>
             </Link>
           ))}
         </div>

@@ -3,6 +3,7 @@ import {
   Outlet,
   createRootRouteWithContext,
   useRouter,
+  useLocation,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -15,6 +16,7 @@ import { SiteNav } from "../lib/site-nav";
 import { SiteFooter } from "../lib/site-footer";
 import { WhatsAppButton } from "../lib/whatsapp-button";
 import { CookieConsent } from "../lib/cookie-consent";
+import { AuthProvider } from "../hooks/useAuth";
 
 function NotFoundComponent() {
   return (
@@ -73,19 +75,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Casa D'Arte — Premium Italian Decorative Wall Finishes" },
+      { title: "Casa D'Arte | Italian Decorative Finishes & Application" },
       {
         name: "description",
         content:
-          "Casa D'Arte brings premium Italian decorative wall finishes — Travertino, Marmorino, Stucco Veneziano and Sahara — to North Macedonia's most refined homes, hotels and hospitality spaces.",
+          "Italian decorative finishes — Travertino, Marmorino, Venetian plaster, Sahara, Microcement — supplied and professionally applied by Casa D'Arte in North Macedonia.",
       },
       { name: "author", content: "Casa D'Arte" },
-      { property: "og:title", content: "Casa D'Arte — Premium Italian Decorative Wall Finishes" },
-      {
-        property: "og:description",
-        content:
-          "Premium Italian decorative finishes for homes, hotels, restaurants, offices and luxury spaces across North Macedonia.",
-      },
+      { property: "og:site_name", content: "Casa D'Arte" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -120,31 +117,52 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+/** Routes that render their own chrome (no public nav/footer/WhatsApp). */
+function isWorkspacePath(pathname: string) {
+  return (
+    pathname === "/auth" ||
+    pathname.startsWith("/auth/") ||
+    pathname === "/admin" ||
+    pathname.startsWith("/admin/") ||
+    pathname.startsWith("/print/")
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const { pathname } = useLocation();
+  const workspace = isWorkspacePath(pathname);
   return (
     <QueryClientProvider client={queryClient}>
-      <SiteNav />
-      <main className="min-h-screen">
-        <Outlet />
-      </main>
-      <SiteFooter />
-      <WhatsAppButton />
-      <CookieConsent />
-      <Toaster
-        position="bottom-center"
-        toastOptions={{
-          style: {
-            background: "#1F3A2E",
-            color: "#F1EDE4",
-            border: "1px solid rgba(197,160,89,0.35)",
-            borderRadius: "999px",
-            padding: "12px 20px",
-            fontFamily: "Inter, sans-serif",
-            fontSize: "13px",
-          },
-        }}
-      />
+      <AuthProvider>
+        {workspace ? (
+          <Outlet />
+        ) : (
+          <>
+            <SiteNav />
+            <main className="min-h-screen">
+              <Outlet />
+            </main>
+            <SiteFooter />
+            <WhatsAppButton />
+            <CookieConsent />
+          </>
+        )}
+        <Toaster
+          position="bottom-center"
+          toastOptions={{
+            style: {
+              background: "var(--color-forest)",
+              color: "var(--color-beige)",
+              border: "1px solid color-mix(in oklab, var(--color-gold) 35%, transparent)",
+              borderRadius: "2px",
+              padding: "14px 20px",
+              fontFamily: "Inter, sans-serif",
+              fontSize: "13px",
+            },
+          }}
+        />
+      </AuthProvider>
     </QueryClientProvider>
   );
 }

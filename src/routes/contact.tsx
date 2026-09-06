@@ -1,55 +1,107 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ConsultationForm } from "@/lib/consultation-form";
 import { Phone, Mail, MessageCircle, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import { SITE, whatsappLink } from "@/lib/site-config";
+
+const INTENTS = ["project", "sample", "quote", "partner"] as const;
+export type ContactIntent = (typeof INTENTS)[number];
+
+const intentCopy: Record<
+  ContactIntent,
+  { eyebrow: string; heading: string; project: string; message: string; submit: string }
+> = {
+  project: {
+    eyebrow: "Discuss your project",
+    heading: "Tell us about the project.",
+    project: "",
+    message: "",
+    submit: "Send inquiry",
+  },
+  sample: {
+    eyebrow: "Request a sample",
+    heading: "Which finishes would you like to see?",
+    project: "Sample request",
+    message: "I would like to receive samples of: ",
+    submit: "Request samples",
+  },
+  quote: {
+    eyebrow: "Request a quote",
+    heading: "Let us price the work.",
+    project: "Quotation request",
+    message: "Surface area (approx.), location, condition of the walls, preferred finish: ",
+    submit: "Request a quote",
+  },
+  partner: {
+    eyebrow: "Partnership",
+    heading: "Introduce your studio or company.",
+    project: "Partnership inquiry",
+    message: "",
+    submit: "Start the conversation",
+  },
+};
 
 export const Route = createFileRoute("/contact")({
+  validateSearch: (search: Record<string, unknown>): { intent?: ContactIntent } => {
+    const raw = search.intent;
+    return typeof raw === "string" && (INTENTS as readonly string[]).includes(raw)
+      ? { intent: raw as ContactIntent }
+      : {};
+  },
   head: () => ({
     meta: [
-      { title: "Contact Casa D'Arte — Skopje, North Macedonia" },
+      { title: "Contact Casa D'Arte — Discuss a Project, Request a Sample or Quote" },
       {
         name: "description",
         content:
-          "Get in touch with Casa D'Arte. Book a free consultation, request a sample box or ask about custom Italian decorative finishes.",
+          "Discuss your project with Casa D'Arte in Skopje. Request samples, a quotation or a consultation for Italian decorative finishes, supplied and professionally applied.",
       },
       { property: "og:title", content: "Contact Casa D'Arte" },
-      { property: "og:description", content: "Book a free consultation or request a sample box." },
+      {
+        property: "og:description",
+        content: "Discuss a project, request samples or a quotation for Italian decorative finishes.",
+      },
+      { property: "og:url", content: "/contact" },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: ContactPage,
 });
 
 function ContactPage() {
+  const { intent } = Route.useSearch();
+  const copy = intentCopy[intent ?? "project"];
+
   return (
     <>
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
-        <div className="mx-auto max-w-5xl text-center">
+        <div className="mx-auto max-w-[1400px]">
           <p className="eyebrow text-gold mb-6">Contact</p>
-          <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.05] mb-8">
-            Let's begin a <em className="italic">conversation.</em>
+          <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.05] mb-8 max-w-4xl text-balance">
+            Let's begin with a <em className="italic">conversation.</em>
           </h1>
-          <p className="text-forest/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            Reach the atelier by form, phone or WhatsApp. We respond to every inquiry within one
-            business day.
+          <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
+            Reach the studio by form, phone or WhatsApp. Whether you are specifying a finish,
+            planning a development or renovating a home, we will guide you from sample to
+            finished surface.
           </p>
         </div>
       </section>
 
-      <section className="pb-24 px-6 md:px-12 bg-beige">
-        <div className="mx-auto max-w-[1400px] grid md:grid-cols-5 gap-12 md:gap-16">
-          <div className="md:col-span-2 space-y-10">
+      <section className="pb-24 md:pb-32 px-6 md:px-12 bg-beige">
+        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-12 md:gap-16">
+          <div className="md:col-span-4 space-y-10">
             <div>
-              <p className="eyebrow text-gold mb-4">Atelier</p>
+              <p className="eyebrow text-gold mb-4">Studio</p>
               <a
-                href="https://maps.google.com/?q=Partizanski+Odredi+Skopje"
+                href="https://maps.google.com/?q=Skopje+North+Macedonia"
                 target="_blank"
                 rel="noreferrer"
                 className="flex gap-4 items-start text-forest hover:text-gold transition-colors"
               >
                 <MapPin className="h-5 w-5 mt-1 shrink-0" />
                 <span className="leading-relaxed">
-                  Casa D'Arte Skopje<br />
-                  bul. Partizanski Odredi<br />
-                  1000 Skopje, North Macedonia
+                  Casa D'Arte<br />
+                  Skopje, North Macedonia
                 </span>
               </a>
             </div>
@@ -57,16 +109,16 @@ function ContactPage() {
             <div>
               <p className="eyebrow text-gold mb-4">Direct</p>
               <div className="space-y-3">
-                <a href="tel:+38970000000" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
+                <a href={SITE.phoneHref} className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Phone className="h-4 w-4" />
-                  +389 70 000 000
+                  {SITE.phoneDisplay}
                 </a>
-                <a href="mailto:atelier@casadarte.mk" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
+                <a href={`mailto:${SITE.email}`} className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Mail className="h-4 w-4" />
-                  atelier@casadarte.mk
+                  {SITE.email}
                 </a>
                 <a
-                  href="https://wa.me/38970000000"
+                  href={whatsappLink()}
                   target="_blank"
                   rel="noreferrer"
                   className="flex gap-4 items-center text-forest hover:text-gold transition-colors"
@@ -79,36 +131,41 @@ function ContactPage() {
 
             <div>
               <p className="eyebrow text-gold mb-4">Social</p>
-              <div className="flex gap-3">
-                {[Instagram, Facebook, Linkedin].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    aria-label="Social"
-                    className="size-11 rounded-full border border-forest/25 grid place-items-center hover:border-gold hover:text-gold transition-colors"
-                  >
-                    <Icon className="h-4 w-4" />
-                  </a>
-                ))}
+              <div className="flex gap-6 text-forest/70">
+                <a href={SITE.social.instagram} aria-label="Instagram" className="hover:text-gold transition-colors">
+                  <Instagram className="h-4 w-4" />
+                </a>
+                <a href={SITE.social.facebook} aria-label="Facebook" className="hover:text-gold transition-colors">
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <a href={SITE.social.linkedin} aria-label="LinkedIn" className="hover:text-gold transition-colors">
+                  <Linkedin className="h-4 w-4" />
+                </a>
               </div>
             </div>
 
-            <div className="rounded-sm overflow-hidden border border-forest/10">
+            <div className="overflow-hidden border border-forest/10">
               <iframe
                 title="Casa D'Arte on the map"
-                src="https://www.google.com/maps?q=Skopje+Partizanski+Odredi&output=embed"
-                className="w-full h-64"
+                src="https://www.google.com/maps?q=Skopje+North+Macedonia&output=embed"
+                className="w-full h-64 grayscale-[35%]"
                 loading="lazy"
               />
             </div>
           </div>
 
-          <div className="md:col-span-3 bg-forest text-beige rounded-sm p-8 md:p-12">
-            <p className="eyebrow text-gold mb-4">Send an inquiry</p>
-            <h2 className="font-serif text-3xl md:text-4xl mb-8">
-              Tell us about your project.
-            </h2>
-            <ConsultationForm variant="dark" source="contact-page" />
+          <div className="md:col-span-7 md:col-start-6 bg-forest text-beige p-8 md:p-14">
+            <p className="eyebrow text-gold mb-4">{copy.eyebrow}</p>
+            <h2 className="font-serif text-3xl md:text-4xl mb-10">{copy.heading}</h2>
+            <ConsultationForm
+              key={intent ?? "project"}
+              variant="dark"
+              source={`contact-${intent ?? "project"}`}
+              defaultProject={copy.project}
+              defaultMessage={copy.message}
+              defaultClientType={intent === "partner" ? "Architect / Interior designer" : undefined}
+              submitLabel={copy.submit}
+            />
           </div>
         </div>
       </section>
