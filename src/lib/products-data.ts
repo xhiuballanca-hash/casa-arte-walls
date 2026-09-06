@@ -2,14 +2,24 @@ import travertino from "@/assets/product-travertino.jpg";
 import marmorino from "@/assets/product-marmorino.jpg";
 import veneziano from "@/assets/product-veneziano.jpg";
 import sahara from "@/assets/product-sahara.jpg";
+import microcementTemp from "@/assets/portfolio-bathroom.jpg";
 
 export type Product = {
   slug: string;
   index: string;
   name: string;
+  /** Optional alternate name shown alongside the primary name (e.g. "Venetian Plaster"). */
+  alias?: string;
   tagline: string;
+  /** One-line summary used in lists and navigation. */
+  summary: string;
   description: string;
   image: string;
+  /**
+   * Set when the image is a neutral placeholder rather than dedicated
+   * photography of this finish. Shown as a caption so nothing is misleading.
+   */
+  imageNote?: string;
   features: string[];
   benefits: string[];
   interior: string[];
@@ -22,20 +32,21 @@ export const products: Product[] = [
     index: "01",
     name: "Travertino",
     tagline: "Architectural & Raw",
+    summary: "The porous, stone-like depth of Roman travertine — for interiors and facades.",
     description:
-      "Inspired by the volcanic stone of Roman monuments, Travertino captures the honest, porous depth of natural travertine. A tactile finish that carries the weight of Italian architectural heritage into contemporary spaces.",
+      "Inspired by the stone of Roman monuments, Travertino captures the honest, porous depth of natural travertine. A tactile lime-based finish that carries the weight of Italian architectural heritage into contemporary spaces — indoors and on facades.",
     image: travertino,
     features: [
       "Natural stone appearance with authentic porosity",
       "Multi-layer lime-based application",
-      "Available in matte and semi-polished finishes",
-      "Compatible with interior and exterior surfaces",
+      "Matte or semi-polished surface, to specification",
+      "Suitable for interior and exterior surfaces",
     ],
     benefits: [
-      "Highly breathable, regulates humidity",
+      "Breathable mineral surface",
       "Ages gracefully with a natural patina",
-      "Excellent durability, resistant to abrasion",
-      "Made with mineral pigments — colour stability",
+      "Robust, tactile finish for high-visibility walls",
+      "Mineral pigments for stable colour",
     ],
     interior: ["Living rooms", "Feature walls", "Hotel lobbies", "Restaurant interiors", "Bathrooms"],
     exterior: ["Facades", "Villa exteriors", "Courtyard walls", "Boutique storefronts"],
@@ -45,19 +56,20 @@ export const products: Product[] = [
     index: "02",
     name: "Marmorino",
     tagline: "Classic Sophistication",
+    summary: "A smooth, softly luminous lime finish with quiet depth — the classic Venetian wall.",
     description:
-      "The traditional lime-based Venetian finish, refined for over five centuries. Marmorino produces a smooth, softly luminous surface with subtle depth — the quiet confidence of Palladian villas translated for modern architecture.",
+      "The traditional lime-based Venetian finish. Marmorino produces a smooth, softly luminous surface with subtle depth — the quiet confidence of Palladian villas translated for modern architecture.",
     image: marmorino,
     features: [
       "Slaked-lime base with fine marble powder",
       "Silky satin or polished finish options",
-      "Custom pigmentation from a library of 240+ tones",
-      "Hand-troweled application by master artisans",
+      "Custom pigmentation to project specification",
+      "Hand-troweled application by our own team",
     ],
     benefits: [
-      "Naturally antibacterial and mould-resistant",
-      "Zero VOC — safe for bedrooms and children's spaces",
-      "Timeless finish that never dates",
+      "Lime-based, breathable mineral surface",
+      "Calm, low-sheen depth suited to bedrooms and living spaces",
+      "A timeless finish that does not date",
       "Repairable and refinishable in place",
     ],
     interior: ["Bedrooms", "Dining rooms", "Boutique retail", "Executive offices", "Spas"],
@@ -67,21 +79,23 @@ export const products: Product[] = [
     slug: "stucco-veneziano",
     index: "03",
     name: "Stucco Veneziano",
+    alias: "Venetian Plaster",
     tagline: "Mirror-like Brilliance",
+    summary: "Translucent lime-marble layers polished to a mirror finish with marble-like depth.",
     description:
-      "The most refined expression of Italian plasterwork. Applied in up to eight translucent layers and polished to a mirror finish, Stucco Veneziano reveals a depth reminiscent of veined marble — luxury in its most restrained form.",
+      "The most refined expression of Italian plasterwork. Applied in multiple translucent layers and polished to a mirror finish, Stucco Veneziano — Venetian plaster — reveals a depth reminiscent of veined marble. Luxury in its most restrained form.",
     image: veneziano,
     features: [
-      "Up to 8 translucent lime-marble layers",
-      "Mirror polish with beeswax finish",
+      "Multiple translucent lime-marble layers",
+      "Polished, mirror-like surface with wax protection",
       "Marble-veined depth and translucency",
-      "Bespoke color matching",
+      "Bespoke colour matching",
     ],
     benefits: [
-      "Extraordinary visual depth impossible with paint",
-      "Ultra-smooth, easily cleaned surface",
-      "Reflects light — makes spaces feel larger",
-      "The signature of five-star hospitality",
+      "A visual depth that paint cannot reproduce",
+      "Smooth, easily maintained surface",
+      "Reflects light, lending presence to a room",
+      "Widely specified in luxury hospitality and residential interiors",
     ],
     interior: ["Feature walls", "Hotel suites", "Fine dining", "Private residences", "Retail flagships"],
     exterior: null,
@@ -91,23 +105,50 @@ export const products: Product[] = [
     index: "04",
     name: "Sahara",
     tagline: "Metallic Grain Texture",
+    summary: "Fine mineral grain with metallic pigments — a surface that shifts with the light.",
     description:
-      "A contemporary tactile finish inspired by desert landscapes and precious metals. Sahara combines mineral grain with fine metallic pigments — copper, bronze, champagne, gold — for walls that shift with the light throughout the day.",
+      "A contemporary tactile finish inspired by desert landscapes and precious metals. Sahara combines mineral grain with fine metallic pigments — copper, bronze, champagne, gold — for walls that change character with the light throughout the day.",
     image: sahara,
     features: [
       "Fine mineral aggregate with metallic pigments",
-      "Sand, bronze, copper, gold, or champagne palettes",
-      "Light-reactive shimmer, restrained by day and dramatic by night",
+      "Sand, bronze, copper, gold or champagne palettes",
+      "Light-reactive shimmer — restrained by day, dramatic by night",
       "Suitable for feature walls and full rooms",
     ],
     benefits: [
       "Dramatic visual effect without added ornament",
-      "Hides minor imperfections in existing walls",
-      "Highly durable — commercial-grade wear resistance",
+      "Helps mask minor imperfections in existing walls",
+      "Durable finish suited to commercial interiors",
       "Custom metallic tones for signature spaces",
     ],
-    interior: ["Feature walls", "Hospitality bars", "Boutique retail", "Nightclub interiors", "Powder rooms"],
+    interior: ["Feature walls", "Hospitality bars", "Boutique retail", "Lounges", "Powder rooms"],
     exterior: ["Facade accents", "Sheltered entries"],
+  },
+  {
+    slug: "microcement",
+    index: "05",
+    name: "Microcement",
+    tagline: "Seamless & Contemporary",
+    summary: "Continuous, joint-free cement surfaces for walls, floors and wet areas.",
+    description:
+      "A thin, seamless cement-based coating applied in fine layers over existing substrates — walls, floors, stairs and wet areas. Microcement suits contemporary architecture where uninterrupted planes and a calm, mineral surface are the intent.",
+    image: microcementTemp,
+    imageNote:
+      "Representative architectural image. Dedicated Microcement photography will follow.",
+    features: [
+      "Seamless application at only a few millimetres of thickness",
+      "For walls, floors, stairs and wet areas, with the appropriate sealing system",
+      "Can be applied over many existing substrates, including tiles",
+      "Matte to satin surface in a wide range of tones",
+    ],
+    benefits: [
+      "Continuous surfaces without joints or grout lines",
+      "Renovation-friendly: minimal build-up on existing surfaces",
+      "Durable and easy to maintain when correctly sealed",
+      "A coherent look across floor, wall and built-in elements",
+    ],
+    interior: ["Bathrooms and showers", "Kitchens", "Floors and stairs", "Retail interiors", "Feature walls"],
+    exterior: ["Terraces and sheltered exterior surfaces, subject to system specification"],
   },
 ];
 

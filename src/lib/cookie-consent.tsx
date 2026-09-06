@@ -24,23 +24,24 @@ export function CookieConsent() {
   };
 
   return (
-    <div className="fixed bottom-6 left-6 right-6 md:right-auto md:max-w-md z-40 fade-in">
-      <div className="bg-beige border border-forest/15 rounded-2xl shadow-2xl p-6">
+    <div
+      role="dialog"
+      aria-label="Cookie preferences"
+      className="fixed bottom-6 left-6 right-6 md:right-auto md:max-w-md z-40 fade-in"
+    >
+      <div className="bg-beige border border-forest/15 shadow-lg p-6">
         <p className="eyebrow text-gold mb-2">Cookies</p>
-        <p className="text-sm text-forest/80 leading-relaxed mb-4">
-          We use cookies to refine your experience and understand how visitors engage with our
-          portfolio. Choose what you're comfortable with.
+        <p className="text-sm text-forest/80 leading-relaxed mb-5">
+          We use cookies to understand how visitors use this site and to improve it. Choose what
+          you are comfortable with.
         </p>
         <div className="flex flex-wrap gap-2">
-          <button
-            onClick={() => accept("all")}
-            className="text-[10px] uppercase tracking-[0.22em] bg-forest text-beige rounded-full px-5 py-2.5 hover:bg-gold hover:text-forest transition"
-          >
+          <button onClick={() => accept("all")} className="btn btn-forest !px-5 !py-2.5 text-[10px]">
             Accept all
           </button>
           <button
             onClick={() => accept("essential")}
-            className="text-[10px] uppercase tracking-[0.22em] border border-forest/25 text-forest rounded-full px-5 py-2.5 hover:border-gold hover:text-gold transition"
+            className="btn btn-outline !px-5 !py-2.5 text-[10px]"
           >
             Essential only
           </button>

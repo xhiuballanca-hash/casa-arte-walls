@@ -47,7 +47,7 @@
 }
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0.125rem;
 
   /* Brand — forest green, beige, cream, gold */
   --forest: oklch(0.32 0.04 155);          /* #1F3A2E deep forest green */
@@ -125,6 +125,97 @@
   background: color-mix(in oklch, var(--forest) 15%, transparent);
 }
 
+/* Editorial buttons — squared, hairline, restrained */
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1.125rem 2.25rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  white-space: nowrap;
+  transition:
+    background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+@utility btn-gold {
+  background: var(--gold);
+  color: var(--forest);
+  border-color: var(--gold);
+  &:hover:not(:disabled) {
+    background: var(--beige);
+    border-color: var(--beige);
+  }
+}
+@utility btn-forest {
+  background: var(--forest);
+  color: var(--beige);
+  border-color: var(--forest);
+  &:hover:not(:disabled) {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--forest);
+  }
+}
+@utility btn-outline {
+  background: transparent;
+  color: var(--forest);
+  border-color: color-mix(in oklch, var(--forest) 45%, transparent);
+  &:hover:not(:disabled) {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: var(--beige);
+  }
+}
+@utility btn-outline-light {
+  background: transparent;
+  color: var(--beige);
+  border-color: color-mix(in oklch, var(--beige) 50%, transparent);
+  &:hover:not(:disabled) {
+    background: var(--beige);
+    border-color: var(--beige);
+    color: var(--forest);
+  }
+}
+@utility btn-outline-gold {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
+  &:hover:not(:disabled) {
+    background: var(--gold);
+    color: var(--forest);
+  }
+}
+
+/* Understated text link with hairline underline */
+@utility link-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid currentColor;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  &:hover {
+    color: var(--gold);
+  }
+}
+
 @keyframes reveal-up {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
@@ -139,4 +230,10 @@
 }
 @utility fade-in {
   animation: fade-in 0.8s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .fade-in {
+    animation: none;
+  }
 }

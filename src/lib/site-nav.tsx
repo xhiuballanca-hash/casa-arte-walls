@@ -1,20 +1,24 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { to: "/products", label: "Collections" },
-  { to: "/portfolio", label: "Portfolio" },
+  { to: "/products", label: "Finishes" },
+  { to: "/portfolio", label: "Projects" },
   { to: "/architects", label: "Architects" },
   { to: "/services", label: "Services" },
-  { to: "/about", label: "About" },
+  { to: "/about", label: "Studio" },
   { to: "/blog", label: "Journal" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
+/** Routes whose first screen is dark, so the transparent nav needs light text. */
+const DARK_HERO_ROUTES = new Set(["/", "/architects"]);
+
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -23,27 +27,36 @@ export function SiteNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const onDark = DARK_HERO_ROUTES.has(pathname) && !scrolled && !open;
+  const ink = onDark ? "text-beige" : "text-forest";
+  const inkSoft = onDark ? "text-beige/80" : "text-forest/75";
+  const border = onDark ? "border-beige/40" : "border-forest/35";
+
   return (
     <nav
       className={`fixed top-0 z-50 w-full transition-all duration-500 ${
-        scrolled
-          ? "bg-beige/85 backdrop-blur-xl border-b border-forest/10 py-4"
+        scrolled || open
+          ? "bg-beige/95 backdrop-blur-sm border-b border-forest/10 py-4"
           : "bg-transparent py-6"
       }`}
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12">
         <Link
           to="/"
-          className="font-serif text-xl md:text-2xl tracking-tight font-bold text-forest"
+          className={`font-serif text-xl md:text-2xl tracking-tight font-semibold transition-colors ${ink}`}
         >
           CASA D'ARTE
         </Link>
-        <div className="hidden lg:flex items-center gap-9">
+        <div className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="text-[11px] uppercase tracking-[0.22em] font-medium text-forest/80 hover:text-gold transition-colors"
+              className={`text-[11px] uppercase tracking-[0.22em] font-medium transition-colors hover:text-gold ${inkSoft}`}
               activeProps={{ className: "text-gold" }}
             >
               {l.label}
@@ -53,14 +66,16 @@ export function SiteNav() {
         <div className="flex items-center gap-3">
           <Link
             to="/contact"
-            className="hidden md:inline-flex text-[11px] uppercase tracking-[0.2em] font-medium border border-forest/25 text-forest rounded-full px-5 py-2.5 hover:bg-forest hover:text-beige transition-all duration-300"
+            search={{ intent: "project" }}
+            className={`hidden md:inline-flex text-[11px] uppercase tracking-[0.2em] font-medium border ${border} ${ink} px-5 py-2.5 transition-all duration-300 hover:bg-gold hover:border-gold hover:text-forest`}
           >
-            Free Consultation
+            Discuss Your Project
           </Link>
           <button
-            aria-label="Menu"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
-            className="lg:hidden text-forest p-2"
+            className={`lg:hidden p-2 transition-colors ${ink}`}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -68,24 +83,36 @@ export function SiteNav() {
       </div>
 
       {open && (
-        <div className="lg:hidden bg-beige border-t border-forest/10 mt-4 px-6 py-6 fade-in">
-          <div className="flex flex-col gap-4">
+        <div className="lg:hidden bg-beige border-t border-forest/10 mt-4 px-6 pt-6 pb-8 fade-in">
+          <div className="flex flex-col divide-y divide-forest/10">
             {links.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="text-sm uppercase tracking-[0.2em] text-forest/85"
+                className="py-4 text-sm uppercase tracking-[0.2em] text-forest/85 hover:text-gold"
+                activeProps={{ className: "text-gold" }}
               >
                 {l.label}
               </Link>
             ))}
+          </div>
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link
               to="/contact"
+              search={{ intent: "project" }}
               onClick={() => setOpen(false)}
-              className="mt-2 text-center text-[11px] uppercase tracking-[0.2em] bg-forest text-beige rounded-full py-3"
+              className="btn btn-forest w-full"
             >
-              Free Consultation
+              Discuss Your Project
+            </Link>
+            <Link
+              to="/contact"
+              search={{ intent: "sample" }}
+              onClick={() => setOpen(false)}
+              className="btn btn-outline w-full"
+            >
+              Request a Sample
             </Link>
           </div>
         </div>

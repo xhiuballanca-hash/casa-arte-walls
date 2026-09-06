@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1788698492629,
+      "tag": "0000_add_inquiry_client_type_company",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788699643232,
+      "tag": "0001_admin_roles_crm_quotations",
+      "breakpoints": true
+    }
+  ]
+}
