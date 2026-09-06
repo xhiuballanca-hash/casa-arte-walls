@@ -24,6 +24,7 @@ import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as AuthenticatedAdminRouteRouteImport } from './routes/_authenticated/admin/route'
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin/index'
+import { Route as AuthenticatedAdminAnalyticsRouteImport } from './routes/_authenticated/admin/analytics'
 import { Route as AuthenticatedAdminQuotationsIndexRouteImport } from './routes/_authenticated/admin/quotations/index'
 import { Route as AuthenticatedAdminLeadsIndexRouteImport } from './routes/_authenticated/admin/leads/index'
 import { Route as AuthenticatedPrintQuotationsIdRouteImport } from './routes/_authenticated/print/quotations.$id'
@@ -105,6 +106,12 @@ const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AuthenticatedAdminRouteRoute,
 } as any)
+const AuthenticatedAdminAnalyticsRoute =
+  AuthenticatedAdminAnalyticsRouteImport.update({
+    id: '/analytics',
+    path: '/analytics',
+    getParentRoute: () => AuthenticatedAdminRouteRoute,
+  } as any)
 const AuthenticatedAdminQuotationsIndexRoute =
   AuthenticatedAdminQuotationsIndexRouteImport.update({
     id: '/quotations/',
@@ -156,6 +163,7 @@ export interface FileRoutesByFullPath {
   '/admin': typeof AuthenticatedAdminRouteRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
+  '/admin/analytics': typeof AuthenticatedAdminAnalyticsRoute
   '/admin/': typeof AuthenticatedAdminIndexRoute
   '/admin/leads/$id': typeof AuthenticatedAdminLeadsIdRoute
   '/admin/quotations/$id': typeof AuthenticatedAdminQuotationsIdRoute
@@ -177,6 +185,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
+  '/admin/analytics': typeof AuthenticatedAdminAnalyticsRoute
   '/admin': typeof AuthenticatedAdminIndexRoute
   '/admin/leads/$id': typeof AuthenticatedAdminLeadsIdRoute
   '/admin/quotations/$id': typeof AuthenticatedAdminQuotationsIdRoute
@@ -201,6 +210,7 @@ export interface FileRoutesById {
   '/_authenticated/admin': typeof AuthenticatedAdminRouteRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
+  '/_authenticated/admin/analytics': typeof AuthenticatedAdminAnalyticsRoute
   '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
   '/_authenticated/admin/leads/$id': typeof AuthenticatedAdminLeadsIdRoute
   '/_authenticated/admin/quotations/$id': typeof AuthenticatedAdminQuotationsIdRoute
@@ -225,6 +235,7 @@ export interface FileRouteTypes {
     | '/admin'
     | '/blog/$slug'
     | '/products/$slug'
+    | '/admin/analytics'
     | '/admin/'
     | '/admin/leads/$id'
     | '/admin/quotations/$id'
@@ -246,6 +257,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/products/$slug'
+    | '/admin/analytics'
     | '/admin'
     | '/admin/leads/$id'
     | '/admin/quotations/$id'
@@ -269,6 +281,7 @@ export interface FileRouteTypes {
     | '/_authenticated/admin'
     | '/blog/$slug'
     | '/products/$slug'
+    | '/_authenticated/admin/analytics'
     | '/_authenticated/admin/'
     | '/_authenticated/admin/leads/$id'
     | '/_authenticated/admin/quotations/$id'
@@ -399,6 +412,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminIndexRouteImport
       parentRoute: typeof AuthenticatedAdminRouteRoute
     }
+    '/_authenticated/admin/analytics': {
+      id: '/_authenticated/admin/analytics'
+      path: '/analytics'
+      fullPath: '/admin/analytics'
+      preLoaderRoute: typeof AuthenticatedAdminAnalyticsRouteImport
+      parentRoute: typeof AuthenticatedAdminRouteRoute
+    }
     '/_authenticated/admin/quotations/': {
       id: '/_authenticated/admin/quotations/'
       path: '/quotations'
@@ -445,6 +465,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface AuthenticatedAdminRouteRouteChildren {
+  AuthenticatedAdminAnalyticsRoute: typeof AuthenticatedAdminAnalyticsRoute
   AuthenticatedAdminIndexRoute: typeof AuthenticatedAdminIndexRoute
   AuthenticatedAdminLeadsIdRoute: typeof AuthenticatedAdminLeadsIdRoute
   AuthenticatedAdminQuotationsIdRoute: typeof AuthenticatedAdminQuotationsIdRoute
@@ -455,6 +476,7 @@ interface AuthenticatedAdminRouteRouteChildren {
 
 const AuthenticatedAdminRouteRouteChildren: AuthenticatedAdminRouteRouteChildren =
   {
+    AuthenticatedAdminAnalyticsRoute: AuthenticatedAdminAnalyticsRoute,
     AuthenticatedAdminIndexRoute: AuthenticatedAdminIndexRoute,
     AuthenticatedAdminLeadsIdRoute: AuthenticatedAdminLeadsIdRoute,
     AuthenticatedAdminQuotationsIdRoute: AuthenticatedAdminQuotationsIdRoute,
