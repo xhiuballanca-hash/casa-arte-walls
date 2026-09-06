@@ -2,7 +2,9 @@ import { queryOptions } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import type { Database } from "@/integrations/supabase/types";
 import {
+  LEAD_STATUS_LABEL,
   computeQuoteTotals,
+  leadStatus,
   type Inquiry,
   type LeadNote,
   type LeadPriority,
@@ -75,7 +77,9 @@ export async function setLeadStatus(
   await updateLead(id, { status });
   await addLeadNote(id, {
     kind: "status",
-    body: previous ? `Status changed from ${previous} to ${status}.` : `Status set to ${status}.`,
+    body: previous
+      ? `Status changed from ${LEAD_STATUS_LABEL[leadStatus(previous)]} to ${LEAD_STATUS_LABEL[status]}.`
+      : `Status set to ${LEAD_STATUS_LABEL[status]}.`,
     author,
   });
 }

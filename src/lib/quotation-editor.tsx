@@ -34,7 +34,9 @@ import {
   leadStatus,
   lineTotal,
   newQuoteItem,
+  parseQuoteItems,
   quoteStatus,
+  sourceLabel,
   type Inquiry,
   type QuoteItem,
   type QuoteStatus,
@@ -97,19 +99,7 @@ export function draftFromQuotation(q: Quotation): QuotationDraft {
 }
 
 function parseItems(raw: Quotation["items"]): QuoteItem[] {
-  if (!Array.isArray(raw)) return [newQuoteItem()];
-  const items = raw
-    .filter((x): x is Record<string, unknown> => !!x && typeof x === "object" && !Array.isArray(x))
-    .map((x) =>
-      newQuoteItem({
-        id: typeof x.id === "string" ? x.id : undefined,
-        description: typeof x.description === "string" ? x.description : "",
-        finish: typeof x.finish === "string" ? x.finish : "",
-        unit: typeof x.unit === "string" ? x.unit : "m²",
-        quantity: Number(x.quantity) || 0,
-        unit_price: Number(x.unit_price) || 0,
-      }),
-    );
+  const items = parseQuoteItems(raw);
   return items.length ? items : [newQuoteItem()];
 }
 
@@ -575,7 +565,7 @@ export function QuotationEditor(props: Props) {
 
           {lead && (
             <Panel eyebrow="Linked lead" title={lead.name}>
-              <p className="text-sm text-forest/70">{lead.company || lead.client_type || sourceLabelSafe(lead.source)}</p>
+              <p className="text-sm text-forest/70">{lead.company || lead.client_type || sourceLabel(lead.source)}</p>
               <p className="text-xs text-forest/50 mt-1 break-all">{lead.email}</p>
               <Link to="/admin/leads/$id" params={{ id: lead.id }} className="link-line text-xs text-forest/70 mt-4 inline-block">
                 Open lead
@@ -612,8 +602,4 @@ function Row({ label, value }: { label: string; value: string }) {
       <dd className="tabular-nums text-forest">{value}</dd>
     </div>
   );
-}
-
-function sourceLabelSafe(source: string | null | undefined) {
-  return source ? source.replace(/[-_]/g, " ") : "Website";
 }
