@@ -26,6 +26,7 @@ import { Route as AuthenticatedAdminRouteRouteImport } from './routes/_authentic
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin/index'
 import { Route as AuthenticatedAdminQuotationsIndexRouteImport } from './routes/_authenticated/admin/quotations/index'
 import { Route as AuthenticatedAdminLeadsIndexRouteImport } from './routes/_authenticated/admin/leads/index'
+import { Route as AuthenticatedPrintQuotationsIdRouteImport } from './routes/_authenticated/print/quotations.$id'
 import { Route as AuthenticatedAdminQuotationsNewRouteImport } from './routes/_authenticated/admin/quotations/new'
 import { Route as AuthenticatedAdminQuotationsIdRouteImport } from './routes/_authenticated/admin/quotations/$id'
 import { Route as AuthenticatedAdminLeadsIdRouteImport } from './routes/_authenticated/admin/leads/$id'
@@ -116,6 +117,12 @@ const AuthenticatedAdminLeadsIndexRoute =
     path: '/leads/',
     getParentRoute: () => AuthenticatedAdminRouteRoute,
   } as any)
+const AuthenticatedPrintQuotationsIdRoute =
+  AuthenticatedPrintQuotationsIdRouteImport.update({
+    id: '/print/quotations/$id',
+    path: '/print/quotations/$id',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedAdminQuotationsNewRoute =
   AuthenticatedAdminQuotationsNewRouteImport.update({
     id: '/quotations/new',
@@ -153,6 +160,7 @@ export interface FileRoutesByFullPath {
   '/admin/leads/$id': typeof AuthenticatedAdminLeadsIdRoute
   '/admin/quotations/$id': typeof AuthenticatedAdminQuotationsIdRoute
   '/admin/quotations/new': typeof AuthenticatedAdminQuotationsNewRoute
+  '/print/quotations/$id': typeof AuthenticatedPrintQuotationsIdRoute
   '/admin/leads/': typeof AuthenticatedAdminLeadsIndexRoute
   '/admin/quotations/': typeof AuthenticatedAdminQuotationsIndexRoute
 }
@@ -173,6 +181,7 @@ export interface FileRoutesByTo {
   '/admin/leads/$id': typeof AuthenticatedAdminLeadsIdRoute
   '/admin/quotations/$id': typeof AuthenticatedAdminQuotationsIdRoute
   '/admin/quotations/new': typeof AuthenticatedAdminQuotationsNewRoute
+  '/print/quotations/$id': typeof AuthenticatedPrintQuotationsIdRoute
   '/admin/leads': typeof AuthenticatedAdminLeadsIndexRoute
   '/admin/quotations': typeof AuthenticatedAdminQuotationsIndexRoute
 }
@@ -196,6 +205,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/leads/$id': typeof AuthenticatedAdminLeadsIdRoute
   '/_authenticated/admin/quotations/$id': typeof AuthenticatedAdminQuotationsIdRoute
   '/_authenticated/admin/quotations/new': typeof AuthenticatedAdminQuotationsNewRoute
+  '/_authenticated/print/quotations/$id': typeof AuthenticatedPrintQuotationsIdRoute
   '/_authenticated/admin/leads/': typeof AuthenticatedAdminLeadsIndexRoute
   '/_authenticated/admin/quotations/': typeof AuthenticatedAdminQuotationsIndexRoute
 }
@@ -219,6 +229,7 @@ export interface FileRouteTypes {
     | '/admin/leads/$id'
     | '/admin/quotations/$id'
     | '/admin/quotations/new'
+    | '/print/quotations/$id'
     | '/admin/leads/'
     | '/admin/quotations/'
   fileRoutesByTo: FileRoutesByTo
@@ -239,6 +250,7 @@ export interface FileRouteTypes {
     | '/admin/leads/$id'
     | '/admin/quotations/$id'
     | '/admin/quotations/new'
+    | '/print/quotations/$id'
     | '/admin/leads'
     | '/admin/quotations'
   id:
@@ -261,6 +273,7 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/leads/$id'
     | '/_authenticated/admin/quotations/$id'
     | '/_authenticated/admin/quotations/new'
+    | '/_authenticated/print/quotations/$id'
     | '/_authenticated/admin/leads/'
     | '/_authenticated/admin/quotations/'
   fileRoutesById: FileRoutesById
@@ -400,6 +413,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminLeadsIndexRouteImport
       parentRoute: typeof AuthenticatedAdminRouteRoute
     }
+    '/_authenticated/print/quotations/$id': {
+      id: '/_authenticated/print/quotations/$id'
+      path: '/print/quotations/$id'
+      fullPath: '/print/quotations/$id'
+      preLoaderRoute: typeof AuthenticatedPrintQuotationsIdRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/admin/quotations/new': {
       id: '/_authenticated/admin/quotations/new'
       path: '/quotations/new'
@@ -451,10 +471,12 @@ const AuthenticatedAdminRouteRouteWithChildren =
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAdminRouteRoute: typeof AuthenticatedAdminRouteRouteWithChildren
+  AuthenticatedPrintQuotationsIdRoute: typeof AuthenticatedPrintQuotationsIdRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAdminRouteRoute: AuthenticatedAdminRouteRouteWithChildren,
+  AuthenticatedPrintQuotationsIdRoute: AuthenticatedPrintQuotationsIdRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =
