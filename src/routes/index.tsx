@@ -139,46 +139,39 @@ function HomePage() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="relative h-[100svh] min-h-[680px] w-full overflow-hidden bg-forest">
-        <img
-          src={heroImg}
-          alt="Hand-applied Italian decorative plaster in deep forest green"
-          width={1920}
-          height={1200}
-          fetchPriority="high"
-          className="absolute inset-0 h-full w-full object-cover opacity-75"
+      {/* HERO — editorial photograph; the finish is the protagonist. */}
+      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-cream">
+        <picture>
+          <source media="(max-width: 767px)" srcSet={heroPortrait} width={848} height={1264} />
+          <img
+            src={heroImg}
+            alt="Interior wall finished in warm hand-troweled decorative plaster, lit by soft daylight"
+            width={1920}
+            height={1280}
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover object-[62%_center] md:object-center"
+          />
+        </picture>
+        {/* Soft legibility veil — light, never a colour block. */}
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-cream/30 md:bg-cream/15"
         />
-        <div className="absolute inset-0 bg-forest/45" />
-        <div className="relative z-10 flex h-full flex-col justify-end px-6 md:px-12 pb-24 md:pb-28 pt-32">
+        <div className="relative z-10 flex h-full flex-col justify-center px-6 md:px-12">
           <div className="mx-auto w-full max-w-[1600px]">
-            <p className="eyebrow text-gold mb-8 fade-in">Italian Decorative Finishes · Est. 2012</p>
-            <h1 className="font-serif text-beige text-[clamp(3rem,8vw,8rem)] leading-[0.98] tracking-[-0.02em] max-w-5xl mb-10 reveal">
-              Turn Every Wall <br />
-              <em className="italic font-normal">Into Art.</em>
-            </h1>
-            <div className="grid md:grid-cols-12 gap-10 md:gap-8 items-end reveal">
-              <p className="md:col-span-6 lg:col-span-5 text-beige/85 text-base md:text-lg font-light leading-relaxed text-balance">
-                Premium Italian decorative finishes — supplied and professionally applied by our
-                own team. For architects, designers, developers and discerning private clients
-                across North Macedonia.
+            <div className="max-w-[28rem] sm:max-w-xl lg:max-w-2xl pt-20 md:pt-0">
+              <h1 className="font-serif text-forest text-[clamp(2.75rem,7.2vw,6.75rem)] leading-[1.02] tracking-[-0.02em] mb-7 md:mb-9 reveal">
+                Turn Every Wall <br className="hidden sm:block" />
+                <em className="italic font-normal">Into Art.</em>
+              </h1>
+              <p className="text-forest/80 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 md:mb-12 max-w-md reveal">
+                Premium decorative finishes, professionally applied by our team.
               </p>
-              <div className="md:col-span-6 lg:col-span-7 flex flex-col sm:flex-row md:justify-end gap-3">
-                <Link to="/contact" search={{ intent: "project" }} className="btn btn-gold">
-                  Discuss Your Project
-                </Link>
-                <Link to="/portfolio" className="btn btn-outline-light">
-                  View Our Projects
-                </Link>
-              </div>
+              <Link to="/products" className="btn btn-forest reveal">
+                Explore Our Finishes
+              </Link>
             </div>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-beige/15">
-          <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-5 flex flex-wrap gap-x-10 gap-y-2 text-[10px] uppercase tracking-[0.28em] text-beige/60">
-            <span>Premium Italian materials</span>
-            <span className="hidden sm:inline">Applied by our own team</span>
-            <span className="hidden md:inline">Sample · Quotation · Execution</span>
           </div>
         </div>
       </section>
