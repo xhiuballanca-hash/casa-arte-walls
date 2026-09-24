@@ -12,6 +12,8 @@ export const Route = createFileRoute("/products")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: "Finishes — Casa D'Arte" },
       { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/products" },
     ],
     links: [{ rel: "canonical", href: "/products" }],
