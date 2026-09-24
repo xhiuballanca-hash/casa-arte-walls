@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { products } from "@/lib/products-data";
 
-const TITLE = "Finishes — Travertino, Marmorino, Venetian Plaster, Sahara, Microcement";
+const TITLE = "Finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement, Beton Look";
 const DESCRIPTION =
-  "Five Italian decorative finishes — Travertino, Marmorino, Stucco Veneziano (Venetian plaster), Sahara and Microcement — supplied and professionally applied by Casa D'Arte in North Macedonia.";
+  "Six premium decorative finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — supplied and professionally applied by Casa D'Arte.";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -43,7 +43,7 @@ function ProductsIndex() {
           <div className="md:col-span-8">
             <p className="eyebrow text-gold mb-6">The Finishes</p>
             <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
-              Five finishes. <em className="italic">One standard of execution.</em>
+              Six finishes. <em className="italic">One standard of execution.</em>
             </h1>
             <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
               Each finish is an Italian decorative system we supply and apply with our own team —
@@ -80,14 +80,20 @@ function ProductsIndex() {
               }`}
             >
               <div className="md:col-span-6">
-                <img
-                  src={p.image}
-                  alt={`${p.name} decorative wall finish`}
-                  width={1000}
-                  height={1250}
-                  loading={i === 0 ? "eager" : "lazy"}
-                  className="w-full aspect-[4/5] object-cover"
-                />
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={`${p.name} decorative wall finish`}
+                    width={1000}
+                    height={1250}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    className="w-full aspect-[4/5] object-cover"
+                  />
+                ) : (
+                  <div className="flex aspect-[4/5] items-end bg-beige p-6 text-sm text-forest/50">
+                    Approved material photography to follow.
+                  </div>
+                )}
                 {p.imageNote ? (
                   <p className="mt-3 text-xs text-forest/50 italic">{p.imageNote}</p>
                 ) : null}

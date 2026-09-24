@@ -14,7 +14,7 @@ export type Product = {
   /** One-line summary used in lists and navigation. */
   summary: string;
   description: string;
-  image: string;
+  image?: string;
   /**
    * Set when the image is a neutral placeholder rather than dedicated
    * photography of this finish. Shown as a caption so nothing is misleading.
@@ -79,7 +79,6 @@ export const products: Product[] = [
     slug: "stucco-veneziano",
     index: "03",
     name: "Stucco Veneziano",
-    alias: "Venetian Plaster",
     tagline: "Mirror-like Brilliance",
     summary: "Translucent lime-marble layers polished to a mirror finish with marble-like depth.",
     description:
@@ -149,6 +148,30 @@ export const products: Product[] = [
     ],
     interior: ["Bathrooms and showers", "Kitchens", "Floors and stairs", "Retail interiors", "Feature walls"],
     exterior: ["Terraces and sheltered exterior surfaces, subject to system specification"],
+  },
+  {
+    slug: "beton-look",
+    index: "06",
+    name: "Beton Look",
+    tagline: "Architectural Concrete Character",
+    summary: "A decorative finish with the calm, mineral appearance of exposed concrete.",
+    description:
+      "Beton Look brings the visual character of concrete to interior surfaces. Its restrained tone and subtle movement suit contemporary spaces where the wall is intended to feel architectural and understated.",
+    imageNote: "Approved Beton Look material photography will be added when supplied.",
+    features: [
+      "Concrete-inspired decorative appearance",
+      "Subtle variation created through application",
+      "Matte architectural character",
+      "Tone and texture selected for the project",
+    ],
+    benefits: [
+      "Creates a restrained contemporary surface",
+      "Works as a feature or continuous wall finish",
+      "Pairs naturally with timber, metal and stone",
+      "Applied as part of the complete Casa D'Arte service",
+    ],
+    interior: ["Living spaces", "Offices", "Retail interiors", "Hospitality spaces", "Feature walls"],
+    exterior: null,
   },
 ];
 

@@ -11,7 +11,7 @@ import { SITE, whatsappLink } from "@/lib/site-config";
 
 const TITLE = "Casa D'Arte | Italian Decorative Finishes & Application";
 const DESCRIPTION =
-  "Italian decorative finishes — Travertino, Marmorino, Venetian plaster, Sahara, Microcement — supplied and professionally applied by Casa D'Arte in North Macedonia.";
+  "Premium decorative finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — professionally applied by Casa D'Arte in North Macedonia.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,9 +43,9 @@ export const Route = createFileRoute("/")({
             "Travertino",
             "Marmorino",
             "Stucco Veneziano",
-            "Venetian plaster",
             "Sahara decorative finish",
             "Microcement",
+            "Beton Look",
           ],
         }),
       },
@@ -73,7 +73,7 @@ const processSteps = [
   {
     n: "04",
     t: "Professional Application",
-    d: "Our own trained team prepares the substrate and applies the finish layer by layer.",
+    d: "Our own team prepares the substrate and applies the finish layer by layer.",
   },
   {
     n: "05",
@@ -108,11 +108,11 @@ const assurances = [
 const faqs = [
   {
     q: "Do you only supply materials, or also apply them?",
-    a: "Both. Casa D'Arte supplies premium Italian decorative finishes and applies them with its own trained team. Most projects combine the two, so one party is responsible for the finished surface.",
+    a: "Both. Casa D'Arte supplies premium decorative finishes and applies them with its own team. Most projects combine the two, so one party is responsible for the finished surface.",
   },
   {
     q: "Which finishes do you offer?",
-    a: "Travertino, Marmorino, Stucco Veneziano (Venetian plaster), Sahara and Microcement — each available in a range of tones, and pigmented to project specification.",
+    a: "Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look. Samples help establish the right tone and texture for each project.",
   },
   {
     q: "Can we see samples before deciding?",
@@ -151,18 +151,18 @@ function HomePage() {
             height={1280}
             fetchPriority="high"
             decoding="async"
-            className="absolute inset-0 h-full w-full object-cover object-[62%_center] md:object-center"
+            className="absolute inset-0 h-full w-full object-cover object-[68%_center] md:object-center"
           />
         </picture>
         {/* Soft legibility veil — light, never a colour block. */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-cream/30 md:bg-cream/15"
+          className="absolute inset-0 bg-cream/25 md:bg-cream/10"
         />
         <div className="relative z-10 flex h-full flex-col justify-center px-6 md:px-12">
           <div className="mx-auto w-full max-w-[1600px]">
             <div className="max-w-[28rem] sm:max-w-xl lg:max-w-2xl pt-20 md:pt-0">
-              <h1 className="font-serif text-forest text-[clamp(2.75rem,7.2vw,6.75rem)] leading-[1.02] tracking-[-0.02em] mb-7 md:mb-9 reveal">
+              <h1 className="font-serif text-forest text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[1.02] mb-7 md:mb-9 reveal">
                 Turn Every Wall <br className="hidden sm:block" />
                 <em className="italic font-normal">Into Art.</em>
               </h1>
@@ -189,8 +189,8 @@ function HomePage() {
               <em className="italic">finished surfaces.</em>
             </h2>
             <p className="text-forest/70 text-lg md:text-xl leading-relaxed max-w-3xl mb-14">
-              Casa D'Arte supplies premium Italian decorative finishes and applies them with its
-              own trained team. From the first sample through quotation and planning to the final
+              Casa D'Arte supplies premium decorative finishes and applies them with its
+              own team. From the first sample through quotation and planning to the final
               polish, one studio carries the responsibility — so the surface on the wall is the
               surface that was specified.
             </p>
@@ -246,7 +246,7 @@ function HomePage() {
             <div className="max-w-2xl">
               <p className="eyebrow text-gold mb-5">The Finishes</p>
               <h2 className="font-serif text-4xl md:text-6xl text-forest leading-[1.08] text-balance">
-                Five finishes. One standard of execution.
+                Six finishes. One standard of execution.
               </h2>
             </div>
             <Link to="/products" className="link-line text-forest self-start md:self-end">
@@ -308,14 +308,20 @@ function HomePage() {
                     <p className="eyebrow text-forest/45 mt-2">{p.tagline}</p>
                     <p className="text-forest/70 leading-relaxed mt-3 max-w-xl">{p.summary}</p>
                     <div className="lg:hidden mt-5 overflow-hidden aspect-[16/9] bg-beige">
-                      <img
-                        src={p.image}
-                        alt={`${p.name} decorative finish`}
-                        width={1000}
-                        height={563}
-                        loading="lazy"
-                        className="h-full w-full object-cover"
-                      />
+                      {p.image ? (
+                        <img
+                          src={p.image}
+                          alt={`${p.name} decorative finish`}
+                          width={1000}
+                          height={563}
+                          loading="lazy"
+                          className="h-full w-full object-cover"
+                        />
+                      ) : (
+                        <div className="flex h-full items-end p-5 text-sm text-forest/50">
+                          Approved material photography to follow.
+                        </div>
+                      )}
                     </div>
                     {p.imageNote ? (
                       <p className="lg:hidden mt-2 text-xs text-forest/50 italic">{p.imageNote}</p>
@@ -472,7 +478,7 @@ function HomePage() {
                   ["Finish and material specification support", "Guidance on which finish suits the space, substrate and use — with documentation for tender."],
                   ["Technical consultation", "Substrate assessment, preparation requirements and detailing, in the studio or on site."],
                   ["Quotation", "Material and application quoted together, so cost and programme can be planned."],
-                  ["Professional execution", "Application by our own trained team, coordinated with your site schedule."],
+                  ["Professional execution", "Application by our own team, coordinated with your site schedule."],
                   ["Flexible partnership", "From single feature walls to multi-unit developments and rollouts, on terms that suit the collaboration."],
                 ].map(([t, d]) => (
                   <li key={t} className="grid sm:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-x-8 gap-y-1 py-5 border-b border-beige/15">
