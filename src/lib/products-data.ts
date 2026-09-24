@@ -8,7 +8,7 @@ export type Product = {
   slug: string;
   index: string;
   name: string;
-  /** Optional alternate name shown alongside the primary name (e.g. "Venetian Plaster"). */
+  /** Optional secondary name, used only when an approved naming convention requires it. */
   alias?: string;
   tagline: string;
   /** One-line summary used in lists and navigation. */
@@ -82,7 +82,7 @@ const productCatalog: Product[] = [
     tagline: "Mirror-like Brilliance",
     summary: "Translucent lime-marble layers polished to a mirror finish with marble-like depth.",
     description:
-      "The most refined expression of Italian plasterwork. Applied in multiple translucent layers and polished to a mirror finish, Stucco Veneziano — Venetian plaster — reveals a depth reminiscent of veined marble. Luxury in its most restrained form.",
+      "The most refined expression of Italian plasterwork. Applied in multiple translucent layers and polished to a mirror finish, Stucco Veneziano reveals a depth reminiscent of veined marble. Luxury in its most restrained form.",
     image: veneziano,
     features: [
       "Multiple translucent lime-marble layers",

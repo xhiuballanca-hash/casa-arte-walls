@@ -73,9 +73,8 @@ function PortfolioPage() {
               Surfaces in place.
             </h1>
             <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
-              Residences, restaurants, hotels and workplaces where the finish was selected,
-              sampled, quoted and applied by Casa D'Arte. Each surface shown was executed by our
-              own team.
+              A selection of Casa D'Arte surfaces in residential, hospitality, workplace and retail
+              interiors. Each project is presented only by its space and finish.
             </p>
           </div>
           <div className="md:col-span-4 md:text-right">
