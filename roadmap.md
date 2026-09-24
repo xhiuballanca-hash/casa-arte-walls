@@ -2,6 +2,7 @@
 
 ## Done
 - Public site redesign (editorial, squared, photography-led), "Finishes" naming, Microcement added
+- Casa D'Arte showcase update: six finishes, five verified project labels, refined photographic hero
 - Factual cleanup: no fabricated testimonials / project counts / claims
 - Intent-driven contact prefill (`/contact?intent=project|sample|quote|partner`)
 - Per-route SEO head() + JSON-LD, sitemap, robots

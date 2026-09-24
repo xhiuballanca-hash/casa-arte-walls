@@ -12,6 +12,8 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -44,13 +46,13 @@ const services = [
   {
     n: "01",
     t: "Decorative wall finishes",
-    d: "Travertino, Marmorino, Stucco Veneziano (Venetian plaster), Sahara and Microcement — Italian systems supplied and pigmented to the project. Each finish is chosen for the space, the substrate and the way the surface will be used.",
+    d: "Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — decorative finishes supplied for the project. Each finish is chosen for the space, the substrate and the intended visual character.",
     link: { label: "The finishes", to: "/products" as const },
   },
   {
     n: "02",
     t: "Professional application",
-    d: "The finish is applied by our own trained team: substrate assessment and preparation, priming, layering, polishing and sealing. We coordinate with your architect, contractor and other trades so the surface is delivered as specified.",
+    d: "The finish is applied by our own team: substrate assessment and preparation, priming, layering, polishing and sealing. We coordinate with your architect, contractor and other trades so the surface is delivered as specified.",
   },
   {
     n: "03",

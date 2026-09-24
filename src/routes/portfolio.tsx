@@ -14,6 +14,8 @@ export const Route = createFileRoute("/portfolio")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/portfolio" },
     ],
     links: [{ rel: "canonical", href: "/portfolio" }],
@@ -73,9 +75,8 @@ function PortfolioPage() {
               Surfaces in place.
             </h1>
             <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
-              Residences, restaurants, hotels and workplaces where the finish was selected,
-              sampled, quoted and applied by Casa D'Arte. Each surface shown was executed by our
-              own team.
+              A selection of Casa D'Arte surfaces in residential, hospitality, workplace and retail
+              interiors. Each project is presented only by its space and finish.
             </p>
           </div>
           <div className="md:col-span-4 md:text-right">
@@ -115,22 +116,25 @@ function PortfolioPage() {
                 className="group mb-4 md:mb-6 block w-full break-inside-avoid overflow-hidden bg-cream text-left"
               >
                 <div className="relative overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={`${p.title} — ${p.finish}`}
-                    loading="lazy"
-                    className="w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-                  />
+                  {p.image ? (
+                    <img
+                      src={p.image}
+                      alt={`${p.title} — ${p.finish}`}
+                      loading="lazy"
+                      className="w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                    />
+                  ) : (
+                    <div className="flex aspect-[4/5] items-end bg-cream p-5 text-sm text-forest/50">
+                      Approved project photography to follow.
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-500" />
                   <div className="absolute inset-x-0 bottom-0 p-5 text-beige translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-500">
-                    <p className="eyebrow text-gold mb-1">{p.category}</p>
-                    <p className="font-serif text-xl leading-tight">{p.title}</p>
-                    <p className="text-xs text-beige/70 mt-1">{p.finish}</p>
+                    <p className="font-serif text-xl leading-tight">{p.title} — {p.finish}</p>
                   </div>
                 </div>
-                <div className="flex flex-col gap-1 pt-3 pb-1">
-                  <p className="font-serif text-forest text-lg leading-tight">{p.title}</p>
-                  <p className="eyebrow text-forest/45">{p.finish}</p>
+                <div className="pt-3 pb-1">
+                  <p className="font-serif text-forest text-lg leading-tight">{p.title} — {p.finish}</p>
                 </div>
               </button>
             ))}
@@ -195,17 +199,21 @@ function PortfolioPage() {
             </>
           )}
           <div className="max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={active.image}
-              alt={`${active.title} — ${active.finish}`}
-              className="w-full max-h-[78vh] object-contain"
-            />
+            {active.image ? (
+              <img
+                src={active.image}
+                alt={`${active.title} — ${active.finish}`}
+                className="w-full max-h-[78vh] object-contain"
+              />
+            ) : (
+              <div className="flex h-[50vh] items-end bg-beige p-8 text-forest/60">
+                Approved project photography to follow.
+              </div>
+            )}
             <div className="mt-6 text-beige flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 border-t border-beige/15 pt-5">
               <div>
-                <p className="eyebrow text-gold mb-1">{active.category}</p>
-                <p className="font-serif text-2xl">{active.title}</p>
+                <p className="font-serif text-2xl">{active.title} — {active.finish}</p>
               </div>
-              <p className="text-sm text-beige/70">{active.finish}</p>
             </div>
           </div>
         </div>

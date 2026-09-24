@@ -25,6 +25,7 @@ export const Route = createFileRoute("/products/$slug")({
         { property: "og:title", content: title },
         { property: "og:description", content: description.slice(0, 158) },
         { property: "og:type", content: "product" },
+        { name: "twitter:card", content: "summary_large_image" },
         { property: "og:url", content: `/products/${params.slug}` },
       ],
       links: [{ rel: "canonical", href: `/products/${params.slug}` }],
@@ -99,14 +100,20 @@ function ProductDetail() {
       {/* IMAGE */}
       <section className="py-12 md:py-16 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px]">
-          <img
-            src={product.image}
-            alt={`${product.name} decorative finish surface`}
-            width={1600}
-            height={1000}
-            fetchPriority="high"
-            className="w-full aspect-[16/10] object-cover"
-          />
+          {product.image ? (
+            <img
+              src={product.image}
+              alt={`${product.name} decorative finish surface`}
+              width={1600}
+              height={1000}
+              fetchPriority="high"
+              className="w-full aspect-[16/10] object-cover"
+            />
+          ) : (
+            <div className="flex aspect-[16/10] items-end bg-cream p-8 text-sm text-forest/50">
+              Approved material photography to follow.
+            </div>
+          )}
           {product.imageNote ? (
             <p className="mt-3 text-xs text-forest/50 italic">{product.imageNote}</p>
           ) : null}
@@ -242,12 +249,18 @@ function ProductDetail() {
             {others.map((p) => (
               <Link key={p.slug} to="/products/$slug" params={{ slug: p.slug }} className="group block">
                 <div className="aspect-[4/5] overflow-hidden bg-beige mb-4">
-                  <img
-                    src={p.image}
-                    alt={`${p.name} decorative finish`}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.04]"
-                  />
+                  {p.image ? (
+                    <img
+                      src={p.image}
+                      alt={`${p.name} decorative finish`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.04]"
+                    />
+                  ) : (
+                    <div className="flex h-full items-end p-4 text-xs text-forest/50">
+                      Photography to follow.
+                    </div>
+                  )}
                 </div>
                 <p className="font-serif text-xl text-forest group-hover:text-gold transition-colors">
                   {p.name}

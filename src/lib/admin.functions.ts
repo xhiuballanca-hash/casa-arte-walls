@@ -1,4 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
+import type { User } from "@supabase/supabase-js";
 import { z } from "zod";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
@@ -89,7 +90,7 @@ export type TeamMember = {
 
 async function listAllUsers() {
   const admin = await adminClient();
-  const users: Awaited<ReturnType<typeof admin.auth.admin.listUsers>>["data"]["users"] = [];
+  const users: User[] = [];
   let page = 1;
   // Team sizes are tiny; cap paging defensively.
   while (page <= 10) {

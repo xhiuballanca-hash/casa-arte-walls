@@ -13,7 +13,7 @@ const links = [
 ] as const;
 
 /** Routes whose first screen is dark, so the transparent nav needs light text. */
-const DARK_HERO_ROUTES = new Set(["/", "/architects"]);
+const DARK_HERO_ROUTES = new Set(["/architects"]);
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);

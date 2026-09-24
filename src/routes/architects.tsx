@@ -65,7 +65,7 @@ const support = [
   {
     n: "06",
     t: "Professional execution",
-    d: "The finish is applied by our own trained team, coordinated with your programme and other trades, and handed over as specified.",
+    d: "The finish is applied by our own team, coordinated with your programme and other trades, and handed over as specified.",
   },
   {
     n: "07",

@@ -62,7 +62,7 @@ function AdminShell() {
       </div>
       <nav className="flex-1 px-3 py-5 space-y-0.5">
         {nav.map((item) => {
-          const active = item.exact
+          const active = "exact" in item && item.exact
             ? location.pathname === item.to
             : location.pathname.startsWith(item.to);
           const Icon = item.icon;

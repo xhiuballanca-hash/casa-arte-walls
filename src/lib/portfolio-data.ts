@@ -1,27 +1,22 @@
 import living from "@/assets/portfolio-living.jpg";
-import hotel from "@/assets/portfolio-hotel.jpg";
-import restaurant from "@/assets/portfolio-restaurant.jpg";
 import office from "@/assets/portfolio-office.jpg";
 import bedroom from "@/assets/portfolio-bedroom.jpg";
-import bathroom from "@/assets/portfolio-bathroom.jpg";
 import facade from "@/assets/portfolio-facade.jpg";
 
 export type Category =
   | "Living Rooms"
   | "Bedrooms"
-  | "Restaurants"
   | "Hotels"
   | "Offices"
-  | "Bathrooms"
+  | "Stores"
   | "Facades";
 
 export const categories: Category[] = [
   "Living Rooms",
   "Bedrooms",
-  "Restaurants",
   "Hotels",
   "Offices",
-  "Bathrooms",
+  "Stores",
   "Facades",
 ];
 
@@ -32,61 +27,45 @@ export type Project = {
   category: Category;
   /** Finish and tone applied. */
   finish: string;
-  image: string;
+  image?: string;
   span?: "wide" | "tall";
 };
 
 export const projects: Project[] = [
   {
-    id: "living-marmorino",
-    title: "Living room, private residence",
-    category: "Living Rooms",
-    finish: "Marmorino · custom warm beige",
-    image: living,
+    id: "bedroom-travertino",
+    title: "Bedroom",
+    category: "Bedrooms",
+    finish: "Travertino",
+    image: bedroom,
     span: "wide",
   },
   {
-    id: "hotel-veneziano",
-    title: "Hotel lobby",
-    category: "Hotels",
-    finish: "Stucco Veneziano · forest green",
-    image: hotel,
-  },
-  {
-    id: "restaurant-veneziano",
-    title: "Restaurant interior",
-    category: "Restaurants",
-    finish: "Stucco Veneziano · midnight green",
-    image: restaurant,
+    id: "hotel-facade-travertino",
+    title: "Hotel Facade",
+    category: "Facades",
+    finish: "Travertino",
+    image: facade,
     span: "tall",
   },
   {
-    id: "office-sahara",
-    title: "Office reception",
+    id: "living-room-marmorino",
+    title: "Living Room",
+    category: "Living Rooms",
+    finish: "Marmorino",
+    image: living,
+  },
+  {
+    id: "office-beton-look",
+    title: "Office",
     category: "Offices",
-    finish: "Sahara · bronze grain",
+    finish: "Beton Look",
     image: office,
   },
   {
-    id: "bedroom-marmorino",
-    title: "Master bedroom",
-    category: "Bedrooms",
-    finish: "Marmorino · alabaster",
-    image: bedroom,
-  },
-  {
-    id: "bathroom-travertino",
-    title: "Bathroom and spa",
-    category: "Bathrooms",
-    finish: "Travertino · warm ivory",
-    image: bathroom,
-  },
-  {
-    id: "facade-travertino",
-    title: "Villa facade",
-    category: "Facades",
-    finish: "Travertino exterior · sand",
-    image: facade,
-    span: "tall",
+    id: "store-beton-look",
+    title: "Store",
+    category: "Stores",
+    finish: "Beton Look",
   },
 ];

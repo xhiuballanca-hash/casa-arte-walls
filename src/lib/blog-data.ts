@@ -12,7 +12,7 @@ export type Post = {
 export const posts: Post[] = [
   {
     slug: "art-of-venetian-plaster",
-    title: "The Art of Venetian Plaster",
+    title: "The Art of Stucco Veneziano",
     excerpt:
       "How a centuries-old Italian technique became the signature of contemporary luxury interiors — and why the hand that applies it matters as much as the material.",
     date: "March 2026",
@@ -36,7 +36,7 @@ export const posts: Post[] = [
     readTime: "8 min read",
     category: "Guide",
     body: [
-      "The five finishes we work with each have a distinct architectural character. Understanding which fits a given space — and how the space will be used — is the first decision in any project, and the one that a physical sample settles best.",
+      "The six finishes we work with each have a distinct architectural character. Understanding which fits a given space — and how the space will be used — is the first decision in any project, and the one that a physical sample settles best.",
       "Marmorino is quiet. It works where you want depth without drama: bedrooms, dining rooms, offices for people who value restraint. A soft, luminous surface with subtle movement.",
       "Stucco Veneziano is theatrical. It belongs in spaces where light matters — suites with tall windows, restaurants where candlelight does the work at night. Polished to a mirror sheen, it reads as veined marble.",
       "Travertino is tectonic. Its porosity gives weight. It suits villas, facades and any wall that should feel rooted in the ground rather than applied to it.",
