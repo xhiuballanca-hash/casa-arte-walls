@@ -144,18 +144,15 @@ function HomePage() {
     <>
       {/* HERO — editorial photograph; the finish is the protagonist. */}
       <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-cream">
-        <picture>
-          <source media="(max-width: 767px)" srcSet={heroPortrait} width={848} height={1264} />
-          <img
-            src={heroImg}
-            alt="Interior wall finished in warm hand-troweled decorative plaster, lit by soft daylight"
-            width={1920}
-            height={1280}
-            fetchPriority="high"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover object-[68%_center] md:object-center"
-          />
-        </picture>
+        <img
+          src={heroCover}
+          alt="Luxury living room with a warm textured decorative plaster wall in soft daylight"
+          width={1536}
+          height={655}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover object-[30%_center]"
+        />
         {/* Soft legibility veil — light, never a colour block. */}
         <div
           aria-hidden
