@@ -115,12 +115,18 @@ function PortfolioPage() {
                 className="group mb-4 md:mb-6 block w-full break-inside-avoid overflow-hidden bg-cream text-left"
               >
                 <div className="relative overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={`${p.title} — ${p.finish}`}
-                    loading="lazy"
-                    className="w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-                  />
+                  {p.image ? (
+                    <img
+                      src={p.image}
+                      alt={`${p.title} — ${p.finish}`}
+                      loading="lazy"
+                      className="w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                    />
+                  ) : (
+                    <div className="flex aspect-[4/5] items-end bg-cream p-5 text-sm text-forest/50">
+                      Approved project photography to follow.
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-500" />
                   <div className="absolute inset-x-0 bottom-0 p-5 text-beige translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-500">
                     <p className="eyebrow text-gold mb-1">{p.category}</p>
@@ -195,11 +201,17 @@ function PortfolioPage() {
             </>
           )}
           <div className="max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={active.image}
-              alt={`${active.title} — ${active.finish}`}
-              className="w-full max-h-[78vh] object-contain"
-            />
+            {active.image ? (
+              <img
+                src={active.image}
+                alt={`${active.title} — ${active.finish}`}
+                className="w-full max-h-[78vh] object-contain"
+              />
+            ) : (
+              <div className="flex h-[50vh] items-end bg-beige p-8 text-forest/60">
+                Approved project photography to follow.
+              </div>
+            )}
             <div className="mt-6 text-beige flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 border-t border-beige/15 pt-5">
               <div>
                 <p className="eyebrow text-gold mb-1">{active.category}</p>

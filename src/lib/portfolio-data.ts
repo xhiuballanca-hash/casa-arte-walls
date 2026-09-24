@@ -1,9 +1,7 @@
 import living from "@/assets/portfolio-living.jpg";
-import hotel from "@/assets/portfolio-hotel.jpg";
 import restaurant from "@/assets/portfolio-restaurant.jpg";
 import office from "@/assets/portfolio-office.jpg";
 import bedroom from "@/assets/portfolio-bedroom.jpg";
-import bathroom from "@/assets/portfolio-bathroom.jpg";
 import facade from "@/assets/portfolio-facade.jpg";
 
 export type Category =
@@ -30,7 +28,7 @@ export type Project = {
   category: Category;
   /** Finish and tone applied. */
   finish: string;
-  image: string;
+  image?: string;
   span?: "wide" | "tall";
 };
 
@@ -70,6 +68,5 @@ export const projects: Project[] = [
     title: "Store",
     category: "Stores",
     finish: "Beton Look",
-    image: restaurant,
   },
 ];

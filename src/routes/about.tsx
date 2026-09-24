@@ -109,7 +109,7 @@ function AboutPage() {
                 We work with Italian decorative finishes — Travertino, Marmorino, Stucco
                 Veneziano, Sahara and Microcement — and we do two things with them. We supply the
                 material, pigmented and specified for the project. And we apply it, with our own
-                trained team, from surface preparation through layering, polishing and sealing.
+                own team, from surface preparation through layering, polishing and sealing.
               </p>
               <p>
                 Most of our work is with architects, interior designers, developers and

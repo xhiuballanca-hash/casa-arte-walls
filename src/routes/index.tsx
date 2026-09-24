@@ -258,19 +258,30 @@ function HomePage() {
             {/* Active image (desktop) */}
             <div className="hidden lg:block lg:col-span-5 lg:sticky lg:top-32">
               <div className="relative aspect-[4/5] overflow-hidden bg-beige">
-                {products.map((p, i) => (
-                  <img
-                    key={p.slug}
-                    src={p.image}
-                    alt={`${p.name} decorative finish`}
-                    width={1000}
-                    height={1250}
-                    loading={i === 0 ? "eager" : "lazy"}
-                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out ${
-                      i === activeFinish ? "opacity-100" : "opacity-0"
-                    }`}
-                  />
-                ))}
+                {products.map((p, i) =>
+                  p.image ? (
+                    <img
+                      key={p.slug}
+                      src={p.image}
+                      alt={`${p.name} decorative finish`}
+                      width={1000}
+                      height={1250}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out ${
+                        i === activeFinish ? "opacity-100" : "opacity-0"
+                      }`}
+                    />
+                  ) : (
+                    <div
+                      key={p.slug}
+                      className={`absolute inset-0 flex items-end bg-beige p-6 text-sm text-forest/50 transition-opacity duration-700 ${
+                        i === activeFinish ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      Approved material photography to follow.
+                    </div>
+                  ),
+                )}
               </div>
               <div className="mt-5 flex items-baseline justify-between gap-6">
                 <p className="font-serif text-2xl text-forest">
@@ -420,21 +431,25 @@ function HomePage() {
                 key={p.id}
                 to="/portfolio"
                 className={`group relative overflow-hidden bg-forest/10 ${
-                  p.span === "feature"
-                    ? "col-span-2 row-span-2"
-                    : p.span === "tall"
+                  p.span === "tall"
                     ? "row-span-2"
                     : p.span === "wide"
                     ? "col-span-2"
                     : ""
                 } ${i === 0 ? "col-span-2" : ""}`}
               >
-                <img
-                  src={p.image}
-                  alt={`${p.title} — ${p.finish}`}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-                />
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={`${p.title} — ${p.finish}`}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                  />
+                ) : (
+                  <div className="flex h-full items-end bg-beige p-5 text-sm text-forest/50">
+                    Approved project photography to follow.
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-forest/65 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-500" />
                 <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 text-beige translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-500">
                   <p className="eyebrow text-gold mb-1">{p.category}</p>

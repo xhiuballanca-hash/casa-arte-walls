@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Italian decorative finishes — Travertino, Marmorino, Venetian plaster, Sahara, Microcement — supplied and professionally applied by Casa D'Arte in North Macedonia.",
+          "Premium decorative finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — professionally applied by Casa D'Arte.",
       },
       { name: "author", content: "Casa D'Arte" },
       { property: "og:site_name", content: "Casa D'Arte" },

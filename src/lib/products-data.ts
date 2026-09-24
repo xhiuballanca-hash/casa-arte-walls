@@ -26,7 +26,7 @@ export type Product = {
   exterior: string[] | null;
 };
 
-export const products: Product[] = [
+const productCatalog: Product[] = [
   {
     slug: "travertino",
     index: "01",
@@ -77,7 +77,7 @@ export const products: Product[] = [
   },
   {
     slug: "stucco-veneziano",
-    index: "03",
+    index: "04",
     name: "Stucco Veneziano",
     tagline: "Mirror-like Brilliance",
     summary: "Translucent lime-marble layers polished to a mirror finish with marble-like depth.",
@@ -101,7 +101,7 @@ export const products: Product[] = [
   },
   {
     slug: "sahara",
-    index: "04",
+    index: "03",
     name: "Sahara",
     tagline: "Metallic Grain Texture",
     summary: "Fine mineral grain with metallic pigments — a surface that shifts with the light.",
@@ -174,6 +174,19 @@ export const products: Product[] = [
     exterior: null,
   },
 ];
+
+const finishOrder = [
+  "travertino",
+  "marmorino",
+  "sahara",
+  "stucco-veneziano",
+  "microcement",
+  "beton-look",
+];
+
+export const products = [...productCatalog].sort(
+  (a, b) => finishOrder.indexOf(a.slug) - finishOrder.indexOf(b.slug),
+);
 
 export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);

@@ -3,7 +3,7 @@ import { posts } from "@/lib/blog-data";
 
 const TITLE = "Journal — Casa D'Arte on Italian Decorative Finishes";
 const DESCRIPTION =
-  "Notes and guides on Italian decorative finishes — Venetian plaster, Marmorino, Travertino, Sahara, Microcement — colour, and the architecture of the interior, from the Casa D'Arte studio.";
+  "Notes and guides on decorative finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — colour and interior surfaces, from Casa D'Arte.";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
