@@ -128,14 +128,11 @@ function PortfolioPage() {
                   )}
                   <div className="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-500" />
                   <div className="absolute inset-x-0 bottom-0 p-5 text-beige translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-500">
-                    <p className="eyebrow text-gold mb-1">{p.category}</p>
-                    <p className="font-serif text-xl leading-tight">{p.title}</p>
-                    <p className="text-xs text-beige/70 mt-1">{p.finish}</p>
+                    <p className="font-serif text-xl leading-tight">{p.title} — {p.finish}</p>
                   </div>
                 </div>
-                <div className="flex flex-col gap-1 pt-3 pb-1">
-                  <p className="font-serif text-forest text-lg leading-tight">{p.title}</p>
-                  <p className="eyebrow text-forest/45">{p.finish}</p>
+                <div className="pt-3 pb-1">
+                  <p className="font-serif text-forest text-lg leading-tight">{p.title} — {p.finish}</p>
                 </div>
               </button>
             ))}
@@ -213,10 +210,8 @@ function PortfolioPage() {
             )}
             <div className="mt-6 text-beige flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 border-t border-beige/15 pt-5">
               <div>
-                <p className="eyebrow text-gold mb-1">{active.category}</p>
-                <p className="font-serif text-2xl">{active.title}</p>
+                <p className="font-serif text-2xl">{active.title} — {active.finish}</p>
               </div>
-              <p className="text-sm text-beige/70">{active.finish}</p>
             </div>
           </div>
         </div>

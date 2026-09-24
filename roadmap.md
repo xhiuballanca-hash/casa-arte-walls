@@ -8,10 +8,10 @@
 - Inquiry submission → `inquiries` table (verified end to end)
 
 ## In progress
-- [ ] Casa D'Arte showcase update
+- [x] Casa D'Arte showcase update
   - [x] Six-finish catalog with Beton Look
   - [x] Five verified project labels and approved-image-ready slots
-  - [ ] Homepage hero and visual clarity verification
+  - [x] Homepage hero and visual clarity verification
 - [ ] Admin dashboard + CRM
   - [ ] Auth: email/password sign-in at `/auth`, `user_roles` + `has_role()`, admin-only gate under `/admin`
   - [ ] Leads: list (search, status/source filters), detail with pipeline status, priority, value, next action, notes timeline, CSV export

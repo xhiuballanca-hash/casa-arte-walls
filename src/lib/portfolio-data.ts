@@ -1,5 +1,4 @@
 import living from "@/assets/portfolio-living.jpg";
-import restaurant from "@/assets/portfolio-restaurant.jpg";
 import office from "@/assets/portfolio-office.jpg";
 import bedroom from "@/assets/portfolio-bedroom.jpg";
 import facade from "@/assets/portfolio-facade.jpg";
