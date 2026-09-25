@@ -1,7 +1,14 @@
-import living from "@/assets/portfolio-living.jpg";
-import office from "@/assets/portfolio-office.jpg";
-import bedroom from "@/assets/portfolio-bedroom.jpg";
-import facade from "@/assets/portfolio-facade.jpg";
+import bedroomAsset from "@/assets/project-bedroom-travertino.jpg.asset.json";
+import facadeAsset from "@/assets/project-hotel-facade-travertino.jpg.asset.json";
+import livingAsset from "@/assets/project-living-room-marmorino.jpg.asset.json";
+import officeAsset from "@/assets/project-office-beton-look.jpg.asset.json";
+import storeAsset from "@/assets/project-store-beton-look.jpg.asset.json";
+
+const bedroom = bedroomAsset.url;
+const facade = facadeAsset.url;
+const living = livingAsset.url;
+const office = officeAsset.url;
+const store = storeAsset.url;
 
 export type Category =
   | "Living Rooms"
