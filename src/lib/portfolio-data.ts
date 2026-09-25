@@ -74,5 +74,6 @@ export const projects: Project[] = [
     title: "Store",
     category: "Stores",
     finish: "Beton Look",
+    image: store,
   },
 ];
