@@ -90,7 +90,7 @@ const productCatalog: Product[] = [
     tagline: "Mirror-like Brilliance",
     summary: "Translucent lime-marble layers polished to a mirror finish with marble-like depth.",
     description:
-      "The most refined expression of Italian plasterwork. Applied in multiple translucent layers and polished to a mirror finish, Stucco Veneziano reveals a depth reminiscent of veined marble. Luxury in its most restrained form.",
+      "The most refined expression of Italian plasterwork. Applied in multiple translucent layers and polished to a mirror finish, Stucco Veneziano reveals a depth reminiscent of veined marble. ",
     image: veneziano,
     features: [
       "Multiple translucent lime-marble layers",
@@ -102,7 +102,7 @@ const productCatalog: Product[] = [
       "A visual depth that paint cannot reproduce",
       "Smooth, easily maintained surface",
       "Reflects light, lending presence to a room",
-      "Widely specified in luxury hospitality and residential interiors",
+      "Suited to hospitality and residential interiors",
     ],
     interior: ["Feature walls", "Hotel suites", "Fine dining", "Private residences", "Retail flagships"],
     exterior: null,
