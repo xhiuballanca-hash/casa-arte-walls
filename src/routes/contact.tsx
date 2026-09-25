@@ -141,6 +141,7 @@ function ContactPage() {
                   Casa D'Arte Macedonia
                 </a>
               </div>
+            </div>
 
             <div className="overflow-hidden border border-forest/10">
               <iframe
