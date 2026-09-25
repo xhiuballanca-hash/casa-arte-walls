@@ -1,10 +1,4 @@
-/**
- * Studio details used across the public site, the admin workspace and printed
- * documents. Update these in one place.
- *
- * NOTE: phone and email below are placeholders until the studio supplies its
- * real contact details.
- */
+/** Official studio details used across the site, admin and printed documents. */
 export const SITE = {
   name: "Casa D'Arte",
   tagline: "Italian decorative finishes · supplied & applied",
@@ -13,14 +7,14 @@ export const SITE = {
   addressLine: "Skopje, North Macedonia",
   foundedYear: 2012,
   /** E.164 without "+" — used for wa.me links */
-  whatsappNumber: "38970000000",
-  phoneHref: "tel:+38970000000",
-  phoneDisplay: "+389 70 000 000",
-  email: "atelier@casadarte.mk",
+  whatsappNumber: "38972245116",
+  phoneHref: "tel:+38972245116",
+  phoneDisplay: "+389 72 245 116",
+  email: "info@casadarte.mk",
   social: {
-    instagram: "#",
-    facebook: "#",
-    linkedin: "#",
+    instagram: "https://www.instagram.com/casadarte_macedonia/",
+    instagramHandle: "@casadarte_macedonia",
+    facebook: "https://www.facebook.com/CasaDarteMacedonia/",
   },
 } as const;
 
