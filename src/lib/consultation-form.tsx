@@ -14,6 +14,16 @@ export const CLIENT_TYPES = [
   "Contractor / Other",
 ] as const;
 
+export const SERVICE_OPTIONS = [
+  "Travertino",
+  "Marmorino",
+  "Sahara",
+  "Stucco Veneziano",
+  "Microcement",
+  "Beton Look",
+  "Not sure yet — advice needed",
+];
+
 export type ClientType = (typeof CLIENT_TYPES)[number];
 
 export function ConsultationForm({
@@ -46,11 +56,10 @@ export function ConsultationForm({
       await submit({
         data: {
           name: String(fd.get("name") ?? ""),
-          email: String(fd.get("email") ?? ""),
           phone: String(fd.get("phone") ?? ""),
-          company: String(fd.get("company") ?? ""),
-          client_type: String(fd.get("client_type") ?? ""),
+          city: String(fd.get("city") ?? ""),
           project_type: String(fd.get("project_type") ?? ""),
+          client_type: defaultClientType ?? "",
           message: String(fd.get("message") ?? ""),
           source,
         },
@@ -100,61 +109,40 @@ export function ConsultationForm({
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7">
         <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>Full name</span>
+          <span className={`eyebrow ${labelColor} mb-2 block`}>Name</span>
           <input
             name="name"
-            required
-            autoComplete="name"
-            maxLength={120}
+            required autoComplete="name" maxLength={120}
             className={`w-full py-3 text-sm outline-none transition-colors ${inputBase}`}
           />
         </label>
         <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>Email</span>
-          <input
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            maxLength={255}
-            className={`w-full py-3 text-sm outline-none transition-colors ${inputBase}`}
-          />
-        </label>
-        <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>Phone (optional)</span>
+          <span className={`eyebrow ${labelColor} mb-2 block`}>Phone</span>
           <input
             name="phone"
-            type="tel"
-            autoComplete="tel"
-            maxLength={40}
+            type="tel" required autoComplete="tel" maxLength={40}
             className={`w-full py-3 text-sm outline-none transition-colors ${inputBase}`}
           />
         </label>
         <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>Studio / Company (optional)</span>
+          <span className={`eyebrow ${labelColor} mb-2 block`}>City</span>
           <input
-            name="company"
-            autoComplete="organization"
-            maxLength={120}
+            name="city"
+            autoComplete="address-level2" maxLength={120}
             className={`w-full py-3 text-sm outline-none transition-colors ${inputBase}`}
           />
         </label>
         <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>I am a…</span>
+          <span className={`eyebrow ${labelColor} mb-2 block`}>Finish / Service of interest</span>
           <span className="relative block">
             <select
-              name="client_type"
-              required
-              defaultValue={defaultClientType ?? ""}
+              name="project_type"
+              defaultValue={SERVICE_OPTIONS.includes(defaultProject) ? defaultProject : ""}
               className={`w-full appearance-none py-3 pr-8 text-sm outline-none transition-colors cursor-pointer ${inputBase} [&>option]:text-forest`}
             >
-              <option value="" disabled>
-                Select
-              </option>
-              {CLIENT_TYPES.map((c) => (
-                <option key={c} value={c}>
-                  {c}
-                </option>
+              <option value="">Select</option>
+              {SERVICE_OPTIONS.map((c) => (
+                <option key={c} value={c}>{c}</option>
               ))}
             </select>
             <ChevronDown
@@ -162,25 +150,14 @@ export function ConsultationForm({
             />
           </span>
         </label>
-        <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>Project</span>
-          <input
-            name="project_type"
-            defaultValue={defaultProject}
-            maxLength={120}
-            placeholder="Residence, hotel, restaurant, office…"
-            className={`w-full py-3 text-sm outline-none transition-colors ${inputBase}`}
-          />
-        </label>
       </div>
       <label className="block">
-        <span className={`eyebrow ${labelColor} mb-2 block`}>About the project</span>
+        <span className={`eyebrow ${labelColor} mb-2 block`}>Message</span>
         <textarea
           name="message"
           rows={4}
           maxLength={2000}
           defaultValue={defaultMessage}
-          placeholder="Location, approximate surface area, timeline, finishes you are considering…"
           className={`w-full py-3 text-sm outline-none transition-colors resize-none ${inputBase}`}
         />
       </label>
