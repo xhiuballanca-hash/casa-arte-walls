@@ -120,7 +120,7 @@ function ContactPage() {
                 <a
                   href={whatsappLink()}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex gap-4 items-center text-forest hover:text-gold transition-colors"
                 >
                   <MessageCircle className="h-4 w-4" />

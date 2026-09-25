@@ -626,7 +626,7 @@ function HomePage() {
               come back with the next step — a conversation, samples or a site visit.
             </p>
             <div className="space-y-3 text-sm">
-              <a href={whatsappLink()} target="_blank" rel="noreferrer" className="link-line text-forest">
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="link-line text-forest">
                 WhatsApp the studio
               </a>
               <br />
