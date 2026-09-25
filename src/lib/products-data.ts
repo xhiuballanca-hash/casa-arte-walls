@@ -1,8 +1,16 @@
-import travertino from "@/assets/product-travertino.jpg";
-import marmorino from "@/assets/product-marmorino.jpg";
-import veneziano from "@/assets/product-veneziano.jpg";
-import sahara from "@/assets/product-sahara.jpg";
-import microcementTemp from "@/assets/portfolio-bathroom.jpg";
+import travertinoAsset from "@/assets/material-travertino.jpg.asset.json";
+import marmorinoAsset from "@/assets/material-marmorino.jpg.asset.json";
+import venezianoAsset from "@/assets/material-stucco-veneziano.jpg.asset.json";
+import saharaAsset from "@/assets/material-sahara.jpg.asset.json";
+import microcementAsset from "@/assets/material-microcement.jpg.asset.json";
+import betonLookAsset from "@/assets/material-beton-look.jpg.asset.json";
+
+const travertino = travertinoAsset.url;
+const marmorino = marmorinoAsset.url;
+const veneziano = venezianoAsset.url;
+const sahara = saharaAsset.url;
+const microcement = microcementAsset.url;
+const betonLook = betonLookAsset.url;
 
 export type Product = {
   slug: string;
@@ -131,9 +139,7 @@ const productCatalog: Product[] = [
     summary: "Continuous, joint-free cement surfaces for walls, floors and wet areas.",
     description:
       "A thin, seamless cement-based coating applied in fine layers over existing substrates — walls, floors, stairs and wet areas. Microcement suits contemporary architecture where uninterrupted planes and a calm, mineral surface are the intent.",
-    image: microcementTemp,
-    imageNote:
-      "Representative architectural image. Dedicated Microcement photography will follow.",
+    image: microcement,
     features: [
       "Seamless application at only a few millimetres of thickness",
       "For walls, floors, stairs and wet areas, with the appropriate sealing system",
@@ -157,7 +163,7 @@ const productCatalog: Product[] = [
     summary: "A decorative finish with the calm, mineral appearance of exposed concrete.",
     description:
       "Beton Look brings the visual character of concrete to interior surfaces. Its restrained tone and subtle movement suit contemporary spaces where the wall is intended to feel architectural and understated.",
-    imageNote: "Approved Beton Look material photography will be added when supplied.",
+    image: betonLook,
     features: [
       "Concrete-inspired decorative appearance",
       "Subtle variation created through application",
