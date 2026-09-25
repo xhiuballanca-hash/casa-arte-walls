@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Linkedin } from "lucide-react";
+import { Instagram, Facebook, MessageCircle } from "lucide-react";
 import { products } from "@/lib/products-data";
 import { SITE, whatsappLink } from "@/lib/site-config";
 
@@ -63,14 +63,14 @@ export function SiteFooter() {
               </p>
             </address>
             <div className="mt-6 flex gap-5 text-beige/70">
-              <a href={SITE.social.instagram} aria-label="Instagram" className="hover:text-gold transition-colors">
+              <a href={SITE.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href={SITE.social.facebook} aria-label="Facebook" className="hover:text-gold transition-colors">
+              <a href={SITE.social.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-gold transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href={SITE.social.linkedin} aria-label="LinkedIn" className="hover:text-gold transition-colors">
-                <Linkedin className="h-4 w-4" />
+              <a href={whatsappLink()} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="hover:text-gold transition-colors">
+                <MessageCircle className="h-4 w-4" />
               </a>
             </div>
           </div>

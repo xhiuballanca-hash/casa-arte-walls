@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ConsultationForm } from "@/lib/consultation-form";
-import { Phone, Mail, MessageCircle, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Instagram, Facebook } from "lucide-react";
 import { SITE, whatsappLink } from "@/lib/site-config";
 
 const INTENTS = ["project", "sample", "quote", "partner"] as const;
@@ -131,18 +131,16 @@ function ContactPage() {
 
             <div>
               <p className="eyebrow text-gold mb-4">Social</p>
-              <div className="flex gap-6 text-forest/70">
-                <a href={SITE.social.instagram} aria-label="Instagram" className="hover:text-gold transition-colors">
+              <div className="space-y-3">
+                <a href={SITE.social.instagram} target="_blank" rel="noreferrer" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Instagram className="h-4 w-4" />
+                  {SITE.social.instagramHandle}
                 </a>
-                <a href={SITE.social.facebook} aria-label="Facebook" className="hover:text-gold transition-colors">
+                <a href={SITE.social.facebook} target="_blank" rel="noreferrer" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Facebook className="h-4 w-4" />
-                </a>
-                <a href={SITE.social.linkedin} aria-label="LinkedIn" className="hover:text-gold transition-colors">
-                  <Linkedin className="h-4 w-4" />
+                  Casa D'Arte Macedonia
                 </a>
               </div>
-            </div>
 
             <div className="overflow-hidden border border-forest/10">
               <iframe
