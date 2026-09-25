@@ -120,7 +120,7 @@ function ContactPage() {
                 <a
                   href={whatsappLink()}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex gap-4 items-center text-forest hover:text-gold transition-colors"
                 >
                   <MessageCircle className="h-4 w-4" />
@@ -132,11 +132,11 @@ function ContactPage() {
             <div>
               <p className="eyebrow text-gold mb-4">Social</p>
               <div className="space-y-3">
-                <a href={SITE.social.instagram} target="_blank" rel="noreferrer" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
+                <a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Instagram className="h-4 w-4" />
                   {SITE.social.instagramHandle}
                 </a>
-                <a href={SITE.social.facebook} target="_blank" rel="noreferrer" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
+                <a href={SITE.social.facebook} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Facebook className="h-4 w-4" />
                   Casa D'Arte Macedonia
                 </a>

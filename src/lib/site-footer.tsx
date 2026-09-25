@@ -59,17 +59,17 @@ export function SiteFooter() {
               <p>
                 <a href={SITE.phoneHref} className="hover:text-gold block transition-colors">{SITE.phoneDisplay}</a>
                 <a href={`mailto:${SITE.email}`} className="hover:text-gold block transition-colors">{SITE.email}</a>
-                <a href={whatsappLink()} target="_blank" rel="noreferrer" className="hover:text-gold block transition-colors">WhatsApp</a>
+                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hover:text-gold block transition-colors">WhatsApp</a>
               </p>
             </address>
             <div className="mt-6 flex gap-5 text-beige/70">
-              <a href={SITE.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors">
+              <a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href={SITE.social.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-gold transition-colors">
+              <a href={SITE.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-gold transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href={whatsappLink()} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="hover:text-gold transition-colors">
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-gold transition-colors">
                 <MessageCircle className="h-4 w-4" />
               </a>
             </div>
