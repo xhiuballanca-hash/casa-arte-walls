@@ -16,10 +16,11 @@ export type Database = {
     Tables: {
       inquiries: {
         Row: {
+          city: string | null
           client_type: string | null
           company: string | null
           created_at: string
-          email: string
+          email: string | null
           estimated_value: number | null
           id: string
           lost_reason: string | null
@@ -35,10 +36,11 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          city?: string | null
           client_type?: string | null
           company?: string | null
           created_at?: string
-          email: string
+          email?: string | null
           estimated_value?: number | null
           id?: string
           lost_reason?: string | null
@@ -54,10 +56,11 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          city?: string | null
           client_type?: string | null
           company?: string | null
           created_at?: string
-          email?: string
+          email?: string | null
           estimated_value?: number | null
           id?: string
           lost_reason?: string | null

@@ -226,7 +226,7 @@ function ProductDetail() {
             <ConsultationForm
               variant="dark"
               source={`product-${product.slug}`}
-              defaultProject={`${product.name} — quotation`}
+              defaultProject={product.name}
               submitLabel="Request a quote"
             />
           </div>

@@ -15,6 +15,13 @@
       "when": 1788699643232,
       "tag": "0001_admin_roles_crm_quotations",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790341182933,
+      "tag": "0002_simplify_inquiry_form",
+      "breakpoints": true
     }
   ]
 }

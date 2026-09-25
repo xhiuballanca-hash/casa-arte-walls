@@ -4,7 +4,8 @@ import { z } from "zod";
 
 const inquirySchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
-  email: z.string().trim().email("Please enter a valid email").max(255),
+  email: z.string().trim().email().max(255).optional().or(z.literal("")),
+  city: z.string().trim().max(120).optional().or(z.literal("")),
   phone: z.string().trim().max(40).optional().or(z.literal("")),
   company: z.string().trim().max(120).optional().or(z.literal("")),
   client_type: z.string().trim().max(80).optional().or(z.literal("")),
@@ -26,7 +27,8 @@ export const submitInquiry = createServerFn({ method: "POST" })
 
     const { error } = await supabase.from("inquiries").insert({
       name: data.name,
-      email: data.email,
+      email: data.email || null,
+      city: data.city || null,
       phone: data.phone || null,
       company: data.company || null,
       client_type: data.client_type || null,
