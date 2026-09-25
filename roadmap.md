@@ -21,4 +21,5 @@
 - [ ] Email notification to studio on new inquiry (needs Resend or similar connector)
 - [ ] Before/after slider on a finish page using real project photography (once supplied)
 - [ ] Macedonian language version (user chose English-only for now)
-- [ ] Replace temporary Microcement visual with a dedicated photograph
+- [ ] Hero: user will send the clean photo (uploaded cover contains baked-in text) — swap in as soon as it arrives
+- [x] Replace temporary Microcement visual with the approved material photograph (done)
