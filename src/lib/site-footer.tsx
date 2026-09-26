@@ -19,6 +19,7 @@ export function SiteFooter() {
             <p className="eyebrow text-gold mb-5">Contact</p>
             <div className="flex flex-col items-start gap-3 text-sm text-beige/80">
               <a href={SITE.phoneHref} className="hover:text-gold transition-colors">Phone: {SITE.phoneDisplay}</a>
+              <a href={`mailto:${SITE.email}`} className="hover:text-gold transition-colors">Email: {SITE.email}</a>
             </div>
           </div>
 
