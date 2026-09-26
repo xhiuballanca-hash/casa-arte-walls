@@ -90,7 +90,7 @@ function HomePage() {
               width={1536}
               height={655}
               fetchPriority="high"
-              className="absolute bottom-0 right-0 h-[118%] w-auto max-w-none"
+              className="absolute bottom-0 -right-[14%] h-[118%] w-auto max-w-none"
             />
           </div>
           <div className="px-6 pt-10 pb-24 sm:px-10">
