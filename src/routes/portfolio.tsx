@@ -128,10 +128,6 @@ function PortfolioPage() {
                       Approved project photography to follow.
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-forest/60 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute inset-x-0 bottom-0 p-5 text-beige translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-all duration-500">
-                    <p className="font-serif text-xl leading-tight">{p.title} — {p.finish}</p>
-                  </div>
                 </div>
                 <div className="pt-3 pb-1">
                   <p className="font-serif text-forest text-lg leading-tight">{p.title} — {p.finish}</p>

@@ -21,6 +21,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:title", content: p.title },
         { property: "og:description", content: p.excerpt.slice(0, 158) },
         { property: "og:type", content: "article" },
+         { name: "twitter:card", content: "summary_large_image" },
         { property: "og:url", content: `/blog/${params.slug}` },
         { property: "article:published_time", content: p.dateISO },
       ],

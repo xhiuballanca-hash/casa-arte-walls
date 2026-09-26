@@ -1,6 +1,5 @@
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { getProduct, products } from "@/lib/products-data";
-import { ConsultationForm } from "@/lib/consultation-form";
 
 export const Route = createFileRoute("/products/$slug")({
   loader: ({ params }) => {
@@ -83,15 +82,10 @@ function ProductDetail() {
               <p className="eyebrow text-forest/50">{product.tagline}</p>
             </div>
             <div className="md:col-span-5">
-              <p className="text-forest/75 text-lg leading-relaxed mb-8">{product.description}</p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link to="/contact" search={{ intent: "quote" }} className="btn btn-forest">
-                  Request a Quote
-                </Link>
-                <Link to="/contact" search={{ intent: "sample" }} className="btn btn-outline">
-                  Request a Sample
-                </Link>
-              </div>
+               <p className="text-forest/75 text-lg leading-relaxed mb-8">{product.summary}</p>
+               <Link to="/contact" search={{ intent: "project" }} className="btn btn-forest">
+                 Discuss Your Project
+               </Link>
             </div>
           </div>
         </div>
@@ -120,118 +114,16 @@ function ProductDetail() {
         </div>
       </section>
 
-      {/* SUPPLIED & APPLIED */}
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-beige">
-        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 md:gap-8 border-t border-forest/15 pt-12">
-          <div className="md:col-span-4">
-            <p className="eyebrow text-gold">Supplied &amp; applied</p>
-          </div>
-          <div className="md:col-span-8">
-            <h2 className="font-serif text-3xl md:text-5xl text-forest leading-[1.1] text-balance mb-6">
-              {product.name} is supplied by Casa D'Arte and applied by our own team.
-            </h2>
-            <p className="text-forest/70 text-lg leading-relaxed max-w-2xl">
-              Tone, texture and sheen are approved on physical samples prepared for the project.
-              The quotation covers material, surface preparation and application together, and the
-              finish is executed by the people who know the system.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* FEATURES / BENEFITS */}
-      <section className="py-20 md:py-28 px-6 md:px-12 bg-cream">
-        <div className="mx-auto max-w-[1400px] grid md:grid-cols-2 gap-16">
-          <div>
-            <p className="eyebrow text-gold mb-5">Material</p>
-            <h3 className="font-serif text-3xl md:text-4xl text-forest mb-8">Characteristics.</h3>
-            <ul className="border-t border-forest/15">
-              {product.features.map((f: string) => (
-                <li key={f} className="py-4 border-b border-forest/15 text-forest/80 leading-relaxed">
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="eyebrow text-gold mb-5">In use</p>
-            <h3 className="font-serif text-3xl md:text-4xl text-forest mb-8">Why it is specified.</h3>
-            <ul className="border-t border-forest/15">
-              {product.benefits.map((b: string) => (
-                <li key={b} className="py-4 border-b border-forest/15 text-forest/80 leading-relaxed">
-                  {b}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* APPLICATIONS */}
-      <section className="py-20 md:py-28 px-6 md:px-12 bg-beige">
-        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-12 md:gap-8">
-          <div className="md:col-span-4">
-            <p className="eyebrow text-gold mb-5">Applications</p>
-            <h3 className="font-serif text-3xl md:text-4xl text-forest leading-snug">
-              Where {product.name} belongs.
-            </h3>
-          </div>
-          <div className="md:col-span-8 grid sm:grid-cols-2 gap-12">
-            <div>
-              <p className="eyebrow text-forest/45 mb-4">Interior</p>
-              <ul className="border-t border-forest/15">
-                {product.interior.map((i: string) => (
-                  <li key={i} className="py-3 border-b border-forest/15 text-forest/80">
-                    {i}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="eyebrow text-forest/45 mb-4">Exterior</p>
-              {product.exterior ? (
-                <ul className="border-t border-forest/15">
-                  {product.exterior.map((e: string) => (
-                    <li key={e} className="py-3 border-b border-forest/15 text-forest/80">
-                      {e}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-forest/60 leading-relaxed border-t border-forest/15 pt-3">
-                  {product.name} is specified for interior surfaces. For facades and exterior
-                  walls, see Travertino or ask us about a suitable system.
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* QUOTE */}
-      <section className="py-24 md:py-36 px-6 md:px-12 bg-forest text-beige">
-        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8">
-          <div className="md:col-span-5">
-            <p className="eyebrow text-gold mb-5">Request a quote</p>
-            <h2 className="font-serif text-4xl md:text-6xl leading-[1.05] mb-8 text-balance">
-              {product.name}, priced for your project.
-            </h2>
-            <p className="text-beige/70 leading-relaxed text-lg max-w-md">
-              Share the surface area, the location and the condition of the walls where you know
-              it. We will come back with the next step — samples, a site visit or a quotation for
-              material and application.
-            </p>
-          </div>
-          <div className="md:col-span-6 md:col-start-7">
-            <ConsultationForm
-              variant="dark"
-              source={`product-${product.slug}`}
-              defaultProject={product.name}
-              submitLabel="Request a quote"
-            />
-          </div>
-        </div>
-      </section>
+       <section className="pb-20 md:pb-28 px-6 md:px-12 bg-beige">
+         <div className="mx-auto max-w-[1400px] border-t border-forest/15 pt-10 md:pt-14 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+           <p className="font-serif text-2xl md:text-3xl text-forest max-w-2xl">
+             {product.name} is supplied by Casa D'Arte and professionally applied by our own team.
+           </p>
+           <Link to="/contact" search={{ intent: "project" }} className="link-line text-forest self-start md:self-center shrink-0">
+             Discuss Your Project <span aria-hidden>→</span>
+           </Link>
+         </div>
+       </section>
 
       {/* OTHERS */}
       <section className="py-20 md:py-28 px-6 md:px-12 bg-cream">

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useLocation } from "@tanstack/react-router";
 import { products } from "@/lib/products-data";
 
 const TITLE = "Finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement, Beton Look";
@@ -38,6 +38,8 @@ export const Route = createFileRoute("/products")({
 });
 
 function ProductsIndex() {
+  const pathname = useLocation({ select: (location) => location.pathname });
+  if (pathname !== "/products" && pathname !== "/products/") return <Outlet />;
   return (
     <>
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
@@ -48,9 +50,7 @@ function ProductsIndex() {
               Six finishes. <em className="italic">One standard of execution.</em>
             </h1>
             <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
-              Each finish is an Italian decorative system we supply and apply with our own team —
-              pigmented and textured to the project, approved on physical samples, and quoted
-              together with the application.
+               Explore six decorative finishes, supplied and professionally applied by our own team.
             </p>
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 md:items-end">
@@ -109,19 +109,7 @@ function ProductsIndex() {
                   <p className="font-serif italic text-forest/50 text-xl mb-3">{p.alias}</p>
                 ) : null}
                 <p className="eyebrow text-forest/50 mb-8">{p.tagline}</p>
-                <p className="text-forest/75 text-lg leading-relaxed mb-8">{p.description}</p>
-                <div className="grid sm:grid-cols-2 gap-6 border-t border-forest/15 pt-6 mb-10 text-sm">
-                  <div>
-                    <p className="eyebrow text-forest/45 mb-3">Interior</p>
-                    <p className="text-forest/70 leading-relaxed">{p.interior.join(" · ")}</p>
-                  </div>
-                  <div>
-                    <p className="eyebrow text-forest/45 mb-3">Exterior</p>
-                    <p className="text-forest/70 leading-relaxed">
-                      {p.exterior ? p.exterior.join(" · ") : "Interior use"}
-                    </p>
-                  </div>
-                </div>
+                 <p className="text-forest/75 text-lg leading-relaxed mb-8">{p.summary}</p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/products/$slug" params={{ slug: p.slug }} className="btn btn-outline">
                     Explore {p.name}

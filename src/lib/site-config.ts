@@ -2,9 +2,8 @@
 export const SITE = {
   name: "Casa D'Arte",
   tagline: "Italian decorative finishes · supplied & applied",
-  city: "Skopje",
   country: "North Macedonia",
-  addressLine: "Skopje, North Macedonia",
+  addressLine: "North Macedonia",
   foundedYear: 2012,
   /** E.164 without "+" — used for wa.me links */
   whatsappNumber: "38972245116",

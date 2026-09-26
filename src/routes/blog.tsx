@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useLocation } from "@tanstack/react-router";
 import { posts } from "@/lib/blog-data";
 
 const TITLE = "Journal — Casa D'Arte on Italian Decorative Finishes";
@@ -12,6 +12,8 @@ export const Route = createFileRoute("/blog")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/blog" },
     ],
     links: [{ rel: "canonical", href: "/blog" }],
@@ -38,6 +40,8 @@ export const Route = createFileRoute("/blog")({
 });
 
 function BlogIndex() {
+  const pathname = useLocation({ select: (location) => location.pathname });
+  if (pathname !== "/blog" && pathname !== "/blog/") return <Outlet />;
   return (
     <>
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
