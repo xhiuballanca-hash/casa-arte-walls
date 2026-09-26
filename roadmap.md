@@ -10,6 +10,7 @@
 - Final public-site refinement: location, navigation, footer, finish-page clarity, and consistent process language
 
 ## In progress
+- [ ] Homepage cover: uploaded image includes headline, menu, and CTA inside the picture; confirm how to avoid duplicate text while retaining working links
 - [ ] Admin dashboard + CRM
   - [ ] Auth: email/password sign-in at `/auth`, `user_roles` + `has_role()`, admin-only gate under `/admin`
   - [ ] Leads: list (search, status/source filters), detail with pipeline status, priority, value, next action, notes timeline, CSV export
@@ -22,5 +23,4 @@
 - [ ] Email notification to studio on new inquiry (needs Resend or similar connector)
 - [ ] Before/after slider on a finish page using real project photography (once supplied)
 - [ ] Macedonian language version (user chose English-only for now)
-- [ ] Hero: user will send the clean photo (uploaded cover contains baked-in text) — swap in as soon as it arrives
 - [x] Replace temporary Microcement visual with the approved material photograph (done)
