@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-interior.jpg";
-import heroPortrait from "@/assets/hero-interior-portrait.jpg";
+import heroCover from "@/assets/casa-darte-cover.png.asset.json";
 import craftAsset from "@/assets/application-craft.png.asset.json";
 import { products } from "@/lib/products-data";
 import { projects } from "@/lib/portfolio-data";
@@ -61,33 +60,44 @@ function HomePage() {
 
   return (
     <>
-      {/* HERO — editorial photograph; the finish is the protagonist. */}
-      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-cream">
-        <picture>
-          <source media="(max-width: 767px)" srcSet={heroPortrait} width={848} height={1264} />
+      {/* The approved cover includes printed text. Desktop links align with its printed controls. */}
+      <section className="relative w-full bg-cream">
+        <div className="relative hidden lg:block">
+          <h1 className="sr-only">Turn Every Wall Into Art.</h1>
           <img
-            src={heroImg}
-            alt="Interior wall finished in warm hand-troweled decorative plaster, lit by soft daylight"
-            width={1920}
-            height={1280}
+            src={heroCover.url}
+            alt="Casa D'Arte cover: Turn Every Wall Into Art. Premium decorative finishes, professionally applied by our team."
+            width={1536}
+            height={655}
             fetchPriority="high"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover object-[68%_center] md:object-center"
+            className="block h-auto w-full"
           />
-        </picture>
-        {/* Soft legibility veil — light, never a colour block. */}
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-cream/25 md:bg-cream/10"
-        />
-        <div className="relative z-10 flex h-full flex-col justify-center px-6 md:px-12">
+          <Link to="/" aria-label="Casa D'Arte home" className="absolute left-[6.7%] top-[5%] h-[10%] w-[14%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/" aria-label="Home" className="absolute left-[30.7%] top-[6%] h-[7%] w-[4.3%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/products" aria-label="Finishes" className="absolute left-[36%] top-[6%] h-[7%] w-[7.8%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/portfolio" aria-label="Projects" className="absolute left-[44.6%] top-[6%] h-[7%] w-[5.7%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/about" aria-label="About" className="absolute left-[51%] top-[6%] h-[7%] w-[4.3%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/contact" aria-label="Contact" className="absolute left-[56.2%] top-[6%] h-[7%] w-[5.5%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/contact" search={{ intent: "project" }} aria-label="Get in Touch" className="absolute left-[84.5%] top-[5.8%] h-[7.2%] w-[8.6%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/products" aria-label="Explore Our Finishes" className="absolute left-[6.8%] top-[69.7%] h-[8%] w-[15.6%] focus-visible:outline focus-visible:outline-beige" />
+        </div>
+        <div className="relative h-[100svh] min-h-[640px] overflow-hidden lg:hidden">
+          <img
+            src={heroCover.url}
+            alt="Textured decorative wall in a warm living room"
+            width={1536}
+            height={655}
+            fetchPriority="high"
+            className="absolute inset-0 h-full w-full scale-[1.35] object-cover object-[80%_center]"
+          />
+          <div className="relative z-10 flex h-full flex-col justify-center px-6">
           <div className="mx-auto w-full max-w-[1600px]">
             <div className="max-w-[28rem] sm:max-w-xl lg:max-w-2xl pt-20 md:pt-0">
-              <h1 className="font-serif text-forest text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[1.02] mb-7 md:mb-9 reveal">
+              <h1 className="font-serif text-beige text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[1.02] mb-7 md:mb-9 reveal">
                 Turn Every Wall <br className="hidden sm:block" />
                 <em className="italic font-normal">Into Art.</em>
               </h1>
-              <p className="text-forest/80 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 md:mb-12 max-w-md reveal">
+              <p className="text-beige text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 md:mb-12 max-w-md reveal">
                 Premium decorative finishes, professionally applied by our team.
               </p>
               <Link to="/products" className="btn btn-forest reveal">
@@ -95,6 +105,7 @@ function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
         </div>
       </section>
 

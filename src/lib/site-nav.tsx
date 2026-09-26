@@ -30,13 +30,14 @@ export function SiteNav() {
     setOpen(false);
   }, [pathname]);
 
-  const onDark = DARK_HERO_ROUTES.has(pathname) && !scrolled && !open;
+  const onDark = (DARK_HERO_ROUTES.has(pathname) || pathname === "/") && !scrolled && !open;
   const ink = onDark ? "text-beige" : "text-forest";
   const inkSoft = onDark ? "text-beige/80" : "text-forest/75";
+  const coverNavigation = pathname === "/" && !scrolled && !open;
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ${coverNavigation ? "lg:invisible" : ""} ${
         scrolled || open
           ? "bg-beige/95 backdrop-blur-sm border-b border-forest/10 py-4"
           : "bg-transparent py-6"

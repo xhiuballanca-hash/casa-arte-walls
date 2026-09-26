@@ -8,9 +8,9 @@
 - Per-route SEO head() + JSON-LD, sitemap, robots
 - Inquiry submission → `inquiries` table (verified end to end)
 - Final public-site refinement: location, navigation, footer, finish-page clarity, and consistent process language
+- Final uploaded homepage cover installed without modifying the image; printed desktop links remain clickable, mobile headline and CTA remain live
 
 ## In progress
-- [ ] Homepage cover: uploaded image includes headline, menu, and CTA inside the picture; confirm how to avoid duplicate text while retaining working links
 - [ ] Admin dashboard + CRM
   - [ ] Auth: email/password sign-in at `/auth`, `user_roles` + `has_role()`, admin-only gate under `/admin`
   - [ ] Leads: list (search, status/source filters), detail with pipeline status, priority, value, next action, notes timeline, CSV export
