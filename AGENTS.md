@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Public parent routes with child pages must render an `<Outlet />` for child paths while showing their index content only on their exact path; TanStack nests the detail routes under those parents.
+- Keep the narrow Vite client-RPC transform in place: the unoptimized TanStack helper otherwise reads `process.env.TSS_SERVER_FN_BASE` in the browser and breaks inquiry-page navigation.
