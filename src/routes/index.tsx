@@ -88,7 +88,7 @@ function HomePage() {
             width={1536}
             height={655}
             fetchPriority="high"
-            className="absolute inset-0 h-full w-full object-cover object-[80%_center]"
+            className="absolute inset-0 h-full w-full scale-[1.35] object-cover object-[80%_center]"
           />
           <div className="relative z-10 flex h-full flex-col justify-center px-6">
           <div className="mx-auto w-full max-w-[1600px]">
