@@ -82,7 +82,7 @@ function ContactPage() {
             Let's begin with a <em className="italic">conversation.</em>
           </h1>
           <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
-            Reach the studio by form, phone or WhatsApp. Whether you are specifying a finish,
+            Reach the studio by form or phone. Whether you are specifying a finish,
             planning a development or renovating a home, we will guide you from sample to
             finished surface.
           </p>

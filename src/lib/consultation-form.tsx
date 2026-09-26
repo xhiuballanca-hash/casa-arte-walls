@@ -69,7 +69,7 @@ export function ConsultationForm({
       setSent(true);
     } catch (err) {
       console.error(err);
-      toast.error("Something went wrong. Please try WhatsApp or email instead.");
+      toast.error("Something went wrong. Please try again or email us instead.");
     } finally {
       setPending(false);
     }
