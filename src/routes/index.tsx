@@ -87,16 +87,16 @@ function HomePage() {
             width={1536}
             height={655}
             fetchPriority="high"
-            className="absolute inset-0 h-full w-full object-cover object-[74%_center]"
+            className="absolute inset-0 h-full w-full object-cover object-[82%_center]"
           />
           <div className="relative z-10 flex h-full flex-col justify-center px-6">
           <div className="mx-auto w-full max-w-[1600px]">
             <div className="max-w-[28rem] sm:max-w-xl lg:max-w-2xl pt-20 md:pt-0">
-              <h1 className="font-serif text-forest text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[1.02] mb-7 md:mb-9 reveal">
+              <h1 className="font-serif text-beige text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[1.02] mb-7 md:mb-9 reveal">
                 Turn Every Wall <br className="hidden sm:block" />
                 <em className="italic font-normal">Into Art.</em>
               </h1>
-              <p className="text-forest/80 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 md:mb-12 max-w-md reveal">
+              <p className="text-beige text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 md:mb-12 max-w-md reveal">
                 Premium decorative finishes, professionally applied by our team.
               </p>
               <Link to="/products" className="btn btn-forest reveal">
