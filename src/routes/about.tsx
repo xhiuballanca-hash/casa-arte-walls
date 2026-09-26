@@ -6,7 +6,7 @@ import { products } from "@/lib/products-data";
 
 const TITLE = "The Studio — Casa D'Arte, Italian Finishes Since 2012";
 const DESCRIPTION =
-  "Casa D'Arte, Skopje, est. 2012: a studio that supplies premium Italian decorative finishes and applies them with its own team — from sample and quotation to the finished surface.";
+  "Casa D'Arte, est. 2012: a studio supplying premium Italian decorative finishes and applying them with its own team across North Macedonia.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -15,6 +15,8 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -60,14 +62,14 @@ function AboutPage() {
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 md:gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-6">The Studio · Skopje · Est. 2012</p>
+            <p className="eyebrow text-gold mb-6">The Studio · Est. 2012</p>
             <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
               A studio for Italian finishes — <em className="italic">supplied and applied.</em>
             </h1>
           </div>
           <div className="md:col-span-4">
             <p className="text-forest/70 text-lg leading-relaxed">
-              Casa D'Arte was founded in Skopje in 2012 around a simple conviction: a wall deserves
+              Casa D'Arte was founded in 2012 around a simple conviction: a wall deserves
               the same care as the architecture around it — and the people who choose the material
               should be the people who put it on the wall.
             </p>
@@ -108,8 +110,8 @@ function AboutPage() {
               <p>
                 We work with Italian decorative finishes — Travertino, Marmorino, Stucco
                 Veneziano, Sahara and Microcement — and we do two things with them. We supply the
-                material, pigmented and specified for the project. And we apply it, with our own
-                own team, from surface preparation through layering, polishing and sealing.
+                 material, specified for the project. And we apply it, with our own
+                 team, from surface preparation through the finished surface.
               </p>
               <p>
                 Most of our work is with architects, interior designers, developers and
@@ -164,7 +166,7 @@ function AboutPage() {
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-4">
             <p className="eyebrow text-gold mb-3">The finishes</p>
-            <p className="text-forest/65 leading-relaxed">Five Italian systems, each supplied and applied by the studio.</p>
+            <p className="text-forest/65 leading-relaxed">Six finishes, each supplied and applied by the studio.</p>
           </div>
           <ul className="md:col-span-8 flex flex-wrap gap-x-10 gap-y-4">
             {products.map((p) => (

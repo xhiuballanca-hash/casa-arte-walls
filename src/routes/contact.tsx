@@ -53,7 +53,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Discuss your project with Casa D'Arte in Skopje. Request samples, a quotation or a consultation for Italian decorative finishes, supplied and professionally applied.",
+           "Discuss your project with Casa D'Arte in North Macedonia. Request a quotation or consultation for Italian decorative finishes, supplied and professionally applied.",
       },
       { property: "og:title", content: "Contact Casa D'Arte" },
       {
@@ -61,6 +61,8 @@ export const Route = createFileRoute("/contact")({
         content: "Discuss a project, request samples or a quotation for Italian decorative finishes.",
       },
       { property: "og:url", content: "/contact" },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
@@ -92,18 +94,13 @@ function ContactPage() {
           <div className="md:col-span-4 space-y-10">
             <div>
               <p className="eyebrow text-gold mb-4">Studio</p>
-              <a
-                href="https://maps.google.com/?q=Skopje+North+Macedonia"
-                target="_blank"
-                rel="noreferrer"
-                className="flex gap-4 items-start text-forest hover:text-gold transition-colors"
-              >
+               <div className="flex gap-4 items-start text-forest">
                 <MapPin className="h-5 w-5 mt-1 shrink-0" />
                 <span className="leading-relaxed">
                   Casa D'Arte<br />
-                  Skopje, North Macedonia
+                   North Macedonia
                 </span>
-              </a>
+               </div>
             </div>
 
             <div>
@@ -138,19 +135,11 @@ function ContactPage() {
                 </a>
                 <a href={SITE.social.facebook} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Facebook className="h-4 w-4" />
-                  Casa D'Arte Macedonia
+                   CasaDarteMacedonia
                 </a>
               </div>
             </div>
 
-            <div className="overflow-hidden border border-forest/10">
-              <iframe
-                title="Casa D'Arte on the map"
-                src="https://www.google.com/maps?q=Skopje+North+Macedonia&output=embed"
-                className="w-full h-64 grayscale-[35%]"
-                loading="lazy"
-              />
-            </div>
           </div>
 
           <div className="md:col-span-7 md:col-start-6 bg-forest text-beige p-8 md:p-14">

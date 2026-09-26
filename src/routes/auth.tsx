@@ -23,6 +23,8 @@ export const Route = createFileRoute("/auth")({
       { name: "robots", content: "noindex, nofollow" },
       { property: "og:title", content: "Studio Login — Casa D'Arte" },
       { property: "og:description", content: "Private access for the Casa D'Arte studio team." },
+       { property: "og:type", content: "website" },
+       { name: "twitter:card", content: "summary" },
     ],
   }),
   component: AuthPage,

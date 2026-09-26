@@ -7,6 +7,7 @@
 - Intent-driven contact prefill (`/contact?intent=project|sample|quote|partner`)
 - Per-route SEO head() + JSON-LD, sitemap, robots
 - Inquiry submission → `inquiries` table (verified end to end)
+- Final public-site refinement: location, navigation, footer, finish-page clarity, and consistent process language
 
 ## In progress
 - [ ] Admin dashboard + CRM

@@ -133,17 +133,17 @@ function ServicesPage() {
             />
           </div>
           <div className="md:col-span-6 md:col-start-7">
-            <p className="eyebrow text-gold mb-6">How we work</p>
+             <p className="eyebrow text-gold mb-6">From concept to completion</p>
             <h2 className="font-serif text-4xl md:text-5xl text-forest leading-[1.08] mb-10 text-balance">
-              One sequence, whatever the scale.
+               Our Process
             </h2>
             <ol className="border-t border-forest/15">
               {[
-                ["Concept & consultation", "The space, the intent and the constraints — in the studio or on site."],
-                ["Sample & finish selection", "Physical samples in your tones and textures, approved on the real material."],
-                ["Quotation & planning", "Material and application quoted together; preparation and programme agreed."],
-                ["Professional application", "Our own team prepares the substrate and applies the finish."],
-                ["Finished project", "Sealed, inspected and handed over."],
+                 ["Concept & Consultation", "Understand the space, design direction and project requirements."],
+                 ["Finish Selection", "Choose the finish, texture and color."],
+                 ["Quotation & Planning", "Materials and professional application are planned together."],
+                 ["Professional Application", "Our team prepares and applies the decorative finish."],
+                 ["Final Inspection", "The completed surface is checked before handover."],
               ].map(([t, d], i) => (
                 <li key={t} className="grid grid-cols-[3rem_1fr] gap-x-6 py-5 border-b border-forest/15">
                   <p className="font-serif text-gold text-lg">0{i + 1}</p>

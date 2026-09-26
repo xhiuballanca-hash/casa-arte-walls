@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Public parent routes with child pages must render an `<Outlet />` for child paths while showing their index content only on their exact path; TanStack nests the detail routes under those parents.

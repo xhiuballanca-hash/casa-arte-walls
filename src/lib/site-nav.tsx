@@ -3,12 +3,11 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
+  { to: "/", label: "Home" },
   { to: "/products", label: "Finishes" },
   { to: "/portfolio", label: "Projects" },
-  { to: "/architects", label: "Architects" },
   { to: "/services", label: "Services" },
-  { to: "/about", label: "Studio" },
-  { to: "/blog", label: "Journal" },
+  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -34,7 +33,6 @@ export function SiteNav() {
   const onDark = DARK_HERO_ROUTES.has(pathname) && !scrolled && !open;
   const ink = onDark ? "text-beige" : "text-forest";
   const inkSoft = onDark ? "text-beige/80" : "text-forest/75";
-  const border = onDark ? "border-beige/40" : "border-forest/35";
 
   return (
     <nav
@@ -64,13 +62,6 @@ export function SiteNav() {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <Link
-            to="/contact"
-            search={{ intent: "project" }}
-            className={`hidden md:inline-flex text-[11px] uppercase tracking-[0.2em] font-medium border ${border} ${ink} px-5 py-2.5 transition-all duration-300 hover:bg-gold hover:border-gold hover:text-forest`}
-          >
-            Discuss Your Project
-          </Link>
           <button
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
@@ -96,24 +87,6 @@ export function SiteNav() {
                 {l.label}
               </Link>
             ))}
-          </div>
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link
-              to="/contact"
-              search={{ intent: "project" }}
-              onClick={() => setOpen(false)}
-              className="btn btn-forest w-full"
-            >
-              Discuss Your Project
-            </Link>
-            <Link
-              to="/contact"
-              search={{ intent: "sample" }}
-              onClick={() => setOpen(false)}
-              className="btn btn-outline w-full"
-            >
-              Request a Sample
-            </Link>
           </div>
         </div>
       )}
