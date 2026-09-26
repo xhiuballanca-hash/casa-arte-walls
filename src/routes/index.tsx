@@ -63,6 +63,7 @@ function HomePage() {
       {/* The approved cover includes printed text. Desktop links align with its printed controls. */}
       <section className="relative w-full bg-cream">
         <div className="relative hidden lg:block">
+          <h1 className="sr-only">Turn Every Wall Into Art.</h1>
           <img
             src={heroCover.url}
             alt="Casa D'Arte cover: Turn Every Wall Into Art. Premium decorative finishes, professionally applied by our team."
@@ -87,7 +88,7 @@ function HomePage() {
             width={1536}
             height={655}
             fetchPriority="high"
-            className="absolute inset-0 h-full w-full object-cover object-[82%_center]"
+            className="absolute inset-0 h-full w-full object-cover object-[80%_center]"
           />
           <div className="relative z-10 flex h-full flex-col justify-center px-6">
           <div className="mx-auto w-full max-w-[1600px]">
