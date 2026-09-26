@@ -81,31 +81,30 @@ function HomePage() {
           <Link to="/contact" search={{ intent: "project" }} aria-label="Get in Touch" className="absolute left-[84.5%] top-[5.8%] h-[7.2%] w-[8.6%] focus-visible:outline focus-visible:outline-beige" />
           <Link to="/products" aria-label="Explore Our Finishes" className="absolute left-[6.8%] top-[69.7%] h-[8%] w-[15.6%] focus-visible:outline focus-visible:outline-beige" />
         </div>
-        <div className="relative h-[100svh] min-h-[640px] overflow-hidden lg:hidden">
-          <img
-            src={heroCover.url}
-            alt="Textured decorative wall in a warm living room"
-            width={1536}
-            height={655}
-            fetchPriority="high"
-            className="absolute inset-0 h-full w-full scale-[1.35] object-cover object-[80%_center]"
-          />
-          <div className="relative z-10 flex h-full flex-col justify-center px-6">
-          <div className="mx-auto w-full max-w-[1600px]">
-            <div className="max-w-[28rem] sm:max-w-xl lg:max-w-2xl pt-20 md:pt-0">
-              <h1 className="font-serif text-beige text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[1.02] mb-7 md:mb-9 reveal">
-                Turn Every Wall <br className="hidden sm:block" />
-                <em className="italic font-normal">Into Art.</em>
-              </h1>
-              <p className="text-beige text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 md:mb-12 max-w-md reveal">
-                Premium decorative finishes, professionally applied by our team.
-              </p>
-              <Link to="/products" className="btn btn-forest reveal">
-                Explore Our Finishes
-              </Link>
-            </div>
+        {/* Mobile/tablet: same single image, cropped to the clean right side (wall edge, sofa, window) with live text below */}
+        <div className="pt-20 lg:hidden">
+          <div className="relative aspect-[3/2] overflow-hidden">
+            <img
+              src={heroCover.url}
+              alt="Warm living room with a textured Travertino wall, sofa and window view"
+              width={1536}
+              height={655}
+              fetchPriority="high"
+              className="absolute bottom-0 right-0 h-[118%] w-auto max-w-none"
+            />
           </div>
-        </div>
+          <div className="px-6 pt-10 pb-24 sm:px-10">
+            <h1 className="font-serif text-forest text-5xl sm:text-6xl leading-[1.04] mb-6 reveal">
+              Turn Every Wall <br />
+              <em className="italic font-normal">Into Art.</em>
+            </h1>
+            <p className="text-forest/75 text-base sm:text-lg font-light leading-relaxed mb-9 max-w-md reveal">
+              Premium decorative finishes, professionally applied by our team.
+            </p>
+            <Link to="/products" className="btn btn-forest reveal">
+              Explore Our Finishes
+            </Link>
+          </div>
         </div>
       </section>
 
