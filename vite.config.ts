@@ -11,7 +11,6 @@ export default defineConfig({
     // TanStack's client RPC helper reads this at module initialization. Keep its
     // browser value defined even when Vite serves the dependency unoptimized.
     define: { "process.env.TSS_SERVER_FN_BASE": JSON.stringify("/_serverFn/") },
-    optimizeDeps: { include: ["@tanstack/start-client-core"] },
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
