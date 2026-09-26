@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ConsultationForm } from "@/lib/consultation-form";
 import { Phone, Mail, MessageCircle, MapPin, Instagram, Facebook } from "lucide-react";
-import { SITE, whatsappLink } from "@/lib/site-config";
+import { SITE } from "@/lib/site-config";
 
 const INTENTS = ["project", "sample", "quote", "partner"] as const;
 export type ContactIntent = (typeof INTENTS)[number];
@@ -113,15 +113,6 @@ function ContactPage() {
                 <a href={`mailto:${SITE.email}`} className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Mail className="h-4 w-4" />
                   {SITE.email}
-                </a>
-                <a
-                  href={whatsappLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex gap-4 items-center text-forest hover:text-gold transition-colors"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  WhatsApp
                 </a>
               </div>
             </div>

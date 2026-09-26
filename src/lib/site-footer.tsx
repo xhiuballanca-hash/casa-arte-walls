@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, MessageCircle } from "lucide-react";
-import { SITE, whatsappLink } from "@/lib/site-config";
+import { Instagram, Facebook } from "lucide-react";
+import { SITE } from "@/lib/site-config";
 
 export function SiteFooter() {
   return (
@@ -18,11 +18,7 @@ export function SiteFooter() {
           <div className="md:col-span-3 md:col-start-7">
             <p className="eyebrow text-gold mb-5">Contact</p>
             <div className="flex flex-col items-start gap-3 text-sm text-beige/80">
-              <a href={SITE.phoneHref} className="hover:text-gold transition-colors">Phone / WhatsApp: {SITE.phoneDisplay}</a>
-              <a href={`mailto:${SITE.email}`} className="hover:text-gold transition-colors">Email: {SITE.email}</a>
-              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-gold transition-colors">
-                <MessageCircle className="h-4 w-4" aria-hidden="true" /> WhatsApp
-              </a>
+              <a href={SITE.phoneHref} className="hover:text-gold transition-colors">Phone: {SITE.phoneDisplay}</a>
             </div>
           </div>
 
