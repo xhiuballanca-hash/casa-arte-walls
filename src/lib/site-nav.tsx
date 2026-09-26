@@ -30,7 +30,7 @@ export function SiteNav() {
     setOpen(false);
   }, [pathname]);
 
-  const onDark = DARK_HERO_ROUTES.has(pathname) && !scrolled && !open;
+  const onDark = (DARK_HERO_ROUTES.has(pathname) || pathname === "/") && !scrolled && !open;
   const ink = onDark ? "text-beige" : "text-forest";
   const inkSoft = onDark ? "text-beige/80" : "text-forest/75";
   const coverNavigation = pathname === "/" && !scrolled && !open;
