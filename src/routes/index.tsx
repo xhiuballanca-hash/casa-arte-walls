@@ -225,7 +225,7 @@ function HomePage() {
               Discuss Your Project
             </Link>
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-              WhatsApp
+              Message Us
             </a>
           </div>
           <Link to="/architects" className="mt-12 inline-block link-line text-forest/70 text-sm">
