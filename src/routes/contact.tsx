@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ConsultationForm } from "@/lib/consultation-form";
-import { Phone, Mail, MessageCircle, MapPin, Instagram, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import { SITE } from "@/lib/site-config";
 
 const INTENTS = ["project", "sample", "quote", "partner"] as const;
