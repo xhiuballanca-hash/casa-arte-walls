@@ -36,7 +36,7 @@ function systemPrompt(lang: keyof typeof LANG_NAME) {
   const catalog = products
     .map((p) => `- ${p.name} (${p.tagline}): ${p.summary} Interior: ${p.interior.join(", ")}. Exterior: ${p.exterior ? p.exterior.join(", ") : "not offered"}.`)
     .join("\n");
-  return `You are the finish advisor for Casa D'Arte, a North Macedonia studio (est. 2012) that supplies Italian decorative wall finishes and applies them with its own team.
+  return `You are the finish advisor for Casa D'Arte, a North Macedonia studio with more than a decade of experience that supplies Italian decorative wall finishes and applies them with its own team.
 Only recommend finishes from this list, using these exact names:
 ${catalog}
 

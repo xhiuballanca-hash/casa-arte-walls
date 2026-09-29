@@ -13,7 +13,7 @@ export function SiteFooter() {
             <Link to="/" className="font-serif text-3xl md:text-4xl hover:text-gold transition-colors">
               Casa D'Arte
             </Link>
-            <p className="mt-4 text-sm text-beige/60">{t("Italian decorative finishes · Est. 2012")}</p>
+            <p className="mt-4 text-sm text-beige/60">{t("Italian decorative finishes · supplied & applied")}</p>
             <p className="mt-2 text-sm text-beige/60">{t("North Macedonia")}</p>
           </div>
 

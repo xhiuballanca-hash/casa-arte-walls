@@ -195,7 +195,6 @@ function SettingsPage() {
               <DefRow label="Phone">{SITE.phoneDisplay}</DefRow>
               <DefRow label="Email">{SITE.email}</DefRow>
               <DefRow label="Location">{SITE.addressLine}</DefRow>
-              <DefRow label="Founded">{SITE.foundedYear}</DefRow>
             </dl>
             <p className="mt-4 text-[11px] text-forest/45 leading-relaxed">
               These appear on the website, in the footer and on printed quotations. Ask us in chat to change them.
