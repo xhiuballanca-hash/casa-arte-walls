@@ -99,6 +99,10 @@ export const STRINGS: Record<string, Entry> = {
     sq: "Dhomë ndenjeje e ngrohtë me mur me teksturë Travertino, divan dhe pamje nga dritarja",
     mk: "Топла дневна соба со текстуриран ѕид во Travertino, софа и поглед низ прозорецот",
   },
+  "Warm interior with a softly textured decorative wall, stone bench and natural light": {
+    sq: "Ambient i ngrohtë me mur dekorativ me teksturë të butë, stol guri dhe dritë natyrale",
+    mk: "Топол ентериер со нежно текстуриран декоративен ѕид, камена клупа и природна светлина",
+  },
   "The Finishes": { sq: "Materialet", mk: "Обработките" },
   "Six finishes. Supplied and applied by our team.": {
     sq: "Gjashtë materiale. Të furnizuara dhe të aplikuara nga ekipi ynë.",
