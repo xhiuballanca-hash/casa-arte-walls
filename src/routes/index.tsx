@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroInterior from "@/assets/hero-interior.jpg";
+import heroCover from "@/assets/casa-darte-cover-clean.png";
 import craftAsset from "@/assets/application-craft.png.asset.json";
 import { products } from "@/lib/products-data";
 import { projects } from "@/lib/portfolio-data";
@@ -62,26 +62,50 @@ function HomePage() {
 
   return (
     <>
-      <section className="relative isolate flex min-h-[90svh] items-end overflow-hidden bg-beige pt-24 md:min-h-[92svh] md:items-center">
-        <img
-          src={heroInterior}
-          alt={t("Warm interior with a softly textured decorative wall, stone bench and natural light")}
-          width={1920}
-          height={1280}
-          fetchPriority="high"
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-[64%_center] sm:object-center"
-        />
-        <div aria-hidden className="absolute inset-0 -z-10 bg-cream/25" />
-        <div className="mx-auto w-full max-w-[1600px] px-6 pb-16 sm:px-10 sm:pb-20 md:px-12 md:pb-0">
-          <div className="max-w-[42rem]">
-            <p className="eyebrow mb-5 text-forest/70 reveal">Casa D'Arte</p>
-            <h1 className="font-serif text-5xl leading-[1.02] text-forest text-balance reveal sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+      <section className="bg-beige">
+        <div className="relative isolate hidden min-h-[36rem] items-center overflow-hidden pt-24 md:flex md:h-[min(70svh,56vw)] md:max-h-[48rem]">
+          <img
+            src={heroCover}
+            alt={t("Warm living room with a textured Travertino wall, sofa and window view")}
+            width={1536}
+            height={655}
+            fetchPriority="high"
+            className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+          />
+          <div aria-hidden className="absolute inset-0 -z-10 bg-forest/10" />
+          <div className="mx-auto w-full max-w-[1600px] px-12">
+            <div className="max-w-[39rem]">
+              <h1 className="font-serif text-6xl leading-[1.04] text-beige text-balance reveal lg:text-[5rem]">
+                {t("Turn Every Wall Into Art.")}
+              </h1>
+              <p className="mt-6 max-w-lg text-lg leading-relaxed text-beige reveal lg:text-xl">
+                {t("Premium decorative finishes, professionally applied by our team.")}
+              </p>
+              <Link to="/products" className="btn btn-gold mt-9 reveal">
+                {t("Explore Our Finishes")} <span aria-hidden>→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="pt-20 md:hidden">
+          <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/9]">
+            <img
+              src={heroCover}
+              alt={t("Warm living room with a textured Travertino wall, sofa and window view")}
+              width={1536}
+              height={655}
+              fetchPriority="high"
+              className="absolute inset-0 h-full w-full object-cover object-[78%_center]"
+            />
+          </div>
+          <div className="px-6 pb-20 pt-10 sm:px-10">
+            <h1 className="font-serif text-5xl leading-[1.04] text-forest text-balance reveal sm:text-6xl">
               {t("Turn Every Wall Into Art.")}
             </h1>
-            <p className="mt-6 max-w-xl text-base font-normal leading-relaxed text-forest/80 reveal sm:text-lg md:text-xl">
+            <p className="mt-6 max-w-lg text-base leading-relaxed text-forest/80 reveal sm:text-lg">
               {t("Premium decorative finishes, professionally applied by our team.")}
             </p>
-            <Link to="/products" className="btn btn-forest mt-9 reveal">
+            <Link to="/products" className="btn btn-forest mt-8 reveal">
               {t("Explore Our Finishes")} <span aria-hidden>→</span>
             </Link>
           </div>
