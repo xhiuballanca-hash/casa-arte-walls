@@ -82,3 +82,60 @@ export function LanguageSwitcher({ className = "", tone = "text-forest/60" }: { 
     </div>
   );
 }
+
+import { PRODUCT_TR, POST_TR, META_TR } from "./translations";
+
+export function useLocalizedProduct<T extends { slug: string; tagline: string; summary: string }>(p: T): T {
+  const { lang } = useI18n();
+  const tr = lang === "en" ? undefined : PRODUCT_TR[p.slug];
+  return tr ? { ...p, tagline: tr.tagline[lang as "sq" | "mk"], summary: tr.summary[lang as "sq" | "mk"] } : p;
+}
+
+export function localizeProduct<T extends { slug: string; tagline: string; summary: string }>(p: T, lang: Lang): T {
+  const tr = lang === "en" ? undefined : PRODUCT_TR[p.slug];
+  return tr ? { ...p, tagline: tr.tagline[lang as "sq" | "mk"], summary: tr.summary[lang as "sq" | "mk"] } : p;
+}
+
+export function localizePost<T extends { slug: string }>(p: T, lang: Lang): T {
+  const tr = lang === "en" ? undefined : POST_TR[p.slug]?.[lang as "sq" | "mk"];
+  return tr ? { ...p, ...tr } : p;
+}
+
+/** Swaps the document title/description to the chosen language after each navigation. */
+export function useLocalizedHead(pathname: string) {
+  const { lang } = useI18n();
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      const desc = document.querySelector('meta[name="description"]');
+      const root = document.documentElement;
+      // Remember the English values so switching back restores them.
+      if (root.dataset.enPath !== pathname || lang === "en") {
+        if (lang === "en" && root.dataset.enPath === pathname && root.dataset.enTitle) {
+          document.title = root.dataset.enTitle;
+          if (desc && root.dataset.enDesc) desc.setAttribute("content", root.dataset.enDesc);
+          return;
+        }
+        root.dataset.enPath = pathname;
+        root.dataset.enTitle = document.title;
+        root.dataset.enDesc = desc?.getAttribute("content") ?? "";
+      }
+      if (lang === "en") return;
+      const l = lang as "sq" | "mk";
+      let meta = META_TR[pathname.replace(/\/$/, "") || "/"]?.[l];
+      const prod = pathname.match(/^\/products\/([^/]+)/);
+      const post = pathname.match(/^\/blog\/([^/]+)/);
+      if (prod && PRODUCT_TR[prod[1]]) {
+        const name = document.querySelector("h1")?.textContent ?? "";
+        const suffix = l === "sq" ? "Furnizuar dhe aplikuar nga Casa D'Arte" : "Набавено и нанесено од Casa D'Arte";
+        meta = { title: `${name} — ${suffix}`, description: PRODUCT_TR[prod[1]].summary[l] };
+      } else if (post && POST_TR[post[1]]) {
+        const tr = POST_TR[post[1]][l];
+        meta = { title: `${tr.title} — Casa D'Arte`, description: tr.excerpt };
+      }
+      if (!meta) return;
+      document.title = meta.title;
+      desc?.setAttribute("content", meta.description);
+    }, 60);
+    return () => window.clearTimeout(id);
+  }, [lang, pathname]);
+}

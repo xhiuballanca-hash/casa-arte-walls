@@ -505,7 +505,7 @@ export const PRODUCT_TR: Record<string, { tagline: Localized; summary: Localized
     tagline: { sq: "Elegancë klasike", mk: "Класична префинетост" },
     summary: {
       sq: "Një veshje gëlqereje e lëmuar, me shkëlqim të butë dhe thellësi të qetë — muri klasik venecian.",
-      mk: "Мазна вароввна обработка со нежен сјај и тивка длабочина — класичниот венецијански ѕид.",
+      mk: "Мазна варовна обработка со нежен сјај и тивка длабочина — класичниот венецијански ѕид.",
     },
   },
   sahara: {
