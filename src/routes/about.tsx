@@ -3,6 +3,7 @@ import aboutImg from "@/assets/about-craft.jpg";
 import heroImg from "@/assets/hero-plaster.jpg";
 import { ConsultationForm } from "@/lib/consultation-form";
 import { products } from "@/lib/products-data";
+import { useT } from "@/lib/i18n";
 
 const TITLE = "The Studio — Casa D'Arte, Italian Finishes Since 2012";
 const DESCRIPTION =
@@ -57,21 +58,20 @@ const principles = [
 ];
 
 function AboutPage() {
+  const t = useT();
   return (
     <>
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 md:gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-6">The Studio · Est. 2012</p>
+            <p className="eyebrow text-gold mb-6">{t("The Studio · Est. 2012")}</p>
             <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
-              A studio for Italian finishes — <em className="italic">supplied and applied.</em>
+              {t("A studio for Italian finishes —")} <em className="italic">{t("supplied and applied.")}</em>
             </h1>
           </div>
           <div className="md:col-span-4">
             <p className="text-forest/70 text-lg leading-relaxed">
-              Casa D'Arte was founded in 2012 around a simple conviction: a wall deserves
-              the same care as the architecture around it — and the people who choose the material
-              should be the people who put it on the wall.
+              {t("Casa D'Arte was founded in 2012 around a simple conviction: a wall deserves the same care as the architecture around it — and the people who choose the material should be the people who put it on the wall.")}
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@ function AboutPage() {
         <div className="mx-auto max-w-[1400px]">
           <img
             src={heroImg}
-            alt="Hand-applied Italian decorative plaster surface"
+            alt={t("Hand-applied Italian decorative plaster surface")}
             width={1920}
             height={1200}
             className="w-full aspect-[21/9] object-cover"
@@ -94,7 +94,7 @@ function AboutPage() {
           <div className="md:col-span-5 md:sticky md:top-32">
             <img
               src={aboutImg}
-              alt="Decorative finish being applied by hand with a steel trowel"
+              alt={t("Decorative finish being applied by hand with a steel trowel")}
               width={1200}
               height={1500}
               loading="lazy"
@@ -102,34 +102,27 @@ function AboutPage() {
             />
           </div>
           <div className="md:col-span-6 md:col-start-7">
-            <p className="eyebrow text-gold mb-5">What we do</p>
+            <p className="eyebrow text-gold mb-5">{t("What we do")}</p>
             <h2 className="font-serif text-4xl md:text-5xl text-forest leading-[1.08] mb-8 text-balance">
-              From the first sample to the finished surface.
+              {t("From the first sample to the finished surface.")}
             </h2>
             <div className="space-y-6 text-forest/75 text-lg leading-relaxed">
               <p>
-                We work with Italian decorative finishes — Travertino, Marmorino, Stucco
-                Veneziano, Sahara and Microcement — and we do two things with them. We supply the
-                 material, specified for the project. And we apply it, with our own
-                 team, from surface preparation through the finished surface.
+                {t("We work with Italian decorative finishes — Travertino, Marmorino, Stucco Veneziano, Sahara and Microcement — and we do two things with them. We supply the material, specified for the project. And we apply it, with our own team, from surface preparation through the finished surface.")}
               </p>
               <p>
-                Most of our work is with architects, interior designers, developers and
-                hospitality or commercial clients, alongside private residences where the owners
-                care about how a wall feels as much as how it looks. In every case the path is the
-                same: consultation, samples, quotation, application, handover.
+                {t("Most of our work is with architects, interior designers, developers and hospitality or commercial clients, alongside private residences where the owners care about how a wall feels as much as how it looks. In every case the path is the same: consultation, samples, quotation, application, handover.")}
               </p>
               <p>
-                It is a deliberately narrow way of working. It means we can stand behind the
-                surface, because we chose the material and we put it there.
+                {t("It is a deliberately narrow way of working. It means we can stand behind the surface, because we chose the material and we put it there.")}
               </p>
             </div>
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <Link to="/services" className="btn btn-outline">
-                Our Services
+                {t("Our Services")}
               </Link>
               <Link to="/products" className="link-line text-forest self-center sm:ml-4">
-                The finishes <span aria-hidden>→</span>
+                {t("The finishes")} <span aria-hidden>→</span>
               </Link>
             </div>
           </div>
@@ -140,11 +133,11 @@ function AboutPage() {
         <div className="mx-auto max-w-[1400px]">
           <div className="grid md:grid-cols-12 gap-8 mb-14">
             <div className="md:col-span-4">
-              <p className="eyebrow text-gold">How we think</p>
+              <p className="eyebrow text-gold">{t("How we think")}</p>
             </div>
             <div className="md:col-span-8">
               <h2 className="font-serif text-4xl md:text-5xl text-forest leading-[1.08] text-balance">
-                Four principles that shape every project.
+                {t("Four principles that shape every project.")}
               </h2>
             </div>
           </div>
@@ -153,8 +146,8 @@ function AboutPage() {
               <div key={p.t} className="grid grid-cols-[3rem_1fr] gap-x-6 py-8 border-b border-forest/15">
                 <p className="font-serif text-gold text-lg pt-0.5">0{i + 1}</p>
                 <div>
-                  <h3 className="font-serif text-2xl text-forest mb-3">{p.t}</h3>
-                  <p className="text-forest/65 leading-relaxed">{p.d}</p>
+                  <h3 className="font-serif text-2xl text-forest mb-3">{t(p.t)}</h3>
+                  <p className="text-forest/65 leading-relaxed">{t(p.d)}</p>
                 </div>
               </div>
             ))}
@@ -165,8 +158,8 @@ function AboutPage() {
       <section className="py-16 md:py-24 px-6 md:px-12 bg-cream border-y border-forest/10">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-4">
-            <p className="eyebrow text-gold mb-3">The finishes</p>
-            <p className="text-forest/65 leading-relaxed">Six finishes, each supplied and applied by the studio.</p>
+            <p className="eyebrow text-gold mb-3">{t("The finishes")}</p>
+            <p className="text-forest/65 leading-relaxed">{t("Six finishes, each supplied and applied by the studio.")}</p>
           </div>
           <ul className="md:col-span-8 flex flex-wrap gap-x-10 gap-y-4">
             {products.map((p) => (
@@ -187,13 +180,12 @@ function AboutPage() {
       <section className="py-24 md:py-36 px-6 md:px-12 bg-forest text-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8">
           <div className="md:col-span-5">
-            <p className="eyebrow text-gold mb-5">Start a conversation</p>
+            <p className="eyebrow text-gold mb-5">{t("Start a conversation")}</p>
             <h2 className="font-serif text-4xl md:text-6xl leading-[1.05] mb-8 text-balance">
-              Tell us about your space.
+              {t("Tell us about your space.")}
             </h2>
             <p className="text-beige/70 text-lg leading-relaxed max-w-md">
-              Whether you are specifying a finish, planning a development or renovating a home, the
-              next step is a conversation and a sample.
+              {t("Whether you are specifying a finish, planning a development or renovating a home, the next step is a conversation and a sample.")}
             </p>
           </div>
           <div className="md:col-span-6 md:col-start-7">

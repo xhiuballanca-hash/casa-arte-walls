@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import craftApplication from "@/assets/application-craft.png.asset.json";
+import { useT } from "@/lib/i18n";
 
 const TITLE = "Services — Supply, Application & Consultation | Casa D'Arte";
 const DESCRIPTION =
@@ -77,20 +78,21 @@ const services = [
 ];
 
 function ServicesPage() {
+  const t = useT();
+  const tr = t;
   return (
     <>
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 md:gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-6">Services</p>
+            <p className="eyebrow text-gold mb-6">{t("Services")}</p>
             <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
-              From sample to <em className="italic">sealed wall.</em>
+              {t("From sample to")} <em className="italic">{t("sealed wall.")}</em>
             </h1>
           </div>
           <div className="md:col-span-4">
             <p className="text-forest/70 text-lg leading-relaxed">
-              Casa D'Arte does not only supply decorative materials. We take a project from finish
-              selection and samples through quotation to professional application by our own team.
+              {t("Casa D'Arte does not only supply decorative materials. We take a project from finish selection and samples through quotation to professional application by our own team.")}
             </p>
           </div>
         </div>
@@ -105,13 +107,13 @@ function ServicesPage() {
             >
               <p className="md:col-span-1 font-serif text-gold text-2xl">{s.n}</p>
               <h2 className="md:col-span-4 font-serif text-3xl md:text-4xl text-forest leading-[1.1]">
-                {s.t}
+                {t(s.t)}
               </h2>
               <div className="md:col-span-6 md:col-start-7">
-                <p className="text-forest/70 text-lg leading-relaxed">{s.d}</p>
+                <p className="text-forest/70 text-lg leading-relaxed">{t(s.d)}</p>
                 {s.link ? (
                   <Link to={s.link.to} className="link-line text-forest mt-5 inline-block">
-                    {s.link.label} <span aria-hidden>→</span>
+                    {t(s.link.label)} <span aria-hidden>→</span>
                   </Link>
                 ) : null}
               </div>
@@ -125,7 +127,7 @@ function ServicesPage() {
           <div className="md:col-span-5">
             <img
               src={craftApplication.url}
-              alt="Decorative finish applied by hand with a steel trowel"
+              alt={t("Decorative finish applied by hand with a steel trowel")}
               width={941}
               height={1672}
               loading="lazy"
@@ -133,9 +135,9 @@ function ServicesPage() {
             />
           </div>
           <div className="md:col-span-6 md:col-start-7">
-             <p className="eyebrow text-gold mb-6">From concept to completion</p>
+             <p className="eyebrow text-gold mb-6">{t("From concept to completion")}</p>
             <h2 className="font-serif text-4xl md:text-5xl text-forest leading-[1.08] mb-10 text-balance">
-               Our Process
+               {t("Our Process")}
             </h2>
             <ol className="border-t border-forest/15">
               {[
@@ -148,8 +150,8 @@ function ServicesPage() {
                 <li key={t} className="grid grid-cols-[3rem_1fr] gap-x-6 py-5 border-b border-forest/15">
                   <p className="font-serif text-gold text-lg">0{i + 1}</p>
                   <div>
-                    <p className="font-serif text-xl text-forest mb-1">{t}</p>
-                    <p className="text-sm text-forest/60 leading-relaxed">{d}</p>
+                    <p className="font-serif text-xl text-forest mb-1">{tr(t)}</p>
+                    <p className="text-sm text-forest/60 leading-relaxed">{tr(d)}</p>
                   </div>
                 </li>
               ))}
@@ -161,17 +163,17 @@ function ServicesPage() {
       <section className="py-24 md:py-32 px-6 md:px-12 bg-forest text-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 items-end">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-5">Next step</p>
+            <p className="eyebrow text-gold mb-5">{t("Next step")}</p>
             <h2 className="font-serif text-4xl md:text-6xl leading-[1.05] text-balance">
-              Discuss the project, or start with a <em className="italic">sample.</em>
+              {t("Discuss the project, or start with a")} <em className="italic">{t("sample.")}</em>
             </h2>
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 md:items-end">
             <Link to="/contact" search={{ intent: "project" }} className="btn btn-gold">
-              Discuss Your Project
+              {t("Discuss Your Project")}
             </Link>
             <Link to="/contact" search={{ intent: "quote" }} className="btn btn-outline-light">
-              Request a Quote
+              {t("Request a Quote")}
             </Link>
           </div>
         </div>

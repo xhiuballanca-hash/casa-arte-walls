@@ -17,21 +17,23 @@ import { SiteFooter } from "../lib/site-footer";
 import { WhatsAppButton } from "../lib/whatsapp-button";
 import { CookieConsent } from "../lib/cookie-consent";
 import { AuthProvider } from "../hooks/useAuth";
+import { LanguageProvider, useT, useLocalizedHead } from "../lib/i18n";
 
 function NotFoundComponent() {
+  const t = useT();
   return (
     <div className="flex min-h-screen items-center justify-center bg-beige px-6">
       <div className="max-w-md text-center">
         <p className="eyebrow text-gold mb-6">404</p>
-        <h1 className="font-serif text-5xl text-forest mb-4">Page not found</h1>
+        <h1 className="font-serif text-5xl text-forest mb-4">{t("Page not found")}</h1>
         <p className="text-forest/60 mb-8">
-          The page you're looking for has been moved or no longer exists.
+          {t("The page you're looking for has been moved or no longer exists.")}
         </p>
         <a
           href="/"
           className="inline-flex text-[11px] uppercase tracking-[0.25em] border border-forest text-forest rounded-full px-8 py-3 hover:bg-forest hover:text-beige transition-all"
         >
-          Return home
+          {t("Return home")}
         </a>
       </div>
     </div>
@@ -41,28 +43,29 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
+  const t = useT();
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
   return (
     <div className="flex min-h-screen items-center justify-center bg-beige px-6">
       <div className="max-w-md text-center">
-        <h1 className="font-serif text-3xl text-forest mb-3">This page didn't load</h1>
+        <h1 className="font-serif text-3xl text-forest mb-3">{t("This page didn't load")}</h1>
         <p className="text-forest/60 text-sm mb-6">
-          Something went wrong on our end. Please try again.
+          {t("Something went wrong on our end. Please try again.")}
         </p>
         <div className="flex justify-center gap-3">
           <button
             onClick={() => { router.invalidate(); reset(); }}
             className="text-[11px] uppercase tracking-[0.25em] bg-forest text-beige rounded-full px-6 py-3 hover:bg-gold hover:text-forest transition"
           >
-            Try again
+            {t("Try again")}
           </button>
           <a
             href="/"
             className="text-[11px] uppercase tracking-[0.25em] border border-forest/30 text-forest rounded-full px-6 py-3 hover:border-gold hover:text-gold transition"
           >
-            Go home
+            {t("Go home")}
           </a>
         </div>
       </div>
@@ -128,13 +131,20 @@ function isWorkspacePath(pathname: string) {
   );
 }
 
+function HeadLocalizer({ pathname }: { pathname: string }) {
+  useLocalizedHead(pathname);
+  return null;
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const { pathname } = useLocation();
   const workspace = isWorkspacePath(pathname);
   return (
     <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
       <AuthProvider>
+      <HeadLocalizer pathname={pathname} />
         {workspace ? (
           <Outlet />
         ) : (
@@ -163,6 +173,7 @@ function RootComponent() {
           }}
         />
       </AuthProvider>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }

@@ -1,5 +1,6 @@
 import { createFileRoute, Link, Outlet, useLocation } from "@tanstack/react-router";
 import { products } from "@/lib/products-data";
+import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 const TITLE = "Finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement, Beton Look";
 const DESCRIPTION =
@@ -39,23 +40,25 @@ export const Route = createFileRoute("/products")({
 
 function ProductsIndex() {
   const pathname = useLocation({ select: (location) => location.pathname });
+  const { t, lang } = useI18n();
+  const list = products.map((p) => localizeProduct(p, lang));
   if (pathname !== "/products" && pathname !== "/products/") return <Outlet />;
   return (
     <>
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-6">The Finishes</p>
+            <p className="eyebrow text-gold mb-6">{t("The Finishes")}</p>
             <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
-              Six finishes. <em className="italic">One standard of execution.</em>
+              {t("Six finishes.")} <em className="italic">{t("One standard of execution.")}</em>
             </h1>
             <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
-               Explore six decorative finishes, supplied and professionally applied by our own team.
+               {t("Explore six decorative finishes, supplied and professionally applied by our own team.")}
             </p>
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 md:items-end">
             <Link to="/contact" search={{ intent: "sample" }} className="btn btn-forest">
-              Request a Sample
+              {t("Request a Sample")}
             </Link>
           </div>
         </div>
@@ -63,7 +66,7 @@ function ProductsIndex() {
 
       <section className="px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] border-t border-forest/15 py-6 flex flex-wrap gap-x-8 gap-y-2 text-[10px] uppercase tracking-[0.25em] text-forest/50">
-          {products.map((p) => (
+          {list.map((p) => (
             <a key={p.slug} href={`#${p.slug}`} className="hover:text-gold transition-colors">
               {p.index} {p.name}
             </a>
@@ -73,7 +76,7 @@ function ProductsIndex() {
 
       <section className="py-20 md:py-28 pb-32 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] space-y-28 md:space-y-40">
-          {products.map((p, i) => (
+          {list.map((p, i) => (
             <article
               key={p.slug}
               id={p.slug}
@@ -85,7 +88,7 @@ function ProductsIndex() {
                 {p.image ? (
                   <img
                     src={p.image}
-                    alt={`${p.name} decorative wall finish`}
+                    alt={t("{name} decorative wall finish", { name: p.name })}
                     width={1000}
                     height={1250}
                     loading={i === 0 ? "eager" : "lazy"}
@@ -93,7 +96,7 @@ function ProductsIndex() {
                   />
                 ) : (
                   <div className="flex aspect-[4/5] items-end bg-beige p-6 text-sm text-forest/50">
-                    Approved material photography to follow.
+                    {t("Approved material photography to follow.")}
                   </div>
                 )}
                 {p.imageNote ? (
@@ -112,14 +115,14 @@ function ProductsIndex() {
                  <p className="text-forest/75 text-lg leading-relaxed mb-8">{p.summary}</p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/products/$slug" params={{ slug: p.slug }} className="btn btn-outline">
-                    Explore {p.name}
+                    {t("Explore {name}", { name: p.name })}
                   </Link>
                   <Link
                     to="/contact"
                     search={{ intent: "quote" }}
                     className="link-line text-forest self-center sm:ml-4"
                   >
-                    Request a quote <span aria-hidden>→</span>
+                    {t("Request a quote")} <span aria-hidden>→</span>
                   </Link>
                 </div>
               </div>
@@ -131,18 +134,17 @@ function ProductsIndex() {
       <section className="py-24 md:py-32 px-6 md:px-12 bg-cream border-t border-forest/10">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 items-center">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-5">Not sure which finish?</p>
+            <p className="eyebrow text-gold mb-5">{t("Not sure which finish?")}</p>
             <h2 className="font-serif text-3xl md:text-5xl text-forest leading-[1.1] text-balance">
-              Tell us about the space and we will prepare samples in tones and textures suited to
-              it — before anything is quoted.
+              {t("Tell us about the space and we will prepare samples in tones and textures suited to it — before anything is quoted.")}
             </h2>
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 md:items-end">
             <Link to="/contact" search={{ intent: "project" }} className="btn btn-forest">
-              Discuss Your Project
+              {t("Discuss Your Project")}
             </Link>
             <Link to="/contact" search={{ intent: "sample" }} className="btn btn-outline">
-              Request a Sample
+              {t("Request a Sample")}
             </Link>
           </div>
         </div>

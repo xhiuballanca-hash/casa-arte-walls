@@ -1,5 +1,6 @@
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { getProduct, products } from "@/lib/products-data";
+import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 export const Route = createFileRoute("/products/$slug")({
   loader: ({ params }) => {
@@ -59,8 +60,9 @@ export const Route = createFileRoute("/products/$slug")({
 });
 
 function ProductDetail() {
-  const { product } = Route.useLoaderData();
-  const others = products.filter((p) => p.slug !== product.slug);
+  const { t, lang } = useI18n();
+  const product = localizeProduct(Route.useLoaderData().product, lang);
+  const others = products.filter((p) => p.slug !== product.slug).map((p) => localizeProduct(p, lang));
 
   return (
     <>
@@ -68,7 +70,7 @@ function ProductDetail() {
       <section className="pt-36 pb-10 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px]">
           <Link to="/products" className="eyebrow text-forest/60 hover:text-gold transition-colors inline-flex mb-10">
-            ← All finishes
+            {t("← All finishes")}
           </Link>
           <div className="grid md:grid-cols-12 gap-10 md:gap-8 items-end">
             <div className="md:col-span-7">
@@ -84,7 +86,7 @@ function ProductDetail() {
             <div className="md:col-span-5">
                <p className="text-forest/75 text-lg leading-relaxed mb-8">{product.summary}</p>
                <Link to="/contact" search={{ intent: "project" }} className="btn btn-forest">
-                 Discuss Your Project
+                 {t("Discuss Your Project")}
                </Link>
             </div>
           </div>
@@ -97,7 +99,7 @@ function ProductDetail() {
           {product.image ? (
             <img
               src={product.image}
-              alt={`${product.name} decorative finish surface`}
+              alt={t("{name} decorative finish surface", { name: product.name })}
               width={1600}
               height={1000}
               fetchPriority="high"
@@ -105,7 +107,7 @@ function ProductDetail() {
             />
           ) : (
             <div className="flex aspect-[16/10] items-end bg-cream p-8 text-sm text-forest/50">
-              Approved material photography to follow.
+              {t("Approved material photography to follow.")}
             </div>
           )}
           {product.imageNote ? (
@@ -117,10 +119,10 @@ function ProductDetail() {
        <section className="pb-20 md:pb-28 px-6 md:px-12 bg-beige">
          <div className="mx-auto max-w-[1400px] border-t border-forest/15 pt-10 md:pt-14 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
            <p className="font-serif text-2xl md:text-3xl text-forest max-w-2xl">
-             {product.name} is supplied by Casa D'Arte and professionally applied by our own team.
+             {t("{name} is supplied by Casa D'Arte and professionally applied by our own team.", { name: product.name })}
            </p>
            <Link to="/contact" search={{ intent: "project" }} className="link-line text-forest self-start md:self-center shrink-0">
-             Discuss Your Project <span aria-hidden>→</span>
+             {t("Discuss Your Project")} <span aria-hidden>→</span>
            </Link>
          </div>
        </section>
@@ -130,11 +132,11 @@ function ProductDetail() {
         <div className="mx-auto max-w-[1400px]">
           <div className="flex items-end justify-between gap-6 mb-10">
             <div>
-              <p className="eyebrow text-gold mb-4">Other finishes</p>
-              <h3 className="font-serif text-3xl md:text-4xl text-forest">Continue exploring.</h3>
+              <p className="eyebrow text-gold mb-4">{t("Other finishes")}</p>
+              <h3 className="font-serif text-3xl md:text-4xl text-forest">{t("Continue exploring.")}</h3>
             </div>
             <Link to="/products" className="link-line text-forest hidden sm:inline">
-              All finishes <span aria-hidden>→</span>
+              {t("All finishes")} <span aria-hidden>→</span>
             </Link>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -144,13 +146,13 @@ function ProductDetail() {
                   {p.image ? (
                     <img
                       src={p.image}
-                      alt={`${p.name} decorative finish`}
+                      alt={t("{name} decorative finish", { name: p.name })}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.04]"
                     />
                   ) : (
                     <div className="flex h-full items-end p-4 text-xs text-forest/50">
-                      Photography to follow.
+                      {t("Photography to follow.")}
                     </div>
                   )}
                 </div>

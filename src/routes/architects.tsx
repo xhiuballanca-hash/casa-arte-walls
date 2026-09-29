@@ -3,6 +3,7 @@ import { ConsultationForm } from "@/lib/consultation-form";
 import architectsImg from "@/assets/architects-flatlay.jpg";
 import craftImg from "@/assets/about-craft.jpg";
 import { products } from "@/lib/products-data";
+import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 const TITLE = "Architects & Designers — Casa D'Arte Partnership";
 const DESCRIPTION =
@@ -95,29 +96,29 @@ const audiences = [
 ];
 
 function ArchitectsPage() {
+  const { t, lang } = useI18n();
+  const tr = t;
+  const list = products.map((p) => localizeProduct(p, lang));
   return (
     <>
       {/* HERO */}
       <section className="relative bg-forest text-beige pt-40 pb-20 md:pb-28 px-6 md:px-12 overflow-hidden">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-12 md:gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-6">Architects · Designers · Developers</p>
+            <p className="eyebrow text-gold mb-6">{t("Architects · Designers · Developers")}</p>
             <h1 className="font-serif text-5xl md:text-7xl leading-[1.02] mb-8 text-balance">
-              Specify with confidence. <em className="italic">We take it from there.</em>
+              {t("Specify with confidence.")} <em className="italic">{t("We take it from there.")}</em>
             </h1>
             <p className="text-beige/75 text-lg md:text-xl max-w-3xl leading-relaxed">
-              Casa D'Arte works alongside architects, interior designers, developers and
-              hospitality operators as the party responsible for the decorative surface — from
-              sample box and specification to quotation and execution on site. Material and
-              application are handled by one team.
+              {t("Casa D'Arte works alongside architects, interior designers, developers and hospitality operators as the party responsible for the decorative surface — from sample box and specification to quotation and execution on site. Material and application are handled by one team.")}
             </p>
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 md:items-end">
             <a href="#partner" className="btn btn-gold">
-              Become a Partner
+              {t("Become a Partner")}
             </a>
             <Link to="/contact" search={{ intent: "sample" }} className="btn btn-outline-light">
-              Request a Sample Box
+              {t("Request a Sample Box")}
             </Link>
           </div>
         </div>
@@ -129,28 +130,28 @@ function ArchitectsPage() {
           <div className="md:col-span-5 md:sticky md:top-32">
             <img
               src={architectsImg}
-              alt="Finish samples and drawings laid out for specification"
+              alt={t("Finish samples and drawings laid out for specification")}
               width={1200}
               height={1200}
               loading="lazy"
               className="w-full aspect-[4/5] object-cover"
             />
             <p className="mt-4 text-xs text-forest/50 leading-relaxed">
-              Sample cases and project samples are prepared for each collaboration.
+              {t("Sample cases and project samples are prepared for each collaboration.")}
             </p>
           </div>
           <div className="md:col-span-6 md:col-start-7">
-            <p className="eyebrow text-gold mb-5">What we provide</p>
+            <p className="eyebrow text-gold mb-5">{t("What we provide")}</p>
             <h2 className="font-serif text-4xl md:text-5xl text-forest leading-[1.08] mb-12 text-balance">
-              Support from the first sample to the last coat.
+              {t("Support from the first sample to the last coat.")}
             </h2>
             <div className="border-t border-forest/15">
               {support.map((p) => (
                 <div key={p.n} className="grid grid-cols-[3rem_1fr] gap-x-6 py-7 border-b border-forest/15">
                   <p className="font-serif text-gold text-lg pt-0.5">{p.n}</p>
                   <div>
-                    <h3 className="font-serif text-2xl text-forest mb-2">{p.t}</h3>
-                    <p className="text-forest/65 leading-relaxed">{p.d}</p>
+                    <h3 className="font-serif text-2xl text-forest mb-2">{t(p.t)}</h3>
+                    <p className="text-forest/65 leading-relaxed">{t(p.d)}</p>
                   </div>
                 </div>
               ))}
@@ -163,14 +164,13 @@ function ArchitectsPage() {
       <section className="py-20 md:py-28 px-6 md:px-12 bg-cream border-y border-forest/10">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 md:gap-8 items-start">
           <div className="md:col-span-4">
-            <p className="eyebrow text-gold mb-5">The finishes</p>
+            <p className="eyebrow text-gold mb-5">{t("The finishes")}</p>
             <p className="text-forest/70 leading-relaxed max-w-sm">
-              Five Italian systems, each pigmented and textured to project specification. Full
-              details, applications and galleries on each finish page.
+              {t("Five Italian systems, each pigmented and textured to project specification. Full details, applications and galleries on each finish page.")}
             </p>
           </div>
           <ul className="md:col-span-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
-            {products.map((p) => (
+            {list.map((p) => (
               <li key={p.slug}>
                 <Link
                   to="/products/$slug"
@@ -189,9 +189,9 @@ function ArchitectsPage() {
               <Link to="/products" className="group block border-t border-forest/20 pt-4">
                 <p className="font-serif text-gold text-sm mb-2">—</p>
                 <p className="font-serif text-2xl text-forest group-hover:text-gold transition-colors">
-                  All finishes →
+                  {t("All finishes →")}
                 </p>
-                <p className="eyebrow text-forest/45 mt-1">Overview</p>
+                <p className="eyebrow text-forest/45 mt-1">{t("Overview")}</p>
               </Link>
             </li>
           </ul>
@@ -203,21 +203,21 @@ function ArchitectsPage() {
         <div className="mx-auto max-w-[1400px]">
           <div className="grid md:grid-cols-12 gap-8 mb-14 md:mb-20">
             <div className="md:col-span-4">
-              <p className="eyebrow text-gold">Who we work with</p>
+              <p className="eyebrow text-gold">{t("Who we work with")}</p>
             </div>
             <div className="md:col-span-8">
               <h2 className="font-serif text-4xl md:text-5xl text-forest leading-[1.08] text-balance">
-                One responsibility, whatever the scale of the project.
+                {t("One responsibility, whatever the scale of the project.")}
               </h2>
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-10 md:gap-8 border-t border-forest/15">
             {audiences.map((a) => (
               <div key={a.t} className="pt-8 flex flex-col">
-                <h3 className="font-serif text-2xl text-forest mb-4">{a.t}</h3>
-                <p className="text-forest/65 leading-relaxed mb-8 flex-1">{a.d}</p>
+                <h3 className="font-serif text-2xl text-forest mb-4">{t(a.t)}</h3>
+                <p className="text-forest/65 leading-relaxed mb-8 flex-1">{t(a.d)}</p>
                 <Link to="/contact" search={{ intent: a.cta.intent }} className="link-line text-forest self-start">
-                  {a.cta.label} <span aria-hidden>→</span>
+                  {t(a.cta.label)} <span aria-hidden>→</span>
                 </Link>
               </div>
             ))}
@@ -229,9 +229,9 @@ function ArchitectsPage() {
       <section className="bg-forest text-beige py-24 md:py-36 px-6 md:px-12">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8 items-center">
           <div className="md:col-span-6">
-            <p className="eyebrow text-gold mb-6">How a collaboration runs</p>
+            <p className="eyebrow text-gold mb-6">{t("How a collaboration runs")}</p>
             <h2 className="font-serif text-4xl md:text-5xl leading-[1.08] mb-10 text-balance">
-              Clear steps, so your client always knows what happens next.
+              {t("Clear steps, so your client always knows what happens next.")}
             </h2>
             <ol className="border-t border-beige/15">
               {[
@@ -244,8 +244,8 @@ function ArchitectsPage() {
                 <li key={t} className="grid grid-cols-[3rem_1fr] gap-x-6 py-5 border-b border-beige/15">
                   <p className="font-serif text-gold text-lg">0{i + 1}</p>
                   <div>
-                    <p className="font-serif text-xl mb-1">{t}</p>
-                    <p className="text-sm text-beige/60 leading-relaxed">{d}</p>
+                    <p className="font-serif text-xl mb-1">{tr(t)}</p>
+                    <p className="text-sm text-beige/60 leading-relaxed">{tr(d)}</p>
                   </div>
                 </li>
               ))}
@@ -254,7 +254,7 @@ function ArchitectsPage() {
           <div className="md:col-span-5 md:col-start-8">
             <img
               src={craftImg}
-              alt="Decorative finish applied by hand with a steel trowel"
+              alt={t("Decorative finish applied by hand with a steel trowel")}
               width={1200}
               height={1500}
               loading="lazy"
@@ -268,13 +268,12 @@ function ArchitectsPage() {
       <section id="partner" className="py-24 md:py-36 px-6 md:px-12 bg-cream scroll-mt-24">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8">
           <div className="md:col-span-5">
-            <p className="eyebrow text-gold mb-5">Become a Partner</p>
+            <p className="eyebrow text-gold mb-5">{t("Become a Partner")}</p>
             <h2 className="font-serif text-4xl md:text-6xl text-forest leading-[1.05] mb-8 text-balance">
-              Introduce your studio or company.
+              {t("Introduce your studio or company.")}
             </h2>
             <p className="text-forest/65 leading-relaxed text-lg max-w-md">
-              Tell us about your practice or portfolio and the projects you have in view. We will
-              come back to arrange a conversation and, where useful, a sample box.
+              {t("Tell us about your practice or portfolio and the projects you have in view. We will come back to arrange a conversation and, where useful, a sample box.")}
             </p>
           </div>
           <div className="md:col-span-6 md:col-start-7">

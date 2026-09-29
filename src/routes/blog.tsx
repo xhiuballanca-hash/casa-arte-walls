@@ -1,5 +1,6 @@
 import { createFileRoute, Link, Outlet, useLocation } from "@tanstack/react-router";
 import { posts } from "@/lib/blog-data";
+import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 const TITLE = "Journal — Casa D'Arte on Italian Decorative Finishes";
 const DESCRIPTION =
@@ -41,20 +42,21 @@ export const Route = createFileRoute("/blog")({
 
 function BlogIndex() {
   const pathname = useLocation({ select: (location) => location.pathname });
+  const { t, lang } = useI18n();
   if (pathname !== "/blog" && pathname !== "/blog/") return <Outlet />;
   return (
     <>
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-6">The Journal</p>
+            <p className="eyebrow text-gold mb-6">{t("The Journal")}</p>
             <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
-              Notes from the <em className="italic">studio.</em>
+              {t("Notes from the")} <em className="italic">{t("studio.")}</em>
             </h1>
           </div>
           <div className="md:col-span-4">
             <p className="text-forest/70 text-lg leading-relaxed">
-              On Italian craft, colour, material and the architecture of the interior.
+              {t("On Italian craft, colour, material and the architecture of the interior.")}
             </p>
           </div>
         </div>
@@ -62,7 +64,7 @@ function BlogIndex() {
 
       <section className="pb-32 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] border-t border-forest/15">
-          {posts.map((p) => (
+          {posts.map((p) => localizePost(p, lang)).map((p) => (
             <Link
               key={p.slug}
               to="/blog/$slug"
@@ -80,7 +82,7 @@ function BlogIndex() {
                   {p.title}
                 </h2>
                 <p className="text-forest/65 text-lg leading-relaxed max-w-2xl">{p.excerpt}</p>
-                <span className="mt-6 inline-block link-line text-forest text-sm">Read</span>
+                <span className="mt-6 inline-block link-line text-forest text-sm">{t("Read")}</span>
               </div>
             </Link>
           ))}

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 import { projects, categories, type Category } from "@/lib/portfolio-data";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useT } from "@/lib/i18n";
 
 const TITLE = "Projects — Casa D'Arte Decorative Finishes in Place";
 const DESCRIPTION =
@@ -36,6 +37,7 @@ export const Route = createFileRoute("/portfolio")({
 });
 
 function PortfolioPage() {
+  const t = useT();
   const [filter, setFilter] = useState<Category | "All">("All");
   const [lightbox, setLightbox] = useState<number | null>(null);
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
@@ -70,18 +72,17 @@ function PortfolioPage() {
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-6">Projects</p>
+            <p className="eyebrow text-gold mb-6">{t("Projects")}</p>
             <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
-              Surfaces in place.
+              {t("Surfaces in place.")}
             </h1>
             <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
-              A selection of Casa D'Arte surfaces in residential, hospitality, workplace and retail
-              interiors. Each project is presented only by its space and finish.
+              {t("A selection of Casa D'Arte surfaces in residential, hospitality, workplace and retail interiors. Each project is presented only by its space and finish.")}
             </p>
           </div>
           <div className="md:col-span-4 md:text-right">
             <Link to="/contact" search={{ intent: "project" }} className="btn btn-outline">
-              Discuss a Similar Project
+              {t("Discuss a Similar Project")}
             </Link>
           </div>
         </div>
@@ -103,7 +104,7 @@ function PortfolioPage() {
                     : "text-forest/50 border-transparent hover:text-forest"
                 }`}
               >
-                {c}
+                {t(c)}
               </button>
             ))}
           </div>
@@ -119,18 +120,18 @@ function PortfolioPage() {
                   {p.image ? (
                     <img
                       src={p.image}
-                      alt={`${p.title} — ${p.finish}`}
+                      alt={`${t(p.title)} — ${p.finish}`}
                       loading="lazy"
                       className="w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
                     />
                   ) : (
                     <div className="flex aspect-[4/5] items-end bg-cream p-5 text-sm text-forest/50">
-                      Approved project photography to follow.
+                      {t("Approved project photography to follow.")}
                     </div>
                   )}
                 </div>
                 <div className="pt-3 pb-1">
-                  <p className="font-serif text-forest text-lg leading-tight">{p.title} — {p.finish}</p>
+                  <p className="font-serif text-forest text-lg leading-tight">{t(p.title)} — {p.finish}</p>
                 </div>
               </button>
             ))}
@@ -139,16 +140,15 @@ function PortfolioPage() {
           <div className="mt-20 border-t border-forest/15 pt-12 grid md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-8">
               <h2 className="font-serif text-3xl md:text-4xl text-forest leading-snug text-balance">
-                Planning a residence, a hotel or a development? We can prepare samples in your
-                tones and a quotation for material and application together.
+                {t("Planning a residence, a hotel or a development? We can prepare samples in your tones and a quotation for material and application together.")}
               </h2>
             </div>
             <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 md:items-end">
               <Link to="/contact" search={{ intent: "quote" }} className="btn btn-forest">
-                Request a Quote
+                {t("Request a Quote")}
               </Link>
               <Link to="/contact" search={{ intent: "sample" }} className="btn btn-outline">
-                Request a Sample
+                {t("Request a Sample")}
               </Link>
             </div>
           </div>
@@ -159,12 +159,12 @@ function PortfolioPage() {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={active.title}
+          aria-label={t(active.title)}
           className="fixed inset-0 z-[70] bg-forest-deep/95 flex items-center justify-center p-4 md:p-10 fade-in"
           onClick={() => setLightbox(null)}
         >
           <button
-            aria-label="Close"
+            aria-label={t("Close")}
             onClick={() => setLightbox(null)}
             className="absolute top-6 right-6 text-beige hover:text-gold p-2"
           >
@@ -173,7 +173,7 @@ function PortfolioPage() {
           {filtered.length > 1 && (
             <>
               <button
-                aria-label="Previous project"
+                aria-label={t("Previous project")}
                 onClick={(e) => {
                   e.stopPropagation();
                   step(-1);
@@ -183,7 +183,7 @@ function PortfolioPage() {
                 <ChevronLeft className="h-7 w-7" />
               </button>
               <button
-                aria-label="Next project"
+                aria-label={t("Next project")}
                 onClick={(e) => {
                   e.stopPropagation();
                   step(1);
@@ -198,17 +198,17 @@ function PortfolioPage() {
             {active.image ? (
               <img
                 src={active.image}
-                alt={`${active.title} — ${active.finish}`}
+                alt={`${t(active.title)} — ${active.finish}`}
                 className="w-full max-h-[78vh] object-contain"
               />
             ) : (
               <div className="flex h-[50vh] items-end bg-beige p-8 text-forest/60">
-                Approved project photography to follow.
+                {t("Approved project photography to follow.")}
               </div>
             )}
             <div className="mt-6 text-beige flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 border-t border-beige/15 pt-5">
               <div>
-                <p className="font-serif text-2xl">{active.title} — {active.finish}</p>
+                <p className="font-serif text-2xl">{t(active.title)} — {active.finish}</p>
               </div>
             </div>
           </div>
