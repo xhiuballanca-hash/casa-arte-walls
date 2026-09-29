@@ -63,9 +63,9 @@ export function useT() {
 }
 
 export function LanguageSwitcher({ className = "", tone = "text-forest/60" }: { className?: string; tone?: string }) {
-  const { lang, setLang } = useI18n();
+  const { lang, setLang, t } = useI18n();
   return (
-    <div className={`flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-medium ${className}`} aria-label="Language">
+    <div className={`flex shrink-0 items-center gap-2 text-[11px] font-medium uppercase tracking-[0.16em] ${className}`} role="group" aria-label={t("Language")}>
       {LANGS.map((l, i) => (
         <span key={l} className="flex items-center gap-2">
           {i > 0 && <span aria-hidden className="opacity-40">|</span>}
@@ -73,7 +73,7 @@ export function LanguageSwitcher({ className = "", tone = "text-forest/60" }: { 
             type="button"
             onClick={() => setLang(l)}
             aria-pressed={lang === l}
-            className={`transition-colors hover:text-gold ${lang === l ? "text-gold" : tone}`}
+            className={`min-h-8 min-w-8 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${lang === l ? "text-gold" : tone}`}
           >
             {l.toUpperCase()}
           </button>

@@ -35,20 +35,20 @@ export function SiteNav() {
   const onDark = DARK_HERO_ROUTES.has(pathname) && !scrolled && !open;
   const ink = onDark ? "text-beige" : "text-forest";
   const inkSoft = onDark ? "text-beige/80" : "text-forest/75";
-  const coverNavigation = pathname === "/" && !scrolled && !open;
+  const onHomeHero = pathname === "/" && !scrolled && !open;
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-500 ${coverNavigation ? "lg:invisible" : ""} ${
-        scrolled || open
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+        scrolled || open || onHomeHero
           ? "bg-beige/95 backdrop-blur-sm border-b border-forest/10 py-4"
           : "bg-transparent py-6"
       }`}
     >
-      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12">
+      <div className="mx-auto grid max-w-[1600px] grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-4 px-6 md:px-12 lg:flex lg:justify-between">
         <Link
           to="/"
-          className={`font-serif text-xl md:text-2xl tracking-tight font-semibold transition-colors ${ink}`}
+          className={`min-w-0 truncate font-serif text-xl font-semibold tracking-normal transition-colors md:text-2xl ${onHomeHero ? "text-forest" : ink}`}
         >
           CASA D'ARTE
         </Link>
@@ -63,14 +63,15 @@ export function SiteNav() {
               {t(l.label)}
             </Link>
           ))}
-          <LanguageSwitcher tone={inkSoft} />
+          <LanguageSwitcher tone={onHomeHero ? "text-forest/75" : inkSoft} />
         </div>
-        <div className="flex items-center gap-3">
+        <LanguageSwitcher className="lg:hidden" tone="text-forest/75" />
+        <div className="flex shrink-0 items-center">
           <button
             aria-label={open ? t("Close menu") : t("Open menu")}
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
-            className={`lg:hidden p-2 transition-colors ${ink}`}
+            className={`p-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold lg:hidden ${onHomeHero ? "text-forest" : ink}`}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -92,7 +93,6 @@ export function SiteNav() {
               </Link>
             ))}
           </div>
-          <LanguageSwitcher className="pt-6" />
         </div>
       )}
     </nav>

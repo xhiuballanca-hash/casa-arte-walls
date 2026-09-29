@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroCover from "@/assets/casa-darte-cover.png.asset.json";
+import heroInterior from "@/assets/hero-interior.jpg";
 import craftAsset from "@/assets/application-craft.png.asset.json";
 import { products } from "@/lib/products-data";
 import { projects } from "@/lib/portfolio-data";
@@ -63,49 +63,27 @@ function HomePage() {
 
   return (
     <>
-      {/* The approved cover includes printed text. Desktop links align with its printed controls. */}
-      <section className="relative w-full bg-cream">
-        <div className="relative hidden lg:block">
-          <h1 className="sr-only">{t("Turn Every Wall Into Art.")}</h1>
-          <img
-            src={heroCover.url}
-            alt={t("Casa D'Arte cover: Turn Every Wall Into Art. Premium decorative finishes, professionally applied by our team.")}
-            width={1536}
-            height={655}
-            fetchPriority="high"
-            className="block h-auto w-full"
-          />
-          <Link to="/" aria-label={t("Casa D'Arte home")} className="absolute left-[6.7%] top-[5%] h-[10%] w-[14%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/" aria-label={t("Home")} className="absolute left-[30.7%] top-[6%] h-[7%] w-[4.3%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/products" aria-label={t("Finishes")} className="absolute left-[36%] top-[6%] h-[7%] w-[7.8%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/portfolio" aria-label={t("Projects")} className="absolute left-[44.6%] top-[6%] h-[7%] w-[5.7%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/about" aria-label={t("About")} className="absolute left-[51%] top-[6%] h-[7%] w-[4.3%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/contact" aria-label={t("Contact")} className="absolute left-[56.2%] top-[6%] h-[7%] w-[5.5%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/contact" search={{ intent: "project" }} aria-label={t("Get in Touch")} className="absolute left-[84.5%] top-[5.8%] h-[7.2%] w-[8.6%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/products" aria-label={t("Explore Our Finishes")} className="absolute left-[6.8%] top-[69.7%] h-[8%] w-[15.6%] focus-visible:outline focus-visible:outline-beige" />
-        </div>
-        {/* Mobile/tablet: same single image, cropped to the clean right side (wall edge, sofa, window) with live text below */}
-        <div className="pt-20 lg:hidden">
-          <div className="relative aspect-[3/2] overflow-hidden">
-            <img
-              src={heroCover.url}
-              alt={t("Warm living room with a textured Travertino wall, sofa and window view")}
-              width={1536}
-              height={655}
-              fetchPriority="high"
-              className="absolute bottom-0 -right-[7%] h-[118%] w-auto max-w-none"
-            />
-          </div>
-          <div className="px-6 pt-10 pb-24 sm:px-10">
-            <h1 className="font-serif text-forest text-5xl sm:text-6xl leading-[1.04] mb-6 reveal">
-              {t("Turn Every Wall")} <br />
-              <em className="italic font-normal">{t("Into Art.")}</em>
+      <section className="relative isolate flex min-h-[90svh] items-end overflow-hidden bg-beige pt-24 md:min-h-[92svh] md:items-center">
+        <img
+          src={heroInterior}
+          alt={t("Warm interior with a softly textured decorative wall, stone bench and natural light")}
+          width={1920}
+          height={1280}
+          fetchPriority="high"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[64%_center] sm:object-center"
+        />
+        <div aria-hidden className="absolute inset-0 -z-10 bg-cream/25" />
+        <div className="mx-auto w-full max-w-[1600px] px-6 pb-16 sm:px-10 sm:pb-20 md:px-12 md:pb-0">
+          <div className="max-w-[42rem]">
+            <p className="eyebrow mb-5 text-forest/70 reveal">Casa D'Arte</p>
+            <h1 className="font-serif text-5xl leading-[1.02] text-forest text-balance reveal sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+              {t("Turn Every Wall Into Art.")}
             </h1>
-            <p className="text-forest/75 text-base sm:text-lg font-light leading-relaxed mb-9 max-w-md reveal">
+            <p className="mt-6 max-w-xl text-base font-normal leading-relaxed text-forest/80 reveal sm:text-lg md:text-xl">
               {t("Premium decorative finishes, professionally applied by our team.")}
             </p>
-            <Link to="/products" className="btn btn-forest reveal">
-              {t("Explore Our Finishes")}
+            <Link to="/products" className="btn btn-forest mt-9 reveal">
+              {t("Explore Our Finishes")} <span aria-hidden>→</span>
             </Link>
           </div>
         </div>
