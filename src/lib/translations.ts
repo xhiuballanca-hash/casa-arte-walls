@@ -34,7 +34,7 @@ export const STRINGS: Record<string, Entry> = {
   About: { sq: "Rreth nesh", mk: "За нас" },
   Contact: { sq: "Kontakti", mk: "Контакт" },
   "Open menu": { sq: "Hapni menynë", mk: "Отвори мени" },
-  "Close menu": { sq: "Mbyllnini menynë", mk: "Затвори мени" },
+  "Close menu": { sq: "Mbyllni menynë", mk: "Затвори мени" },
   Language: { sq: "Gjuha", mk: "Јазик" },
 
   // Footer
@@ -48,9 +48,9 @@ export const STRINGS: Record<string, Entry> = {
   Social: { sq: "Rrjetet sociale", mk: "Социјални мрежи" },
   "Studio login": { sq: "Hyrja e studios", mk: "Најава за студиото" },
 
-  // Skedarët cookie
+  // Cookies
   "Cookie preferences": { sq: "Preferencat e skedarëve cookie", mk: "Поставки за колачиња" },
-  Skedarët cookie: { sq: "Skedarët cookie", mk: "Колачиња" },
+  Cookies: { sq: "Skedarët cookie", mk: "Колачиња" },
   "We use cookies to understand how visitors use this site and to improve it. Choose what you are comfortable with.": {
     sq: "Përdorim skedarë cookie për të kuptuar se si vizitorët e përdorin faqen dhe për ta përmirësuar atë. Zgjidhni opsionin që ju përshtatet.",
     mk: "Користиме колачиња за да разбереме како посетителите ја користат страницата и за да ја подобриме. Изберете што ви одговара.",
@@ -266,7 +266,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "Respect for the technique": { sq: "Respekt për teknikën", mk: "Почит кон техниката" },
   "Italian decorative finishes are layered systems. Preparation, timing and the hand that applies them matter as much as the material. We do not skip steps.": {
-    sq: "Materialet dekorative italiane janë sisteme me shtresa. Përgatitja, koha dhe dora që i aplikon kanë po aq rëndësi sa materiali. Ne nuk anashkalojmë hapa.",
+    sq: "Materialet dekorative italiane aplikohen në disa shtresa. Përgatitja, koha dhe mjeshtëria e aplikimit kanë po aq rëndësi sa vetë materiali. Nuk anashkalojmë asnjë hap.",
     mk: "Италијанските декоративни обработки се повеќеслојни системи. Подготовката, времето и раката што ги нанесува се важни колку и материјалот. Не прескокнуваме чекори.",
   },
   Restraint: { sq: "Përmbajtje", mk: "Умереност" },
@@ -356,7 +356,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "Flexible partnership": { sq: "Partneritet fleksibël", mk: "Флексибилно партнерство" },
   "From a single feature wall to a multi-unit development or hospitality rollout — a way of working that fits the project and the practice.": {
-    sq: "Nga një mur i vetëm theksues deri te një projekt ndërtimi me shumë njësi ose një projekt hotelerie — një mënyrë pune që i përshtatet projektit dhe studios suaj.",
+    sq: "Nga një mur i vetëm theksues deri te një projekt ndërtimi me shumë njësi ose një projekt hotelerie — një mënyrë pune që i përshtatet projektit dhe praktikës suaj.",
     mk: "Од еден акцентен ѕид до повеќестанбен проект или угостителски објекти — начин на работа што одговара на проектот и на вашата пракса.",
   },
   "Architects & interior designers": { sq: "Arkitektë dhe dizajnerë interieri", mk: "Архитекти и дизајнери на ентериер" },
@@ -639,7 +639,7 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
       category: "Udhëzues",
       body: [
         "Microcement është një shtresë e hollë me bazë çimentoje, që aplikohet me disa milimetra mbi një bazë ekzistuese. Tërheqja e tij është vazhdimësia që sjell: muret, dyshemetë, dushet dhe mobiliet mund të ndajnë një sipërfaqe të pandërprerë, pa fuga e pa buzë pllakash.",
-        "Kjo vazhdimësi është edhe disiplina e tij. Meqë shtresa është kaq e hollë, ajo zbulon bazën poshtë saj. Plasaritjet, lëvizjet dhe lagështia që një sistem më i trashë mund t’i fshihte, dalin në pah përmes microcement. Një rezultat i mirë varet më pak nga shtresa përfundimtare sesa nga vlerësimi, abetarja dhe përgatitja që i paraprijnë.",
+        "Kjo vazhdimësi kërkon edhe disiplinë në aplikim. Meqë shtresa është kaq e hollë, ajo zbulon bazën poshtë saj. Plasaritjet, lëvizjet dhe lagështia që një sistem më i trashë mund t’i fshihte, dalin në pah përmes Microcement. Një rezultat i mirë varet më pak nga shtresa përfundimtare sesa nga vlerësimi, aplikimi i astarit dhe përgatitja paraprake.",
         "Për zonat me lagështi, sistemi i mbylljes dhe detajet e tij te sifonët, bashkimet dhe qoshet janë ato që e bëjnë sipërfaqen të qëndrueshme. Këtu furnizuesi që e aplikon edhe vetë materialin e fiton vendin e vet: sistemi specifikohet, përgatitet, aplikohet dhe mbyllet nga një ekip i vetëm, dhe përgjegjësia për sipërfaqen e përfunduar është e qartë.",
         "Microcement është pjesë e materialeve tona, krahas sistemeve italiane me bazë gëlqereje. Kur një projekt kërkon një sipërfaqe bashkëkohore pa fuga — në banjë, kuzhinë apo dyshemenë e një dyqani — përgatisim mostra në tonin dhe teksturën e synuar dhe paraqesim një ofertë të përbashkët për materialin dhe aplikimin.",
       ],
@@ -717,7 +717,7 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
   },
   "/portfolio": {
     sq: {
-      title: "Projektet — Materialet dekorative të Casa D'Arte në vend",
+      title: "Projektet — Materiale në hapësira të ndryshme | Casa D'Arte",
       description:
         "Materiale dekorative të paraqitura në ambiente banimi, hotele, zyra dhe dyqane në Maqedoninë e Veriut.",
     },
