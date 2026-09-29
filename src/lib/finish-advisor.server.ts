@@ -25,7 +25,14 @@ const inputSchema = z.object({
 
 const LANG_NAME = { en: "English", sq: "Albanian", mk: "Macedonian" } as const;
 
+const FORMAT_LABELS = {
+  en: { observed: "What we see", recommendations: "Recommended finishes", next: "Next steps" },
+  sq: { observed: "Çfarë shohim", recommendations: "Materialet e rekomanduara", next: "Hapat e ardhshëm" },
+  mk: { observed: "Што забележуваме", recommendations: "Препорачани материјали", next: "Следни чекори" },
+} as const;
+
 function systemPrompt(lang: keyof typeof LANG_NAME) {
+  const labels = FORMAT_LABELS[lang];
   const catalog = products
     .map((p) => `- ${p.name} (${p.tagline}): ${p.summary} Interior: ${p.interior.join(", ")}. Exterior: ${p.exterior ? p.exterior.join(", ") : "not offered"}.`)
     .join("\n");
@@ -39,16 +46,16 @@ Rules:
 - Be warm, concise and editorial. Under 250 words.
 - Reply in ${LANG_NAME[lang]}. Keep finish names in their original form.
 
-Format exactly (plain text, no markdown symbols like # or *):
-What we see
+Format exactly in ${LANG_NAME[lang]} (plain text, no markdown symbols like # or *):
+${labels.observed}
 <1-2 sentences about the space and light>
 
-Recommended finishes
+${labels.recommendations}
 1. <Finish name> — <why it suits this space, one sentence>
 2. <Finish name> — <one sentence>
 (2 or 3 finishes)
 
-Next steps
+${labels.next}
 - <short step, e.g. discuss the project with the studio, see the finish in person, arrange a site visit and quotation>
 - <short step>
 - <short step>`;
