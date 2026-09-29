@@ -11,3 +11,4 @@
 
 - Public parent routes with child pages must render an `<Outlet />` for child paths while showing their index content only on their exact path; TanStack nests the detail routes under those parents.
 - Keep the narrow Vite client-RPC transform in place: the unoptimized TanStack helper otherwise reads `process.env.TSS_SERVER_FN_BASE` in the browser and breaks inquiry-page navigation.
+- Translations: wrap public UI text in `useT()`/`t("exact English")` from src/lib/i18n.tsx with entries in src/lib/translations.ts (finishes/articles/meta by slug/path); English is the key so the source copy never drifts.
