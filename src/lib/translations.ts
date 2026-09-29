@@ -775,6 +775,18 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
         "Разговарајте за вашиот проект со Casa D'Arte во Северна Македонија. Побарајте понуда или консултација за италијански декоративни обработки, набавени и професионално нанесени.",
     },
   },
+  "/finish-advisor": {
+    sq: {
+      title: "Këshilltari i materialeve — Casa D'Arte",
+      description:
+        "Ngarkoni një foto të dhomës, përshkruani hapësirën dhe merrni sugjerime për materialet dekorative të Casa D'Arte dhe hapat e ardhshëm.",
+    },
+    mk: {
+      title: "Советник за материјали — Casa D'Arte",
+      description:
+        "Прикачете фотографија од просторијата, опишете го просторот и добијте предлози за декоративните материјали на Casa D'Arte и следните чекори.",
+    },
+  },
   "/blog": {
     sq: {
       title: "Revista — Casa D'Arte për materialet dekorative italiane",
