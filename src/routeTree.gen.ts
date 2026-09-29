@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as FinishAdvisorRouteImport } from './routes/finish-advisor'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AuthRouteImport } from './routes/auth'
@@ -22,6 +23,7 @@ import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ApiFinishAdvisorRouteImport } from './routes/api/finish-advisor'
 import { Route as AuthenticatedAdminRouteRouteImport } from './routes/_authenticated/admin/route'
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin/index'
 import { Route as AuthenticatedAdminSettingsRouteImport } from './routes/_authenticated/admin/settings'
@@ -51,6 +53,11 @@ const ProductsRoute = ProductsRouteImport.update({
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinishAdvisorRoute = FinishAdvisorRouteImport.update({
+  id: '/finish-advisor',
+  path: '/finish-advisor',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -96,6 +103,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => BlogRoute,
+} as any)
+const ApiFinishAdvisorRoute = ApiFinishAdvisorRouteImport.update({
+  id: '/api/finish-advisor',
+  path: '/api/finish-advisor',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const AuthenticatedAdminRouteRoute = AuthenticatedAdminRouteRouteImport.update({
   id: '/admin',
@@ -163,11 +175,13 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/finish-advisor': typeof FinishAdvisorRoute
   '/portfolio': typeof PortfolioRoute
   '/products': typeof ProductsRouteWithChildren
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/admin': typeof AuthenticatedAdminRouteRouteWithChildren
+  '/api/finish-advisor': typeof ApiFinishAdvisorRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/admin/analytics': typeof AuthenticatedAdminAnalyticsRoute
@@ -187,10 +201,12 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/finish-advisor': typeof FinishAdvisorRoute
   '/portfolio': typeof PortfolioRoute
   '/products': typeof ProductsRouteWithChildren
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/finish-advisor': typeof ApiFinishAdvisorRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/admin/analytics': typeof AuthenticatedAdminAnalyticsRoute
@@ -212,11 +228,13 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
+  '/finish-advisor': typeof FinishAdvisorRoute
   '/portfolio': typeof PortfolioRoute
   '/products': typeof ProductsRouteWithChildren
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/_authenticated/admin': typeof AuthenticatedAdminRouteRouteWithChildren
+  '/api/finish-advisor': typeof ApiFinishAdvisorRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/_authenticated/admin/analytics': typeof AuthenticatedAdminAnalyticsRoute
@@ -238,11 +256,13 @@ export interface FileRouteTypes {
     | '/auth'
     | '/blog'
     | '/contact'
+    | '/finish-advisor'
     | '/portfolio'
     | '/products'
     | '/services'
     | '/sitemap.xml'
     | '/admin'
+    | '/api/finish-advisor'
     | '/blog/$slug'
     | '/products/$slug'
     | '/admin/analytics'
@@ -262,10 +282,12 @@ export interface FileRouteTypes {
     | '/auth'
     | '/blog'
     | '/contact'
+    | '/finish-advisor'
     | '/portfolio'
     | '/products'
     | '/services'
     | '/sitemap.xml'
+    | '/api/finish-advisor'
     | '/blog/$slug'
     | '/products/$slug'
     | '/admin/analytics'
@@ -286,11 +308,13 @@ export interface FileRouteTypes {
     | '/auth'
     | '/blog'
     | '/contact'
+    | '/finish-advisor'
     | '/portfolio'
     | '/products'
     | '/services'
     | '/sitemap.xml'
     | '/_authenticated/admin'
+    | '/api/finish-advisor'
     | '/blog/$slug'
     | '/products/$slug'
     | '/_authenticated/admin/analytics'
@@ -312,10 +336,12 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
+  FinishAdvisorRoute: typeof FinishAdvisorRoute
   PortfolioRoute: typeof PortfolioRoute
   ProductsRoute: typeof ProductsRouteWithChildren
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ApiFinishAdvisorRoute: typeof ApiFinishAdvisorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -346,6 +372,13 @@ declare module '@tanstack/react-router' {
       path: '/portfolio'
       fullPath: '/portfolio'
       preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/finish-advisor': {
+      id: '/finish-advisor'
+      path: '/finish-advisor'
+      fullPath: '/finish-advisor'
+      preLoaderRoute: typeof FinishAdvisorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -410,6 +443,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/api/finish-advisor': {
+      id: '/api/finish-advisor'
+      path: '/api/finish-advisor'
+      fullPath: '/api/finish-advisor'
+      preLoaderRoute: typeof ApiFinishAdvisorRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/_authenticated/admin': {
       id: '/_authenticated/admin'
@@ -556,10 +596,12 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
+  FinishAdvisorRoute: FinishAdvisorRoute,
   PortfolioRoute: PortfolioRoute,
   ProductsRoute: ProductsRouteWithChildren,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ApiFinishAdvisorRoute: ApiFinishAdvisorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

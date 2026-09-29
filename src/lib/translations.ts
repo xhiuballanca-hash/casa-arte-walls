@@ -5,6 +5,27 @@
 type Entry = { sq: string; mk: string };
 
 export const STRINGS: Record<string, Entry> = {
+  // Finish Advisor
+  "Finish Advisor": { sq: "Këshilltari i veshjeve", mk: "Советник за обработки" },
+  "Try the Finish Advisor": { sq: "Provoni këshilltarin e veshjeve", mk: "Пробајте го советникот" },
+  "Show us your space.": { sq: "Na tregoni hapësirën tuaj.", mk: "Покажете ни го просторот." },
+  "We'll suggest the finish.": { sq: "Ne sugjerojmë veshjen.", mk: "Ние ќе предложиме обработка." },
+  "Upload a photo of your room and describe it. Our AI-powered advisor suggests suitable finishes and next steps — a starting point for a conversation with our studio.": { sq: "Ngarkoni një foto të dhomës dhe përshkruajeni. Këshilltari ynë me AI sugjeron veshje të përshtatshme dhe hapat e ardhshëm — një pikënisje për bisedë me studion tonë.", mk: "Прикачете фотографија од просторијата и опишете ја. Нашиот советник со AI предлага соодветни обработки и следни чекори — почетна точка за разговор со нашето студио." },
+  "Room photo (optional)": { sq: "Foto e dhomës (opsionale)", mk: "Фотографија од просторијата (опционално)" },
+  "Choose a photo": { sq: "Zgjidhni një foto", mk: "Изберете фотографија" },
+  "Remove photo": { sq: "Hiq foton", mk: "Отстрани фотографија" },
+  "Your uploaded room": { sq: "Dhoma juaj e ngarkuar", mk: "Вашата прикачена просторија" },
+  "Describe your space": { sq: "Përshkruani hapësirën tuaj", mk: "Опишете го просторот" },
+  "e.g. A bright living room with oak floors. We'd like a warm, calm feature wall behind the sofa.": { sq: "p.sh. Një dhomë ndenjeje e ndritshme me dysheme lisi. Duam një mur të ngrohtë dhe të qetë pas divanit.", mk: "пр. Светла дневна соба со даб паркет. Сакаме топол, смирен ѕид зад каучот." },
+  "Get Recommendations": { sq: "Merrni rekomandime", mk: "Добијте препораки" },
+  "Preparing suggestions…": { sq: "Po përgatiten sugjerimet…", mk: "Се подготвуваат предлози…" },
+  "Looking at your space…": { sq: "Po shqyrtojmë hapësirën tuaj…", mk: "Го разгледуваме просторот…" },
+  "Your suggestions will appear here.": { sq: "Sugjerimet do të shfaqen këtu.", mk: "Предлозите ќе се појават тука." },
+  "Suggestions are AI-generated and indicative. Our team confirms the right finish on site.": { sq: "Sugjerimet krijohen nga AI dhe janë orientuese. Ekipi ynë konfirmon veshjen e duhur në vend.", mk: "Предлозите се генерирани со AI и се ориентациски. Нашиот тим ја потврдува вистинската обработка на лице место." },
+  "Please choose a JPG, PNG or WebP photo under 20 MB.": { sq: "Zgjidhni një foto JPG, PNG ose WebP nën 20 MB.", mk: "Изберете JPG, PNG или WebP фотографија под 20 MB." },
+  "This photo couldn't be read. Please try another one.": { sq: "Kjo foto nuk u lexua. Provoni një tjetër.", mk: "Фотографијата не може да се прочита. Пробајте друга." },
+  "We couldn't prepare a recommendation. Please try again.": { sq: "Nuk mundëm të përgatisnim rekomandim. Provoni përsëri.", mk: "Не можевме да подготвиме препорака. Обидете се повторно." },
+
   // Navigation
   Home: { sq: "Kreu", mk: "Почетна" },
   Finishes: { sq: "Veshjet", mk: "Обработки" },
