@@ -11,7 +11,6 @@
 - Final uploaded homepage cover installed without modifying the image; printed desktop links remain clickable, mobile headline and CTA remain live
 
 ## In progress
-- [ ] Approved Albanian-only copy refinement: terminology, grammar, metadata, Journal, and factual corrections
 - [ ] Admin dashboard + CRM
   - [ ] Auth: email/password sign-in at `/auth`, `user_roles` + `has_role()`, admin-only gate under `/admin`
   - [ ] Leads: list (search, status/source filters), detail with pipeline status, priority, value, next action, notes timeline, CSV export
@@ -21,6 +20,7 @@
   - [ ] Blog manager: DB-backed posts with editor; public journal reads from DB
 
 ## Ready
+- [x] Approved Albanian-only copy refinement: terminology, grammar, metadata, Journal, and factual corrections
 - [ ] Email notification to studio on new inquiry (needs Resend or similar connector)
 - [ ] Before/after slider on a finish page using real project photography (once supplied)
 - [ ] Macedonian language version (user chose English-only for now)
