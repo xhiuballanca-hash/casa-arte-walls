@@ -11,6 +11,7 @@
 - Final uploaded homepage cover installed without modifying the image; printed desktop links remain clickable, mobile headline and CTA remain live
 
 ## In progress
+- [ ] Approved Albanian-only copy refinement: terminology, grammar, metadata, Journal, and factual corrections
 - [ ] Admin dashboard + CRM
   - [ ] Auth: email/password sign-in at `/auth`, `user_roles` + `has_role()`, admin-only gate under `/admin`
   - [ ] Leads: list (search, status/source filters), detail with pipeline status, priority, value, next action, notes timeline, CSV export
