@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { STRINGS } from "./translations";
+import { STRINGS, PRODUCT_TR, POST_TR, META_TR } from "./translations";
 
 export const LANGS = ["en", "sq", "mk"] as const;
 export type Lang = (typeof LANGS)[number];
@@ -83,7 +83,6 @@ export function LanguageSwitcher({ className = "", tone = "text-forest/60" }: { 
   );
 }
 
-import { PRODUCT_TR, POST_TR, META_TR } from "./translations";
 
 export function useLocalizedProduct<T extends { slug: string; tagline: string; summary: string }>(p: T): T {
   const { lang } = useI18n();

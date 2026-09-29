@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { LanguageSwitcher, useT } from "@/lib/i18n";
 
 const links = [
   { to: "/", label: "Home" },
@@ -18,6 +19,7 @@ export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const t = useT();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -58,13 +60,14 @@ export function SiteNav() {
               className={`text-[11px] uppercase tracking-[0.22em] font-medium transition-colors hover:text-gold ${inkSoft}`}
               activeProps={{ className: "text-gold" }}
             >
-              {l.label}
+              {t(l.label)}
             </Link>
           ))}
+          <LanguageSwitcher tone={inkSoft} />
         </div>
         <div className="flex items-center gap-3">
           <button
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t("Close menu") : t("Open menu")}
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
             className={`lg:hidden p-2 transition-colors ${ink}`}
@@ -85,10 +88,11 @@ export function SiteNav() {
                 className="py-4 text-sm uppercase tracking-[0.2em] text-forest/85 hover:text-gold"
                 activeProps={{ className: "text-gold" }}
               >
-                {l.label}
+                {t(l.label)}
               </Link>
             ))}
           </div>
+          <LanguageSwitcher className="pt-6" />
         </div>
       )}
     </nav>

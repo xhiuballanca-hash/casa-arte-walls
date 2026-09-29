@@ -3,6 +3,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { toast } from "sonner";
 import { ChevronDown } from "lucide-react";
 import { submitInquiry } from "./inquiries.functions";
+import { useT } from "./i18n";
 
 type Variant = "dark" | "light";
 
@@ -44,6 +45,7 @@ export function ConsultationForm({
   submitLabel?: string;
 }) {
   const submit = useServerFn(submitInquiry);
+  const t = useT();
   const [pending, setPending] = useState(false);
   const [sent, setSent] = useState(false);
 
@@ -64,12 +66,12 @@ export function ConsultationForm({
           source,
         },
       });
-      toast.success("Thank you — your inquiry has been received. We will be in touch shortly.");
+      toast.success(t("Thank you — your inquiry has been received. We will be in touch shortly."));
       form.reset();
       setSent(true);
     } catch (err) {
       console.error(err);
-      toast.error("Something went wrong. Please try again or email us instead.");
+      toast.error(t("Something went wrong. Please try again or email us instead."));
     } finally {
       setPending(false);
     }
@@ -85,18 +87,17 @@ export function ConsultationForm({
   if (sent) {
     return (
       <div className={`py-10 ${dark ? "text-beige" : "text-forest"}`}>
-        <p className="eyebrow text-gold mb-5">Received</p>
-        <h3 className="font-serif text-3xl md:text-4xl mb-4">Thank you.</h3>
+        <p className="eyebrow text-gold mb-5">{t("Received")}</p>
+        <h3 className="font-serif text-3xl md:text-4xl mb-4">{t("Thank you.")}</h3>
         <p className={`${dark ? "text-beige/70" : "text-forest/70"} leading-relaxed max-w-md mb-8`}>
-          Your inquiry has reached the studio. We will review it and come back to you to
-          arrange the next step — a conversation, samples, or a site visit.
+          {t("Your inquiry has reached the studio. We will review it and come back to you to arrange the next step — a conversation, samples, or a site visit.")}
         </p>
         <button
           type="button"
           onClick={() => setSent(false)}
           className={`link-line ${dark ? "text-beige/80" : "text-forest/80"}`}
         >
-          Send another inquiry
+          {t("Send another inquiry")}
         </button>
       </div>
     );
@@ -109,7 +110,7 @@ export function ConsultationForm({
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7">
         <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>Name</span>
+          <span className={`eyebrow ${labelColor} mb-2 block`}>{t("Name")}</span>
           <input
             name="name"
             required autoComplete="name" maxLength={120}
@@ -117,7 +118,7 @@ export function ConsultationForm({
           />
         </label>
         <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>Phone</span>
+          <span className={`eyebrow ${labelColor} mb-2 block`}>{t("Phone")}</span>
           <input
             name="phone"
             type="tel" required autoComplete="tel" maxLength={40}
@@ -125,7 +126,7 @@ export function ConsultationForm({
           />
         </label>
         <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>City</span>
+          <span className={`eyebrow ${labelColor} mb-2 block`}>{t("City")}</span>
           <input
             name="city"
             autoComplete="address-level2" maxLength={120}
@@ -133,16 +134,16 @@ export function ConsultationForm({
           />
         </label>
         <label className="block">
-          <span className={`eyebrow ${labelColor} mb-2 block`}>Finish / Service of interest</span>
+          <span className={`eyebrow ${labelColor} mb-2 block`}>{t("Finish / Service of interest")}</span>
           <span className="relative block">
             <select
               name="project_type"
               defaultValue={SERVICE_OPTIONS.includes(defaultProject) ? defaultProject : ""}
               className={`w-full appearance-none py-3 pr-8 text-sm outline-none transition-colors cursor-pointer ${inputBase} [&>option]:text-forest`}
             >
-              <option value="">Select</option>
+              <option value="">{t("Select")}</option>
               {SERVICE_OPTIONS.map((c) => (
-                <option key={c} value={c}>{c}</option>
+                <option key={c} value={c}>{t(c)}</option>
               ))}
             </select>
             <ChevronDown
@@ -152,7 +153,7 @@ export function ConsultationForm({
         </label>
       </div>
       <label className="block">
-        <span className={`eyebrow ${labelColor} mb-2 block`}>Message</span>
+        <span className={`eyebrow ${labelColor} mb-2 block`}>{t("Message")}</span>
         <textarea
           name="message"
           rows={4}
@@ -163,10 +164,10 @@ export function ConsultationForm({
       </label>
       <div className="flex flex-col sm:flex-row sm:items-center gap-5 pt-2">
         <button type="submit" disabled={pending} className={`${btn} w-full sm:w-auto`}>
-          {pending ? "Sending…" : submitLabel}
+          {pending ? t("Sending…") : t(submitLabel)}
         </button>
         <p className={`text-xs leading-relaxed ${dark ? "text-beige/50" : "text-forest/50"}`}>
-          Your details are used only to respond to this inquiry.
+          {t("Your details are used only to respond to this inquiry.")}
         </p>
       </div>
     </form>

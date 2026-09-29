@@ -1,8 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook } from "lucide-react";
 import { SITE } from "@/lib/site-config";
+import { useT } from "@/lib/i18n";
 
 export function SiteFooter() {
+  const t = useT();
   return (
     <footer className="bg-forest-deep text-beige">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12 pt-16 md:pt-20 pb-10">
@@ -11,20 +13,20 @@ export function SiteFooter() {
             <Link to="/" className="font-serif text-3xl md:text-4xl hover:text-gold transition-colors">
               Casa D'Arte
             </Link>
-            <p className="mt-4 text-sm text-beige/60">Italian decorative finishes · Est. 2012</p>
-            <p className="mt-2 text-sm text-beige/60">North Macedonia</p>
+            <p className="mt-4 text-sm text-beige/60">{t("Italian decorative finishes · Est. 2012")}</p>
+            <p className="mt-2 text-sm text-beige/60">{t("North Macedonia")}</p>
           </div>
 
           <div className="md:col-span-3 md:col-start-7">
-            <p className="eyebrow text-gold mb-5">Contact</p>
+            <p className="eyebrow text-gold mb-5">{t("Contact")}</p>
             <div className="flex flex-col items-start gap-3 text-sm text-beige/80">
-              <a href={SITE.phoneHref} className="hover:text-gold transition-colors">Phone: {SITE.phoneDisplay}</a>
-              <a href={`mailto:${SITE.email}`} className="hover:text-gold transition-colors">Email: {SITE.email}</a>
+              <a href={SITE.phoneHref} className="hover:text-gold transition-colors">{t("Phone")}: {SITE.phoneDisplay}</a>
+              <a href={`mailto:${SITE.email}`} className="hover:text-gold transition-colors">{t("Email")}: {SITE.email}</a>
             </div>
           </div>
 
           <div className="md:col-span-3">
-            <p className="eyebrow text-gold mb-5">Social</p>
+            <p className="eyebrow text-gold mb-5">{t("Social")}</p>
             <div className="flex flex-col items-start gap-3 text-sm text-beige/80">
               <a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-gold transition-colors">
                 <Instagram className="h-4 w-4" aria-hidden="true" /> {SITE.social.instagramHandle}
@@ -37,7 +39,7 @@ export function SiteFooter() {
         </div>
         <div className="border-t border-beige/10 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-beige/45">
           <p>© {new Date().getFullYear()} Casa D'Arte</p>
-          <Link to="/auth" className="hover:text-gold transition-colors">Studio login</Link>
+          <Link to="/auth" className="hover:text-gold transition-colors">{t("Studio login")}</Link>
         </div>
       </div>
     </footer>
