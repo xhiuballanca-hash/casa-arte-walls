@@ -4,7 +4,6 @@ export const SITE = {
   tagline: "Italian decorative finishes · supplied & applied",
   country: "North Macedonia",
   addressLine: "North Macedonia",
-  foundedYear: 2012,
   /** E.164 without "+" — used for wa.me links */
   whatsappNumber: "38972245116",
   phoneHref: "tel:+38972245116",

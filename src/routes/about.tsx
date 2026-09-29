@@ -5,9 +5,9 @@ import { ConsultationForm } from "@/lib/consultation-form";
 import { products } from "@/lib/products-data";
 import { useT } from "@/lib/i18n";
 
-const TITLE = "The Studio — Casa D'Arte, Italian Finishes Since 2012";
+const TITLE = "The Studio — Casa D'Arte, Italian Decorative Finishes";
 const DESCRIPTION =
-  "Casa D'Arte, est. 2012: a studio supplying premium Italian decorative finishes and applying them with its own team across North Macedonia.";
+  "Casa D'Arte: a studio with more than a decade of experience supplying premium Italian decorative finishes and applying them with its own team across North Macedonia.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/about")({
           name: TITLE,
           description: DESCRIPTION,
           url: "/about",
-          about: { "@type": "Organization", name: "Casa D'Arte", foundingDate: "2012" },
+          about: { "@type": "Organization", name: "Casa D'Arte" },
         }),
       },
     ],
@@ -64,14 +64,14 @@ function AboutPage() {
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 md:gap-8 items-end">
           <div className="md:col-span-8">
-            <p className="eyebrow text-gold mb-6">{t("The Studio · Est. 2012")}</p>
+            <p className="eyebrow text-gold mb-6">{t("The Studio · Over a decade of experience")}</p>
             <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.02] mb-8 text-balance">
               {t("A studio for Italian finishes —")} <em className="italic">{t("supplied and applied.")}</em>
             </h1>
           </div>
           <div className="md:col-span-4">
             <p className="text-forest/70 text-lg leading-relaxed">
-              {t("Casa D'Arte was founded in 2012 around a simple conviction: a wall deserves the same care as the architecture around it — and the people who choose the material should be the people who put it on the wall.")}
+              {t("Casa D'Arte brings more than a decade of experience to a simple conviction: a wall deserves the same care as the architecture around it — and the people who choose the material should be the people who put it on the wall.")}
             </p>
           </div>
         </div>

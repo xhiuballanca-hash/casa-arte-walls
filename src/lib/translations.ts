@@ -38,9 +38,9 @@ export const STRINGS: Record<string, Entry> = {
   Language: { sq: "Gjuha", mk: "Јазик" },
 
   // Footer
-  "Italian decorative finishes · Est. 2012": {
-    sq: "Materiale dekorative italiane · Mbi një dekadë përvojë",
-    mk: "Италијански декоративни обработки · Основано 2012",
+  "Italian decorative finishes · supplied & applied": {
+    sq: "Materiale dekorative italiane · të furnizuara dhe të aplikuara",
+    mk: "Италијански декоративни обработки · набавени и нанесени",
   },
   "North Macedonia": { sq: "Maqedonia e Veriut", mk: "Северна Македонија" },
   Phone: { sq: "Telefoni", mk: "Телефон" },
@@ -278,12 +278,12 @@ export const STRINGS: Record<string, Entry> = {
     sq: "Materiali duhet t’i shërbejë arkitekturës. Roli ynë është të krijojmë një sipërfaqe që duket e natyrshme në hapësirë — jo të dekorojmë thjesht për efekt.",
     mk: "Обработката треба да ѝ служи на архитектурата. Нашата улога е површината да делува неизбежно во својот простор — а не да украсуваме само заради украсот.",
   },
-  "The Studio · Est. 2012": { sq: "Studioja · Mbi një dekadë përvojë", mk: "Студиото · Основано 2012" },
+  "The Studio · Over a decade of experience": { sq: "Studioja · Mbi një dekadë përvojë", mk: "Студиото · Повеќе од една декада искуство" },
   "A studio for Italian finishes —": { sq: "Një studio për materiale italiane —", mk: "Студио за италијански обработки —" },
   "supplied and applied.": { sq: "të furnizuara dhe të aplikuara.", mk: "набавени и нанесени." },
-  "Casa D'Arte was founded in 2012 around a simple conviction: a wall deserves the same care as the architecture around it — and the people who choose the material should be the people who put it on the wall.": {
+  "Casa D'Arte brings more than a decade of experience to a simple conviction: a wall deserves the same care as the architecture around it — and the people who choose the material should be the people who put it on the wall.": {
     sq: "Kompania jonë ka më shumë se një dekadë përvojë dhe mbështetet në një bindje të thjeshtë: një mur meriton të njëjtin kujdes si arkitektura përreth tij — dhe ekipi që zgjedh materialin duhet të jetë edhe ai që e aplikon në mur.",
-    mk: "Casa D'Arte е основана во 2012 година врз едноставно уверување: ѕидот заслужува иста грижа како и архитектурата околу него — а луѓето што го избираат материјалот треба да бидат тие што го нанесуваат на ѕидот.",
+    mk: "Casa D'Arte носи повеќе од една декада искуство врз едноставно уверување: ѕидот заслужува иста грижа како и архитектурата околу него — а луѓето што го избираат материјалот треба да бидат тие што го нанесуваат на ѕидот.",
   },
   "Hand-applied Italian decorative plaster surface": {
     sq: "Sipërfaqe me suva dekorative italiane e aplikuar me dorë",
@@ -750,9 +750,9 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
         "Kompania jonë ka më shumë se një dekadë përvojë në furnizimin dhe aplikimin profesional të materialeve dekorative italiane në të gjithë Maqedoninë e Veriut.",
     },
     mk: {
-      title: "Студиото — Casa D'Arte, италијански обработки од 2012",
+      title: "Студиото — Casa D'Arte, италијански обработки",
       description:
-        "Casa D'Arte, основано 2012: студио што набавува премиум италијански декоративни обработки и ги нанесува со сопствен тим низ цела Северна Македонија.",
+        "Casa D'Arte: студио со повеќе од една декада искуство што набавува премиум италијански декоративни обработки и ги нанесува со сопствен тим низ цела Северна Македонија.",
     },
   },
   "/architects": {

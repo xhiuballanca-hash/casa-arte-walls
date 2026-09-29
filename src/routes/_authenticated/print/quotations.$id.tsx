@@ -197,11 +197,7 @@ function PrintQuotationPage() {
               {SITE.phoneDisplay} · {SITE.email}
             </p>
           </div>
-          <p className="text-right">
-            Est. {SITE.foundedYear}
-            <br />
-            Material and application by our own team.
-          </p>
+          <p className="text-right">Material and application by our own team.</p>
         </footer>
       </article>
     </div>
