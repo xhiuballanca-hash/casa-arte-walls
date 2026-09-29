@@ -6,22 +6,22 @@ type Entry = { sq: string; mk: string };
 
 export const STRINGS: Record<string, Entry> = {
   // Finish Advisor
-  "Finish Advisor": { sq: "Këshilltari i materialeve", mk: "Советник за обработки" },
-  "Try the Finish Advisor": { sq: "Provoni këshilltarin e materialeve", mk: "Пробајте го советникот" },
-  "Show us your space.": { sq: "Na tregoni hapësirën tuaj.", mk: "Покажете ни го просторот." },
-  "We'll suggest the finish.": { sq: "Ne ju sugjerojmë materialin.", mk: "Ние ќе предложиме обработка." },
-  "Upload a photo of your room and describe it. Our AI-powered advisor suggests suitable finishes and next steps — a starting point for a conversation with our studio.": { sq: "Ngarkoni një foto të dhomës dhe përshkruani hapësirën. Këshilltari ynë me AI sugjeron materiale të përshtatshme dhe hapat e ardhshëm — si pikënisje për një bisedë me studion tonë.", mk: "Прикачете фотографија од просторијата и опишете ја. Нашиот советник со AI предлага соодветни обработки и следни чекори — почетна точка за разговор со нашето студио." },
+  "Finish Advisor": { sq: "Këshilltari i materialeve", mk: "Советник за материјали" },
+  "Try the Finish Advisor": { sq: "Provoni këshilltarin e materialeve", mk: "Испробајте го советникот за материјали" },
+  "Show us your space.": { sq: "Na tregoni hapësirën tuaj.", mk: "Покажете ни го вашиот простор." },
+  "We'll suggest the finish.": { sq: "Ne ju sugjerojmë materialin.", mk: "Ќе ви предложиме соодветен материјал." },
+  "Upload a photo of your room and describe it. Our AI-powered advisor suggests suitable finishes and next steps — a starting point for a conversation with our studio.": { sq: "Ngarkoni një foto të dhomës dhe përshkruani hapësirën. Këshilltari ynë me AI sugjeron materiale të përshtatshme dhe hapat e ardhshëm — si pikënisje për një bisedë me studion tonë.", mk: "Прикачете фотографија од вашата просторија и опишете го просторот. Нашиот советник со вештачка интелигенција предлага соодветни материјали и следни чекори — како почетна точка за разговор со нашето студио." },
   "Room photo (optional)": { sq: "Foto e dhomës (opsionale)", mk: "Фотографија од просторијата (опционално)" },
   "Choose a photo": { sq: "Zgjidhni një foto", mk: "Изберете фотографија" },
-  "Remove photo": { sq: "Hiqni foton", mk: "Отстрани фотографија" },
-  "Your uploaded room": { sq: "Fotoja e dhomës suaj", mk: "Вашата прикачена просторија" },
-  "Describe your space": { sq: "Përshkruani hapësirën tuaj", mk: "Опишете го просторот" },
+  "Remove photo": { sq: "Hiqni foton", mk: "Отстранете ја фотографијата" },
+  "Your uploaded room": { sq: "Fotoja e dhomës suaj", mk: "Фотографија од вашата просторија" },
+  "Describe your space": { sq: "Përshkruani hapësirën tuaj", mk: "Опишете го вашиот простор" },
   "e.g. A bright living room with oak floors. We'd like a warm, calm feature wall behind the sofa.": { sq: "p.sh. Një dhomë ndenjeje e ndritshme me dysheme lisi. Duam një mur të ngrohtë dhe të qetë pas divanit.", mk: "пр. Светла дневна соба со даб паркет. Сакаме топол, смирен ѕид зад каучот." },
   "Get Recommendations": { sq: "Merrni rekomandime", mk: "Добијте препораки" },
   "Preparing suggestions…": { sq: "Po përgatiten sugjerimet…", mk: "Се подготвуваат предлози…" },
-  "Looking at your space…": { sq: "Po shqyrtojmë hapësirën tuaj…", mk: "Го разгледуваме просторот…" },
+  "Looking at your space…": { sq: "Po shqyrtojmë hapësirën tuaj…", mk: "Го разгледуваме вашиот простор…" },
   "Your suggestions will appear here.": { sq: "Sugjerimet do të shfaqen këtu.", mk: "Предлозите ќе се појават тука." },
-  "Suggestions are AI-generated and indicative. Our team confirms the right finish on site.": { sq: "Sugjerimet krijohen nga AI dhe janë orientuese. Ekipi ynë e konfirmon materialin e duhur pas verifikimit në objekt.", mk: "Предлозите се генерирани со AI и се ориентациски. Нашиот тим ја потврдува вистинската обработка на лице место." },
+  "Suggestions are AI-generated and indicative. Our team confirms the right finish on site.": { sq: "Sugjerimet krijohen nga AI dhe janë orientuese. Ekipi ynë e konfirmon materialin e duhur pas verifikimit në objekt.", mk: "Предлозите се создадени со вештачка интелигенција и служат како насока. Нашиот тим го потврдува соодветниот материјал по проверка на објектот." },
   "Please choose a JPG, PNG or WebP photo under 20 MB.": { sq: "Zgjidhni një foto JPG, PNG ose WebP nën 20 MB.", mk: "Изберете JPG, PNG или WebP фотографија под 20 MB." },
   "This photo couldn't be read. Please try another one.": { sq: "Kjo foto nuk u lexua. Provoni një tjetër.", mk: "Фотографијата не може да се прочита. Пробајте друга." },
   "We couldn't prepare a recommendation. Please try again.": { sq: "Nuk mundëm të përgatisnim rekomandim. Provoni përsëri.", mk: "Не можевме да подготвиме препорака. Обидете се повторно." },
@@ -773,6 +773,18 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
       title: "Контактирајте ја Casa D'Arte — Разговарајте за проект, побарајте мостра или понуда",
       description:
         "Разговарајте за вашиот проект со Casa D'Arte во Северна Македонија. Побарајте понуда или консултација за италијански декоративни обработки, набавени и професионално нанесени.",
+    },
+  },
+  "/finish-advisor": {
+    sq: {
+      title: "Këshilltari i materialeve — Casa D'Arte",
+      description:
+        "Ngarkoni një foto të dhomës, përshkruani hapësirën dhe merrni sugjerime për materialet dekorative të Casa D'Arte dhe hapat e ardhshëm.",
+    },
+    mk: {
+      title: "Советник за материјали — Casa D'Arte",
+      description:
+        "Прикачете фотографија од просторијата, опишете го просторот и добијте предлози за декоративните материјали на Casa D'Arte и следните чекори.",
     },
   },
   "/blog": {
