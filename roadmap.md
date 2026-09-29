@@ -8,7 +8,7 @@
 - Per-route SEO head() + JSON-LD, sitemap, robots
 - Inquiry submission → `inquiries` table (verified end to end)
 - Final public-site refinement: location, navigation, footer, finish-page clarity, and consistent process language
-- Final uploaded homepage cover installed without modifying the image; printed desktop links remain clickable, mobile headline and CTA remain live
+- Responsive homepage hero rebuilt with a clean photograph, semantic translated text and controls, and an always-visible language switcher
 
 ## In progress
 - [ ] Admin dashboard + CRM
