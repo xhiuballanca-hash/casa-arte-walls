@@ -6,40 +6,40 @@ type Entry = { sq: string; mk: string };
 
 export const STRINGS: Record<string, Entry> = {
   // Finish Advisor
-  "Finish Advisor": { sq: "Këshilltari i veshjeve", mk: "Советник за обработки" },
-  "Try the Finish Advisor": { sq: "Provoni këshilltarin e veshjeve", mk: "Пробајте го советникот" },
+  "Finish Advisor": { sq: "Këshilltari i materialeve", mk: "Советник за обработки" },
+  "Try the Finish Advisor": { sq: "Provoni këshilltarin e materialeve", mk: "Пробајте го советникот" },
   "Show us your space.": { sq: "Na tregoni hapësirën tuaj.", mk: "Покажете ни го просторот." },
-  "We'll suggest the finish.": { sq: "Ne sugjerojmë veshjen.", mk: "Ние ќе предложиме обработка." },
-  "Upload a photo of your room and describe it. Our AI-powered advisor suggests suitable finishes and next steps — a starting point for a conversation with our studio.": { sq: "Ngarkoni një foto të dhomës dhe përshkruajeni. Këshilltari ynë me AI sugjeron veshje të përshtatshme dhe hapat e ardhshëm — një pikënisje për bisedë me studion tonë.", mk: "Прикачете фотографија од просторијата и опишете ја. Нашиот советник со AI предлага соодветни обработки и следни чекори — почетна точка за разговор со нашето студио." },
+  "We'll suggest the finish.": { sq: "Ne ju sugjerojmë materialin.", mk: "Ние ќе предложиме обработка." },
+  "Upload a photo of your room and describe it. Our AI-powered advisor suggests suitable finishes and next steps — a starting point for a conversation with our studio.": { sq: "Ngarkoni një foto të dhomës dhe përshkruani hapësirën. Këshilltari ynë me AI sugjeron materiale të përshtatshme dhe hapat e ardhshëm — si pikënisje për një bisedë me studion tonë.", mk: "Прикачете фотографија од просторијата и опишете ја. Нашиот советник со AI предлага соодветни обработки и следни чекори — почетна точка за разговор со нашето студио." },
   "Room photo (optional)": { sq: "Foto e dhomës (opsionale)", mk: "Фотографија од просторијата (опционално)" },
   "Choose a photo": { sq: "Zgjidhni një foto", mk: "Изберете фотографија" },
-  "Remove photo": { sq: "Hiq foton", mk: "Отстрани фотографија" },
-  "Your uploaded room": { sq: "Dhoma juaj e ngarkuar", mk: "Вашата прикачена просторија" },
+  "Remove photo": { sq: "Hiqni foton", mk: "Отстрани фотографија" },
+  "Your uploaded room": { sq: "Fotoja e dhomës suaj", mk: "Вашата прикачена просторија" },
   "Describe your space": { sq: "Përshkruani hapësirën tuaj", mk: "Опишете го просторот" },
   "e.g. A bright living room with oak floors. We'd like a warm, calm feature wall behind the sofa.": { sq: "p.sh. Një dhomë ndenjeje e ndritshme me dysheme lisi. Duam një mur të ngrohtë dhe të qetë pas divanit.", mk: "пр. Светла дневна соба со даб паркет. Сакаме топол, смирен ѕид зад каучот." },
   "Get Recommendations": { sq: "Merrni rekomandime", mk: "Добијте препораки" },
   "Preparing suggestions…": { sq: "Po përgatiten sugjerimet…", mk: "Се подготвуваат предлози…" },
   "Looking at your space…": { sq: "Po shqyrtojmë hapësirën tuaj…", mk: "Го разгледуваме просторот…" },
   "Your suggestions will appear here.": { sq: "Sugjerimet do të shfaqen këtu.", mk: "Предлозите ќе се појават тука." },
-  "Suggestions are AI-generated and indicative. Our team confirms the right finish on site.": { sq: "Sugjerimet krijohen nga AI dhe janë orientuese. Ekipi ynë konfirmon veshjen e duhur në vend.", mk: "Предлозите се генерирани со AI и се ориентациски. Нашиот тим ја потврдува вистинската обработка на лице место." },
+  "Suggestions are AI-generated and indicative. Our team confirms the right finish on site.": { sq: "Sugjerimet krijohen nga AI dhe janë orientuese. Ekipi ynë e konfirmon materialin e duhur pas verifikimit në objekt.", mk: "Предлозите се генерирани со AI и се ориентациски. Нашиот тим ја потврдува вистинската обработка на лице место." },
   "Please choose a JPG, PNG or WebP photo under 20 MB.": { sq: "Zgjidhni një foto JPG, PNG ose WebP nën 20 MB.", mk: "Изберете JPG, PNG или WebP фотографија под 20 MB." },
   "This photo couldn't be read. Please try another one.": { sq: "Kjo foto nuk u lexua. Provoni një tjetër.", mk: "Фотографијата не може да се прочита. Пробајте друга." },
   "We couldn't prepare a recommendation. Please try again.": { sq: "Nuk mundëm të përgatisnim rekomandim. Provoni përsëri.", mk: "Не можевме да подготвиме препорака. Обидете се повторно." },
 
   // Navigation
   Home: { sq: "Kreu", mk: "Почетна" },
-  Finishes: { sq: "Veshjet", mk: "Обработки" },
+  Finishes: { sq: "Materialet", mk: "Обработки" },
   Projects: { sq: "Projektet", mk: "Проекти" },
   Services: { sq: "Shërbimet", mk: "Услуги" },
   About: { sq: "Rreth nesh", mk: "За нас" },
   Contact: { sq: "Kontakti", mk: "Контакт" },
-  "Open menu": { sq: "Hap menynë", mk: "Отвори мени" },
-  "Close menu": { sq: "Mbyll menynë", mk: "Затвори мени" },
+  "Open menu": { sq: "Hapni menynë", mk: "Отвори мени" },
+  "Close menu": { sq: "Mbyllni menynë", mk: "Затвори мени" },
   Language: { sq: "Gjuha", mk: "Јазик" },
 
   // Footer
   "Italian decorative finishes · Est. 2012": {
-    sq: "Veshje dekorative italiane · Që nga 2012",
+    sq: "Materiale dekorative italiane · Mbi një dekadë përvojë",
     mk: "Италијански декоративни обработки · Основано 2012",
   },
   "North Macedonia": { sq: "Maqedonia e Veriut", mk: "Северна Македонија" },
@@ -49,19 +49,19 @@ export const STRINGS: Record<string, Entry> = {
   "Studio login": { sq: "Hyrja e studios", mk: "Најава за студиото" },
 
   // Cookies
-  "Cookie preferences": { sq: "Preferencat e cookies", mk: "Поставки за колачиња" },
-  Cookies: { sq: "Cookies", mk: "Колачиња" },
+  "Cookie preferences": { sq: "Preferencat e skedarëve cookie", mk: "Поставки за колачиња" },
+  Cookies: { sq: "Skedarët cookie", mk: "Колачиња" },
   "We use cookies to understand how visitors use this site and to improve it. Choose what you are comfortable with.": {
-    sq: "Ne përdorim cookies për të kuptuar si e përdorin vizitorët këtë faqe dhe për ta përmirësuar atë. Zgjidhni atë që ju përshtatet.",
+    sq: "Përdorim skedarë cookie për të kuptuar se si vizitorët e përdorin faqen dhe për ta përmirësuar atë. Zgjidhni opsionin që ju përshtatet.",
     mk: "Користиме колачиња за да разбереме како посетителите ја користат страницата и за да ја подобриме. Изберете што ви одговара.",
   },
-  "Accept all": { sq: "Prano të gjitha", mk: "Прифати ги сите" },
+  "Accept all": { sq: "Pranoni të gjitha", mk: "Прифати ги сите" },
   "Essential only": { sq: "Vetëm të domosdoshmet", mk: "Само неопходни" },
 
   // WhatsApp
   "Message Casa D'Arte on WhatsApp": { sq: "Shkruajini Casa D'Arte në WhatsApp", mk: "Пишете му на Casa D'Arte на WhatsApp" },
   "Hello Casa D'Arte, I would like to discuss a project involving your decorative finishes.": {
-    sq: "Përshëndetje Casa D'Arte, dëshiroj të diskutoj një projekt me veshjet tuaja dekorative.",
+    sq: "Përshëndetje Casa D'Arte, dëshiroj të diskutoj një projekt me materialet tuaja dekorative.",
     mk: "Здраво Casa D'Arte, би сакал/а да разговараме за проект со вашите декоративни обработки.",
   },
 
@@ -71,45 +71,45 @@ export const STRINGS: Record<string, Entry> = {
     sq: "Faqja që kërkoni është zhvendosur ose nuk ekziston më.",
     mk: "Страницата што ја барате е преместена или повеќе не постои.",
   },
-  "Return home": { sq: "Kthehu në kreu", mk: "Назад на почетна" },
+  "Return home": { sq: "Kthehuni në faqen kryesore", mk: "Назад на почетна" },
   "This page didn't load": { sq: "Kjo faqe nuk u ngarkua", mk: "Оваа страница не се вчита" },
   "Something went wrong on our end. Please try again.": {
     sq: "Diçka shkoi keq nga ana jonë. Ju lutemi provoni përsëri.",
     mk: "Нешто тргна наопаку кај нас. Ве молиме обидете се повторно.",
   },
-  "Try again": { sq: "Provo përsëri", mk: "Обиди се повторно" },
-  "Go home": { sq: "Shko në kreu", mk: "Оди на почетна" },
+  "Try again": { sq: "Provoni përsëri", mk: "Обиди се повторно" },
+  "Go home": { sq: "Kthehuni në faqen kryesore", mk: "Оди на почетна" },
 
   // Home
   "Turn Every Wall Into Art.": { sq: "Ktheni çdo mur në art.", mk: "Претворете го секој ѕид во уметност." },
   "Turn Every Wall": { sq: "Ktheni çdo mur", mk: "Претворете го секој ѕид" },
   "Into Art.": { sq: "në art.", mk: "во уметност." },
   "Premium decorative finishes, professionally applied by our team.": {
-    sq: "Veshje dekorative premium, të aplikuara në mënyrë profesionale nga ekipi ynë.",
+    sq: "Materiale dekorative premium, të aplikuara në mënyrë profesionale nga ekipi ynë.",
     mk: "Премиум декоративни обработки, професионално нанесени од нашиот тим.",
   },
-  "Explore Our Finishes": { sq: "Zbuloni veshjet tona", mk: "Истражете ги нашите обработки" },
-  "Casa D'Arte home": { sq: "Casa D'Arte – kreu", mk: "Casa D'Arte – почетна" },
+  "Explore Our Finishes": { sq: "Zbuloni materialet tona", mk: "Истражете ги нашите обработки" },
+  "Casa D'Arte home": { sq: "Casa D'Arte – faqja kryesore", mk: "Casa D'Arte – почетна" },
   "Get in Touch": { sq: "Na kontaktoni", mk: "Контактирајте нè" },
   "Casa D'Arte cover: Turn Every Wall Into Art. Premium decorative finishes, professionally applied by our team.": {
-    sq: "Kopertina e Casa D'Arte: Ktheni çdo mur në art. Veshje dekorative premium, të aplikuara në mënyrë profesionale nga ekipi ynë.",
+    sq: "Kopertina e Casa D'Arte: Ktheni çdo mur në art. Materiale dekorative premium, të aplikuara në mënyrë profesionale nga ekipi ynë.",
     mk: "Насловна на Casa D'Arte: Претворете го секој ѕид во уметност. Премиум декоративни обработки, професионално нанесени од нашиот тим.",
   },
   "Warm living room with a textured Travertino wall, sofa and window view": {
     sq: "Dhomë ndenjeje e ngrohtë me mur me teksturë Travertino, divan dhe pamje nga dritarja",
     mk: "Топла дневна соба со текстуриран ѕид во Travertino, софа и поглед низ прозорецот",
   },
-  "The Finishes": { sq: "Veshjet", mk: "Обработките" },
+  "The Finishes": { sq: "Materialet", mk: "Обработките" },
   "Six finishes. Supplied and applied by our team.": {
-    sq: "Gjashtë veshje. Të furnizuara dhe të aplikuara nga ekipi ynë.",
+    sq: "Gjashtë materiale. Të furnizuara dhe të aplikuara nga ekipi ynë.",
     mk: "Шест обработки. Набавени и нанесени од нашиот тим.",
   },
-  "All finishes": { sq: "Të gjitha veshjet", mk: "Сите обработки" },
-  "{name} decorative finish": { sq: "Veshje dekorative {name}", mk: "Декоративна обработка {name}" },
-  "View Finish": { sq: "Shiko veshjen", mk: "Погледни ја обработката" },
+  "All finishes": { sq: "Të gjitha materialet", mk: "Сите обработки" },
+  "{name} decorative finish": { sq: "Material dekorativ {name}", mk: "Декоративна обработка {name}" },
+  "View Finish": { sq: "Shikoni materialin", mk: "Погледни ја обработката" },
   "Our Process": { sq: "Procesi ynë", mk: "Нашиот процес" },
   "Decorative finish applied by hand with a steel trowel": {
-    sq: "Veshje dekorative e aplikuar me dorë me mistri çeliku",
+    sq: "Material dekorativ i aplikuar me dorë me mistri çeliku",
     mk: "Декоративна обработка нанесена рачно со челична глетарица",
   },
   "Concept & Consultation": { sq: "Koncepti dhe konsultimi", mk: "Концепт и консултација" },
@@ -117,9 +117,9 @@ export const STRINGS: Record<string, Entry> = {
     sq: "Kuptojmë hapësirën, drejtimin e dizajnit dhe kërkesat e projektit.",
     mk: "Го разбираме просторот, дизајнерската насока и барањата на проектот.",
   },
-  "Finish Selection": { sq: "Zgjedhja e veshjes", mk: "Избор на обработка" },
+  "Finish Selection": { sq: "Zgjedhja e materialit", mk: "Избор на обработка" },
   "Choose the finish, texture and color.": {
-    sq: "Zgjidhni veshjen, teksturën dhe ngjyrën.",
+    sq: "Zgjidhni materialin, teksturën dhe ngjyrën.",
     mk: "Изберете ја обработката, текстурата и бојата.",
   },
   "Quotation & Planning": { sq: "Oferta dhe planifikimi", mk: "Понуда и планирање" },
@@ -129,7 +129,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "Professional Application": { sq: "Aplikimi profesional", mk: "Професионално нанесување" },
   "Our team prepares and applies the decorative finish.": {
-    sq: "Ekipi ynë e përgatit dhe e aplikon veshjen dekorative.",
+    sq: "Ekipi ynë përgatit sipërfaqen dhe aplikon materialin dekorativ.",
     mk: "Нашиот тим ја подготвува и ја нанесува декоративната обработка.",
   },
   "Final Inspection": { sq: "Inspektimi përfundimtar", mk: "Завршна проверка" },
@@ -138,10 +138,10 @@ export const STRINGS: Record<string, Entry> = {
     mk: "Завршената површина се проверува пред предавањето.",
   },
   "Realized Projects": { sq: "Projekte të realizuara", mk: "Реализирани проекти" },
-  "View all projects": { sq: "Shiko të gjitha projektet", mk: "Погледни ги сите проекти" },
+  "View all projects": { sq: "Shikoni të gjitha projektet", mk: "Погледни ги сите проекти" },
   "Have a project in mind?": { sq: "Keni një projekt në mendje?", mk: "Имате проект на ум?" },
   "Tell us about your space and we’ll help you choose the right finish.": {
-    sq: "Na tregoni për hapësirën tuaj dhe do t’ju ndihmojmë të zgjidhni veshjen e duhur.",
+    sq: "Na tregoni për hapësirën tuaj dhe do t’ju ndihmojmë të zgjidhni materialin e duhur.",
     mk: "Кажете ни за вашиот простор и ќе ви помогнеме да ја изберете вистинската обработка.",
   },
   "Discuss Your Project": { sq: "Diskutoni projektin tuaj", mk: "Разговарајте за вашиот проект" },
@@ -161,80 +161,80 @@ export const STRINGS: Record<string, Entry> = {
   Offices: { sq: "Zyra", mk: "Канцеларии" },
   Stores: { sq: "Dyqane", mk: "Продавници" },
   Facades: { sq: "Fasada", mk: "Фасади" },
-  "Surfaces in place.": { sq: "Sipërfaqe në vend.", mk: "Површини на своето место." },
+  "Surfaces in place.": { sq: "Materialet në hapësira të ndryshme.", mk: "Површини на своето место." },
   "A selection of Casa D'Arte surfaces in residential, hospitality, workplace and retail interiors. Each project is presented only by its space and finish.": {
-    sq: "Një përzgjedhje sipërfaqesh të Casa D'Arte në interiere banimi, mikpritjeje, pune dhe tregtie. Çdo projekt paraqitet vetëm me hapësirën dhe veshjen e tij.",
+    sq: "Materiale dekorative të paraqitura në ambiente banimi, hotele, zyra dhe dyqane. Çdo imazh shoqërohet vetëm me llojin e hapësirës dhe materialin.",
     mk: "Избор на површини на Casa D'Arte во станбени, угостителски, деловни и трговски ентериери. Секој проект е претставен само со својот простор и обработка.",
   },
   "Discuss a Similar Project": { sq: "Diskutoni një projekt të ngjashëm", mk: "Разговарајте за сличен проект" },
   "Approved project photography to follow.": {
-    sq: "Fotografitë e miratuara të projektit do të shtohen së shpejti.",
+    sq: "Imazh i hapësirës",
     mk: "Одобрените фотографии од проектот следуваат.",
   },
   "Planning a residence, a hotel or a development? We can prepare samples in your tones and a quotation for material and application together.": {
-    sq: "Po planifikoni një banesë, një hotel apo një zhvillim? Mund t’ju përgatisim mostra në tonet tuaja dhe një ofertë të përbashkët për materialin dhe aplikimin.",
+    sq: "Po planifikoni një banesë, një hotel apo një projekt ndërtimi? Mund t’ju përgatisim mostra në tonet tuaja dhe një ofertë të përbashkët për materialin dhe aplikimin.",
     mk: "Планирате резиденција, хотел или градежен проект? Можеме да подготвиме мостри во вашите тонови и заедничка понуда за материјал и нанесување.",
   },
   "Request a Quote": { sq: "Kërkoni ofertë", mk: "Побарајте понуда" },
   "Request a Sample": { sq: "Kërkoni mostër", mk: "Побарајте мостра" },
-  Close: { sq: "Mbyll", mk: "Затвори" },
+  Close: { sq: "Mbyllni", mk: "Затвори" },
   "Previous project": { sq: "Projekti i mëparshëm", mk: "Претходен проект" },
   "Next project": { sq: "Projekti tjetër", mk: "Следен проект" },
 
   // Finishes pages
-  "Six finishes.": { sq: "Gjashtë veshje.", mk: "Шест обработки." },
-  "One standard of execution.": { sq: "Një standard zbatimi.", mk: "Еден стандард на изведба." },
+  "Six finishes.": { sq: "Gjashtë materiale.", mk: "Шест обработки." },
+  "One standard of execution.": { sq: "I njëjti standard cilësie në çdo projekt.", mk: "Еден стандард на изведба." },
   "Explore six decorative finishes, supplied and professionally applied by our own team.": {
-    sq: "Zbuloni gjashtë veshje dekorative, të furnizuara dhe të aplikuara në mënyrë profesionale nga ekipi ynë.",
+    sq: "Zbuloni gjashtë materiale dekorative, të furnizuara dhe të aplikuara në mënyrë profesionale nga ekipi ynë.",
     mk: "Истражете шест декоративни обработки, набавени и професионално нанесени од нашиот тим.",
   },
-  "{name} decorative wall finish": { sq: "Veshje dekorative muri {name}", mk: "Декоративна ѕидна обработка {name}" },
+  "{name} decorative wall finish": { sq: "Material dekorativ për mure {name}", mk: "Декоративна ѕидна обработка {name}" },
   "Approved material photography to follow.": {
-    sq: "Fotografitë e miratuara të materialit do të shtohen së shpejti.",
+    sq: "Imazh i materialit",
     mk: "Одобрените фотографии од материјалот следуваат.",
   },
   "Explore {name}": { sq: "Zbuloni {name}", mk: "Истражете {name}" },
   "Request a quote": { sq: "Kërkoni ofertë", mk: "Побарајте понуда" },
-  "Not sure which finish?": { sq: "Nuk jeni të sigurt cilën veshje?", mk: "Не сте сигурни која обработка?" },
+  "Not sure which finish?": { sq: "Nuk jeni të sigurt cilin material të zgjidhni?", mk: "Не сте сигурни која обработка?" },
   "Tell us about the space and we will prepare samples in tones and textures suited to it — before anything is quoted.": {
     sq: "Na tregoni për hapësirën dhe do të përgatisim mostra në tone dhe tekstura që i përshtaten — para çdo oferte.",
     mk: "Кажете ни за просторот и ќе подготвиме мостри во тонови и текстури што му одговараат — пред да се изготви каква било понуда.",
   },
-  "← All finishes": { sq: "← Të gjitha veshjet", mk: "← Сите обработки" },
-  "{name} decorative finish surface": { sq: "Sipërfaqe me veshje dekorative {name}", mk: "Површина со декоративна обработка {name}" },
+  "← All finishes": { sq: "← Të gjitha materialet", mk: "← Сите обработки" },
+  "{name} decorative finish surface": { sq: "Sipërfaqe me material dekorativ {name}", mk: "Површина со декоративна обработка {name}" },
   "{name} is supplied by Casa D'Arte and professionally applied by our own team.": {
     sq: "{name} furnizohet nga Casa D'Arte dhe aplikohet në mënyrë profesionale nga ekipi ynë.",
     mk: "{name} го набавува Casa D'Arte, а професионално го нанесува нашиот тим.",
   },
-  "Other finishes": { sq: "Veshje të tjera", mk: "Други обработки" },
+  "Other finishes": { sq: "Materiale të tjera", mk: "Други обработки" },
   "Continue exploring.": { sq: "Vazhdoni të zbuloni.", mk: "Продолжете да истражувате." },
-  "Photography to follow.": { sq: "Fotografitë do të shtohen.", mk: "Фотографиите следуваат." },
+  "Photography to follow.": { sq: "Imazh i sipërfaqes", mk: "Фотографиите следуваат." },
 
   // Services
-  "Decorative wall finishes": { sq: "Veshje dekorative për mure", mk: "Декоративни ѕидни обработки" },
+  "Decorative wall finishes": { sq: "Materiale dekorative për mure", mk: "Декоративни ѕидни обработки" },
   "Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — decorative finishes supplied for the project. Each finish is chosen for the space, the substrate and the intended visual character.": {
-    sq: "Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — veshje dekorative të furnizuara për projektin. Çdo veshje zgjidhet sipas hapësirës, bazës dhe karakterit vizual të synuar.",
+    sq: "Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — materiale dekorative të furnizuara për projektin. Çdo material zgjidhet sipas hapësirës, bazës dhe karakterit vizual të synuar.",
     mk: "Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement и Beton Look — декоративни обработки набавени за проектот. Секоја обработка се избира според просторот, подлогата и посакуваниот визуелен карактер.",
   },
-  "The finishes": { sq: "Veshjet", mk: "Обработките" },
+  "The finishes": { sq: "Materialet", mk: "Обработките" },
   "Professional application": { sq: "Aplikimi profesional", mk: "Професионално нанесување" },
   "The finish is applied by our own team: substrate assessment and preparation, priming, layering, polishing and sealing. We coordinate with your architect, contractor and other trades so the surface is delivered as specified.": {
-    sq: "Veshja aplikohet nga ekipi ynë: vlerësimi dhe përgatitja e bazës, abetarja, shtresat, lustrimi dhe mbyllja. Koordinohemi me arkitektin, kontraktorin dhe zejtarët e tjerë, që sipërfaqja të dorëzohet sipas specifikimit.",
+    sq: "Materiali aplikohet nga ekipi ynë: vlerësimi dhe përgatitja e bazës, aplikimi i astarit, shtresat dekorative, lustrimi dhe shtresa mbrojtëse. Koordinohemi me arkitektin, kontraktorin dhe profesionistët e tjerë, në mënyrë që sipërfaqja të dorëzohet sipas specifikimit.",
     mk: "Обработката ја нанесува нашиот тим: проценка и подготовка на подлогата, прајмирање, нанесување слоеви, полирање и заштита. Се координираме со вашиот архитект, изведувач и другите мајстори за површината да биде предадена според спецификацијата.",
   },
   "Colour consultation": { sq: "Konsultim për ngjyrat", mk: "Консултација за бои" },
   "Tone development in the studio or on site, judged in the light of the actual space against joinery, stone, fabrics and existing architecture. Approved on physical samples before anything is quoted.": {
-    sq: "Zhvillimi i toneve në studio ose në vend, i vlerësuar në dritën e hapësirës reale përkrah zdrukthtarisë, gurit, tekstileve dhe arkitekturës ekzistuese. Miratohet mbi mostra fizike para çdo oferte.",
+    sq: "Zhvillimi i toneve në studio ose në objekt, të vlerësuara në dritën e hapësirës reale, në harmoni me elementet prej druri, gurin, tekstilet dhe arkitekturën ekzistuese. Tonet miratohen përmes mostrave fizike para përgatitjes së ofertës.",
     mk: "Развој на тонови во студиото или на лице место, проценети во светлината на вистинскиот простор наспроти столаријата, каменот, ткаенините и постојната архитектура. Се одобрува на физички мостри пред да се изготви понуда.",
   },
   "Custom textures": { sq: "Tekstura të personalizuara", mk: "Прилагодени текстури" },
   "Bespoke texture and sheen development for signature walls and spaces — from the smoothest polished surface to more tactile, mineral finishes — with samples refined until the intent is met.": {
-    sq: "Zhvillim i personalizuar i teksturës dhe shkëlqimit për mure dhe hapësira karakteristike — nga sipërfaqja më e lëmuar e lustruar deri te veshjet minerale më të prekshme — me mostra që përsosen derisa të arrihet qëllimi.",
+    sq: "Zhvillim i personalizuar i teksturës dhe shkëlqimit për mure dhe hapësira karakteristike — nga sipërfaqja më e lëmuar dhe e lustruar deri te materialet minerale me teksturë më të theksuar — me mostra që përsosen deri sa të arrihet rezultati i synuar.",
     mk: "Развој на текстура и сјај по мерка за карактеристични ѕидови и простори — од најмазната полирана површина до потактилни минерални обработки — со мостри што се дотеруваат додека не се постигне замислата.",
   },
-  "Commercial & hospitality projects": { sq: "Projekte tregtare dhe mikpritjeje", mk: "Комерцијални и угостителски проекти" },
+  "Commercial & hospitality projects": { sq: "Projekte për biznese dhe hoteleri", mk: "Комерцијални и угостителски проекти" },
   "Hotels, restaurants, retail, offices and developments. Consistent finishes across many surfaces, quotations you can plan around, and scheduling coordinated with opening dates and operating constraints.": {
-    sq: "Hotele, restorante, dyqane, zyra dhe zhvillime. Veshje të njëtrajtshme në shumë sipërfaqe, oferta mbi të cilat mund të planifikoni dhe orare të koordinuara me datat e hapjes dhe kufizimet operative.",
+    sq: "Hotele, restorante, dyqane, zyra dhe projekte ndërtimi. Materiale të njëtrajtshme në shumë sipërfaqe, oferta të qarta dhe afate pune të koordinuara me datat e hapjes dhe kërkesat e funksionimit.",
     mk: "Хотели, ресторани, продавници, канцеларии и градежни проекти. Доследни обработки на многу површини, понуди според кои можете да планирате и распоред усогласен со датумите на отворање и оперативните ограничувања.",
   },
   "Residential projects": { sq: "Projekte banimi", mk: "Станбени проекти" },
@@ -245,7 +245,7 @@ export const STRINGS: Record<string, Entry> = {
   "From sample to": { sq: "Nga mostra te", mk: "Од мостра до" },
   "sealed wall.": { sq: "muri i përfunduar.", mk: "заштитен ѕид." },
   "Casa D'Arte does not only supply decorative materials. We take a project from finish selection and samples through quotation to professional application by our own team.": {
-    sq: "Casa D'Arte nuk furnizon vetëm materiale dekorative. Ne e çojmë një projekt nga zgjedhja e veshjes dhe mostrat, përmes ofertës, deri te aplikimi profesional nga ekipi ynë.",
+    sq: "Casa D'Arte nuk furnizon vetëm materiale dekorative. E shoqërojmë projektin nga zgjedhja e materialit dhe përgatitja e mostrave, përmes ofertës, deri te aplikimi profesional nga ekipi ynë.",
     mk: "Casa D'Arte не набавува само декоративни материјали. Го водиме проектот од изборот на обработка и мострите, преку понудата, до професионалното нанесување од нашиот тим.",
   },
   "From concept to completion": { sq: "Nga koncepti te përfundimi", mk: "Од концепт до завршување" },
@@ -256,29 +256,29 @@ export const STRINGS: Record<string, Entry> = {
   // About
   "Material and execution, together": { sq: "Materiali dhe zbatimi, së bashku", mk: "Материјал и изведба, заедно" },
   "We chose early on not to be a shop that sells buckets, nor a crew that applies whatever arrives on site. Casa D'Arte supplies the finish and applies it — so one team is accountable for the surface.": {
-    sq: "Që herët vendosëm të mos jemi as dyqan që shet kova, as ekip që aplikon çfarëdo që mbërrin në kantier. Casa D'Arte e furnizon veshjen dhe e aplikon — kështu një ekip i vetëm mban përgjegjësi për sipërfaqen.",
+    sq: "Kompania jonë furnizon materiale dekorative dhe kujdeset edhe për aplikimin e tyre profesional përmes ekipit të vet — nga mostra dhe përzgjedhja deri te sipërfaqja e përfunduar.",
     mk: "Уште на почетокот одлучивме да не бидеме ниту продавница што продава кофи, ниту екипа што нанесува што и да стигне на градилиштето. Casa D'Arte ја набавува обработката и ја нанесува — така еден тим е одговорен за површината.",
   },
   "Decisions on the real material": { sq: "Vendime mbi materialin real", mk: "Одлуки врз вистинскиот материјал" },
   "Every finish is approved on physical samples prepared for the project. Tone, texture and sheen are judged in the light of the space, not on a screen.": {
-    sq: "Çdo veshje miratohet mbi mostra fizike të përgatitura për projektin. Toni, tekstura dhe shkëlqimi vlerësohen në dritën e hapësirës, jo në ekran.",
+    sq: "Çdo material miratohet përmes mostrave fizike të përgatitura për projektin. Toni, tekstura dhe shkëlqimi vlerësohen në dritën e hapësirës, jo në ekran.",
     mk: "Секоја обработка се одобрува на физички мостри подготвени за проектот. Тонот, текстурата и сјајот се проценуваат во светлината на просторот, а не на екран.",
   },
   "Respect for the technique": { sq: "Respekt për teknikën", mk: "Почит кон техниката" },
   "Italian decorative finishes are layered systems. Preparation, timing and the hand that applies them matter as much as the material. We do not skip steps.": {
-    sq: "Veshjet dekorative italiane janë sisteme me shtresa. Përgatitja, koha dhe dora që i aplikon kanë po aq rëndësi sa materiali. Ne nuk anashkalojmë hapa.",
+    sq: "Materialet dekorative italiane aplikohen në disa shtresa. Përgatitja, koha dhe mjeshtëria e aplikimit kanë po aq rëndësi sa vetë materiali. Nuk anashkalojmë asnjë hap.",
     mk: "Италијанските декоративни обработки се повеќеслојни системи. Подготовката, времето и раката што ги нанесува се важни колку и материјалот. Не прескокнуваме чекори.",
   },
   Restraint: { sq: "Përmbajtje", mk: "Умереност" },
   "The finish should serve the architecture. Our role is to make a surface feel inevitable in its space — not to decorate for its own sake.": {
-    sq: "Veshja duhet t’i shërbejë arkitekturës. Roli ynë është ta bëjmë një sipërfaqe të duket e natyrshme në hapësirën e saj — jo të dekorojmë për hir të dekorimit.",
+    sq: "Materiali duhet t’i shërbejë arkitekturës. Roli ynë është të krijojmë një sipërfaqe që duket e natyrshme në hapësirë — jo të dekorojmë thjesht për efekt.",
     mk: "Обработката треба да ѝ служи на архитектурата. Нашата улога е површината да делува неизбежно во својот простор — а не да украсуваме само заради украсот.",
   },
-  "The Studio · Est. 2012": { sq: "Studioja · Që nga 2012", mk: "Студиото · Основано 2012" },
-  "A studio for Italian finishes —": { sq: "Një studio për veshje italiane —", mk: "Студио за италијански обработки —" },
+  "The Studio · Est. 2012": { sq: "Studioja · Mbi një dekadë përvojë", mk: "Студиото · Основано 2012" },
+  "A studio for Italian finishes —": { sq: "Një studio për materiale italiane —", mk: "Студио за италијански обработки —" },
   "supplied and applied.": { sq: "të furnizuara dhe të aplikuara.", mk: "набавени и нанесени." },
   "Casa D'Arte was founded in 2012 around a simple conviction: a wall deserves the same care as the architecture around it — and the people who choose the material should be the people who put it on the wall.": {
-    sq: "Casa D'Arte u themelua në vitin 2012 mbi një bindje të thjeshtë: një mur meriton të njëjtin kujdes si arkitektura përreth tij — dhe ata që zgjedhin materialin duhet të jenë ata që e vendosin në mur.",
+    sq: "Kompania jonë ka më shumë se një dekadë përvojë dhe mbështetet në një bindje të thjeshtë: një mur meriton të njëjtin kujdes si arkitektura përreth tij — dhe ekipi që zgjedh materialin duhet të jetë edhe ai që e aplikon në mur.",
     mk: "Casa D'Arte е основана во 2012 година врз едноставно уверување: ѕидот заслужува иста грижа како и архитектурата околу него — а луѓето што го избираат материјалот треба да бидат тие што го нанесуваат на ѕидот.",
   },
   "Hand-applied Italian decorative plaster surface": {
@@ -286,7 +286,7 @@ export const STRINGS: Record<string, Entry> = {
     mk: "Рачно нанесена италијанска декоративна малтерска површина",
   },
   "Decorative finish being applied by hand with a steel trowel": {
-    sq: "Veshje dekorative duke u aplikuar me dorë me mistri çeliku",
+    sq: "Material dekorativ që aplikohet me dorë me mistri çeliku",
     mk: "Декоративна обработка што рачно се нанесува со челична глетарица",
   },
   "What we do": { sq: "Çfarë bëjmë", mk: "Што работиме" },
@@ -295,15 +295,15 @@ export const STRINGS: Record<string, Entry> = {
     mk: "Од првата мостра до завршената површина.",
   },
   "We work with Italian decorative finishes — Travertino, Marmorino, Stucco Veneziano, Sahara and Microcement — and we do two things with them. We supply the material, specified for the project. And we apply it, with our own team, from surface preparation through the finished surface.": {
-    sq: "Ne punojmë me veshje dekorative italiane — Travertino, Marmorino, Stucco Veneziano, Sahara dhe Microcement — dhe bëjmë dy gjëra me to. Furnizojmë materialin, të specifikuar për projektin. Dhe e aplikojmë, me ekipin tonë, nga përgatitja e sipërfaqes deri te sipërfaqja e përfunduar.",
+    sq: "Punojmë me materiale dekorative italiane — Travertino, Marmorino, Stucco Veneziano, Sahara, Microcement dhe Beton Look. I furnizojmë sipas kërkesave të projektit dhe i aplikojmë me ekipin tonë, nga përgatitja e bazës deri te sipërfaqja e përfunduar.",
     mk: "Работиме со италијански декоративни обработки — Travertino, Marmorino, Stucco Veneziano, Sahara и Microcement — и со нив правиме две работи. Го набавуваме материјалот, специфициран за проектот. И го нанесуваме, со нашиот тим, од подготовката на површината до завршената површина.",
   },
   "Most of our work is with architects, interior designers, developers and hospitality or commercial clients, alongside private residences where the owners care about how a wall feels as much as how it looks. In every case the path is the same: consultation, samples, quotation, application, handover.": {
-    sq: "Pjesa më e madhe e punës sonë është me arkitektë, dizajnerë interieri, zhvillues dhe klientë të mikpritjes ose tregtisë, si dhe me rezidenca private ku pronarët kujdesen si ndihet një mur po aq sa si duket. Në çdo rast rruga është e njëjtë: konsultim, mostra, ofertë, aplikim, dorëzim.",
+    sq: "Punojmë kryesisht me arkitektë, dizajnerë interieri, investitorë, biznese dhe hoteleri, si edhe me klientë privatë që i kushtojnë rëndësi si pamjes, ashtu edhe ndjesisë së sipërfaqes. Procesi mbetet i njëjtë: konsultim, mostra, ofertë, aplikim dhe dorëzim.",
     mk: "Најголемиот дел од нашата работа е со архитекти, дизајнери на ентериер, инвеститори и угостителски или комерцијални клиенти, како и со приватни резиденции чии сопственици се грижат за тоа какво е чувството на ѕидот исто колку и за неговиот изглед. Во секој случај патот е ист: консултација, мостри, понуда, нанесување, предавање.",
   },
   "It is a deliberately narrow way of working. It means we can stand behind the surface, because we chose the material and we put it there.": {
-    sq: "Është një mënyrë pune qëllimisht e përqendruar. Kjo do të thotë se mund të garantojmë për sipërfaqen, sepse ne e zgjodhëm materialin dhe ne e vendosëm atje.",
+    sq: "Kjo mënyrë e përqendruar pune na lejon të mbajmë përgjegjësi për sipërfaqen, sepse zgjedhja dhe aplikimi i materialit kryhen nga i njëjti ekip.",
     mk: "Тоа е намерно фокусиран начин на работа. Значи можеме да застанеме зад површината, бидејќи ние го избравме материјалот и ние го поставивме таму.",
   },
   "Our Services": { sq: "Shërbimet tona", mk: "Нашите услуги" },
@@ -313,30 +313,30 @@ export const STRINGS: Record<string, Entry> = {
     mk: "Четири принципи што го обликуваат секој проект.",
   },
   "Six finishes, each supplied and applied by the studio.": {
-    sq: "Gjashtë veshje, secila e furnizuar dhe e aplikuar nga studioja.",
+    sq: "Gjashtë materiale, secili i furnizuar dhe i aplikuar nga studioja.",
     mk: "Шест обработки, секоја набавена и нанесена од студиото.",
   },
   "Start a conversation": { sq: "Filloni një bisedë", mk: "Започнете разговор" },
   "Tell us about your space.": { sq: "Na tregoni për hapësirën tuaj.", mk: "Кажете ни за вашиот простор." },
   "Whether you are specifying a finish, planning a development or renovating a home, the next step is a conversation and a sample.": {
-    sq: "Pavarësisht nëse po specifikoni një veshje, po planifikoni një zhvillim apo po rinovoni një shtëpi, hapi i radhës është një bisedë dhe një mostër.",
+    sq: "Pavarësisht nëse po specifikoni një material, po planifikoni një projekt ndërtimi apo po rinovoni një shtëpi, hapi i radhës është një bisedë dhe një mostër.",
     mk: "Без разлика дали специфицирате обработка, планирате градежен проект или реновирате дом, следниот чекор е разговор и мостра.",
   },
 
   // Architects
   "Sample boxes": { sq: "Kutitë me mostra", mk: "Кутии со мостри" },
   "A curated case of our finishes for the studio, so material conversations start with the real surface rather than a swatch on screen.": {
-    sq: "Një kuti e përzgjedhur me veshjet tona për studion, që bisedat për materialin të nisin me sipërfaqen reale e jo me një mostër në ekran.",
+    sq: "Një kuti e përzgjedhur me materialet tona për studio, në mënyrë që bisedat për materialin të nisin nga sipërfaqja reale dhe jo nga një imazh në ekran.",
     mk: "Одбрана кутија со нашите обработки за студиото, за разговорите за материјалот да почнуваат со вистинската површина, а не со примерок на екран.",
   },
   "Custom samples and textures": { sq: "Mostra dhe tekstura të personalizuara", mk: "Мостри и текстури по мерка" },
   "Project-specific samples in your tones, textures and sheen — refined until the finish matches the intent, before anything is quoted.": {
-    sq: "Mostra specifike për projektin në tonet, teksturat dhe shkëlqimin tuaj — të përsosura derisa veshja të përputhet me qëllimin, para çdo oferte.",
+    sq: "Mostra të posaçme për projektin, në tonet, teksturat dhe shkëlqimin e zgjedhur — të përpunuara deri sa materiali të përputhet me synimin, para përgatitjes së ofertës.",
     mk: "Мостри за конкретниот проект во вашите тонови, текстури и сјај — дотерани додека обработката не одговара на замислата, пред да се изготви понуда.",
   },
-  "Finish and material specification": { sq: "Specifikimi i veshjes dhe materialit", mk: "Спецификација на обработка и материјал" },
+  "Finish and material specification": { sq: "Specifikimi i materialit", mk: "Спецификација на обработка и материјал" },
   "Guidance on which finish suits the space, substrate and use, with the information you need for drawings, schedules and tender.": {
-    sq: "Udhëzim se cila veshje i përshtatet hapësirës, bazës dhe përdorimit, me informacionin që ju nevojitet për vizatimet, grafikët dhe tenderin.",
+    sq: "Udhëzim për materialin që i përshtatet hapësirës, bazës dhe përdorimit, së bashku me informacionin e nevojshëm për vizatimet, planifikimin dhe tenderin.",
     mk: "Насоки за тоа која обработка одговара на просторот, подлогата и намената, со информациите потребни за цртежи, распореди и тендер.",
   },
   "Technical consultation": { sq: "Konsultim teknik", mk: "Техничка консултација" },
@@ -346,45 +346,45 @@ export const STRINGS: Record<string, Entry> = {
   },
   Quotation: { sq: "Oferta", mk: "Понуда" },
   "Material and application quoted together, itemised by surface, so your client can approve the finish and the budget in one step.": {
-    sq: "Materiali dhe aplikimi në një ofertë të vetme, të ndara sipas sipërfaqes, që klienti juaj të miratojë veshjen dhe buxhetin në një hap.",
+    sq: "Materiali dhe aplikimi paraqiten në një ofertë të vetme, të detajuar sipas sipërfaqeve, në mënyrë që klienti juaj të miratojë materialin dhe buxhetin në një hap.",
     mk: "Материјалот и нанесувањето во заедничка понуда, разложена по површини, за вашиот клиент да ги одобри обработката и буџетот во еден чекор.",
   },
   "Professional execution": { sq: "Zbatim profesional", mk: "Професионална изведба" },
   "The finish is applied by our own team, coordinated with your programme and other trades, and handed over as specified.": {
-    sq: "Veshja aplikohet nga ekipi ynë, e koordinuar me programin tuaj dhe zejtarët e tjerë, dhe dorëzohet sipas specifikimit.",
+    sq: "Materiali aplikohet nga ekipi ynë, në koordinim me planin tuaj të punës dhe profesionistët e tjerë, dhe dorëzohet sipas specifikimit.",
     mk: "Обработката ја нанесува нашиот тим, усогласено со вашата програма и другите мајстори, и се предава според спецификацијата.",
   },
   "Flexible partnership": { sq: "Partneritet fleksibël", mk: "Флексибилно партнерство" },
   "From a single feature wall to a multi-unit development or hospitality rollout — a way of working that fits the project and the practice.": {
-    sq: "Nga një mur i vetëm theksues deri te një zhvillim me shumë njësi ose një projekt mikpritjeje — një mënyrë pune që i përshtatet projektit dhe studios suaj.",
+    sq: "Nga një mur i vetëm theksues deri te një projekt ndërtimi me shumë njësi ose një projekt hotelerie — një mënyrë pune që i përshtatet projektit dhe praktikës suaj.",
     mk: "Од еден акцентен ѕид до повеќестанбен проект или угостителски објекти — начин на работа што одговара на проектот и на вашата пракса.",
   },
   "Architects & interior designers": { sq: "Arkitektë dhe dizajnerë interieri", mk: "Архитекти и дизајнери на ентериер" },
   "One partner for the decorative surface: samples, specification, quotation and execution — so the finish on site is the finish you drew.": {
-    sq: "Një partner për sipërfaqen dekorative: mostra, specifikim, ofertë dhe zbatim — që veshja në kantier të jetë ajo që keni projektuar.",
+    sq: "Një partner për sipërfaqen dekorative: mostra, specifikim, ofertë dhe zbatim — në mënyrë që materiali në objekt të jetë ai që keni projektuar.",
     mk: "Еден партнер за декоративната површина: мостри, спецификација, понуда и изведба — за обработката на градилиштето да биде онаа што ја нацртавте.",
   },
   "Request a Sample Box": { sq: "Kërkoni një kuti me mostra", mk: "Побарајте кутија со мостри" },
-  "Developers & investors": { sq: "Zhvillues dhe investitorë", mk: "Инвеститори и градители" },
+  "Developers & investors": { sq: "Investitorë dhe zhvillues projektesh", mk: "Инвеститори и градители" },
   "Consistent finishes across units, lobbies and common areas, with quotations you can plan around and scheduling coordinated with your contractor.": {
-    sq: "Veshje të njëtrajtshme në njësi, holle dhe hapësira të përbashkëta, me oferta mbi të cilat mund të planifikoni dhe orare të koordinuara me kontraktorin tuaj.",
+    sq: "Materiale të njëtrajtshme në njësi, holle dhe hapësira të përbashkëta, me oferta të qarta dhe afate pune të koordinuara me kontraktorin tuaj.",
     mk: "Доследни обработки во станови, лобија и заеднички простори, со понуди според кои можете да планирате и распоред усогласен со вашиот изведувач.",
   },
-  "Hospitality & commercial": { sq: "Mikpritje dhe tregti", mk: "Угостителство и комерцијала" },
+  "Hospitality & commercial": { sq: "Hoteleri dhe biznese", mk: "Угостителство и комерцијала" },
   "Hotels, restaurants, retail and offices: durable, characterful surfaces delivered around opening dates and operating constraints.": {
     sq: "Hotele, restorante, dyqane dhe zyra: sipërfaqe të qëndrueshme e me karakter, të dorëzuara sipas datave të hapjes dhe kufizimeve operative.",
     mk: "Хотели, ресторани, продавници и канцеларии: издржливи површини со карактер, изведени според датумите на отворање и оперативните ограничувања.",
   },
-  "Architects · Designers · Developers": { sq: "Arkitektë · Dizajnerë · Zhvillues", mk: "Архитекти · Дизајнери · Инвеститори" },
+  "Architects · Designers · Developers": { sq: "Arkitektë · Dizajnerë · Investitorë", mk: "Архитекти · Дизајнери · Инвеститори" },
   "Specify with confidence.": { sq: "Specifikoni me besim.", mk: "Специфицирајте со доверба." },
   "We take it from there.": { sq: "Për pjesën tjetër kujdesemi ne.", mk: "Ние продолжуваме оттаму." },
   "Casa D'Arte works alongside architects, interior designers, developers and hospitality operators as the party responsible for the decorative surface — from sample box and specification to quotation and execution on site. Material and application are handled by one team.": {
-    sq: "Casa D'Arte punon krah arkitektëve, dizajnerëve të interierit, zhvilluesve dhe operatorëve të mikpritjes si pala përgjegjëse për sipërfaqen dekorative — nga kutia me mostra dhe specifikimi deri te oferta dhe zbatimi në kantier. Materiali dhe aplikimi trajtohen nga një ekip i vetëm.",
+    sq: "Casa D'Arte bashkëpunon me arkitektë, dizajnerë interieri, investitorë dhe operatorë hotelerie, duke marrë përgjegjësinë për sipërfaqen dekorative — nga kutia me mostra dhe specifikimi deri te oferta dhe zbatimi në objekt. Materiali dhe aplikimi menaxhohen nga një ekip i vetëm.",
     mk: "Casa D'Arte работи заедно со архитекти, дизајнери на ентериер, инвеститори и угостители како страна одговорна за декоративната површина — од кутијата со мостри и спецификацијата до понудата и изведбата на градилиштето. Материјалот и нанесувањето ги води еден тим.",
   },
   "Become a Partner": { sq: "Bëhuni partner", mk: "Станете партнер" },
   "Finish samples and drawings laid out for specification": {
-    sq: "Mostra veshjesh dhe vizatime të shtruara për specifikim",
+    sq: "Mostra materialesh dhe vizatime të përgatitura për specifikim",
     mk: "Мостри од обработки и цртежи подготвени за спецификација",
   },
   "Sample cases and project samples are prepared for each collaboration.": {
@@ -397,10 +397,10 @@ export const STRINGS: Record<string, Entry> = {
     mk: "Поддршка од првата мостра до последниот слој.",
   },
   "Five Italian systems, each pigmented and textured to project specification. Full details, applications and galleries on each finish page.": {
-    sq: "Pesë sisteme italiane, secili i pigmentuar dhe i teksturuar sipas specifikimit të projektit. Detajet e plota, përdorimet dhe galeritë gjenden në faqen e secilës veshje.",
+    sq: "Gjashtë materiale, secili me ngjyrë dhe teksturë sipas specifikimit të projektit. Detajet, përdorimet dhe galeritë gjenden në faqen e secilit material.",
     mk: "Пет италијански системи, секој пигментиран и текстуриран според спецификацијата на проектот. Целосни детали, примени и галерии на страницата на секоја обработка.",
   },
-  "All finishes →": { sq: "Të gjitha veshjet →", mk: "Сите обработки →" },
+  "All finishes →": { sq: "Të gjitha materialet →", mk: "Сите обработки →" },
   Overview: { sq: "Përmbledhje", mk: "Преглед" },
   "Who we work with": { sq: "Me kë punojmë", mk: "Со кого работиме" },
   "One responsibility, whatever the scale of the project.": {
@@ -417,7 +417,7 @@ export const STRINGS: Record<string, Entry> = {
     sq: "Shqyrtojmë me ju hapësirën dhe qëllimin — në studio ose në vend.",
     mk: "Ги разгледуваме просторот и замислата со вас — во студиото или на лице место.",
   },
-  "Sample & finish selection": { sq: "Mostrat dhe zgjedhja e veshjes", mk: "Мостри и избор на обработка" },
+  "Sample & finish selection": { sq: "Mostrat dhe zgjedhja e materialit", mk: "Мостри и избор на обработка" },
   "Project samples in your tones and textures, approved on the real material.": {
     sq: "Mostra projekti në tonet dhe teksturat tuaja, të miratuara mbi materialin real.",
     mk: "Мостри за проектот во вашите тонови и текстури, одобрени на вистинскиот материјал.",
@@ -428,7 +428,7 @@ export const STRINGS: Record<string, Entry> = {
     mk: "Материјалот и нанесувањето во заедничка понуда; подготовката и програмата се договараат.",
   },
   "Our own team prepares the substrate and applies the finish.": {
-    sq: "Ekipi ynë e përgatit bazën dhe aplikon veshjen.",
+    sq: "Ekipi ynë përgatit bazën dhe aplikon materialin.",
     mk: "Нашиот тим ја подготвува подлогата и ја нанесува обработката.",
   },
   "Finished project": { sq: "Projekti i përfunduar", mk: "Завршен проект" },
@@ -438,7 +438,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "Introduce your studio or company.": { sq: "Prezantoni studion ose kompaninë tuaj.", mk: "Претставете го вашето студио или компанија." },
   "Tell us about your practice or portfolio and the projects you have in view. We will come back to arrange a conversation and, where useful, a sample box.": {
-    sq: "Na tregoni për studion ose portofolin tuaj dhe projektet që keni në plan. Do t’ju kthehemi për të caktuar një bisedë dhe, kur është e dobishme, një kuti me mostra.",
+    sq: "Na tregoni për studion ose portofolin tuaj dhe projektet që keni në plan. Do t’ju kontaktojmë për të caktuar një bisedë dhe, kur është e dobishme, për të përgatitur një kuti me mostra.",
     mk: "Кажете ни за вашата пракса или портфолио и проектите што ги планирате. Ќе ви се јавиме за да договориме разговор и, кога е корисно, кутија со мостри.",
   },
   "Start the conversation": { sq: "Filloni bisedën", mk: "Започнете го разговорот" },
@@ -446,21 +446,21 @@ export const STRINGS: Record<string, Entry> = {
   // Contact
   "Discuss your project": { sq: "Diskutoni projektin tuaj", mk: "Разговарајте за вашиот проект" },
   "Tell us about the project.": { sq: "Na tregoni për projektin.", mk: "Кажете ни за проектот." },
-  "Send inquiry": { sq: "Dërgo kërkesën", mk: "Испрати барање" },
+  "Send inquiry": { sq: "Dërgoni kërkesën", mk: "Испрати барање" },
   "Request a sample": { sq: "Kërkoni mostër", mk: "Побарајте мостра" },
-  "Which finishes would you like to see?": { sq: "Cilat veshje dëshironi të shihni?", mk: "Кои обработки би сакале да ги видите?" },
+  "Which finishes would you like to see?": { sq: "Cilat materiale dëshironi të shihni?", mk: "Кои обработки би сакале да ги видите?" },
   "I would like to receive samples of: ": { sq: "Dëshiroj të marr mostra të: ", mk: "Би сакал/а да добијам мостри од: " },
   "Request samples": { sq: "Kërkoni mostra", mk: "Побарајте мостри" },
-  "Let us price the work.": { sq: "Le ta vlerësojmë punën.", mk: "Дозволете ни да ја процениме работата." },
+  "Let us price the work.": { sq: "Kërkoni një preventiv për punimet.", mk: "Дозволете ни да ја процениме работата." },
   "Surface area (approx.), location, condition of the walls, preferred finish: ": {
-    sq: "Sipërfaqja (përafërsisht), vendndodhja, gjendja e mureve, veshja e preferuar: ",
+    sq: "Sipërfaqja (përafërsisht), vendndodhja, gjendja e mureve, materiali i preferuar: ",
     mk: "Површина (приближно), локација, состојба на ѕидовите, посакувана обработка: ",
   },
   Partnership: { sq: "Partneritet", mk: "Партнерство" },
   "Let's begin with a": { sq: "Le të fillojmë me një", mk: "Да започнеме со" },
   "conversation.": { sq: "bisedë.", mk: "разговор." },
   "Reach the studio by form or phone. Whether you are specifying a finish, planning a development or renovating a home, we will guide you from sample to finished surface.": {
-    sq: "Kontaktoni studion përmes formularit ose telefonit. Pavarësisht nëse po specifikoni një veshje, po planifikoni një zhvillim apo po rinovoni një shtëpi, do t’ju udhëheqim nga mostra te sipërfaqja e përfunduar.",
+    sq: "Kontaktoni studion përmes formularit ose telefonit. Pavarësisht nëse po specifikoni një material, po planifikoni një projekt ndërtimi apo po rinovoni një shtëpi, do t’ju udhëheqim nga mostra deri te sipërfaqja e përfunduar.",
     mk: "Контактирајте го студиото преку формуларот или по телефон. Без разлика дали специфицирате обработка, планирате градежен проект или реновирате дом, ќе ве водиме од мострата до завршената површина.",
   },
   Studio: { sq: "Studioja", mk: "Студио" },
@@ -469,9 +469,9 @@ export const STRINGS: Record<string, Entry> = {
   // Form
   Name: { sq: "Emri", mk: "Име" },
   City: { sq: "Qyteti", mk: "Град" },
-  "Finish / Service of interest": { sq: "Veshja / shërbimi që ju intereson", mk: "Обработка / услуга од интерес" },
+  "Finish / Service of interest": { sq: "Materiali / shërbimi që ju intereson", mk: "Обработка / услуга од интерес" },
   Select: { sq: "Zgjidhni", mk: "Изберете" },
-  "Not sure yet — advice needed": { sq: "Ende nuk jam i sigurt — kam nevojë për këshillë", mk: "Сè уште не сум сигурен/на — потребен ми е совет" },
+  "Not sure yet — advice needed": { sq: "Ende nuk jam i sigurt — më nevojitet këshillë", mk: "Сè уште не сум сигурен/на — потребен ми е совет" },
   Message: { sq: "Mesazhi", mk: "Порака" },
   "Sending…": { sq: "Po dërgohet…", mk: "Се испраќа…" },
   "Your details are used only to respond to this inquiry.": {
@@ -489,7 +489,7 @@ export const STRINGS: Record<string, Entry> = {
   Received: { sq: "U pranua", mk: "Примено" },
   "Thank you.": { sq: "Faleminderit.", mk: "Ви благодариме." },
   "Your inquiry has reached the studio. We will review it and come back to you to arrange the next step — a conversation, samples, or a site visit.": {
-    sq: "Kërkesa juaj ka mbërritur në studio. Do ta shqyrtojmë dhe do t’ju kthehemi për të caktuar hapin e radhës — një bisedë, mostra ose një vizitë në vend.",
+    sq: "Kërkesa juaj ka mbërritur në studio. Do ta shqyrtojmë dhe do t’ju kontaktojmë për të caktuar hapin e radhës — një bisedë, mostra ose një vizitë në objekt.",
     mk: "Вашето барање стигна до студиото. Ќе го разгледаме и ќе ви се јавиме за да го договориме следниот чекор — разговор, мостри или посета на лице место.",
   },
   "Send another inquiry": { sq: "Dërgoni një kërkesë tjetër", mk: "Испратете друго барање" },
@@ -502,10 +502,10 @@ export const STRINGS: Record<string, Entry> = {
     sq: "Për zanatin italian, ngjyrën, materialin dhe arkitekturën e interierit.",
     mk: "За италијанскиот занает, бојата, материјалот и архитектурата на ентериерот.",
   },
-  Read: { sq: "Lexo", mk: "Прочитај" },
+  Read: { sq: "Lexoni", mk: "Прочитај" },
   "← The Journal": { sq: "← Revista", mk: "← Дневникот" },
   "Considering one of these finishes for a project? We prepare samples in your tones before anything is quoted.": {
-    sq: "Po mendoni një nga këto veshje për një projekt? Ne përgatisim mostra në tonet tuaja para çdo oferte.",
+    sq: "Po mendoni të përdorni një nga këto materiale në projektin tuaj? Përgatisim mostra në tonet tuaja para hartimit të ofertës.",
     mk: "Размислувате за некоја од овие обработки за проект? Подготвуваме мостри во вашите тонови пред да се изготви понуда.",
   },
   "Continue reading": { sq: "Vazhdoni të lexoni", mk: "Продолжете со читање" },
@@ -525,12 +525,12 @@ export const PRODUCT_TR: Record<string, { tagline: Localized; summary: Localized
   marmorino: {
     tagline: { sq: "Elegancë klasike", mk: "Класична префинетост" },
     summary: {
-      sq: "Një veshje gëlqereje e lëmuar, me shkëlqim të butë dhe thellësi të qetë — muri klasik venecian.",
+      sq: "Një material i lëmuar me bazë gëlqereje, me shkëlqim të butë dhe thellësi të qetë — fryma e murit klasik venecian.",
       mk: "Мазна варовна обработка со нежен сјај и тивка длабочина — класичниот венецијански ѕид.",
     },
   },
   sahara: {
-    tagline: { sq: "Teksturë me kokërr metalike", mk: "Текстура со метално зрно" },
+    tagline: { sq: "Teksturë ranore me shkëlqim metalik", mk: "Текстура со метално зрно" },
     summary: {
       sq: "Kokërr e imët minerale me pigmente metalike — një sipërfaqe që ndryshon me dritën.",
       mk: "Фино минерално зрно со метални пигменти — површина што се менува со светлината.",
@@ -544,7 +544,7 @@ export const PRODUCT_TR: Record<string, { tagline: Localized; summary: Localized
     },
   },
   microcement: {
-    tagline: { sq: "Pa bashkime dhe bashkëkohore", mk: "Беспрекорно и современо" },
+    tagline: { sq: "Sipërfaqe moderne pa fuga", mk: "Беспрекорно и современо" },
     summary: {
       sq: "Sipërfaqe çimentoje të vazhdueshme, pa fuga, për mure, dysheme dhe zona me lagështi.",
       mk: "Континуирани цементни површини без фуги, за ѕидови, подови и влажни простории.",
@@ -553,7 +553,7 @@ export const PRODUCT_TR: Record<string, { tagline: Localized; summary: Localized
   "beton-look": {
     tagline: { sq: "Karakter arkitektonik betoni", mk: "Архитектонски карактер на бетон" },
     summary: {
-      sq: "Një veshje dekorative me pamjen e qetë minerale të betonit të zhveshur.",
+      sq: "Një material dekorativ me pamjen e qetë minerale të betonit të ekspozuar.",
       mk: "Декоративна обработка со смирен минерален изглед на видлив бетон.",
     },
   },
@@ -572,10 +572,10 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
       readTime: "6 min lexim",
       category: "Zanati",
       body: [
-        "Suvaja veneciane, ose Stucco Veneziano, e ka origjinën te pallatet e Venecias së Rilindjes — një qytet ku ajri i lagësht detar kërkonte veshje njëkohësisht të bukura dhe që marrin frymë. E aplikuar në shtresa të tejdukshme gëlqereje të shuar dhe mermeri të bluar imët, teknika krijon një mur që duket se ka thellësinë e vet.",
+        "Suvaja veneciane, ose Stucco Veneziano, e ka origjinën në pallatet e Venecias së Rilindjes — një qytet ku ajri i lagësht detar kërkonte materiale që të ishin njëkohësisht të bukura dhe të përshkueshme nga ajri. E aplikuar në shtresa të tejdukshme gëlqereje të shuar dhe mermeri të bluar imët, kjo teknikë krijon një mur me thellësi të dallueshme.",
         "Arkitektët që punojnë në interiere të rafinuara i janë rikthyer Stucco Veneziano pikërisht për arsyen që e çmonin ndërtuesit venecianë: asnjë bojë industriale nuk e riprodhon butësinë vizuale të gëlqeres së punuar me mistri, apo mënyrën si ndryshon kur drita lëviz nëpër dhomë.",
         "Është gjithashtu një teknikë ku materiali dhe aplikimi nuk mund të ndahen. I njëjti produkt, në duar të ndryshme, krijon një mur tjetër. Numri i shtresave, presioni i mistrisë, koha mes shtresave dhe lustrimi përfundimtar vendosin nëse sipërfaqja duket si mermer apo si bojë.",
-        "Prandaj Casa D'Arte e furnizon veshjen dhe e aplikon me ekipin e vet. Një Stucco Veneziano i specifikuar realizohet vetëm kur ata që zgjodhën materialin janë ata që e sjellin në mur — shtresë pas shtrese, derisa sipërfaqja t’i përkasë arkitekturës në vend që të qëndrojë mbi të.",
+        "Prandaj Casa D'Arte e furnizon materialin dhe e aplikon me ekipin e vet. Një sipërfaqe Stucco Veneziano realizohet sipas specifikimit kur i njëjti ekip kujdeset për materialin dhe aplikimin — shtresë pas shtrese, deri sa sipërfaqja të bëhet pjesë e natyrshme e arkitekturës.",
       ],
     },
     mk: {
@@ -595,20 +595,20 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
   },
   "choosing-finish-for-your-space": {
     sq: {
-      title: "Si të zgjidhni veshjen e duhur për hapësirën tuaj",
+      title: "Si të zgjidhni materialin e duhur për hapësirën tuaj",
       excerpt:
-        "Travertino, Marmorino, Stucco Veneziano, Sahara apo Microcement — një udhëzues dizajneri për zgjedhjen e veshjes që i përshtatet arkitekturës suaj.",
+        "Travertino, Marmorino, Stucco Veneziano, Sahara, Microcement apo Beton Look — një udhëzues për zgjedhjen e materialit që i përshtatet arkitekturës suaj.",
       date: "Shkurt 2026",
       readTime: "8 min lexim",
       category: "Udhëzues",
       body: [
-        "Gjashtë veshjet me të cilat punojmë kanë secila një karakter të veçantë arkitektonik. Të kuptosh se cila i përshtatet një hapësire — dhe si do të përdoret ajo hapësirë — është vendimi i parë në çdo projekt, dhe ai që zgjidhet më mirë me një mostër fizike.",
-        "Marmorino është e qetë. Funksionon aty ku doni thellësi pa dramë: dhoma gjumi, dhoma ngrënieje, zyra për njerëz që e vlerësojnë përmbajtjen. Një sipërfaqe e butë, e ndritshme, me lëvizje delikate.",
-        "Stucco Veneziano është teatrale. I përket hapësirave ku drita ka rëndësi — suita me dritare të larta, restorante ku natën punën e bën drita e qirinjve. E lustruar deri në shkëlqim pasqyre, duket si mermer me damarë.",
-        "Travertino është tektonike. Poroziteti i saj i jep peshë. U përshtatet vilave, fasadave dhe çdo muri që duhet të ndihet i rrënjosur në tokë e jo thjesht i aplikuar mbi të.",
-        "Sahara është bashkëkohore. Kokrra e imët minerale me pigment metalik e gjallëron në dritën e mbrëmjes, prandaj u përshtatet bareve të mikpritjes, dyqaneve butik dhe tualeteve për mysafirë.",
-        "Microcement është pa bashkime. Një sipërfaqe e hollë, e vazhdueshme me bazë çimentoje për mure, dysheme dhe zona me lagështi, që u përshtatet banjove bashkëkohore, kuzhinave dhe interiereve tregtare ku fugat dhe pllakat do ta ndërprisnin hapësirën.",
-        "Cilido qoftë drejtimi i një projekti, rekomandojmë që vendimi të merret mbi mostra të përgatitura në tonin dhe teksturën e synuar, të parë në hapësirën reale. Veshja e duhur është ajo që duket e pashmangshme atje.",
+        "Secili nga gjashtë materialet me të cilat punojmë ka karakter të veçantë arkitektonik. Të përcaktoni se cili i përshtatet një hapësire — dhe mënyrës se si do të përdoret ajo — është vendimi i parë në çdo projekt, që merret më mirë duke parë një mostër fizike.",
+        "Marmorino ka një karakter të qetë. Përshtatet aty ku kërkohet thellësi pa teprime: në dhoma gjumi, dhoma ngrënieje dhe zyra me estetikë të përmbajtur. Krijon një sipërfaqe të butë, të ndritshme dhe me lëvizje delikate.",
+        "Stucco Veneziano ka karakter shprehës. Përshtatet në hapësira ku drita luan rol të rëndësishëm — suita me dritare të larta dhe restorante ku ndriçimi i mbrëmjes thekson sipërfaqen. I lustruar deri në shkëlqim pasqyre, krijon pamjen e mermerit me damarë.",
+        "Travertino ka karakter tektonik. Poroziteti i jep peshë vizuale. Përshtatet me vila, fasada dhe mure që kërkojnë një prani të fortë arkitektonike.",
+        "Sahara ka karakter bashkëkohor. Tekstura e imët ranore me shkëlqim metalik gjallërohet në dritën e mbrëmjes, ndaj përshtatet me bare, dyqane butik dhe tualete për mysafirë.",
+        "Microcement krijon sipërfaqe moderne pa fuga. Ky material i hollë me bazë çimentoje përdoret në mure, dysheme dhe zona me lagështi, duke iu përshtatur banjove bashkëkohore, kuzhinave dhe ambienteve tregtare ku fugat dhe pllakat do ta ndërprisnin vazhdimësinë e hapësirës.",
+        "Pavarësisht drejtimit të projektit, rekomandojmë që vendimi të merret duke parë në hapësirën reale mostra të përgatitura në tonin dhe teksturën e synuar. Materiali i duhur është ai që harmonizohet natyrshëm me hapësirën.",
       ],
     },
     mk: {
@@ -631,17 +631,17 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
   },
   "microcement-seamless-surfaces": {
     sq: {
-      title: "Microcement: sipërfaqe pa bashkime, të zbatuara si duhet",
+      title: "Microcement: sipërfaqe pa fuga, të realizuara siç duhet",
       excerpt:
-        "Pse microcement është bërë përgjigjja bashkëkohore për banjot, dyshemetë dhe interieret e vazhdueshme — dhe pse përgatitja e vendos rezultatin.",
+        "Pse Microcement është bërë një zgjidhje bashkëkohore për banja, dysheme dhe ambiente me sipërfaqe të vazhdueshme — dhe pse përgatitja përcakton rezultatin.",
       date: "Janar 2026",
       readTime: "5 min lexim",
       category: "Udhëzues",
       body: [
         "Microcement është një shtresë e hollë me bazë çimentoje, që aplikohet me disa milimetra mbi një bazë ekzistuese. Tërheqja e tij është vazhdimësia që sjell: muret, dyshemetë, dushet dhe mobiliet mund të ndajnë një sipërfaqe të pandërprerë, pa fuga e pa buzë pllakash.",
-        "Kjo vazhdimësi është edhe disiplina e tij. Meqë shtresa është kaq e hollë, ajo zbulon bazën poshtë saj. Plasaritjet, lëvizjet dhe lagështia që një sistem më i trashë mund t’i fshihte, dalin në pah përmes microcement. Një rezultat i mirë varet më pak nga shtresa përfundimtare sesa nga vlerësimi, abetarja dhe përgatitja që i paraprijnë.",
+        "Kjo vazhdimësi kërkon edhe disiplinë në aplikim. Meqë shtresa është kaq e hollë, ajo zbulon bazën poshtë saj. Plasaritjet, lëvizjet dhe lagështia që një sistem më i trashë mund t’i fshihte, dalin në pah përmes Microcement. Një rezultat i mirë varet më pak nga shtresa përfundimtare sesa nga vlerësimi, aplikimi i astarit dhe përgatitja paraprake.",
         "Për zonat me lagështi, sistemi i mbylljes dhe detajet e tij te sifonët, bashkimet dhe qoshet janë ato që e bëjnë sipërfaqen të qëndrueshme. Këtu furnizuesi që e aplikon edhe vetë materialin e fiton vendin e vet: sistemi specifikohet, përgatitet, aplikohet dhe mbyllet nga një ekip i vetëm, dhe përgjegjësia për sipërfaqen e përfunduar është e qartë.",
-        "Microcement tani është pjesë e veshjeve tona, krahas sistemeve italiane me bazë gëlqereje. Kur një projekt kërkon një sipërfaqe bashkëkohore pa bashkime — një banjë, një kuzhinë, një dysheme dyqani — përgatisim mostra në tonin dhe teksturën e synuar dhe japim një ofertë të përbashkët për materialin dhe aplikimin.",
+        "Microcement është pjesë e materialeve tona, krahas sistemeve italiane me bazë gëlqereje. Kur një projekt kërkon një sipërfaqe bashkëkohore pa fuga — në banjë, kuzhinë apo dyshemenë e një dyqani — përgatisim mostra në tonin dhe teksturën e synuar dhe paraqesim një ofertë të përbashkët për materialin dhe aplikimin.",
       ],
     },
     mk: {
@@ -670,7 +670,7 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
       body: [
         "Për shekuj me radhë, jeshilja e thellë ishte ngjyrë e fisnikërisë italiane — në muret e pallateve të Rilindjes dhe të dhomave veneciane, e përftuar nga pigmente me bazë bakri dhe e stabilizuar në gëlqere, ku plakej me dinjitet ndërsa jeshilet më të lira bëheshin të turbullta.",
         "Vitet e fundit, arkitektët e interierit e kanë rikthyer. Muri jeshil i errët — i thellë, mat, pa zbukurime — është bërë shenjë vetëbesimi në interieret bashkëkohore.",
-        "Është një ngjyrë që kërkon veshjen e duhur. Si bojë, ajo rrafshohet. Në Stucco Veneziano ose Marmorino, pigmenti mineral qëndron brenda shtresave të tejdukshme të gëlqeres dhe mermerit, dhe jeshilja fiton thellësinë që kishte në pallate: më pak një shtresë ngjyre e më shumë një material më vete.",
+        "Është një ngjyrë që kërkon materialin e duhur. Në një sipërfaqe të lyer, mund të duket e rrafshët. Në Stucco Veneziano ose Marmorino, pigmenti mineral qëndron brenda shtresave të tejdukshme të gëlqeres dhe mermerit, duke i dhënë jeshiles thellësi: më pak si një shtresë ngjyre dhe më shumë si një material më vete.",
       ],
     },
     mk: {
@@ -693,9 +693,9 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
 export const META_TR: Record<string, { sq: { title: string; description: string }; mk: { title: string; description: string } }> = {
   "/": {
     sq: {
-      title: "Casa D'Arte | Veshje dekorative italiane dhe aplikim",
+      title: "Casa D'Arte | Materiale dekorative italiane dhe aplikim",
       description:
-        "Veshje dekorative premium — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — të aplikuara në mënyrë profesionale nga Casa D'Arte në Maqedoninë e Veriut.",
+        "Materiale dekorative premium — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — të aplikuara në mënyrë profesionale nga Casa D'Arte në Maqedoninë e Veriut.",
     },
     mk: {
       title: "Casa D'Arte | Италијански декоративни обработки и нанесување",
@@ -705,9 +705,9 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
   },
   "/products": {
     sq: {
-      title: "Veshjet — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement, Beton Look",
+      title: "Materialet — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement, Beton Look",
       description:
-        "Gjashtë veshje dekorative premium — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — të furnizuara dhe të aplikuara në mënyrë profesionale nga Casa D'Arte.",
+        "Gjashtë materiale dekorative premium — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — të furnizuara dhe të aplikuara në mënyrë profesionale nga Casa D'Arte.",
     },
     mk: {
       title: "Обработки — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement, Beton Look",
@@ -717,9 +717,9 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
   },
   "/portfolio": {
     sq: {
-      title: "Projektet — Veshjet dekorative të Casa D'Arte në vend",
+      title: "Projektet — Materiale në hapësira të ndryshme | Casa D'Arte",
       description:
-        "Projekte të përzgjedhura banimi, mikpritjeje dhe tregtare në Maqedoninë e Veriut — veshje dekorative italiane të furnizuara dhe të aplikuara nga ekipi i Casa D'Arte.",
+        "Materiale dekorative të paraqitura në ambiente banimi, hotele, zyra dhe dyqane në Maqedoninë e Veriut.",
     },
     mk: {
       title: "Проекти — Декоративните обработки на Casa D'Arte на своето место",
@@ -731,7 +731,7 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
     sq: {
       title: "Shërbimet — Furnizim, aplikim dhe konsultim | Casa D'Arte",
       description:
-        "Veshje dekorative italiane të furnizuara dhe të aplikuara në mënyrë profesionale: konsultim, mostra, zhvillim ngjyrash dhe teksturash, ofertë dhe zbatim për projekte banimi, tregtare dhe mikpritjeje në Maqedoninë e Veriut.",
+        "Materiale dekorative italiane të furnizuara dhe të aplikuara në mënyrë profesionale: konsultim, mostra, zhvillim ngjyrash dhe teksturash, ofertë dhe zbatim për projekte banimi, biznese dhe hoteleri në Maqedoninë e Veriut.",
     },
     mk: {
       title: "Услуги — Набавка, нанесување и консултации | Casa D'Arte",
@@ -741,9 +741,9 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
   },
   "/about": {
     sq: {
-      title: "Studioja — Casa D'Arte, veshje italiane që nga 2012",
+      title: "Studioja — Casa D'Arte, mbi një dekadë përvojë",
       description:
-        "Casa D'Arte, themeluar më 2012: një studio që furnizon veshje dekorative italiane premium dhe i aplikon me ekipin e vet në të gjithë Maqedoninë e Veriut.",
+        "Kompania jonë ka më shumë se një dekadë përvojë në furnizimin dhe aplikimin profesional të materialeve dekorative italiane në të gjithë Maqedoninë e Veriut.",
     },
     mk: {
       title: "Студиото — Casa D'Arte, италијански обработки од 2012",
@@ -755,7 +755,7 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
     sq: {
       title: "Arkitektë dhe dizajnerë — Partneritet me Casa D'Arte",
       description:
-        "Kuti me mostra, mostra të personalizuara, mbështetje për specifikim, konsultim teknik, ofertë dhe aplikim profesional — Casa D'Arte punon me arkitektë, dizajnerë, zhvillues dhe projekte mikpritjeje në Maqedoninë e Veriut.",
+        "Kuti me mostra, mostra të personalizuara, mbështetje për specifikim, konsultim teknik, ofertë dhe aplikim profesional — Casa D'Arte punon me arkitektë, dizajnerë, investitorë dhe projekte hotelerie në Maqedoninë e Veriut.",
     },
     mk: {
       title: "Архитекти и дизајнери — Партнерство со Casa D'Arte",
@@ -765,9 +765,9 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
   },
   "/contact": {
     sq: {
-      title: "Kontaktoni Casa D'Arte — Diskutoni një projekt, kërkoni mostër ose ofertë",
+      title: "Kontaktoni Casa D'Arte — Diskutoni një projekt, kërkoni mostër ose preventiv",
       description:
-        "Diskutoni projektin tuaj me Casa D'Arte në Maqedoninë e Veriut. Kërkoni ofertë ose konsultim për veshje dekorative italiane, të furnizuara dhe të aplikuara në mënyrë profesionale.",
+        "Diskutoni projektin tuaj me Casa D'Arte në Maqedoninë e Veriut. Kërkoni preventiv ose konsultim për materiale dekorative italiane, të furnizuara dhe të aplikuara në mënyrë profesionale.",
     },
     mk: {
       title: "Контактирајте ја Casa D'Arte — Разговарајте за проект, побарајте мостра или понуда",
@@ -777,9 +777,9 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
   },
   "/blog": {
     sq: {
-      title: "Revista — Casa D'Arte për veshjet dekorative italiane",
+      title: "Revista — Casa D'Arte për materialet dekorative italiane",
       description:
-        "Shënime dhe udhëzues për veshjet dekorative — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — ngjyrat dhe sipërfaqet e interierit, nga Casa D'Arte.",
+        "Shënime dhe udhëzues për materialet dekorative — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — ngjyrat dhe sipërfaqet e ambienteve, nga Casa D'Arte.",
     },
     mk: {
       title: "Дневник — Casa D'Arte за италијанските декоративни обработки",

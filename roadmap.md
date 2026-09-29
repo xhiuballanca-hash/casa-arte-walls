@@ -20,6 +20,7 @@
   - [ ] Blog manager: DB-backed posts with editor; public journal reads from DB
 
 ## Ready
+- [x] Approved Albanian-only copy refinement: terminology, grammar, metadata, Journal, and factual corrections
 - [ ] Email notification to studio on new inquiry (needs Resend or similar connector)
 - [ ] Before/after slider on a finish page using real project photography (once supplied)
 - [ ] Macedonian language version (user chose English-only for now)
