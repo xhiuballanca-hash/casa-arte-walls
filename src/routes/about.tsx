@@ -76,28 +76,16 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 md:px-12 bg-beige pb-20 md:pb-28">
-        <div className="mx-auto max-w-[1400px]">
-          <img
-            src={heroImg}
-            alt={t("Hand-applied Italian decorative plaster surface")}
-            width={1920}
-            height={1200}
-            className="w-full aspect-[21/9] object-cover"
-          />
-        </div>
-      </section>
-
       <section className="py-20 md:py-32 px-6 md:px-12 bg-cream">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8 items-start">
           <div className="md:col-span-5 md:sticky md:top-32">
             <img
-              src={aboutImg}
+              src={applicationCraft.url}
               alt={t("Decorative finish being applied by hand with a steel trowel")}
-              width={1200}
-              height={1500}
+              width={941}
+              height={1672}
               loading="lazy"
-              className="w-full aspect-[4/5] object-cover"
+              className="w-full aspect-[4/5] object-cover object-[60%_40%]"
             />
           </div>
           <div className="md:col-span-6 md:col-start-7">
