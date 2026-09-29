@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import aboutImg from "@/assets/about-craft.jpg";
-import heroImg from "@/assets/hero-plaster.jpg";
+import applicationCraft from "@/assets/application-craft.png.asset.json";
 import { ConsultationForm } from "@/lib/consultation-form";
 import { products } from "@/lib/products-data";
 import { useT } from "@/lib/i18n";
@@ -61,7 +60,7 @@ function AboutPage() {
   const t = useT();
   return (
     <>
-      <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
+      <section className="pt-40 pb-20 md:pb-28 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-10 md:gap-8 items-end">
           <div className="md:col-span-8">
             <p className="eyebrow text-gold mb-6">{t("The Studio · Over a decade of experience")}</p>
