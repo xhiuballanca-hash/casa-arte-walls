@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ConsultationForm } from "@/lib/consultation-form";
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import { SITE } from "@/lib/site-config";
+import { useT } from "@/lib/i18n";
 
 const INTENTS = ["project", "sample", "quote", "partner"] as const;
 export type ContactIntent = (typeof INTENTS)[number];
@@ -72,19 +73,18 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   const { intent } = Route.useSearch();
   const copy = intentCopy[intent ?? "project"];
+  const t = useT();
 
   return (
     <>
       <section className="pt-40 pb-16 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px]">
-          <p className="eyebrow text-gold mb-6">Contact</p>
+          <p className="eyebrow text-gold mb-6">{t("Contact")}</p>
           <h1 className="font-serif text-5xl md:text-7xl text-forest leading-[1.05] mb-8 max-w-4xl text-balance">
-            Let's begin with a <em className="italic">conversation.</em>
+            {t("Let's begin with a")} <em className="italic">{t("conversation.")}</em>
           </h1>
           <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
-            Reach the studio by form or phone. Whether you are specifying a finish,
-            planning a development or renovating a home, we will guide you from sample to
-            finished surface.
+            {t("Reach the studio by form or phone. Whether you are specifying a finish, planning a development or renovating a home, we will guide you from sample to finished surface.")}
           </p>
         </div>
       </section>
@@ -93,18 +93,18 @@ function ContactPage() {
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-12 md:gap-16">
           <div className="md:col-span-4 space-y-10">
             <div>
-              <p className="eyebrow text-gold mb-4">Studio</p>
+              <p className="eyebrow text-gold mb-4">{t("Studio")}</p>
                <div className="flex gap-4 items-start text-forest">
                 <MapPin className="h-5 w-5 mt-1 shrink-0" />
                 <span className="leading-relaxed">
                   Casa D'Arte<br />
-                   North Macedonia
+                   {t("North Macedonia")}
                 </span>
                </div>
             </div>
 
             <div>
-              <p className="eyebrow text-gold mb-4">Direct</p>
+              <p className="eyebrow text-gold mb-4">{t("Direct")}</p>
               <div className="space-y-3">
                 <a href={SITE.phoneHref} className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Phone className="h-4 w-4" />
@@ -118,7 +118,7 @@ function ContactPage() {
             </div>
 
             <div>
-              <p className="eyebrow text-gold mb-4">Social</p>
+              <p className="eyebrow text-gold mb-4">{t("Social")}</p>
               <div className="space-y-3">
                 <a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center text-forest hover:text-gold transition-colors">
                   <Instagram className="h-4 w-4" />
@@ -134,14 +134,14 @@ function ContactPage() {
           </div>
 
           <div className="md:col-span-7 md:col-start-6 bg-forest text-beige p-8 md:p-14">
-            <p className="eyebrow text-gold mb-4">{copy.eyebrow}</p>
-            <h2 className="font-serif text-3xl md:text-4xl mb-10">{copy.heading}</h2>
+            <p className="eyebrow text-gold mb-4">{t(copy.eyebrow)}</p>
+            <h2 className="font-serif text-3xl md:text-4xl mb-10">{t(copy.heading)}</h2>
             <ConsultationForm
-              key={intent ?? "project"}
+              key={`${intent ?? "project"}-${t("Name")}`}
               variant="dark"
               source={`contact-${intent ?? "project"}`}
               defaultProject={copy.project}
-              defaultMessage={copy.message}
+              defaultMessage={copy.message ? t(copy.message) : ""}
               defaultClientType={intent === "partner" ? "Architect / Interior designer" : undefined}
               submitLabel={copy.submit}
             />

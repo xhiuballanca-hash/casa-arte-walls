@@ -4,6 +4,7 @@ import craftAsset from "@/assets/application-craft.png.asset.json";
 import { products } from "@/lib/products-data";
 import { projects } from "@/lib/portfolio-data";
 import { whatsappLink } from "@/lib/site-config";
+import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 const TITLE = "Casa D'Arte | Italian Decorative Finishes & Application";
 const DESCRIPTION =
@@ -57,36 +58,38 @@ const processSteps = [
 ];
 
 function HomePage() {
+  const { t, lang } = useI18n();
+  const list = products.map((p) => localizeProduct(p, lang));
 
   return (
     <>
       {/* The approved cover includes printed text. Desktop links align with its printed controls. */}
       <section className="relative w-full bg-cream">
         <div className="relative hidden lg:block">
-          <h1 className="sr-only">Turn Every Wall Into Art.</h1>
+          <h1 className="sr-only">{t("Turn Every Wall Into Art.")}</h1>
           <img
             src={heroCover.url}
-            alt="Casa D'Arte cover: Turn Every Wall Into Art. Premium decorative finishes, professionally applied by our team."
+            alt={t("Casa D'Arte cover: Turn Every Wall Into Art. Premium decorative finishes, professionally applied by our team.")}
             width={1536}
             height={655}
             fetchPriority="high"
             className="block h-auto w-full"
           />
-          <Link to="/" aria-label="Casa D'Arte home" className="absolute left-[6.7%] top-[5%] h-[10%] w-[14%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/" aria-label="Home" className="absolute left-[30.7%] top-[6%] h-[7%] w-[4.3%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/products" aria-label="Finishes" className="absolute left-[36%] top-[6%] h-[7%] w-[7.8%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/portfolio" aria-label="Projects" className="absolute left-[44.6%] top-[6%] h-[7%] w-[5.7%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/about" aria-label="About" className="absolute left-[51%] top-[6%] h-[7%] w-[4.3%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/contact" aria-label="Contact" className="absolute left-[56.2%] top-[6%] h-[7%] w-[5.5%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/contact" search={{ intent: "project" }} aria-label="Get in Touch" className="absolute left-[84.5%] top-[5.8%] h-[7.2%] w-[8.6%] focus-visible:outline focus-visible:outline-beige" />
-          <Link to="/products" aria-label="Explore Our Finishes" className="absolute left-[6.8%] top-[69.7%] h-[8%] w-[15.6%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/" aria-label={t("Casa D'Arte home")} className="absolute left-[6.7%] top-[5%] h-[10%] w-[14%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/" aria-label={t("Home")} className="absolute left-[30.7%] top-[6%] h-[7%] w-[4.3%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/products" aria-label={t("Finishes")} className="absolute left-[36%] top-[6%] h-[7%] w-[7.8%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/portfolio" aria-label={t("Projects")} className="absolute left-[44.6%] top-[6%] h-[7%] w-[5.7%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/about" aria-label={t("About")} className="absolute left-[51%] top-[6%] h-[7%] w-[4.3%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/contact" aria-label={t("Contact")} className="absolute left-[56.2%] top-[6%] h-[7%] w-[5.5%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/contact" search={{ intent: "project" }} aria-label={t("Get in Touch")} className="absolute left-[84.5%] top-[5.8%] h-[7.2%] w-[8.6%] focus-visible:outline focus-visible:outline-beige" />
+          <Link to="/products" aria-label={t("Explore Our Finishes")} className="absolute left-[6.8%] top-[69.7%] h-[8%] w-[15.6%] focus-visible:outline focus-visible:outline-beige" />
         </div>
         {/* Mobile/tablet: same single image, cropped to the clean right side (wall edge, sofa, window) with live text below */}
         <div className="pt-20 lg:hidden">
           <div className="relative aspect-[3/2] overflow-hidden">
             <img
               src={heroCover.url}
-              alt="Warm living room with a textured Travertino wall, sofa and window view"
+              alt={t("Warm living room with a textured Travertino wall, sofa and window view")}
               width={1536}
               height={655}
               fetchPriority="high"
@@ -95,14 +98,14 @@ function HomePage() {
           </div>
           <div className="px-6 pt-10 pb-24 sm:px-10">
             <h1 className="font-serif text-forest text-5xl sm:text-6xl leading-[1.04] mb-6 reveal">
-              Turn Every Wall <br />
-              <em className="italic font-normal">Into Art.</em>
+              {t("Turn Every Wall")} <br />
+              <em className="italic font-normal">{t("Into Art.")}</em>
             </h1>
             <p className="text-forest/75 text-base sm:text-lg font-light leading-relaxed mb-9 max-w-md reveal">
-              Premium decorative finishes, professionally applied by our team.
+              {t("Premium decorative finishes, professionally applied by our team.")}
             </p>
             <Link to="/products" className="btn btn-forest reveal">
-              Explore Our Finishes
+              {t("Explore Our Finishes")}
             </Link>
           </div>
         </div>
@@ -114,23 +117,23 @@ function HomePage() {
         <div className="mx-auto max-w-[1400px]">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14 md:mb-20">
             <div className="max-w-2xl">
-              <p className="eyebrow text-gold mb-5">The Finishes</p>
+              <p className="eyebrow text-gold mb-5">{t("The Finishes")}</p>
               <h2 className="font-serif text-4xl md:text-6xl text-forest leading-[1.08] text-balance">
-                Six finishes. Supplied and applied by our team.
+                {t("Six finishes. Supplied and applied by our team.")}
               </h2>
             </div>
             <Link to="/products" className="link-line text-forest self-start md:self-end">
-              All finishes <span aria-hidden>→</span>
+              {t("All finishes")} <span aria-hidden>→</span>
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-8 gap-y-14">
-            {products.map((p) => (
+            {list.map((p) => (
               <Link key={p.slug} to="/products/$slug" params={{ slug: p.slug }} className="group block">
                 <div className="overflow-hidden aspect-[4/5] bg-beige">
                   {p.image ? (
                     <img
                       src={p.image}
-                      alt={`${p.name} decorative finish`}
+                      alt={t("{name} decorative finish", { name: p.name })}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
                     />
@@ -139,7 +142,7 @@ function HomePage() {
                 <h3 className="mt-6 font-serif text-3xl text-forest group-hover:text-gold transition-colors">{p.name}</h3>
                 <p className="mt-2 text-forest/65 leading-relaxed max-w-sm">{p.tagline}</p>
                 <span className="mt-4 inline-block text-[11px] uppercase tracking-[0.25em] text-forest/50 group-hover:text-gold transition-colors">
-                  View Finish →
+                  {t("View Finish")} →
                 </span>
               </Link>
             ))}
@@ -153,7 +156,7 @@ function HomePage() {
           <div className="md:col-span-5">
             <img
               src={craftAsset.url}
-              alt="Decorative finish applied by hand with a steel trowel"
+              alt={t("Decorative finish applied by hand with a steel trowel")}
               width={941}
               height={1672}
               loading="lazy"
@@ -161,14 +164,14 @@ function HomePage() {
             />
           </div>
           <div className="md:col-span-6 md:col-start-7">
-            <h2 className="font-serif text-4xl md:text-6xl text-forest leading-[1.08] mb-10">Our Process</h2>
+            <h2 className="font-serif text-4xl md:text-6xl text-forest leading-[1.08] mb-10">{t("Our Process")}</h2>
             <ol className="border-t border-forest/15">
               {processSteps.map((s) => (
                 <li key={s.n} className="grid grid-cols-[3rem_1fr] gap-x-4 py-6 border-b border-forest/15">
                   <p className="font-serif text-gold text-xl pt-0.5">{s.n}</p>
                   <div>
-                    <h3 className="font-serif text-2xl text-forest leading-snug mb-1">{s.t}</h3>
-                    <p className="text-forest/65 leading-relaxed">{s.d}</p>
+                    <h3 className="font-serif text-2xl text-forest leading-snug mb-1">{t(s.t)}</h3>
+                    <p className="text-forest/65 leading-relaxed">{t(s.d)}</p>
                   </div>
                 </li>
               ))}
@@ -182,11 +185,11 @@ function HomePage() {
         <div className="mx-auto max-w-[1500px] px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
             <div>
-              <p className="eyebrow text-gold mb-5">Projects</p>
-              <h2 className="font-serif text-4xl md:text-6xl text-forest leading-[1.08]">Realized Projects</h2>
+              <p className="eyebrow text-gold mb-5">{t("Projects")}</p>
+              <h2 className="font-serif text-4xl md:text-6xl text-forest leading-[1.08]">{t("Realized Projects")}</h2>
             </div>
             <Link to="/portfolio" className="link-line text-forest self-start md:self-end">
-              View all projects <span aria-hidden>→</span>
+              {t("View all projects")} <span aria-hidden>→</span>
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-8 gap-y-12">
@@ -196,14 +199,14 @@ function HomePage() {
                   {p.image ? (
                     <img
                       src={p.image}
-                      alt={`${p.title} — ${p.finish}`}
+                      alt={`${t(p.title)} — ${p.finish}`}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
                     />
                   ) : null}
                 </div>
                 <p className="mt-5 font-serif text-xl md:text-2xl text-forest">
-                  {p.title} — {p.finish}
+                  {t(p.title)} — {p.finish}
                 </p>
               </Link>
             ))}
@@ -215,21 +218,21 @@ function HomePage() {
       <section className="py-24 md:py-36 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-serif text-4xl md:text-6xl text-forest leading-[1.08] mb-6 text-balance">
-            Have a project in mind?
+            {t("Have a project in mind?")}
           </h2>
           <p className="text-forest/70 text-lg leading-relaxed mb-10">
-            Tell us about your space and we’ll help you choose the right finish.
+            {t("Tell us about your space and we’ll help you choose the right finish.")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <Link to="/contact" search={{ intent: "project" }} className="btn btn-forest">
-              Discuss Your Project
+              {t("Discuss Your Project")}
             </Link>
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-              Message Us
+              {t("Message Us")}
             </a>
           </div>
           <Link to="/architects" className="mt-12 inline-block link-line text-forest/70 text-sm">
-            For Architects &amp; Designers <span aria-hidden>→</span>
+            {t("For Architects & Designers")} <span aria-hidden>→</span>
           </Link>
         </div>
       </section>

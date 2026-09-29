@@ -1,5 +1,6 @@
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { getPost, posts } from "@/lib/blog-data";
+import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -58,15 +59,16 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function BlogDetail() {
-  const { post } = Route.useLoaderData();
-  const others = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const { t, lang } = useI18n();
+  const post = localizePost(Route.useLoaderData().post, lang);
+  const others = posts.filter((p) => p.slug !== post.slug).slice(0, 3).map((p) => localizePost(p, lang));
   return (
     <>
       <article className="pt-40 pb-24 px-6 md:px-12 bg-beige">
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
             <Link to="/blog" className="eyebrow text-forest/60 hover:text-gold inline-flex mb-8">
-              ← The Journal
+              {t("← The Journal")}
             </Link>
             <div className="hidden md:flex flex-col gap-2 border-t border-forest/15 pt-4">
               <span className="eyebrow text-gold">{post.category}</span>
@@ -95,12 +97,11 @@ function BlogDetail() {
             </div>
             <div className="mt-14 border-t border-forest/15 pt-8 flex flex-col sm:flex-row sm:items-center gap-6">
               <p className="text-forest/60 text-sm leading-relaxed max-w-sm">
-                Considering one of these finishes for a project? We prepare samples in your tones
-                before anything is quoted.
+                {t("Considering one of these finishes for a project? We prepare samples in your tones before anything is quoted.")}
               </p>
               <div className="flex gap-3">
                 <Link to="/contact" search={{ intent: "sample" }} className="btn btn-outline">
-                  Request a Sample
+                  {t("Request a Sample")}
                 </Link>
               </div>
             </div>
@@ -110,7 +111,7 @@ function BlogDetail() {
 
       <section className="py-20 md:py-28 px-6 md:px-12 bg-cream">
         <div className="mx-auto max-w-[1400px]">
-          <p className="eyebrow text-gold mb-8">Continue reading</p>
+          <p className="eyebrow text-gold mb-8">{t("Continue reading")}</p>
           <div className="grid md:grid-cols-3 gap-x-8 gap-y-10 border-t border-forest/15">
             {others.map((p) => (
               <Link key={p.slug} to="/blog/$slug" params={{ slug: p.slug }} className="group block pt-6">
