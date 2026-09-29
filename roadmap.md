@@ -24,3 +24,4 @@
 - [ ] Before/after slider on a finish page using real project photography (once supplied)
 - [ ] Macedonian language version (user chose English-only for now)
 - [x] Replace temporary Microcement visual with the approved material photograph (done)
+- [x] Finish Advisor: visitors upload a room photo + description, AI suggests finishes and next steps (`/finish-advisor`)
