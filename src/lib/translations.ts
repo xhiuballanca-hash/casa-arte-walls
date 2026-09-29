@@ -161,14 +161,14 @@ export const STRINGS: Record<string, Entry> = {
   Offices: { sq: "Zyra", mk: "Канцеларии" },
   Stores: { sq: "Dyqane", mk: "Продавници" },
   Facades: { sq: "Fasada", mk: "Фасади" },
-  "Surfaces in place.": { sq: "Materialet në hapësira të ndryshme.", mk: "Површини на своето место." },
+  "Surfaces in place.": { sq: "Projektet e realizuara.", mk: "Површини на своето место." },
   "A selection of Casa D'Arte surfaces in residential, hospitality, workplace and retail interiors. Each project is presented only by its space and finish.": {
-    sq: "Materiale dekorative të paraqitura në ambiente banimi, hotele, zyra dhe dyqane. Çdo imazh shoqërohet vetëm me llojin e hapësirës dhe materialin.",
+    sq: "Një përzgjedhje projektesh të realizuara nga Casa D'Arte në ambiente banimi, hotele, zyra dhe dyqane. Çdo projekt paraqitet vetëm me hapësirën dhe materialin e përdorur.",
     mk: "Избор на површини на Casa D'Arte во станбени, угостителски, деловни и трговски ентериери. Секој проект е претставен само со својот простор и обработка.",
   },
   "Discuss a Similar Project": { sq: "Diskutoni një projekt të ngjashëm", mk: "Разговарајте за сличен проект" },
   "Approved project photography to follow.": {
-    sq: "Imazh i hapësirës",
+    sq: "",
     mk: "Одобрените фотографии од проектот следуваат.",
   },
   "Planning a residence, a hotel or a development? We can prepare samples in your tones and a quotation for material and application together.": {
@@ -190,7 +190,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "{name} decorative wall finish": { sq: "Material dekorativ për mure {name}", mk: "Декоративна ѕидна обработка {name}" },
   "Approved material photography to follow.": {
-    sq: "Imazh i materialit",
+    sq: "",
     mk: "Одобрените фотографии од материјалот следуваат.",
   },
   "Explore {name}": { sq: "Zbuloni {name}", mk: "Истражете {name}" },
@@ -208,7 +208,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "Other finishes": { sq: "Materiale të tjera", mk: "Други обработки" },
   "Continue exploring.": { sq: "Vazhdoni të zbuloni.", mk: "Продолжете да истражувате." },
-  "Photography to follow.": { sq: "Imazh i sipërfaqes", mk: "Фотографиите следуваат." },
+  "Photography to follow.": { sq: "", mk: "Фотографиите следуваат." },
 
   // Services
   "Decorative wall finishes": { sq: "Materiale dekorative për mure", mk: "Декоративни ѕидни обработки" },
@@ -397,7 +397,7 @@ export const STRINGS: Record<string, Entry> = {
     mk: "Поддршка од првата мостра до последниот слој.",
   },
   "Five Italian systems, each pigmented and textured to project specification. Full details, applications and galleries on each finish page.": {
-    sq: "Gjashtë materiale, secili me ngjyrë dhe teksturë sipas specifikimit të projektit. Detajet, përdorimet dhe galeritë gjenden në faqen e secilit material.",
+    sq: "Gjashtë materiale italiane, secili me ngjyrë dhe teksturë sipas specifikimit të projektit. Detajet, përdorimet dhe galeritë gjenden në faqen e secilit material.",
     mk: "Пет италијански системи, секој пигментиран и текстуриран според спецификацијата на проектот. Целосни детали, примени и галерии на страницата на секоја обработка.",
   },
   "All finishes →": { sq: "Të gjitha materialet →", mk: "Сите обработки →" },
@@ -717,9 +717,9 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
   },
   "/portfolio": {
     sq: {
-      title: "Projektet — Materiale në hapësira të ndryshme | Casa D'Arte",
+      title: "Projektet e realizuara | Casa D'Arte",
       description:
-        "Materiale dekorative të paraqitura në ambiente banimi, hotele, zyra dhe dyqane në Maqedoninë e Veriut.",
+        "Projekte të realizuara nga Casa D'Arte në ambiente banimi, hotele, zyra dhe dyqane në Maqedoninë e Veriut, të paraqitura me hapësirën dhe materialin e përdorur.",
     },
     mk: {
       title: "Проекти — Декоративните обработки на Casa D'Arte на своето место",
