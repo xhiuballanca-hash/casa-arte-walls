@@ -31,7 +31,6 @@ export const Route = createFileRoute("/")({
           name: "Casa D'Arte",
           description:
             "Premium Italian decorative wall finishes — supplied and professionally applied — for architects, designers, developers, hospitality and residential projects in North Macedonia.",
-          foundingDate: "2012",
           address: { "@type": "PostalAddress", addressCountry: "MK" },
           areaServed: "North Macedonia",
           knowsAbout: [
