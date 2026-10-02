@@ -14,7 +14,7 @@ export function SiteFooter() {
               Casa D'Arte
             </Link>
             <p className="mt-4 text-sm text-beige/60">{t("Italian decorative finishes · Supplied & Applied")}</p>
-            <p className="mt-2 text-sm text-beige/60">{t("North Macedonia")}</p>
+            <p className="mt-2 text-sm text-beige/60">{t("Macedonia · Balkans")}</p>
           </div>
 
           <div className="md:col-span-3 md:col-start-7">
