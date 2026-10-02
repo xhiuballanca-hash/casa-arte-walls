@@ -39,10 +39,10 @@ const productCatalog: Product[] = [
     slug: "travertino",
     index: "01",
     name: "Travertino",
-    tagline: "Architectural & Raw",
-    summary: "The porous, stone-like depth of Roman travertine — for interiors and facades.",
+    tagline: "Natural Stone Effect",
+    summary: "Travertino gives walls a natural stone appearance with visible texture and depth. It works well for both interiors and facades.",
     description:
-      "Inspired by the stone of Roman monuments, Travertino captures the honest, porous depth of natural travertine. A tactile lime-based finish that carries the weight of Italian architectural heritage into contemporary spaces — indoors and on facades.",
+      "Travertino gives walls a natural stone appearance with visible texture and depth. It works well for both interiors and facades.",
     image: travertino,
     features: [
       "Natural stone appearance with authentic porosity",
@@ -63,10 +63,10 @@ const productCatalog: Product[] = [
     slug: "marmorino",
     index: "02",
     name: "Marmorino",
-    tagline: "Classic Sophistication",
-    summary: "A smooth, softly luminous lime finish with quiet depth — the classic Venetian wall.",
+    tagline: "Refined Mineral Finish",
+    summary: "Marmorino is a versatile decorative finish that can create smooth, polished or more textured surfaces. It gives interiors an elegant and refined character.",
     description:
-      "The traditional lime-based Venetian finish. Marmorino produces a smooth, softly luminous surface with subtle depth — the quiet confidence of Palladian villas translated for modern architecture.",
+      "Marmorino is a versatile decorative finish that can create smooth, polished or more textured surfaces. It gives interiors an elegant and refined character.",
     image: marmorino,
     features: [
       "Slaked-lime base with fine marble powder",
@@ -87,10 +87,10 @@ const productCatalog: Product[] = [
     slug: "stucco-veneziano",
     index: "04",
     name: "Stucco Veneziano",
-    tagline: "Mirror-like Brilliance",
-    summary: "Translucent lime-marble layers polished to a mirror finish with marble-like depth.",
+    tagline: "Polished Marble Look",
+    summary: "Stucco Veneziano is a smooth, polished finish with a glossy marble-like appearance. It is ideal for elegant feature walls.",
     description:
-      "The most refined expression of Italian plasterwork. Applied in multiple translucent layers and polished to a mirror finish, Stucco Veneziano reveals a depth reminiscent of veined marble. ",
+      "Stucco Veneziano is a smooth, polished finish with a glossy marble-like appearance. It is ideal for elegant feature walls.",
     image: veneziano,
     features: [
       "Multiple translucent lime-marble layers",
@@ -111,10 +111,10 @@ const productCatalog: Product[] = [
     slug: "sahara",
     index: "03",
     name: "Sahara",
-    tagline: "Metallic Grain Texture",
-    summary: "Fine mineral grain with metallic pigments — a surface that shifts with the light.",
+    tagline: "Sand Effect",
+    summary: "Sahara creates a decorative sand effect with subtle movement and light reflection. It gives walls a warm and elegant look.",
     description:
-      "A contemporary tactile finish inspired by desert landscapes and precious metals. Sahara combines mineral grain with fine metallic pigments — copper, bronze, champagne, gold — for walls that change character with the light throughout the day.",
+      "Sahara creates a decorative sand effect with subtle movement and light reflection. It gives walls a warm and elegant look.",
     image: sahara,
     features: [
       "Fine mineral aggregate with metallic pigments",
@@ -135,10 +135,10 @@ const productCatalog: Product[] = [
     slug: "microcement",
     index: "05",
     name: "Microcement",
-    tagline: "Seamless & Contemporary",
-    summary: "Continuous, joint-free cement surfaces for walls, floors and wet areas.",
+    tagline: "Seamless Concrete Finish",
+    summary: "Microcement creates a clean, continuous surface with a modern concrete look. It is ideal for minimalist and contemporary spaces.",
     description:
-      "A thin, seamless cement-based coating applied in fine layers over existing substrates — walls, floors, stairs and wet areas. Microcement suits contemporary architecture where uninterrupted planes and a calm, mineral surface are the intent.",
+      "Microcement creates a clean, continuous surface with a modern concrete look. It is ideal for minimalist and contemporary spaces.",
     image: microcement,
     features: [
       "Seamless application at only a few millimetres of thickness",
@@ -159,10 +159,10 @@ const productCatalog: Product[] = [
     slug: "beton-look",
     index: "06",
     name: "Beton Look",
-    tagline: "Architectural Concrete Character",
-    summary: "A decorative finish with the calm, mineral appearance of exposed concrete.",
+    tagline: "Modern Concrete Effect",
+    summary: "Beton Look gives walls the appearance of architectural concrete with natural texture and variation. It creates a modern, industrial feel.",
     description:
-      "Beton Look brings the visual character of concrete to interior surfaces. Its restrained tone and subtle movement suit contemporary spaces where the wall is intended to feel architectural and understated.",
+      "Beton Look gives walls the appearance of architectural concrete with natural texture and variation. It creates a modern, industrial feel.",
     image: betonLook,
     features: [
       "Concrete-inspired decorative appearance",
