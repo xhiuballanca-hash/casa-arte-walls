@@ -155,6 +155,7 @@ export const STRINGS: Record<string, Entry> = {
   // Projects
   Bedroom: { sq: "Dhomë gjumi", mk: "Спална соба" },
   "Hotel Facade": { sq: "Fasadë hoteli", mk: "Фасада на хотел" },
+  "House Facade": { sq: "Fasadë shtëpie", mk: "Фасада на куќа" },
   "Living Room": { sq: "Dhomë ndenjeje", mk: "Дневна соба" },
   Office: { sq: "Zyrë", mk: "Канцеларија" },
   Store: { sq: "Dyqan", mk: "Продавница" },
