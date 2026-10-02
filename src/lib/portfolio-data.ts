@@ -2,6 +2,7 @@ import bedroomAsset from "@/assets/project-bedroom-travertino.jpg.asset.json";
 import facadeAsset from "@/assets/project-hotel-facade-travertino.jpg.asset.json";
 import livingAsset from "@/assets/project-living-room-marmorino.jpg.asset.json";
 import officeAsset from "@/assets/project-office-beton-look.jpg.asset.json";
+import saharaLivingAsset from "@/assets/project-living-room-sahara.jpg.asset.json";
 import storeAsset from "@/assets/project-store-beton-look.jpg.asset.json";
 
 const bedroom = bedroomAsset.url;
@@ -9,6 +10,7 @@ const facade = facadeAsset.url;
 const living = livingAsset.url;
 const office = officeAsset.url;
 const store = storeAsset.url;
+const saharaLiving = saharaLivingAsset.url;
 
 export type Category =
   | "Living Rooms"
@@ -75,5 +77,12 @@ export const projects: Project[] = [
     category: "Stores",
     finish: "Beton Look",
     image: store,
+  },
+  {
+    id: "living-room-sahara",
+    title: "Living Room",
+    category: "Living Rooms",
+    finish: "Sahara",
+    image: saharaLiving,
   },
 ];
