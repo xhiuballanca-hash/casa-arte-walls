@@ -521,45 +521,45 @@ type Localized = { sq: string; mk: string };
 /** Finish taglines and summaries, by slug. */
 export const PRODUCT_TR: Record<string, { tagline: Localized; summary: Localized }> = {
   travertino: {
-    tagline: { sq: "Arkitektonike dhe e papërpunuar", mk: "Архитектонски и сурово" },
+    tagline: { sq: "Efekt Guri Natyral", mk: "Ефект на природен камен" },
     summary: {
-      sq: "Thellësia poroze, si prej guri, e travertinës romake — për interiere dhe fasada.",
-      mk: "Порозната длабочина налик на камен на римскиот травертин — за ентериери и фасади.",
+      sq: "Travertino u jep mureve pamjen e gurit natyral, me teksturë dhe thellësi të dukshme. Përshtatet shumë mirë si për ambiente të brendshme, ashtu edhe për fasada.",
+      mk: "Travertino им дава на ѕидовите изглед на природен камен со видлива текстура и длабочина. Одлично одговара и за ентериери и за фасади.",
     },
   },
   marmorino: {
-    tagline: { sq: "Elegancë klasike", mk: "Класична префинетост" },
+    tagline: { sq: "Finish Mineral Elegant", mk: "Елегантна минерална завршница" },
     summary: {
-      sq: "Një material i lëmuar me bazë gëlqereje, me shkëlqim të butë dhe thellësi të qetë — fryma e murit klasik venecian.",
-      mk: "Мазна варовна обработка со нежен сјај и тивка длабочина — класичниот венецијански ѕид.",
+      sq: "Marmorino është një finish dekorativ i gjithanshëm që mund të krijojë sipërfaqe të lëmuara, të lustruara ose më të teksturuara. I jep ambienteve një pamje elegante dhe të rafinuar.",
+      mk: "Marmorino е разновидна декоративна завршница што може да создаде мазни, полирани или поизразено текстурирани површини. На ентериерот му дава елегантен и префинет изглед.",
     },
   },
   sahara: {
-    tagline: { sq: "Teksturë ranore me shkëlqim metalik", mk: "Текстура со метално зрно" },
+    tagline: { sq: "Efekt Rëre", mk: "Ефект на песок" },
     summary: {
-      sq: "Kokërr e imët minerale me pigmente metalike — një sipërfaqe që ndryshon me dritën.",
-      mk: "Фино минерално зрно со метални пигменти — површина што се менува со светлината.",
+      sq: "Sahara krijon një efekt dekorativ rëre me lëvizje delikate dhe reflektim të lehtë të dritës. I jep mureve një pamje të ngrohtë dhe elegante.",
+      mk: "Sahara создава декоративен ефект на песок со суптилно движење и нежно одбивање на светлината. На ѕидовите им дава топол и елегантен изглед.",
     },
   },
   "stucco-veneziano": {
-    tagline: { sq: "Shkëlqim si pasqyrë", mk: "Сјај како огледало" },
+    tagline: { sq: "Pamje Mermeri e Lustruar", mk: "Полиран мермерен изглед" },
     summary: {
-      sq: "Shtresa të tejdukshme gëlqereje dhe mermeri, të lustruara si pasqyrë, me thellësi si të mermerit.",
-      mk: "Проѕирни слоеви од вар и мермер, полирани до огледален сјај со длабочина налик на мермер.",
+      sq: "Stucco Veneziano është një finish i lëmuar dhe i lustruar me pamje të shkëlqyeshme si mermeri. Është ideal për mure dekorative elegante.",
+      mk: "Stucco Veneziano е мазна и полирана завршница со сјаен изглед сличен на мермер. Идеален е за елегантни декоративни ѕидови.",
     },
   },
   microcement: {
-    tagline: { sq: "Sipërfaqe moderne pa fuga", mk: "Беспрекорно и современо" },
+    tagline: { sq: "Finish Betoni Pa Ndarje", mk: "Беспрекорна бетонска завршница" },
     summary: {
-      sq: "Sipërfaqe çimentoje të vazhdueshme, pa fuga, për mure, dysheme dhe zona me lagështi.",
-      mk: "Континуирани цементни површини без фуги, за ѕидови, подови и влажни простории.",
+      sq: "Microcement krijon një sipërfaqe të pastër dhe të vazhdueshme me pamje moderne betoni. Është ideal për ambiente minimaliste dhe bashkëkohore.",
+      mk: "Microcement создава чиста и континуирана површина со модерен бетонски изглед. Идеален е за минималистички и современи простори.",
     },
   },
   "beton-look": {
-    tagline: { sq: "Karakter arkitektonik betoni", mk: "Архитектонски карактер на бетон" },
+    tagline: { sq: "Efekt Modern Betoni", mk: "Модерен бетонски ефект" },
     summary: {
-      sq: "Një material dekorativ me pamjen e qetë minerale të betonit të ekspozuar.",
-      mk: "Декоративна обработка со смирен минерален изглед на видлив бетон.",
+      sq: "Beton Look u jep mureve pamjen e betonit arkitektonik, me teksturë dhe ndryshime natyrale. Krijon një stil modern dhe industrial.",
+      mk: "Beton Look им дава на ѕидовите изглед на архитектонски бетон со природна текстура и варијации. Создава модерен и индустриски карактер.",
     },
   },
 };
