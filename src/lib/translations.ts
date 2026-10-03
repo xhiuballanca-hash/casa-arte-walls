@@ -572,29 +572,29 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
     sq: {
       title: "Arti i Stucco Veneziano",
       excerpt:
-        "Si një teknikë italiane shekullore u bë shenja dalluese e interiereve luksoze bashkëkohore — dhe pse dora që e aplikon ka po aq rëndësi sa materiali.",
+        "Si një teknikë italiane shekullore u bë shenja dalluese e interiereve luksoze bashkëkohore dhe pse dora që e aplikon ka po aq rëndësi sa materiali.",
       date: "Mars 2026",
       readTime: "6 min lexim",
       category: "Zanati",
       body: [
-        "Suvaja veneciane, ose Stucco Veneziano, e ka origjinën në pallatet e Venecias së Rilindjes — një qytet ku ajri i lagësht detar kërkonte materiale që të ishin njëkohësisht të bukura dhe të përshkueshme nga ajri. E aplikuar në shtresa të tejdukshme gëlqereje të shuar dhe mermeri të bluar imët, kjo teknikë krijon një mur me thellësi të dallueshme.",
+        "Suvaja veneciane, ose Stucco Veneziano, e ka origjinën në pallatet e Venecias së Rilindjes, një qytet ku ajri i lagësht detar kërkonte materiale që të ishin njëkohësisht të bukura dhe të përshkueshme nga ajri. E aplikuar në shtresa të tejdukshme gëlqereje të shuar dhe mermeri të bluar imët, kjo teknikë krijon një mur me thellësi të dallueshme.",
         "Arkitektët që punojnë në interiere të rafinuara i janë rikthyer Stucco Veneziano pikërisht për arsyen që e çmonin ndërtuesit venecianë: asnjë bojë industriale nuk e riprodhon butësinë vizuale të gëlqeres së punuar me mistri, apo mënyrën si ndryshon kur drita lëviz nëpër dhomë.",
         "Është gjithashtu një teknikë ku materiali dhe aplikimi nuk mund të ndahen. I njëjti produkt, në duar të ndryshme, krijon një mur tjetër. Numri i shtresave, presioni i mistrisë, koha mes shtresave dhe lustrimi përfundimtar vendosin nëse sipërfaqja duket si mermer apo si bojë.",
-        "Prandaj Casa D'Arte e furnizon materialin dhe e aplikon me ekipin e vet. Një sipërfaqe Stucco Veneziano realizohet sipas specifikimit kur i njëjti ekip kujdeset për materialin dhe aplikimin — shtresë pas shtrese, deri sa sipërfaqja të bëhet pjesë e natyrshme e arkitekturës.",
+        "Prandaj Casa D'Arte e furnizon materialin dhe e aplikon me ekipin e vet. Një sipërfaqe Stucco Veneziano realizohet sipas specifikimit kur i njëjti ekip kujdeset për materialin dhe aplikimin, shtresë pas shtrese, deri sa sipërfaqja të bëhet pjesë e natyrshme e arkitekturës.",
       ],
     },
     mk: {
       title: "Уметноста на Stucco Veneziano",
       excerpt:
-        "Како една вековна италијанска техника стана белег на современите луксузни ентериери — и зошто раката што ја нанесува е важна колку и материјалот.",
+        "Како една вековна италијанска техника стана белег на современите луксузни ентериери и зошто раката што ја нанесува е важна колку и материјалот.",
       date: "Март 2026",
       readTime: "6 мин. читање",
       category: "Занает",
       body: [
-        "Венецијанскиот малтер, или Stucco Veneziano, потекнува од палатите на ренесансна Венеција — град чиј влажен морски воздух бараше обработки што се истовремено убави и дишат. Нанесена во проѕирни слоеви од гасена вар и фино мелен мермер, техниката создава ѕид што се чини дека има сопствена длабочина.",
+        "Венецијанскиот малтер, или Stucco Veneziano, потекнува од палатите на ренесансна Венеција, град чиј влажен морски воздух бараше обработки што се истовремено убави и дишат. Нанесена во проѕирни слоеви од гасена вар и фино мелен мермер, техниката создава ѕид што се чини дека има сопствена длабочина.",
         "Архитектите што работат на префинети ентериери повторно се вратија на Stucco Veneziano токму поради причината поради која го ценеа венецијанските градители: ниту една индустриска боја не ја повторува визуелната мекост на рачно глетуваната вар, ниту начинот на кој се менува додека светлината се движи низ просторијата.",
         "Тоа е и техника во која материјалот и нанесувањето не можат да се одвојат. Истиот производ, во различни раце, дава различен ѕид. Бројот на слоеви, притисокот на глетарицата, времето меѓу слоевите и завршното полирање одлучуваат дали површината ќе делува како мермер или како боја.",
-        "Затоа Casa D'Arte ја набавува обработката и ја нанесува со својот тим. Специфициран Stucco Veneziano се остварува само кога луѓето што го избрале материјалот се истите што го носат на ѕидот — слој по слој, додека површината не ѝ припадне на архитектурата наместо само да лежи врз неа.",
+        "Затоа Casa D'Arte ја набавува обработката и ја нанесува со својот тим. Специфициран Stucco Veneziano се остварува само кога луѓето што го избрале материјалот се истите што го носат на ѕидот, слој по слој, додека површината не ѝ припадне на архитектурата наместо само да лежи врз неа.",
       ],
     },
   },
@@ -602,14 +602,14 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
     sq: {
       title: "Si të zgjidhni materialin e duhur për hapësirën tuaj",
       excerpt:
-        "Travertino, Marmorino, Stucco Veneziano, Sahara, Microcement apo Beton Look — një udhëzues për zgjedhjen e materialit që i përshtatet arkitekturës suaj.",
+        "Një udhëzues për zgjedhjen mes Travertino, Marmorino, Stucco Veneziano, Sahara, Microcement dhe Beton Look, sipas arkitekturës suaj.",
       date: "Shkurt 2026",
       readTime: "8 min lexim",
       category: "Udhëzues",
       body: [
-        "Secili nga gjashtë materialet me të cilat punojmë ka karakter të veçantë arkitektonik. Të përcaktoni se cili i përshtatet një hapësire — dhe mënyrës se si do të përdoret ajo — është vendimi i parë në çdo projekt, që merret më mirë duke parë një mostër fizike.",
+        "Secili nga gjashtë materialet me të cilat punojmë ka karakter të veçantë arkitektonik. Të përcaktoni se cili i përshtatet një hapësire dhe mënyrës se si do të përdoret ajo është vendimi i parë në çdo projekt, që merret më mirë duke parë një mostër fizike.",
         "Marmorino ka një karakter të qetë. Përshtatet aty ku kërkohet thellësi pa teprime: në dhoma gjumi, dhoma ngrënieje dhe zyra me estetikë të përmbajtur. Krijon një sipërfaqe të butë, të ndritshme dhe me lëvizje delikate.",
-        "Stucco Veneziano ka karakter shprehës. Përshtatet në hapësira ku drita luan rol të rëndësishëm — suita me dritare të larta dhe restorante ku ndriçimi i mbrëmjes thekson sipërfaqen. I lustruar deri në shkëlqim pasqyre, krijon pamjen e mermerit me damarë.",
+        "Stucco Veneziano ka karakter shprehës. Përshtatet në hapësira ku drita luan rol të rëndësishëm, si suita me dritare të larta dhe restorante ku ndriçimi i mbrëmjes thekson sipërfaqen. I lustruar deri në shkëlqim pasqyre, krijon pamjen e mermerit me damarë.",
         "Travertino ka karakter tektonik. Poroziteti i jep peshë vizuale. Përshtatet me vila, fasada dhe mure që kërkojnë një prani të fortë arkitektonike.",
         "Sahara ka karakter bashkëkohor. Tekstura e imët ranore me shkëlqim metalik gjallërohet në dritën e mbrëmjes, ndaj përshtatet me bare, dyqane butik dhe tualete për mysafirë.",
         "Microcement krijon sipërfaqe moderne pa fuga. Ky material i hollë me bazë çimentoje përdoret në mure, dysheme dhe zona me lagështi, duke iu përshtatur banjove bashkëkohore, kuzhinave dhe ambienteve tregtare ku fugat dhe pllakat do ta ndërprisnin vazhdimësinë e hapësirës.",
@@ -619,14 +619,14 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
     mk: {
       title: "Како да ја изберете вистинската обработка за вашиот простор",
       excerpt:
-        "Travertino, Marmorino, Stucco Veneziano, Sahara или Microcement — дизајнерски водич за избор на обработката што одговара на вашата архитектура.",
+        "Дизајнерски водич за избор меѓу Travertino, Marmorino, Stucco Veneziano, Sahara, Microcement и Beton Look според вашата архитектура.",
       date: "Февруари 2026",
       readTime: "8 мин. читање",
       category: "Водич",
       body: [
-        "Секоја од шесте обработки со кои работиме има свој архитектонски карактер. Разбирањето која одговара на даден простор — и како ќе се користи тој простор — е првата одлука во секој проект, и онаа што најдобро ја решава физичката мостра.",
+        "Секоја од шесте обработки со кои работиме има свој архитектонски карактер. Разбирањето која одговара на даден простор и како ќе се користи тој простор е првата одлука во секој проект, и онаа што најдобро ја решава физичката мостра.",
         "Marmorino е тивок. Одговара таму каде што сакате длабочина без драма: спални, трпезарии, канцеларии за луѓе што ценат умереност. Мека, светлечка површина со суптилно движење.",
-        "Stucco Veneziano е театрален. Припаѓа на простори каде светлината е важна — апартмани со високи прозорци, ресторани каде навечер работата ја врши светлината од свеќите. Полиран до огледален сјај, делува како жилест мермер.",
+        "Stucco Veneziano е театрален. Припаѓа на простори каде светлината е важна, како апартмани со високи прозорци и ресторани каде навечер работата ја врши светлината од свеќите. Полиран до огледален сјај, делува како жилест мермер.",
         "Travertino е тектонски. Неговата порозност му дава тежина. Одговара на вили, фасади и секој ѕид што треба да делува вкоренет во земјата, а не само нанесен врз неа.",
         "Sahara е современа. Финото минерално зрно со метален пигмент ја оживува во вечерната светлина, па затоа одговара на барови, бутик-продавници и тоалети за гости.",
         "Microcement е беспрекорен. Тенка, континуирана цементна површина за ѕидови, подови и влажни простории, погодна за современи бањи, кујни и комерцијални ентериери каде фугите и плочките би го прекинувале просторот.",
@@ -638,7 +638,7 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
     sq: {
       title: "Microcement: sipërfaqe pa fuga, të realizuara siç duhet",
       excerpt:
-        "Pse Microcement është bërë një zgjidhje bashkëkohore për banja, dysheme dhe ambiente me sipërfaqe të vazhdueshme — dhe pse përgatitja përcakton rezultatin.",
+        "Pse Microcement është bërë një zgjidhje bashkëkohore për banja, dysheme dhe ambiente me sipërfaqe të vazhdueshme, dhe pse përgatitja përcakton rezultatin.",
       date: "Janar 2026",
       readTime: "5 min lexim",
       category: "Udhëzues",
@@ -646,13 +646,13 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
         "Microcement është një shtresë e hollë me bazë çimentoje, që aplikohet me disa milimetra mbi një bazë ekzistuese. Tërheqja e tij është vazhdimësia që sjell: muret, dyshemetë, dushet dhe mobiliet mund të ndajnë një sipërfaqe të pandërprerë, pa fuga e pa buzë pllakash.",
         "Kjo vazhdimësi kërkon edhe disiplinë në aplikim. Meqë shtresa është kaq e hollë, ajo zbulon bazën poshtë saj. Plasaritjet, lëvizjet dhe lagështia që një sistem më i trashë mund t’i fshihte, dalin në pah përmes Microcement. Një rezultat i mirë varet më pak nga shtresa përfundimtare sesa nga vlerësimi, aplikimi i astarit dhe përgatitja paraprake.",
         "Për zonat me lagështi, sistemi i mbylljes dhe detajet e tij te sifonët, bashkimet dhe qoshet janë ato që e bëjnë sipërfaqen të qëndrueshme. Këtu furnizuesi që e aplikon edhe vetë materialin e fiton vendin e vet: sistemi specifikohet, përgatitet, aplikohet dhe mbyllet nga një ekip i vetëm, dhe përgjegjësia për sipërfaqen e përfunduar është e qartë.",
-        "Microcement është pjesë e materialeve tona, krahas sistemeve italiane me bazë gëlqereje. Kur një projekt kërkon një sipërfaqe bashkëkohore pa fuga — në banjë, kuzhinë apo dyshemenë e një dyqani — përgatisim mostra në tonin dhe teksturën e synuar dhe paraqesim një ofertë të përbashkët për materialin dhe aplikimin.",
+        "Microcement është pjesë e materialeve tona, krahas sistemeve italiane me bazë gëlqereje. Kur një projekt kërkon një sipërfaqe bashkëkohore pa fuga, për shembull në banjë, kuzhinë apo dyshemenë e një dyqani, përgatisim mostra në tonin dhe teksturën e synuar dhe paraqesim një ofertë të përbashkët për materialin dhe aplikimin.",
       ],
     },
     mk: {
       title: "Microcement: беспрекорни површини, правилно изведени",
       excerpt:
-        "Зошто микроцементот стана современиот одговор за бањи, подови и континуирани ентериери — и зошто подготовката го одредува резултатот.",
+        "Зошто микроцементот стана современиот одговор за бањи, подови и континуирани ентериери, и зошто подготовката го одредува резултатот.",
       date: "Јануари 2026",
       readTime: "5 мин. читање",
       category: "Водич",
@@ -660,7 +660,7 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
         "Микроцементот е тенок премаз на цементна основа што се нанесува во неколку милиметри врз постојна подлога. Неговата привлечност е континуитетот: ѕидовите, подовите, тушевите и мебелот можат да делат една непрекината површина, без фуги и рабови од плочки.",
         "Тој континуитет е и негова дисциплина. Бидејќи премазот е толку тенок, ја открива подлогата под него. Пукнатините, движењата и влагата што подебел систем би ги скрил, ќе се видат низ микроцементот. Добриот резултат зависи помалку од завршниот слој, а повеќе од проценката, прајмирањето и подготовката пред него.",
         "Кај влажните простории, системот за заштита и неговата изведба кај сливниците, спојовите и аглите се она што ја прави површината издржлива. Тука добавувачот што и сам го нанесува материјалот го заслужува своето место: системот го специфицира, подготвува, нанесува и заштитува еден тим, а одговорноста за завршената површина е јасна.",
-        "Микроцементот сега е дел од нашите обработки, покрај италијанските системи на варовна основа. Кога проектот бара беспрекорна, современа површина — бања, кујна, под во продавница — подготвуваме мостри во посакуваниот тон и текстура и даваме заедничка понуда за материјалот и нанесувањето.",
+        "Микроцементот сега е дел од нашите обработки, покрај италијанските системи на варовна основа. Кога проектот бара беспрекорна, современа површина, на пример бања, кујна или под во продавница, подготвуваме мостри во посакуваниот тон и текстура и даваме заедничка понуда за материјалот и нанесувањето.",
       ],
     },
   },
@@ -668,26 +668,26 @@ export const POST_TR: Record<string, { sq: PostTr; mk: PostTr }> = {
     sq: {
       title: "Pse jeshilja u rikthye në dizajnin italian",
       excerpt:
-        "Nga pallatet e Rilindjes te interieret bashkëkohore milaneze — një ngjyrë rizbulon autoritetin e saj arkitektonik.",
+        "Nga pallatet e Rilindjes te interieret bashkëkohore milaneze, një ngjyrë rizbulon autoritetin e saj arkitektonik.",
       date: "Dhjetor 2025",
       readTime: "5 min lexim",
       category: "Ngjyra",
       body: [
-        "Për shekuj me radhë, jeshilja e thellë ishte ngjyrë e fisnikërisë italiane — në muret e pallateve të Rilindjes dhe të dhomave veneciane, e përftuar nga pigmente me bazë bakri dhe e stabilizuar në gëlqere, ku plakej me dinjitet ndërsa jeshilet më të lira bëheshin të turbullta.",
-        "Vitet e fundit, arkitektët e interierit e kanë rikthyer. Muri jeshil i errët — i thellë, mat, pa zbukurime — është bërë shenjë vetëbesimi në interieret bashkëkohore.",
+        "Për shekuj me radhë, jeshilja e thellë ishte ngjyrë e fisnikërisë italiane. Ajo shfaqej në muret e pallateve të Rilindjes dhe të dhomave veneciane, e përftuar nga pigmente me bazë bakri dhe e stabilizuar në gëlqere, ku plakej me dinjitet ndërsa jeshilet më të lira bëheshin të turbullta.",
+        "Vitet e fundit, arkitektët e interierit e kanë rikthyer. Muri jeshil i errët, i thellë, mat dhe pa zbukurime, është bërë shenjë vetëbesimi në interieret bashkëkohore.",
         "Është një ngjyrë që kërkon materialin e duhur. Në një sipërfaqe të lyer, mund të duket e rrafshët. Në Stucco Veneziano ose Marmorino, pigmenti mineral qëndron brenda shtresave të tejdukshme të gëlqeres dhe mermerit, duke i dhënë jeshiles thellësi: më pak si një shtresë ngjyre dhe më shumë si një material më vete.",
       ],
     },
     mk: {
       title: "Зошто зелената се врати во италијанскиот дизајн",
       excerpt:
-        "Од ренесансните палати до современите милански ентериери — една боја повторно го открива својот архитектонски авторитет.",
+        "Од ренесансните палати до современите милански ентериери, една боја повторно го открива својот архитектонски авторитет.",
       date: "Декември 2025",
       readTime: "5 мин. читање",
       category: "Боја",
       body: [
-        "Со векови, темнозелената беше боја на италијанското благородништво — на ѕидовите на ренесансните палати и венецијанските простории, добиена од пигменти на бакарна основа и стабилизирана во вар, каде старееше достоинствено додека поевтините зелени бои стануваа матни.",
-        "Во последниве години, архитектите на ентериер ја вратија. Темнозелениот ѕид — длабок, мат, без украси — стана знак на самодоверба во современите ентериери.",
+        "Со векови, темнозелената беше боја на италијанското благородништво. Се појавуваше на ѕидовите на ренесансните палати и венецијанските простории, добиена од пигменти на бакарна основа и стабилизирана во вар, каде старееше достоинствено додека поевтините зелени бои стануваа матни.",
+        "Во последниве години, архитектите на ентериер ја вратија. Темнозелениот ѕид, длабок, мат и без украси, стана знак на самодоверба во современите ентериери.",
         "Тоа е боја што бара вистинска обработка. Како боја, таа станува рамна. Во Stucco Veneziano или Marmorino, минералниот пигмент лежи во проѕирните слоеви од вар и мермер, а зелената ја добива длабочината што ја имаше во палатите: помалку слој боја, а повеќе материјал сам по себе.",
       ],
     },
@@ -700,24 +700,24 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
     sq: {
       title: "Casa D'Arte | Materiale dekorative italiane dhe aplikim",
       description:
-        "Materiale dekorative premium — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — të aplikuara në mënyrë profesionale nga Casa D'Arte në Maqedoninë e Veriut.",
+        "Materiale dekorative premium, duke përfshirë Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look, të aplikuara në mënyrë profesionale nga Casa D'Arte në Maqedoninë e Veriut.",
     },
     mk: {
       title: "Casa D'Arte | Италијански декоративни обработки и нанесување",
       description:
-        "Премиум декоративни обработки — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement и Beton Look — професионално нанесени од Casa D'Arte во Северна Македонија.",
+        "Премиум декоративни обработки, меѓу кои Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement и Beton Look, професионално нанесени од Casa D'Arte во Северна Македонија.",
     },
   },
   "/products": {
     sq: {
       title: "Materialet — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement, Beton Look",
       description:
-        "Gjashtë materiale dekorative premium — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — të furnizuara dhe të aplikuara në mënyrë profesionale nga Casa D'Arte.",
+        "Gjashtë materiale dekorative premium, Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look, të furnizuara dhe të aplikuara në mënyrë profesionale nga Casa D'Arte.",
     },
     mk: {
       title: "Обработки — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement, Beton Look",
       description:
-        "Шест премиум декоративни обработки — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement и Beton Look — набавени и професионално нанесени од Casa D'Arte.",
+        "Шест премиум декоративни обработки, Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement и Beton Look, набавени и професионално нанесени од Casa D'Arte.",
     },
   },
   "/portfolio": {
