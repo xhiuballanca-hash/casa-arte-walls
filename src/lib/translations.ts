@@ -549,14 +549,14 @@ export const PRODUCT_TR: Record<string, { tagline: Localized; summary: Localized
     },
   },
   microcement: {
-    tagline: { sq: "Finish Betoni Pa Ndarje", mk: "Беспрекорна бетонска завршница" },
+    tagline: { sq: "Teksturë Moderne Minimaliste", mk: "Беспрекорна бетонска завршница" },
     summary: {
       sq: "Microcement krijon një sipërfaqe të pastër dhe të vazhdueshme me pamje moderne betoni. Është ideal për ambiente minimaliste dhe bashkëkohore.",
       mk: "Microcement создава чиста и континуирана површина со модерен бетонски изглед. Идеален е за минималистички и современи простори.",
     },
   },
   "beton-look": {
-    tagline: { sq: "Efekt Modern Betoni", mk: "Модерен бетонски ефект" },
+    tagline: { sq: "Shkëlqim Elegant Mermeri", mk: "Модерен бетонски ефект" },
     summary: {
       sq: "Beton Look u jep mureve pamjen e betonit arkitektonik, me teksturë dhe ndryshime natyrale. Krijon një stil modern dhe industrial.",
       mk: "Beton Look им дава на ѕидовите изглед на архитектонски бетон со природна текстура и варијации. Создава модерен и индустриски карактер.",
