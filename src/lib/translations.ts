@@ -528,7 +528,7 @@ export const PRODUCT_TR: Record<string, { tagline: Localized; summary: Localized
     },
   },
   marmorino: {
-    tagline: { sq: "Finish Mineral Elegant", mk: "Елегантна минерална завршница" },
+    tagline: { sq: "Finish Elegant", mk: "Елегантна завршница" },
     summary: {
       sq: "Marmorino është një finish dekorativ i gjithanshëm që mund të krijojë sipërfaqe të lëmuara, të lustruara ose më të teksturuara. I jep ambienteve një pamje elegante dhe të rafinuar.",
       mk: "Marmorino е разновидна декоративна завршница што може да создаде мазни, полирани или поизразено текстурирани површини. На ентериерот му дава елегантен и префинет изглед.",
@@ -542,21 +542,21 @@ export const PRODUCT_TR: Record<string, { tagline: Localized; summary: Localized
     },
   },
   "stucco-veneziano": {
-    tagline: { sq: "Pamje Mermeri e Lustruar", mk: "Полиран мермерен изглед" },
+    tagline: { sq: "Shkëlqim Luksoz", mk: "Луксузен сјај" },
     summary: {
       sq: "Stucco Veneziano është një finish i lëmuar dhe i lustruar me pamje të shkëlqyeshme si mermeri. Është ideal për mure dekorative elegante.",
       mk: "Stucco Veneziano е мазна и полирана завршница со сјаен изглед сличен на мермер. Идеален е за елегантни декоративни ѕидови.",
     },
   },
   microcement: {
-    tagline: { sq: "Teksturë Moderne Minimaliste", mk: "Беспрекорна бетонска завршница" },
+    tagline: { sq: "Teksturë Moderne Minimaliste", mk: "Модерна минималистичка текстура" },
     summary: {
-      sq: "Microcement krijon një sipërfaqe të pastër dhe të vazhdueshme me pamje moderne betoni. Është ideal për ambiente minimaliste dhe bashkëkohore.",
-      mk: "Microcement создава чиста и континуирана површина со модерен бетонски изглед. Идеален е за минималистички и современи простори.",
+      sq: "Microcement krijon një sipërfaqe të lëmuar dhe të vazhdueshme, me një pamje të pastër dhe moderne. Është ideal për ambiente bashkëkohore ku kërkohet një finish minimalist dhe pa ndërprerje.",
+      mk: "Microcement создава мазна, континуирана површина со чист и модерен изглед. Идеален е за современи ентериери каде што се бара минималистичка завршница без видливи споеви.",
     },
   },
   "beton-look": {
-    tagline: { sq: "Shkëlqim Elegant Mermeri", mk: "Модерен бетонски ефект" },
+    tagline: { sq: "Pamje Betoni", mk: "Бетонски изглед" },
     summary: {
       sq: "Beton Look u jep mureve pamjen e betonit arkitektonik, me teksturë dhe ndryshime natyrale. Krijon një stil modern dhe industrial.",
       mk: "Beton Look им дава на ѕидовите изглед на архитектонски бетон со природна текстура и варијации. Создава модерен и индустриски карактер.",

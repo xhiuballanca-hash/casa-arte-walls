@@ -63,7 +63,7 @@ const productCatalog: Product[] = [
     slug: "marmorino",
     index: "02",
     name: "Marmorino",
-    tagline: "Refined Mineral Finish",
+    tagline: "Elegant Finish",
     summary: "Marmorino is a versatile decorative finish that can create smooth, polished or more textured surfaces. It gives interiors an elegant and refined character.",
     description:
       "Marmorino is a versatile decorative finish that can create smooth, polished or more textured surfaces. It gives interiors an elegant and refined character.",
@@ -87,7 +87,7 @@ const productCatalog: Product[] = [
     slug: "stucco-veneziano",
     index: "04",
     name: "Stucco Veneziano",
-    tagline: "Polished Marble Look",
+    tagline: "Luxurious Shine",
     summary: "Stucco Veneziano is a smooth, polished finish with a glossy marble-like appearance. It is ideal for elegant feature walls.",
     description:
       "Stucco Veneziano is a smooth, polished finish with a glossy marble-like appearance. It is ideal for elegant feature walls.",
@@ -135,10 +135,10 @@ const productCatalog: Product[] = [
     slug: "microcement",
     index: "05",
     name: "Microcement",
-    tagline: "Modern Minimalist Texture",
-    summary: "Microcement creates a clean, continuous surface with a modern concrete look. It is ideal for minimalist and contemporary spaces.",
+    tagline: "Modern Minimal Texture",
+    summary: "Microcement creates a smooth, seamless surface with a clean, modern character. It is ideal for contemporary interiors where a continuous and minimal finish is desired.",
     description:
-      "Microcement creates a clean, continuous surface with a modern concrete look. It is ideal for minimalist and contemporary spaces.",
+      "Microcement creates a smooth, seamless surface with a clean, modern character. It is ideal for contemporary interiors where a continuous and minimal finish is desired.",
     image: microcement,
     features: [
       "Seamless application at only a few millimetres of thickness",
@@ -159,7 +159,7 @@ const productCatalog: Product[] = [
     slug: "beton-look",
     index: "06",
     name: "Beton Look",
-    tagline: "Modern Concrete Effect",
+    tagline: "Concrete Look",
     summary: "Beton Look gives walls the appearance of architectural concrete with natural texture and variation. It creates a modern, industrial feel.",
     description:
       "Beton Look gives walls the appearance of architectural concrete with natural texture and variation. It creates a modern, industrial feel.",
