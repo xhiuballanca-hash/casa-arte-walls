@@ -194,7 +194,7 @@ function AuthPage() {
           <div>
             <p className="eyebrow text-gold mb-4">Studio workspace</p>
             <p className="font-serif text-4xl leading-tight max-w-md">
-              Every inquiry, sample and quotation — in one place.
+              Every inquiry, sample and quotation in one place.
             </p>
           </div>
         </div>

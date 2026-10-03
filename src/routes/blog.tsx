@@ -4,7 +4,7 @@ import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 const TITLE = "Journal — Casa D'Arte on Italian Decorative Finishes";
 const DESCRIPTION =
-  "Notes and guides on decorative finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — colour and interior surfaces, from Casa D'Arte.";
+  "Notes and guides from Casa D'Arte on decorative finishes, including Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look, colour and interior surfaces.";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({

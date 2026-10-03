@@ -106,7 +106,7 @@ function FinishAdvisor() {
             {t("Show us your space.")} <em className="italic">{t("We'll suggest the finish.")}</em>
           </h1>
           <p className="text-forest/70 text-lg max-w-2xl leading-relaxed">
-            {t("Upload a photo of your room and describe it. Our AI-powered advisor suggests suitable finishes and next steps — a starting point for a conversation with our studio.")}
+            {t("Upload a photo of your room and describe it. Our AI-powered advisor suggests suitable finishes and next steps as a starting point for a conversation with our studio.")}
           </p>
         </div>
       </section>

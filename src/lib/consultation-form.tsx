@@ -66,7 +66,7 @@ export function ConsultationForm({
           source,
         },
       });
-      toast.success(t("Thank you — your inquiry has been received. We will be in touch shortly."));
+      toast.success(t("Thank you. Your inquiry has been received, and we will be in touch shortly."));
       form.reset();
       setSent(true);
     } catch (err) {
@@ -90,7 +90,7 @@ export function ConsultationForm({
         <p className="eyebrow text-gold mb-5">{t("Received")}</p>
         <h3 className="font-serif text-3xl md:text-4xl mb-4">{t("Thank you.")}</h3>
         <p className={`${dark ? "text-beige/70" : "text-forest/70"} leading-relaxed max-w-md mb-8`}>
-          {t("Your inquiry has reached the studio. We will review it and come back to you to arrange the next step — a conversation, samples, or a site visit.")}
+          {t("Your inquiry has reached the studio. We will review it and come back to you to arrange the next step: a conversation, samples, or a site visit.")}
         </p>
         <button
           type="button"

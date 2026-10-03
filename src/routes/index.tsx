@@ -8,7 +8,7 @@ import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 const TITLE = "Casa D'Arte | Italian Decorative Finishes & Application";
 const DESCRIPTION =
-  "Premium decorative finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — professionally applied by Casa D'Arte in North Macedonia.";
+  "Premium decorative finishes: Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look, professionally applied by Casa D'Arte in North Macedonia.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
           "@type": "Organization",
           name: "Casa D'Arte",
           description:
-            "Premium Italian decorative wall finishes — supplied and professionally applied — for architects, designers, developers, hospitality and residential projects in North Macedonia.",
+            "Premium Italian decorative wall finishes, supplied and professionally applied for architects, designers, developers, hospitality and residential projects in North Macedonia.",
           address: { "@type": "PostalAddress", addressCountry: "MK" },
           areaServed: "North Macedonia",
           knowsAbout: [

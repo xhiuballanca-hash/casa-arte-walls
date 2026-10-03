@@ -119,7 +119,7 @@ const productCatalog: Product[] = [
     features: [
       "Fine mineral aggregate with metallic pigments",
       "Sand, bronze, copper, gold or champagne palettes",
-      "Light-reactive shimmer — restrained by day, dramatic by night",
+      "Light-reactive shimmer, restrained by day and dramatic by night",
       "Suitable for feature walls and full rooms",
     ],
     benefits: [
