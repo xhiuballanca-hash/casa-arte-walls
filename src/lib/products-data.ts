@@ -135,7 +135,7 @@ const productCatalog: Product[] = [
     slug: "microcement",
     index: "05",
     name: "Microcement",
-    tagline: "Seamless Concrete Finish",
+    tagline: "Modern Minimalist Texture",
     summary: "Microcement creates a clean, continuous surface with a modern concrete look. It is ideal for minimalist and contemporary spaces.",
     description:
       "Microcement creates a clean, continuous surface with a modern concrete look. It is ideal for minimalist and contemporary spaces.",
