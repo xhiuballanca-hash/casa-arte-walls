@@ -47,7 +47,7 @@ const services = [
   {
     n: "01",
     t: "Decorative wall finishes",
-    d: "Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — decorative finishes supplied for the project. Each finish is chosen for the space, the substrate and the intended visual character.",
+    d: "Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look: decorative finishes supplied for the project. Each finish is chosen for the space, the substrate and the intended visual character.",
     link: { label: "The finishes", to: "/products" as const },
   },
   {
@@ -63,7 +63,7 @@ const services = [
   {
     n: "04",
     t: "Custom textures",
-    d: "Bespoke texture and sheen development for signature walls and spaces — from the smoothest polished surface to more tactile, mineral finishes — with samples refined until the intent is met.",
+    d: "Bespoke texture and sheen development for signature walls and spaces, from the smoothest polished surface to more tactile, mineral finishes. Samples are refined until the intent is met.",
   },
   {
     n: "05",

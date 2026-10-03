@@ -4,7 +4,7 @@ import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 const TITLE = "Finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement, Beton Look";
 const DESCRIPTION =
-  "Six premium decorative finishes — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look — supplied and professionally applied by Casa D'Arte.";
+  "Six premium decorative finishes: Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement and Beton Look, supplied and professionally applied by Casa D'Arte.";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -136,7 +136,7 @@ function ProductsIndex() {
           <div className="md:col-span-8">
             <p className="eyebrow text-gold mb-5">{t("Not sure which finish?")}</p>
             <h2 className="font-serif text-3xl md:text-5xl text-forest leading-[1.1] text-balance">
-              {t("Tell us about the space and we will prepare samples in tones and textures suited to it — before anything is quoted.")}
+              {t("Tell us about the space and we will prepare samples in tones and textures suited to it before anything is quoted.")}
             </h2>
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 md:items-end">

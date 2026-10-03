@@ -7,7 +7,7 @@ import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
 const TITLE = "Architects & Designers — Casa D'Arte Partnership";
 const DESCRIPTION =
-  "Sample boxes, custom samples, finish specification support, technical consultation, quotation and professional application — Casa D'Arte works with architects, designers, developers and hospitality projects in North Macedonia.";
+  "Sample boxes, custom samples, finish specification support, technical consultation, quotation and professional application. Casa D'Arte works with architects, designers, developers and hospitality projects in North Macedonia.";
 
 export const Route = createFileRoute("/architects")({
   head: () => ({
@@ -48,7 +48,7 @@ const support = [
   {
     n: "02",
     t: "Custom samples and textures",
-    d: "Project-specific samples in your tones, textures and sheen — refined until the finish matches the intent, before anything is quoted.",
+    d: "Project-specific samples in your tones, textures and sheen, refined until the finish matches the intent before anything is quoted.",
   },
   {
     n: "03",
@@ -58,7 +58,7 @@ const support = [
   {
     n: "04",
     t: "Technical consultation",
-    d: "Substrate assessment, preparation requirements, junctions and detailing — reviewed in the studio or on site with your team.",
+    d: "Substrate assessment, preparation requirements, junctions and detailing, reviewed in the studio or on site with your team.",
   },
   {
     n: "05",
@@ -73,14 +73,14 @@ const support = [
   {
     n: "07",
     t: "Flexible partnership",
-    d: "From a single feature wall to a multi-unit development or hospitality rollout — a way of working that fits the project and the practice.",
+    d: "From a single feature wall to a multi-unit development or hospitality rollout, our way of working fits the project and the practice.",
   },
 ];
 
 const audiences = [
   {
     t: "Architects & interior designers",
-    d: "One partner for the decorative surface: samples, specification, quotation and execution — so the finish on site is the finish you drew.",
+    d: "One partner for the decorative surface: samples, specification, quotation and execution, so the finish on site is the finish you drew.",
     cta: { label: "Request a Sample Box", intent: "sample" as const },
   },
   {
@@ -110,7 +110,7 @@ function ArchitectsPage() {
               {t("Specify with confidence.")} <em className="italic">{t("We take it from there.")}</em>
             </h1>
             <p className="text-beige/75 text-lg md:text-xl max-w-3xl leading-relaxed">
-              {t("Casa D'Arte works alongside architects, interior designers, developers and hospitality operators as the party responsible for the decorative surface — from sample box and specification to quotation and execution on site. Material and application are handled by one team.")}
+              {t("Casa D'Arte works alongside architects, interior designers, developers and hospitality operators as the party responsible for the decorative surface, from sample box and specification to quotation and execution on site. Material and application are handled by one team.")}
             </p>
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 md:items-end">
@@ -235,7 +235,7 @@ function ArchitectsPage() {
             </h2>
             <ol className="border-t border-beige/15">
               {[
-                ["Concept & consultation", "We review the space and intent with you — in the studio or on site."],
+                ["Concept & consultation", "We review the space and intent with you in the studio or on site."],
                 ["Sample & finish selection", "Project samples in your tones and textures, approved on the real material."],
                 ["Quotation & planning", "Material and application quoted together; preparation and programme agreed."],
                 ["Professional application", "Our own team prepares the substrate and applies the finish."],

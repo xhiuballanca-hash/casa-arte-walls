@@ -40,7 +40,7 @@ export const Route = createFileRoute("/about")({
 const principles = [
   {
     t: "Material and execution, together",
-    d: "We chose early on not to be a shop that sells buckets, nor a crew that applies whatever arrives on site. Casa D'Arte supplies the finish and applies it — so one team is accountable for the surface.",
+    d: "We chose early on not to be a shop that sells buckets, nor a crew that applies whatever arrives on site. Casa D'Arte supplies the finish and applies it, so one team is accountable for the surface.",
   },
   {
     t: "Decisions on the real material",
@@ -52,7 +52,7 @@ const principles = [
   },
   {
     t: "Restraint",
-    d: "The finish should serve the architecture. Our role is to make a surface feel inevitable in its space — not to decorate for its own sake.",
+    d: "The finish should serve the architecture. Our role is to make a surface feel inevitable in its space, not to decorate for its own sake.",
   },
 ];
 
@@ -70,7 +70,7 @@ function AboutPage() {
           </div>
           <div className="md:col-span-4">
             <p className="text-forest/70 text-lg leading-relaxed">
-              {t("Casa D'Arte brings more than a decade of experience to a simple conviction: a wall deserves the same care as the architecture around it — and the people who choose the material should be the people who put it on the wall.")}
+              {t("Casa D'Arte brings more than a decade of experience to a simple conviction: a wall deserves the same care as the architecture around it, and the people who choose the material should be the people who put it on the wall.")}
             </p>
           </div>
         </div>
@@ -95,7 +95,7 @@ function AboutPage() {
             </h2>
             <div className="space-y-6 text-forest/75 text-lg leading-relaxed">
               <p>
-                {t("We work with Italian decorative finishes — Travertino, Marmorino, Stucco Veneziano, Sahara and Microcement — and we do two things with them. We supply the material, specified for the project. And we apply it, with our own team, from surface preparation through the finished surface.")}
+                {t("We work with Italian decorative finishes: Travertino, Marmorino, Stucco Veneziano, Sahara, Microcement and Beton Look. We supply the material specified for the project and apply it with our own team, from surface preparation through the finished surface.")}
               </p>
               <p>
                 {t("Most of our work is with architects, interior designers, developers and hospitality or commercial clients, alongside private residences where the owners care about how a wall feels as much as how it looks. In every case the path is the same: consultation, samples, quotation, application, handover.")}

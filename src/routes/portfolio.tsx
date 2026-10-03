@@ -6,7 +6,7 @@ import { useT } from "@/lib/i18n";
 
 const TITLE = "Projects — Casa D'Arte Decorative Finishes in Place";
 const DESCRIPTION =
-  "Selected residential, hospitality and commercial projects in North Macedonia — Italian decorative finishes supplied and applied by Casa D'Arte's own team.";
+  "Selected residential, hospitality and commercial projects in North Macedonia. Italian decorative finishes are supplied and applied by Casa D'Arte's own team.";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
