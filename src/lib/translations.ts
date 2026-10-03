@@ -729,7 +729,7 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
     mk: {
       title: "Проекти — Декоративните обработки на Casa D'Arte на своето место",
       description:
-        "Одбрани станбени, угостителски и комерцијални проекти во Северна Македонија — италијански декоративни обработки набавени и нанесени од тимот на Casa D'Arte.",
+        "Одбрани станбени, угостителски и комерцијални проекти во Северна Македонија со италијански декоративни обработки набавени и нанесени од тимот на Casa D'Arte.",
     },
   },
   "/services": {
@@ -760,12 +760,12 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
     sq: {
       title: "Arkitektë dhe dizajnerë — Partneritet me Casa D'Arte",
       description:
-        "Kuti me mostra, mostra të personalizuara, mbështetje për specifikim, konsultim teknik, ofertë dhe aplikim profesional — Casa D'Arte punon me arkitektë, dizajnerë, investitorë dhe projekte hotelerie në Maqedoninë e Veriut.",
+        "Kuti me mostra, mostra të personalizuara, mbështetje për specifikim, konsultim teknik, ofertë dhe aplikim profesional. Casa D'Arte punon me arkitektë, dizajnerë, investitorë dhe projekte hotelerie në Maqedoninë e Veriut.",
     },
     mk: {
       title: "Архитекти и дизајнери — Партнерство со Casa D'Arte",
       description:
-        "Кутии со мостри, мостри по мерка, поддршка при спецификација, техничка консултација, понуда и професионално нанесување — Casa D'Arte работи со архитекти, дизајнери, инвеститори и угостителски проекти во Северна Македонија.",
+        "Кутии со мостри, мостри по мерка, поддршка при спецификација, техничка консултација, понуда и професионално нанесување. Casa D'Arte работи со архитекти, дизајнери, инвеститори и угостителски проекти во Северна Македонија.",
     },
   },
   "/contact": {
@@ -796,12 +796,12 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
     sq: {
       title: "Revista — Casa D'Arte për materialet dekorative italiane",
       description:
-        "Shënime dhe udhëzues për materialet dekorative — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look — ngjyrat dhe sipërfaqet e ambienteve, nga Casa D'Arte.",
+        "Shënime dhe udhëzues nga Casa D'Arte për materialet dekorative Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement dhe Beton Look, si dhe për ngjyrat dhe sipërfaqet e ambienteve.",
     },
     mk: {
       title: "Дневник — Casa D'Arte за италијанските декоративни обработки",
       description:
-        "Белешки и водичи за декоративни обработки — Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement и Beton Look — бои и ентериерни површини, од Casa D'Arte.",
+        "Белешки и водичи од Casa D'Arte за декоративните обработки Travertino, Marmorino, Sahara, Stucco Veneziano, Microcement и Beton Look, како и за боите и ентериерните површини.",
     },
   },
 };
