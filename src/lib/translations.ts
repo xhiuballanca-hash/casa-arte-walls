@@ -81,7 +81,7 @@ export const STRINGS: Record<string, Entry> = {
   "Go home": { sq: "Kthehuni në faqen kryesore", mk: "Оди на почетна" },
 
   // Home
-  "Turn Every Wall Into Art.": { sq: "Shndë çdo mur në art.\n", mk: "Претворете го секој ѕид во уметност." },
+  "Turn Every Wall Into Art.": { sq: "Shndë çdo mur në art.\n\n", mk: "Претворете го секој ѕид во уметност." },
   "Turn Every Wall": { sq: "Ktheni çdo mur", mk: "Претворете го секој ѕид" },
   "Into Art.": { sq: "në art.", mk: "во уметност." },
   "Premium decorative finishes, professionally applied by our team.": {
