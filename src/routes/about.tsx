@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import applicationCraft from "@/assets/application-craft.png.asset.json";
 import { ConsultationForm } from "@/lib/consultation-form";
-import { products } from "@/lib/products-data";
 import { useT } from "@/lib/i18n";
 
 const TITLE = "The Studio — Casa D'Arte, Italian Decorative Finishes";
@@ -139,28 +138,6 @@ function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-cream border-y border-forest/10">
-        <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-4">
-            <p className="eyebrow text-gold mb-3">{t("The finishes")}</p>
-            <p className="text-forest/65 leading-relaxed">{t("Six finishes, each supplied and applied by the studio.")}</p>
-          </div>
-          <ul className="md:col-span-8 flex flex-wrap gap-x-10 gap-y-4">
-            {products.map((p) => (
-              <li key={p.slug}>
-                <Link
-                  to="/products/$slug"
-                  params={{ slug: p.slug }}
-                  className="font-serif text-2xl md:text-3xl text-forest hover:text-gold transition-colors"
-                >
-                  {p.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
