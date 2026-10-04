@@ -502,7 +502,7 @@ export const STRINGS: Record<string, Entry> = {
   // Journal
   "The Journal": { sq: "Revista", mk: "Дневникот" },
   "Notes from the": { sq: "Shënime nga", mk: "Белешки од" },
-  "studio.": { sq: "studioja.", mk: "студиото." },
+  "studio.": { sq: "studioja.", mk: "нашиот тим." },
   "On Italian craft, colour, material and the architecture of the interior.": {
     sq: "Për zanatin italian, ngjyrën, materialin dhe arkitekturën e interierit.",
     mk: "За италијанскиот занает, бојата, материјалот и архитектурата на ентериерот.",
