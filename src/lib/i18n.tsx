@@ -125,7 +125,7 @@ export function useLocalizedHead(pathname: string) {
       const post = pathname.match(/^\/blog\/([^/]+)/);
       if (prod && PRODUCT_TR[prod[1]]) {
         const name = document.querySelector("h1")?.textContent ?? "";
-        const suffix = l === "sq" ? "Furnizuar dhe aplikuar nga Casa D'Arte" : "Набавено и нанесено од Casa D'Arte";
+        const suffix = l === "sq" ? "Furnizuar dhe aplikuar nga Casa D'Arte" : "Обезбедено и нанесено од Casa D'Arte";
         meta = { title: `${name} — ${suffix}`, description: PRODUCT_TR[prod[1]].summary[l] };
       } else if (post && POST_TR[post[1]]) {
         const tr = POST_TR[post[1]][l];
