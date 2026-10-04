@@ -10,7 +10,7 @@ export const STRINGS: Record<string, Entry> = {
   "Try the Finish Advisor": { sq: "Provoni këshilltarin e materialeve", mk: "Испробајте го советникот за материјали" },
   "Show us your space.": { sq: "Na tregoni hapësirën tuaj.", mk: "Покажете ни го вашиот простор." },
   "We'll suggest the finish.": { sq: "Ne ju sugjerojmë materialin.", mk: "Ќе ви предложиме соодветен материјал." },
-  "Upload a photo of your room and describe it. Our AI-powered advisor suggests suitable finishes and next steps as a starting point for a conversation with our studio.": { sq: "Ngarkoni një foto të dhomës dhe përshkruani hapësirën. Këshilltari ynë me AI sugjeron materiale të përshtatshme dhe hapat e ardhshëm si pikënisje për një bisedë me studion tonë.", mk: "Прикачете фотографија од вашата просторија и опишете го просторот. Нашиот советник со вештачка интелигенција предлага соодветни материјали и следни чекори како почетна точка за разговор со нашето студио." },
+  "Upload a photo of your room and describe it. Our AI-powered advisor suggests suitable finishes and next steps as a starting point for a conversation with our studio.": { sq: "Ngarkoni një foto të dhomës dhe përshkruani hapësirën. Këshilltari ynë me AI sugjeron materiale të përshtatshme dhe hapat e ardhshëm si pikënisje për një bisedë me studion tonë.", mk: "Прикачете фотографија од вашата просторија и опишете го просторот. Нашиот советник со вештачка интелигенција предлага соодветни материјали и следни чекори како почетна точка за разговор со нашиот тим." },
   "Room photo (optional)": { sq: "Foto e dhomës (opsionale)", mk: "Фотографија од просторијата (опционално)" },
   "Choose a photo": { sq: "Zgjidhni një foto", mk: "Изберете фотографија" },
   "Remove photo": { sq: "Hiqni foton", mk: "Отстранете ја фотографијата" },
@@ -40,7 +40,7 @@ export const STRINGS: Record<string, Entry> = {
   // Footer
   "Italian decorative finishes · supplied & applied": {
     sq: "Materiale dekorative italiane · të furnizuara dhe të aplikuara",
-    mk: "Италијански декоративни обработки · набавени и нанесени",
+    mk: "Италијански декоративни обработки · обезбедени и професионално нанесени",
   },
   "North Macedonia": { sq: "Maqedonia e Veriut", mk: "Северна Македонија" },
   Phone: { sq: "Telefoni", mk: "Телефон" },
@@ -110,7 +110,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "All finishes": { sq: "Të gjitha materialet", mk: "Сите обработки" },
   "{name} decorative finish": { sq: "Material dekorativ {name}", mk: "Декоративна обработка {name}" },
-  "View Finish": { sq: "Shikoni materialin", mk: "Погледни ја обработката" },
+  "View Finish": { sq: "Shikoni materialin", mk: "Погледнете ја обработката" },
   "Our Process": { sq: "Procesi ynë", mk: "Нашиот процес" },
   "Decorative finish applied by hand with a steel trowel": {
     sq: "Material dekorativ i aplikuar me dorë me mistri çeliku",
@@ -142,7 +142,7 @@ export const STRINGS: Record<string, Entry> = {
     mk: "Завршената површина се проверува пред предавањето.",
   },
   "Realized Projects": { sq: "Projekte të realizuara", mk: "Реализирани проекти" },
-  "View all projects": { sq: "Shikoni të gjitha projektet", mk: "Погледни ги сите проекти" },
+  "View all projects": { sq: "Shikoni të gjitha projektet", mk: "Погледнете ги сите проекти" },
   "Have a project in mind?": { sq: "Keni një projekt në mendje?", mk: "Имате проект на ум?" },
   "Tell us about your space and we’ll help you choose the right finish.": {
     sq: "Na tregoni për hapësirën tuaj dhe do t’ju ndihmojmë të zgjidhni materialin e duhur.",
@@ -166,7 +166,7 @@ export const STRINGS: Record<string, Entry> = {
   Offices: { sq: "Zyra", mk: "Канцеларии" },
   Stores: { sq: "Dyqane", mk: "Продавници" },
   Facades: { sq: "Fasada", mk: "Фасади" },
-  "Surfaces in place.": { sq: "Projektet e realizuara.", mk: "Површини на своето место." },
+  "Surfaces in place.": { sq: "Projektet e realizuara.", mk: "Реализирани проекти." },
   "A selection of Casa D'Arte surfaces in residential, hospitality, workplace and retail interiors. Each project is presented only by its space and finish.": {
     sq: "Një përzgjedhje projektesh të realizuara nga Casa D'Arte në ambiente banimi, hotele, zyra dhe dyqane. Çdo projekt paraqitet vetëm me hapësirën dhe materialin e përdorur.",
     mk: "Избор на површини на Casa D'Arte во станбени, угостителски, деловни и трговски ентериери. Секој проект е претставен само со својот простор и обработка.",
@@ -191,7 +191,7 @@ export const STRINGS: Record<string, Entry> = {
   "One standard of execution.": { sq: "I njëjti standard cilësie në çdo projekt.", mk: "Еден стандард на изведба." },
   "Explore six decorative finishes, supplied and professionally applied by our own team.": {
     sq: "Zbuloni gjashtë materiale dekorative, të furnizuara dhe të aplikuara në mënyrë profesionale nga ekipi ynë.",
-    mk: "Истражете шест декоративни обработки, набавени и професионално нанесени од нашиот тим.",
+    mk: "Истражете шест декоративни обработки, обезбедени и професионално нанесени од нашиот тим.",
   },
   "{name} decorative wall finish": { sq: "Material dekorativ për mure {name}", mk: "Декоративна ѕидна обработка {name}" },
   "Approved material photography to follow.": {
@@ -200,7 +200,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "Explore {name}": { sq: "Zbuloni {name}", mk: "Истражете {name}" },
   "Request a quote": { sq: "Kërkoni ofertë", mk: "Побарајте понуда" },
-  "Not sure which finish?": { sq: "Nuk jeni të sigurt cilin material të zgjidhni?", mk: "Не сте сигурни која обработка?" },
+  "Not sure which finish?": { sq: "Nuk jeni të sigurt cilin material të zgjidhni?", mk: "Не сте сигурни која обработка да ја изберете?" },
   "Tell us about the space and we will prepare samples in tones and textures suited to it before anything is quoted.": {
     sq: "Na tregoni për hapësirën dhe do të përgatisim mostra në tone dhe tekstura që i përshtaten para çdo oferte.",
     mk: "Кажете ни за просторот и ќе подготвиме мостри во тонови и текстури што му одговараат пред да се изготви каква било понуда.",
@@ -209,7 +209,7 @@ export const STRINGS: Record<string, Entry> = {
   "{name} decorative finish surface": { sq: "Sipërfaqe me material dekorativ {name}", mk: "Површина со декоративна обработка {name}" },
   "{name} is supplied by Casa D'Arte and professionally applied by our own team.": {
     sq: "{name} furnizohet nga Casa D'Arte dhe aplikohet në mënyrë profesionale nga ekipi ynë.",
-    mk: "{name} го набавува Casa D'Arte, а професионално го нанесува нашиот тим.",
+    mk: "{name} го обезбедува Casa D'Arte, а професионално го нанесува нашиот тим.",
   },
   "Other finishes": { sq: "Materiale të tjera", mk: "Други обработки" },
   "Continue exploring.": { sq: "Vazhdoni të zbuloni.", mk: "Продолжете да истражувате." },
@@ -230,7 +230,7 @@ export const STRINGS: Record<string, Entry> = {
   "Colour consultation": { sq: "Konsultim për ngjyrat", mk: "Консултација за бои" },
   "Tone development in the studio or on site, judged in the light of the actual space against joinery, stone, fabrics and existing architecture. Approved on physical samples before anything is quoted.": {
     sq: "Zhvillimi i toneve në studio ose në objekt, të vlerësuara në dritën e hapësirës reale, në harmoni me elementet prej druri, gurin, tekstilet dhe arkitekturën ekzistuese. Tonet miratohen përmes mostrave fizike para përgatitjes së ofertës.",
-    mk: "Развој на тонови во студиото или на лице место, проценети во светлината на вистинскиот простор наспроти столаријата, каменот, ткаенините и постојната архитектура. Се одобрува на физички мостри пред да се изготви понуда.",
+    mk: "Развој на тонови во нашиот простор или на лице место, проценети во светлината на вистинскиот простор наспроти столаријата, каменот, ткаенините и постојната архитектура. Се одобрува на физички мостри пред да се изготви понуда.",
   },
   "Custom textures": { sq: "Tekstura të personalizuara", mk: "Прилагодени текстури" },
   "Bespoke texture and sheen development for signature walls and spaces, from the smoothest polished surface to more tactile, mineral finishes. Samples are refined until the intent is met.": {
@@ -281,7 +281,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "The Studio · Over a decade of experience": { sq: "Studioja · Mbi një dekadë përvojë", mk: "Студиото · Повеќе од една декада искуство" },
   "A studio for Italian finishes —": { sq: "Një studio për materiale italiane —", mk: "Студио за италијански обработки —" },
-  "supplied and applied.": { sq: "të furnizuara dhe të aplikuara.", mk: "набавени и нанесени." },
+  "supplied and applied.": { sq: "të furnizuara dhe të aplikuara.", mk: "обезбедени и професионално нанесени." },
   "Casa D'Arte brings more than a decade of experience to a simple conviction: a wall deserves the same care as the architecture around it, and the people who choose the material should be the people who put it on the wall.": {
     sq: "Kompania jonë ka më shumë se një dekadë përvojë dhe mbështetet në një bindje të thjeshtë: një mur meriton të njëjtin kujdes si arkitektura përreth tij, dhe ekipi që zgjedh materialin duhet të jetë edhe ai që e aplikon në mur.",
     mk: "Casa D'Arte носи повеќе од една декада искуство врз едноставно уверување: ѕидот заслужува иста грижа како и архитектурата околу него, а луѓето што го избираат материјалот треба да бидат тие што го нанесуваат на ѕидот.",
@@ -319,7 +319,7 @@ export const STRINGS: Record<string, Entry> = {
   },
   "Six finishes, each supplied and applied by the studio.": {
     sq: "Gjashtë materiale, secili i furnizuar dhe i aplikuar nga studioja.",
-    mk: "Шест обработки, секоја набавена и нанесена од студиото.",
+    mk: "Шест обработки, секоја обезбедена и професионално нанесена од нашиот тим.",
   },
   "Start a conversation": { sq: "Filloni një bisedë", mk: "Започнете разговор" },
   "Tell us about your space.": { sq: "Na tregoni për hapësirën tuaj.", mk: "Кажете ни за вашиот простор." },
@@ -332,7 +332,7 @@ export const STRINGS: Record<string, Entry> = {
   "Sample boxes": { sq: "Kutitë me mostra", mk: "Кутии со мостри" },
   "A curated case of our finishes for the studio, so material conversations start with the real surface rather than a swatch on screen.": {
     sq: "Një kuti e përzgjedhur me materialet tona për studio, në mënyrë që bisedat për materialin të nisin nga sipërfaqja reale dhe jo nga një imazh në ekran.",
-    mk: "Одбрана кутија со нашите обработки за студиото, за разговорите за материјалот да почнуваат со вистинската површина, а не со примерок на екран.",
+    mk: "Одбрана кутија со нашите обработки за вашето студио, за разговорите за материјалот да почнуваат со вистинската површина, а не со примерок на екран.",
   },
   "Custom samples and textures": { sq: "Mostra dhe tekstura të personalizuara", mk: "Мостри и текстури по мерка" },
   "Project-specific samples in your tones, textures and sheen, refined until the finish matches the intent before anything is quoted.": {
@@ -347,7 +347,7 @@ export const STRINGS: Record<string, Entry> = {
   "Technical consultation": { sq: "Konsultim teknik", mk: "Техничка консултација" },
   "Substrate assessment, preparation requirements, junctions and detailing, reviewed in the studio or on site with your team.": {
     sq: "Vlerësimi i bazës, kërkesat e përgatitjes, bashkimet dhe detajet shqyrtohen në studio ose në vend me ekipin tuaj.",
-    mk: "Проценката на подлогата, барањата за подготовка, спојовите и деталите се разгледуваат во студиото или на лице место со вашиот тим.",
+    mk: "Проценката на подлогата, барањата за подготовка, спојовите и деталите се разгледуваат кај нас или на лице место со вашиот тим.",
   },
   Quotation: { sq: "Oferta", mk: "Понуда" },
   "Material and application quoted together, itemised by surface, so your client can approve the finish and the budget in one step.": {
@@ -420,7 +420,7 @@ export const STRINGS: Record<string, Entry> = {
   "Concept & consultation": { sq: "Koncepti dhe konsultimi", mk: "Концепт и консултација" },
   "We review the space and intent with you in the studio or on site.": {
     sq: "Shqyrtojmë me ju hapësirën dhe qëllimin në studio ose në vend.",
-    mk: "Ги разгледуваме просторот и замислата со вас во студиото или на лице место.",
+    mk: "Ги разгледуваме просторот и замислата со вас кај нас или на лице место.",
   },
   "Sample & finish selection": { sq: "Mostrat dhe zgjedhja e materialit", mk: "Мостри и избор на обработка" },
   "Project samples in your tones and textures, approved on the real material.": {
@@ -451,12 +451,12 @@ export const STRINGS: Record<string, Entry> = {
   // Contact
   "Discuss your project": { sq: "Diskutoni projektin tuaj", mk: "Разговарајте за вашиот проект" },
   "Tell us about the project.": { sq: "Na tregoni për projektin.", mk: "Кажете ни за проектот." },
-  "Send inquiry": { sq: "Dërgoni kërkesën", mk: "Испрати барање" },
+  "Send inquiry": { sq: "Dërgoni kërkesën", mk: "Испратете барање" },
   "Request a sample": { sq: "Kërkoni mostër", mk: "Побарајте мостра" },
   "Which finishes would you like to see?": { sq: "Cilat materiale dëshironi të shihni?", mk: "Кои обработки би сакале да ги видите?" },
   "I would like to receive samples of: ": { sq: "Dëshiroj të marr mostra të: ", mk: "Би сакал/а да добијам мостри од: " },
   "Request samples": { sq: "Kërkoni mostra", mk: "Побарајте мостри" },
-  "Let us price the work.": { sq: "Kërkoni një preventiv për punimet.", mk: "Дозволете ни да ја процениме работата." },
+  "Let us price the work.": { sq: "Kërkoni një preventiv për punimet.", mk: "Побарајте понуда за изведбата." },
   "Surface area (approx.), location, condition of the walls, preferred finish: ": {
     sq: "Sipërfaqja (përafërsisht), vendndodhja, gjendja e mureve, materiali i preferuar: ",
     mk: "Површина (приближно), локација, состојба на ѕидовите, посакувана обработка: ",
@@ -466,7 +466,7 @@ export const STRINGS: Record<string, Entry> = {
   "conversation.": { sq: "bisedë.", mk: "разговор." },
   "Reach the studio by form or phone. Whether you are specifying a finish, planning a development or renovating a home, we will guide you from sample to finished surface.": {
     sq: "Kontaktoni studion përmes formularit ose telefonit. Pavarësisht nëse po specifikoni një material, po planifikoni një projekt ndërtimi apo po rinovoni një shtëpi, do t’ju udhëheqim nga mostra deri te sipërfaqja e përfunduar.",
-    mk: "Контактирајте го студиото преку формуларот или по телефон. Без разлика дали специфицирате обработка, планирате градежен проект или реновирате дом, ќе ве водиме од мострата до завршената површина.",
+    mk: "Контактирајте нè преку формуларот или по телефон. Без разлика дали специфицирате обработка, планирате градежен проект или реновирате дом, ќе ве водиме од мострата до завршената површина.",
   },
   Studio: { sq: "Studioja", mk: "Студио" },
   Direct: { sq: "Direkt", mk: "Директно" },
@@ -495,7 +495,7 @@ export const STRINGS: Record<string, Entry> = {
   "Thank you.": { sq: "Faleminderit.", mk: "Ви благодариме." },
   "Your inquiry has reached the studio. We will review it and come back to you to arrange the next step: a conversation, samples, or a site visit.": {
     sq: "Kërkesa juaj ka mbërritur në studio. Do ta shqyrtojmë dhe do t’ju kontaktojmë për të caktuar hapin e radhës: një bisedë, mostra ose një vizitë në objekt.",
-    mk: "Вашето барање стигна до студиото. Ќе го разгледаме и ќе ви се јавиме за да го договориме следниот чекор: разговор, мостри или посета на лице место.",
+    mk: "Вашето барање е примено од нашиот тим. Ќе го разгледаме и ќе ви се јавиме за да го договориме следниот чекор: разговор, мостри или посета на лице место.",
   },
   "Send another inquiry": { sq: "Dërgoni një kërkesë tjetër", mk: "Испратете друго барање" },
 
@@ -507,7 +507,7 @@ export const STRINGS: Record<string, Entry> = {
     sq: "Për zanatin italian, ngjyrën, materialin dhe arkitekturën e interierit.",
     mk: "За италијанскиот занает, бојата, материјалот и архитектурата на ентериерот.",
   },
-  Read: { sq: "Lexoni", mk: "Прочитај" },
+  Read: { sq: "Lexoni", mk: "Прочитајте" },
   "← The Journal": { sq: "← Revista", mk: "← Дневникот" },
   "Considering one of these finishes for a project? We prepare samples in your tones before anything is quoted.": {
     sq: "Po mendoni të përdorni një nga këto materiale në projektin tuaj? Përgatisim mostra në tonet tuaja para hartimit të ofertës.",
@@ -753,7 +753,7 @@ export const META_TR: Record<string, { sq: { title: string; description: string 
     mk: {
       title: "Студиото — Casa D'Arte, италијански обработки",
       description:
-        "Casa D'Arte: студио со повеќе од една декада искуство што набавува премиум италијански декоративни обработки и ги нанесува со сопствен тим низ цела Северна Македонија.",
+        "Casa D'Arte: тим со повеќе од една деценија искуство што обезбедува премиум италијански декоративни обработки и ги нанесува со сопствен тим низ цела Северна Македонија.",
     },
   },
   "/architects": {
