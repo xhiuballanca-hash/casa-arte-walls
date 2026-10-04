@@ -166,7 +166,7 @@ function ArchitectsPage() {
           <div className="md:col-span-4">
             <p className="eyebrow text-gold mb-5">{t("The finishes")}</p>
             <p className="text-forest/70 leading-relaxed max-w-sm">
-              {t("Five Italian systems, each pigmented and textured to project specification. Full details, applications and galleries on each finish page.")}
+              {t("Six Italian systems, each pigmented and textured to project specification. Full details, applications and galleries on each finish page.")}
             </p>
           </div>
           <ul className="md:col-span-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">

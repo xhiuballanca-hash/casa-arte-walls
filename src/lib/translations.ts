@@ -401,9 +401,9 @@ export const STRINGS: Record<string, Entry> = {
     sq: "Mbështetje nga mostra e parë te shtresa e fundit.",
     mk: "Поддршка од првата мостра до последниот слој.",
   },
-  "Five Italian systems, each pigmented and textured to project specification. Full details, applications and galleries on each finish page.": {
+  "Six Italian systems, each pigmented and textured to project specification. Full details, applications and galleries on each finish page.": {
     sq: "Gjashtë materiale italiane, secili me ngjyrë dhe teksturë sipas specifikimit të projektit. Detajet, përdorimet dhe galeritë gjenden në faqen e secilit material.",
-    mk: "Пет италијански системи, секој пигментиран и текстуриран според спецификацијата на проектот. Целосни детали, примени и галерии ќе најдете на страницата на секоја обработка.",
+    mk: "Шест италијански системи, секој пигментиран и текстуриран според спецификацијата на проектот. Целосни детали, примени и галерии ќе најдете на страницата на секоја обработка.",
   },
   "All finishes →": { sq: "Të gjitha materialet →", mk: "Сите обработки →" },
   Overview: { sq: "Përmbledhje", mk: "Преглед" },
