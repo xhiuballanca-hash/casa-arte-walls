@@ -34,6 +34,7 @@ import { Route as AuthenticatedAdminQuotationsIndexRouteImport } from './routes/
 import { Route as AuthenticatedAdminQuotationsIdRouteImport } from './routes/_authenticated/admin/quotations/$id'
 import { Route as AuthenticatedAdminQuotationsNewRouteImport } from './routes/_authenticated/admin/quotations/new'
 import { Route as AuthenticatedPrintQuotationsIdRouteImport } from './routes/_authenticated/print/quotations.$id'
+import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -167,6 +168,12 @@ const AuthenticatedPrintQuotationsIdRoute =
     path: '/print/quotations/$id',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
+const LovableEmailTransactionalPreviewRoute =
+  LovableEmailTransactionalPreviewRouteImport.update({
+    id: '/lovable/email/transactional/preview',
+    path: '/lovable/email/transactional/preview',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -191,6 +198,7 @@ export interface FileRoutesByFullPath {
   '/admin/quotations/$id': typeof AuthenticatedAdminQuotationsIdRoute
   '/admin/quotations/new': typeof AuthenticatedAdminQuotationsNewRoute
   '/print/quotations/$id': typeof AuthenticatedPrintQuotationsIdRoute
+  '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/admin/leads/': typeof AuthenticatedAdminLeadsIndexRoute
   '/admin/quotations/': typeof AuthenticatedAdminQuotationsIndexRoute
 }
@@ -216,6 +224,7 @@ export interface FileRoutesByTo {
   '/admin/quotations/$id': typeof AuthenticatedAdminQuotationsIdRoute
   '/admin/quotations/new': typeof AuthenticatedAdminQuotationsNewRoute
   '/print/quotations/$id': typeof AuthenticatedPrintQuotationsIdRoute
+  '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/admin/leads': typeof AuthenticatedAdminLeadsIndexRoute
   '/admin/quotations': typeof AuthenticatedAdminQuotationsIndexRoute
 }
@@ -244,6 +253,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/quotations/$id': typeof AuthenticatedAdminQuotationsIdRoute
   '/_authenticated/admin/quotations/new': typeof AuthenticatedAdminQuotationsNewRoute
   '/_authenticated/print/quotations/$id': typeof AuthenticatedPrintQuotationsIdRoute
+  '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/_authenticated/admin/leads/': typeof AuthenticatedAdminLeadsIndexRoute
   '/_authenticated/admin/quotations/': typeof AuthenticatedAdminQuotationsIndexRoute
 }
@@ -272,6 +282,7 @@ export interface FileRouteTypes {
     | '/admin/quotations/$id'
     | '/admin/quotations/new'
     | '/print/quotations/$id'
+    | '/lovable/email/transactional/preview'
     | '/admin/leads/'
     | '/admin/quotations/'
   fileRoutesByTo: FileRoutesByTo
@@ -297,6 +308,7 @@ export interface FileRouteTypes {
     | '/admin/quotations/$id'
     | '/admin/quotations/new'
     | '/print/quotations/$id'
+    | '/lovable/email/transactional/preview'
     | '/admin/leads'
     | '/admin/quotations'
   id:
@@ -324,6 +336,7 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/quotations/$id'
     | '/_authenticated/admin/quotations/new'
     | '/_authenticated/print/quotations/$id'
+    | '/lovable/email/transactional/preview'
     | '/_authenticated/admin/leads/'
     | '/_authenticated/admin/quotations/'
   fileRoutesById: FileRoutesById
@@ -342,6 +355,7 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiFinishAdvisorRoute: typeof ApiFinishAdvisorRoute
+  LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -521,6 +535,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedPrintQuotationsIdRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/lovable/email/transactional/preview': {
+      id: '/lovable/email/transactional/preview'
+      path: '/lovable/email/transactional/preview'
+      fullPath: '/lovable/email/transactional/preview'
+      preLoaderRoute: typeof LovableEmailTransactionalPreviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -602,6 +623,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiFinishAdvisorRoute: ApiFinishAdvisorRoute,
+  LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
