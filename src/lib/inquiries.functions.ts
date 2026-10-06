@@ -42,5 +42,17 @@ export const submitInquiry = createServerFn({ method: "POST" })
       throw new Error("Could not submit inquiry");
     }
 
+    try {
+      const { sendTemplateEmail } = await import("./email-templates/send-email");
+      await sendTemplateEmail("inquiry-notification", "info@casadarte.mk", {
+        templateData: data,
+        idempotencyKey: `inquiry-notification-${crypto.randomUUID()}`,
+        ...(data.email ? { replyTo: data.email } : {}),
+      });
+    } catch (e) {
+      // The inquiry is already saved; never fail the visitor's submission over email.
+      console.error("[inquiries] notification email failed", e);
+    }
+
     return { ok: true as const };
   });
