@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ConsultationForm } from "@/lib/consultation-form";
-import architectsImg from "@/assets/architects-flatlay.jpg";
+import architectsImg from "@/assets/architects-sample-boxes.jpeg.asset.json";
 import craftImg from "@/assets/about-craft.jpg";
 import { products } from "@/lib/products-data";
 import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
@@ -129,8 +129,8 @@ function ArchitectsPage() {
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8 items-start">
           <div className="md:col-span-5 md:sticky md:top-32">
             <img
-              src={architectsImg}
-              alt={t("Finish samples and drawings laid out for specification")}
+              src={architectsImg.url}
+              alt={t("Sample boxes")}
               width={1200}
               height={1200}
               loading="lazy"
