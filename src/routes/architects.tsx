@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ConsultationForm } from "@/lib/consultation-form";
 import architectsImg from "@/assets/architects-sample-boxes.jpeg.asset.json";
-import craftImg from "@/assets/about-craft.jpg";
+import craftAsset from "@/assets/architects-application.jpeg.asset.json";
+const craftImg = craftAsset.url;
 import { products } from "@/lib/products-data";
 import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
