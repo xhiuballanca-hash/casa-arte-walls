@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ConsultationForm } from "@/lib/consultation-form";
-import architectsImg from "@/assets/architects-sample-boxes.jpeg.asset.json";
-import craftAsset from "@/assets/architects-application.jpeg.asset.json";
-const craftImg = craftAsset.url;
+import architectsImg from "@/assets/architects-sample-boxes.jpeg";
+import craftAsset from "@/assets/architects-application.jpeg";
+const craftImg = craftAsset;
 import { products } from "@/lib/products-data";
 import { useI18n, localizeProduct, localizePost } from "@/lib/i18n";
 
@@ -130,7 +130,7 @@ function ArchitectsPage() {
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8 items-start">
           <div className="md:col-span-5 md:sticky md:top-32">
             <img
-              src={architectsImg.url}
+              src={architectsImg}
               alt={t("Sample boxes")}
               width={1200}
               height={1200}

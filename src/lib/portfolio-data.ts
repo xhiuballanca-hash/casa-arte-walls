@@ -1,18 +1,18 @@
-import bedroomAsset from "@/assets/project-bedroom-travertino.jpg.asset.json";
-import facadeAsset from "@/assets/project-hotel-facade-travertino.jpg.asset.json";
-import houseFacadeAsset from "@/assets/project-house-facade-travertino.jpg.asset.json";
-import livingAsset from "@/assets/project-living-room-marmorino.jpg.asset.json";
-import officeAsset from "@/assets/project-office-beton-look.jpg.asset.json";
-import saharaLivingAsset from "@/assets/project-living-room-sahara.jpg.asset.json";
-import storeAsset from "@/assets/project-store-beton-look.jpg.asset.json";
+import bedroomAsset from "@/assets/project-bedroom-travertino.jpg";
+import facadeAsset from "@/assets/project-hotel-facade-travertino.jpg";
+import houseFacadeAsset from "@/assets/project-house-facade-travertino.jpg";
+import livingAsset from "@/assets/project-living-room-marmorino.jpg";
+import officeAsset from "@/assets/project-office-beton-look.jpg";
+import saharaLivingAsset from "@/assets/project-living-room-sahara.jpg";
+import storeAsset from "@/assets/project-store-beton-look.jpg";
 
-const bedroom = bedroomAsset.url;
-const facade = facadeAsset.url;
-const houseFacade = houseFacadeAsset.url;
-const living = livingAsset.url;
-const office = officeAsset.url;
-const store = storeAsset.url;
-const saharaLiving = saharaLivingAsset.url;
+const bedroom = bedroomAsset;
+const facade = facadeAsset;
+const houseFacade = houseFacadeAsset;
+const living = livingAsset;
+const office = officeAsset;
+const store = storeAsset;
+const saharaLiving = saharaLivingAsset;
 
 export type Category =
   | "Living Rooms"

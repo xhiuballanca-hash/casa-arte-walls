@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import applicationCraft from "@/assets/application-craft.png.asset.json";
+import applicationCraft from "@/assets/application-craft.png";
 import { ConsultationForm } from "@/lib/consultation-form";
 import { useT } from "@/lib/i18n";
 
@@ -79,7 +79,7 @@ function AboutPage() {
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8 items-start">
           <div className="md:col-span-5 md:sticky md:top-32">
             <img
-              src={applicationCraft.url}
+              src={applicationCraft}
               alt={t("Decorative finish being applied by hand with a steel trowel")}
               width={941}
               height={1672}
