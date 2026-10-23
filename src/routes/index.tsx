@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroCover from "@/assets/casa-darte-cover-clean.png";
-import craftAsset from "@/assets/application-craft.png";
+import heroCover from "@/assets/casa-darte-cover-clean.jpg";
+import craftAsset from "@/assets/application-craft.jpg";
 import { products } from "@/lib/products-data";
 import { projects } from "@/lib/portfolio-data";
 import { whatsappLink } from "@/lib/site-config";

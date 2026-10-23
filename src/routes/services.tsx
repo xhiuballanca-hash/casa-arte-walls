@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import craftApplication from "@/assets/application-craft.png";
+import craftApplication from "@/assets/application-craft.jpg";
 import { useT } from "@/lib/i18n";
 
 const TITLE = "Services — Supply, Application & Consultation | Casa D'Arte";

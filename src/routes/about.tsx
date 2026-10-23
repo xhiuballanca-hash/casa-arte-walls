@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import applicationCraft from "@/assets/application-craft.png";
+import applicationCraft from "@/assets/application-craft.jpg";
 import { ConsultationForm } from "@/lib/consultation-form";
 import { useT } from "@/lib/i18n";
 
