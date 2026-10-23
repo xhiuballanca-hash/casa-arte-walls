@@ -39,7 +39,6 @@ export function SiteFooter() {
         </div>
         <div className="border-t border-beige/10 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-beige/45">
           <p>© {new Date().getFullYear()} Casa D'Arte</p>
-          <Link to="/auth" className="hover:text-gold transition-colors">{t("Studio login")}</Link>
         </div>
       </div>
     </footer>

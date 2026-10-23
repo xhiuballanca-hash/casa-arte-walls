@@ -8,16 +8,14 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Toaster } from "sonner";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "../lib/site-nav";
 import { SiteFooter } from "../lib/site-footer";
 import { WhatsAppButton } from "../lib/whatsapp-button";
 import { CookieConsent } from "../lib/cookie-consent";
-import { AuthProvider } from "../hooks/useAuth";
 import { LanguageProvider, useT, useLocalizedHead } from "../lib/i18n";
 
 function NotFoundComponent() {
@@ -45,9 +43,6 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   const t = useT();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
   return (
     <div className="flex min-h-screen items-center justify-center bg-beige px-6">
       <div className="max-w-md text-center">
@@ -123,17 +118,6 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
-/** Routes that render their own chrome (no public nav/footer/WhatsApp). */
-function isWorkspacePath(pathname: string) {
-  return (
-    pathname === "/auth" ||
-    pathname.startsWith("/auth/") ||
-    pathname === "/admin" ||
-    pathname.startsWith("/admin/") ||
-    pathname.startsWith("/print/")
-  );
-}
-
 function HeadLocalizer({ pathname }: { pathname: string }) {
   useLocalizedHead(pathname);
   return null;
@@ -142,25 +126,17 @@ function HeadLocalizer({ pathname }: { pathname: string }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const { pathname } = useLocation();
-  const workspace = isWorkspacePath(pathname);
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
-      <AuthProvider>
       <HeadLocalizer pathname={pathname} />
-        {workspace ? (
+        <SiteNav />
+        <main className="min-h-screen">
           <Outlet />
-        ) : (
-          <>
-            <SiteNav />
-            <main className="min-h-screen">
-              <Outlet />
-            </main>
-            <SiteFooter />
-            <WhatsAppButton />
-            <CookieConsent />
-          </>
-        )}
+        </main>
+        <SiteFooter />
+        <WhatsAppButton />
+        <CookieConsent />
         <Toaster
           position="bottom-center"
           toastOptions={{
@@ -175,7 +151,6 @@ function RootComponent() {
             },
           }}
         />
-      </AuthProvider>
       </LanguageProvider>
     </QueryClientProvider>
   );

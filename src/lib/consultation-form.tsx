@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
 import { toast } from "sonner";
 import { ChevronDown } from "lucide-react";
-import { submitInquiry } from "./inquiries.functions";
 import { useT } from "./i18n";
+
+// Public key from web3forms.com (sends each inquiry to info@casadarte.mk). Safe to keep in the code.
+const WEB3FORMS_ACCESS_KEY = "0e196f57-a98d-4b25-b6df-fa6af049a7d8";
 
 type Variant = "dark" | "light";
 
@@ -44,7 +45,6 @@ export function ConsultationForm({
   title?: string;
   submitLabel?: string;
 }) {
-  const submit = useServerFn(submitInquiry);
   const t = useT();
   const [pending, setPending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -55,17 +55,25 @@ export function ConsultationForm({
     const fd = new FormData(form);
     setPending(true);
     try {
-      await submit({
-        data: {
-          name: String(fd.get("name") ?? ""),
-          phone: String(fd.get("phone") ?? ""),
-          city: String(fd.get("city") ?? ""),
-          project_type: String(fd.get("project_type") ?? ""),
-          client_type: defaultClientType ?? "",
-          message: String(fd.get("message") ?? ""),
-          source,
-        },
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New website inquiry: ${String(fd.get("name") ?? "")}`,
+          from_name: "Casa D'Arte website",
+          Name: String(fd.get("name") ?? ""),
+          Phone: String(fd.get("phone") ?? ""),
+          City: String(fd.get("city") ?? ""),
+          "Finish / Service": String(fd.get("project_type") ?? ""),
+          "Client type": defaultClientType ?? "",
+          Message: String(fd.get("message") ?? ""),
+          Form: source,
+          botcheck: Boolean(fd.get("botcheck")),
+        }),
       });
+      const result = (await res.json().catch(() => ({}))) as { success?: boolean };
+      if (!res.ok || !result.success) throw new Error("Form submission failed");
       toast.success(t("Thank you. Your inquiry has been received, and we will be in touch shortly."));
       form.reset();
       setSent(true);
@@ -105,6 +113,7 @@ export function ConsultationForm({
 
   return (
     <form onSubmit={onSubmit} className="space-y-7">
+      <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
       {title && (
         <h3 className={`font-serif text-3xl ${dark ? "text-beige" : "text-forest"}`}>{title}</h3>
       )}

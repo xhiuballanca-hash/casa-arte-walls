@@ -146,9 +146,6 @@ function ProductsIndex() {
             <Link to="/contact" search={{ intent: "sample" }} className="btn btn-outline">
               {t("Request a Sample")}
             </Link>
-            <Link to="/finish-advisor" className="link-line text-forest self-center md:self-end">
-              {t("Try the Finish Advisor")} <span aria-hidden>→</span>
-            </Link>
           </div>
         </div>
       </section>
