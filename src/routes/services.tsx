@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import craftApplication from "@/assets/application-craft.png.asset.json";
+import craftApplication from "@/assets/application-craft.png";
 import { useT } from "@/lib/i18n";
 
 const TITLE = "Services — Supply, Application & Consultation | Casa D'Arte";
@@ -126,7 +126,7 @@ function ServicesPage() {
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-14 md:gap-8 items-center">
           <div className="md:col-span-5">
             <img
-              src={craftApplication.url}
+              src={craftApplication}
               alt={t("Decorative finish applied by hand with a steel trowel")}
               width={941}
               height={1672}

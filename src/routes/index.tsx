@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroCover from "@/assets/casa-darte-cover-clean.png";
-import craftAsset from "@/assets/application-craft.png.asset.json";
+import craftAsset from "@/assets/application-craft.png";
 import { products } from "@/lib/products-data";
 import { projects } from "@/lib/portfolio-data";
 import { whatsappLink } from "@/lib/site-config";
@@ -156,7 +156,7 @@ function HomePage() {
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-12 gap-12 md:gap-8 items-start">
           <div className="md:col-span-5">
             <img
-              src={craftAsset.url}
+              src={craftAsset}
               alt={t("Decorative finish applied by hand with a steel trowel")}
               width={941}
               height={1672}

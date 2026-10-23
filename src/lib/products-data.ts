@@ -1,16 +1,16 @@
-import travertinoAsset from "@/assets/material-travertino.jpg.asset.json";
-import marmorinoAsset from "@/assets/material-marmorino.jpg.asset.json";
-import venezianoAsset from "@/assets/material-stucco-veneziano.jpg.asset.json";
-import saharaAsset from "@/assets/material-sahara.jpg.asset.json";
-import microcementAsset from "@/assets/material-microcement.jpg.asset.json";
-import betonLookAsset from "@/assets/material-beton-look.jpg.asset.json";
+import travertinoAsset from "@/assets/material-travertino.jpg";
+import marmorinoAsset from "@/assets/material-marmorino.jpg";
+import venezianoAsset from "@/assets/material-stucco-veneziano.jpg";
+import saharaAsset from "@/assets/material-sahara.jpg";
+import microcementAsset from "@/assets/material-microcement.jpg";
+import betonLookAsset from "@/assets/material-beton-look.jpg";
 
-const travertino = travertinoAsset.url;
-const marmorino = marmorinoAsset.url;
-const veneziano = venezianoAsset.url;
-const sahara = saharaAsset.url;
-const microcement = microcementAsset.url;
-const betonLook = betonLookAsset.url;
+const travertino = travertinoAsset;
+const marmorino = marmorinoAsset;
+const veneziano = venezianoAsset;
+const sahara = saharaAsset;
+const microcement = microcementAsset;
+const betonLook = betonLookAsset;
 
 export type Product = {
   slug: string;
